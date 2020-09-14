@@ -1,0 +1,363 @@
+* {
+  box-sizing: border-box;
+  margin: auto;
+  padding: 0;
+  transition: all 0.6s ease;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700|Source+Sans+Pro:400,700");
+
+header,
+.splash {
+  padding: 15px;
+}
+header {
+  height: 70px;
+  width: 100%;
+  background-color: bisque;
+}
+
+.contenedor {
+  height: 400px !important;
+  width: 100% !important;
+  position: relative !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  z-index: 100;
+}
+.splash {
+  position: absolute !important;
+  height: 400px !important;
+  width: 100% !important;
+  background-image: url(../img/20170508174130-fiesta-oficina.jpeg) !important;
+  background-position: center !important;
+  background-size: cover !important;
+}
+
+.tits {
+  position: absolute !important;
+
+  height: 40% !important;
+  width: 80% !important;
+  padding: 20px !important;
+  background-color: rgba(245, 128, 180, 0.7) !important;
+  color: white !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+.metz {
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+  height: 50px;
+  width: 50px;
+  background-color: rgba(255, 255, 0, 0.5);
+  z-index: 50;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  font-size: 26pt;
+  font-family: monospace;
+  font-weight: 700;
+}
+
+/******************* COLORES *******************/
+.fl {
+  float: left;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+}
+.productos {
+  display: flex;
+  flex-direction: row;
+}
+
+.cont1 {
+  flex: 1;
+}
+.cont2 {
+  flex: 2;
+} /*
+.br {border: solid 2px red;}
+.br:nth-child(even) {border: solid 2px lightgreen;}*/
+
+.logo {
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  display: flex;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  -o-flex: 1;
+  flex: 1;
+}
+.menu {
+  flex: 2;
+}
+
+/******************* COLORES *******************/
+
+body {
+  color: dimgray;
+  padding: 0;
+  width: 92%;
+  max-width: 1650px;
+  margin: auto;
+}
+.oro100 {
+  background-color: rgba(170, 143, 83, 1);
+  color: white !important;
+}
+.oro60 {
+  background-color: rgba(170, 143, 83, 0.6);
+  color: white !important;
+}
+.gris1 {
+  background-color: rgba(128, 128, 128, 1);
+  color: white !important;
+}
+.gris2 {
+  background-color: rgba(77, 77, 77, 1);
+  color: white !important;
+}
+.toro {
+  color: rgba(170, 143, 83, 1) !important;
+}
+
+.blanco {
+  border: solid 2px rgba(170, 143, 83, 1);
+  background-color: white;
+}
+
+/******************* ANCHOS **************/
+.col-12 {
+  width: 100%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-8 {
+  width: 66.66%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-4 {
+  width: 33.33%;
+}
+.col-3 {
+  width: 25%;
+}
+
+/******************* ALTURAS **************/
+
+.h690 {
+  height: 690px;
+}
+.h836 {
+  height: 765px;
+  text-align: center;
+}
+.h185 {
+  height: 185px;
+}
+.h80 {
+  height: 80px;
+}
+.publi {
+  width: 80%;
+  height: 80%;
+}
+
+.img1 {
+  background-image: url(../img/image1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+/******************* ALTURAS **************/
+
+li {
+  float: left;
+  list-style: none;
+}
+
+/******************* ENCABEZADOS Y SUBTITULOS *******************/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.sub16,
+.boton {
+  font-family: "Quicksand", sans-serif;
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 50pt;
+  font-weight: 300; /*light*/
+  letter-spacing: 5px;
+}
+h2 {
+  font-size: 24pt;
+  font-weight: 400;
+  letter-spacing: 5px;
+}
+h3 {
+  font-size: 18pt;
+  font-weight: 400; /*regular*/
+  letter-spacing: 1px;
+}
+h4 {
+  font-size: 16pt;
+  font-weight: 500;
+  letter-spacing: 0px;
+}
+h5 {
+  font-size: 12pt;
+  font-weight: 500; /*MEDIUM*/
+  letter-spacing: 0px;
+}
+h6 {
+  font-size: 12pt;
+  font-weight: 700; /*bold*/
+  letter-spacing: 0px;
+}
+.boton {
+  font-size: 12pt;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 2px;
+}
+.sub16 {
+  font-size: 16pt;
+  font-weight: 400;
+  letter-spacing: 5px;
+}
+
+/******************* TEXTO / BOTONES / ANOTACIONES *******************/
+.cuerpo1,
+.sub14,
+.cuerpo2,
+.anotacion {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.cuerpo1 {
+  font-size: 12pt;
+  font-weight: 400;
+  letter-spacing: 0px;
+}
+.cuerpo2 {
+  font-size: 10pt;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.anotacion {
+  font-size: 9pt;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.sub14 {
+  font-size: 10pt;
+  font-weight: 700;
+  letter-spacing: 5px;
+}
+
+.lnh {
+  line-height: 1.4em;
+} /*interlineado oó separación entre líneas de texto*/
+
+.pd10 {
+  padding: 10px;
+}
+
+.md-12 {
+  margin: auto;
+  width: 100%;
+  height: auto;
+  position: relative;
+  float: left;
+  padding: 10px;
+}
+.md-8 {
+  width: 66.6%;
+  float: left;
+  padding: 20px;
+}
+.md-6 {
+  width: 50%;
+  float: left;
+}
+.md-4 {
+  width: 33.3%;
+  float: left;
+  padding: 10px;
+}
+.bbrr {
+  border-bottom-right-radius: 15px;
+  background-color: rgba(128, 128, 128, 1);
+  color: white;
+  float: right;
+  margin-left: 5px;
+  text-align: center;
+}
+.bbrr:hover {
+  background-color: rgba(77, 77, 77, 1);
+}
+.bbrr:active {
+  background-color: rgba(170, 143, 83, 0.6);
+  color: white !important;
+}
+.btlr {
+  border-top-left-radius: 15px;
+  background-color: rgba(128, 128, 128, 1);
+  color: white;
+}
+
+p {
+  padding-top: 20px;
+}
+
+.mb10 {
+  margin-bottom: 10px;
+}
+.cvl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ----------PAGINA 7---------------------*/
+
+/* ----------FIN PAGINA 7---------*/
+
+@media screen and (max-width: 960px) {
+  .container {
+    flex-direction: column;
+  }
+  .cont2 {
+    flex: 2;
+  }
+
+  .md-12,
+  .md-8,
+  .md-4,
+  .md-6,
+  body {
+    width: 100%;
+  }
+}
