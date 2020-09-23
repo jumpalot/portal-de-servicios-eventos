@@ -6,7 +6,7 @@
     include('view/common/navbar.html');
 
     #home o home de empresa
-    if($_GET*['section']=='userHome') 
+    if(@$_GET['section']=='userHome') 
         include('controller/users/userIndex.php');
     else 
         include('controller/public/publicIndex.php');

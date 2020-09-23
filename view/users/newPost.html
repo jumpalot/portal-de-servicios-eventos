@@ -1,0 +1,43 @@
+<script>
+  const lista = new Array(
+    "newServico",
+    "newSalon",
+    "newEvento",
+    "newImagenP",
+    "newTrabajo",
+    "newIdea"
+  );
+  function mostrar() {
+    var tipo = document.getElementById("tipo");
+    var opcion = tipo.options[tipo.selectedIndex];
+    for (lista of publi) document.getElementById(publi).style.display = "none";
+    document.getElementById(opcion.value).style.display = "block";
+  }
+</script>
+<select name="tipo" id="tipo" onchange="mostrar()">
+  <option value="newServicio">Servicio</option>
+  <option value="newSalon">Salón</option>
+  <option value="newEvento">Evento</option>
+  <option value="newImagenP">Imagen Personal</option>
+  <option value="newTrabajo">Trabaja con Nosotros</option>
+  <option value="newIdea">Ideas & Notas</option>
+</select>
+
+<div class="hidden" id="newServicio">
+  Servicio. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+</div>
+<div class="hidden" id="newSalon">
+  Salon. Lorem, ipsum dolor sit amet consectetur adipisicing.
+</div>
+<div class="hidden" id="newEvento">
+  Evento. Lorem ipsum dolor sit amet consectetur.
+</div>
+<div class="hidden" id="newImagenP">
+  Imagen Personal. Lorem ipsum dolor sit amet.
+</div>
+<div class="hidden" id="newTrabajo">
+  Trabaja con nosotros. Lorem ipsum dolor sit amet.
+</div>
+<div class="hidden" id="newIdea">
+  Ideas & Notas. Lorem ipsum dolor sit amet.
+</div>
