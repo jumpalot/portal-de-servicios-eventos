@@ -7,16 +7,6 @@
 
 @import url("https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700|Source+Sans+Pro:400,700");
 
-header,
-.splash {
-  padding: 15px;
-}
-header {
-  height: 70px;
-  width: 100%;
-  background-color: bisque;
-}
-
 .contenedor {
   height: 400px !important;
   width: 100% !important;
