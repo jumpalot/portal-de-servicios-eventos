@@ -7,7 +7,7 @@
     #mostrar carousel
     include('view/public/carousel.php');
 
-    #mostrar banners
+    #mostrar banner
     include('view/public/banners/home.html');
 
     #mostrar quienes somos
