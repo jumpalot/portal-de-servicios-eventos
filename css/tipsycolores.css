@@ -56,9 +56,30 @@
 .fl {
   float: left;
 }
-.container {
+/* .container {
   display: flex;
   flex-direction: row;
+} */
+.detalle {
+  position: relative;
+  /* display: inline-block; */
+}
+h2.regresar {
+  position: absolute;
+  bottom: 71%;
+  left: 3%;
+  letter-spacing: 1px;
+  color: white;
+  z-index: 4;
+}
+img.regresar {
+    position: absolute;
+    bottom: 70%;
+    left: -15px;
+    padding: 0.4em 0.4em 0.4em 1.2em;
+    letter-spacing: 1px;
+    width: 23em;
+    z-index: 3;
 }
 .productos {
   display: flex;
@@ -93,17 +114,25 @@
   display: none;
 }
 
+.flecha {
+  font-size: 30px;
+  color:  rgba(170, 143, 83, 1);
+}
 /******************* COLORES *******************/
 
 body {
   color: dimgray;
   padding: 0;
-  width: 92%;
+  width: 95%;
   max-width: 1650px;
   margin: auto;
 }
 .oro100 {
   background-color: rgba(170, 143, 83, 1);
+  color: white !important;
+}
+.oro80 {
+  background-color: rgba(170, 143, 83, 0.8);
   color: white !important;
 }
 .oro60 {
@@ -167,6 +196,11 @@ body {
   height: 80%;
 }
 
+.crop-333 {
+  object-fit: cover;
+  height: 333px;
+}
+
 .img1 {
   background-image: url(../img/image1.jpg);
   background-size: cover;
@@ -180,6 +214,12 @@ li {
 }
 
 /******************* ENCABEZADOS Y SUBTITULOS *******************/
+.bold {
+  font-weight: 900;
+}
+.fit {
+  font-weight: 200;
+}
 h1,
 h2,
 h3,
@@ -222,11 +262,14 @@ h5 {
   font-size: 12pt;
   font-weight: 500; /*MEDIUM*/
   letter-spacing: 0px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 h6 {
   font-size: 12pt;
   font-weight: 700; /*bold*/
   letter-spacing: 0px;
+  margin-top: 0.5em;
 }
 .boton {
   font-size: 12pt;
@@ -324,9 +367,17 @@ h6 {
 p {
   padding-top: 20px;
 }
-
+.notop{
+  margin-top: 0px;
+}
 .mb10 {
   margin-bottom: 10px;
+}
+.mt10 {
+  margin-top: 10px;
+}
+.mb-min{
+  margin-bottom: 0.1em;
 }
 .cvl {
   display: flex;
@@ -402,9 +453,9 @@ nav ul li a:hover {
 /* ----------FIN PAGINA 7---------*/
 
 @media screen and (max-width: 960px) {
-  .container {
+  /* .container {
     flex-direction: column;
-  }
+  } */
   .cont2 {
     flex: 2;
   }
