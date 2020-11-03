@@ -8,7 +8,7 @@
             include('controller/public/legales/politica_privacidad.html');
         break;
         case 'terminos':
-            include('controller/public/legales/terminos_condiciones');
+            include('controller/public/legales/terminos_condiciones.html');
         break;
         default:
             include('controller/public/home.php');
