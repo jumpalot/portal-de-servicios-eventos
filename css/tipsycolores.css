@@ -420,8 +420,6 @@ header {
   box-sizing: border-box;
 }
 nav {
-  width: 60%;
-  height: 50px;
   background: transparent;
   float: right;
   text-align: right;
