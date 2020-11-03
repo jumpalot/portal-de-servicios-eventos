@@ -7,6 +7,11 @@
 
 @import url("https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700|Source+Sans+Pro:400,700");
 
+.headers,
+.splash {
+  padding: 15px;
+}
+
 .contenedor {
   height: 400px !important;
   width: 100% !important;
@@ -27,7 +32,6 @@
 
 .tits {
   position: absolute !important;
-
   height: 40% !important;
   width: 80% !important;
   padding: 20px !important;
@@ -60,9 +64,19 @@
   display: flex;
   flex-direction: row;
 } */
+.productos {
+  display: flex;
+  flex-direction: row;
+}
 .detalle {
   position: relative;
   /* display: inline-block; */
+}
+.cont1 {
+  flex: 1;
+}
+.cont2 {
+  flex: 2;
 }
 h2.regresar {
   position: absolute;
