@@ -95,6 +95,17 @@ img.regresar {
   width: 23em;
   z-index: 3;
 }
+.lonk {
+  text-decoration: none;
+  color: white;
+  font-weight: 620;
+}
+.lonk:hover {
+  color: #737070;
+}
+.link:hover{
+  color: cadetblue;
+}
 .productos {
   display: flex;
   flex-direction: row;
