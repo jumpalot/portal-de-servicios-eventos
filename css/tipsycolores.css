@@ -563,7 +563,7 @@ nav ul li a:hover {
 }
 .infos {
   z-index: 1;
-  width: 100%;
+  width: -webkit-fill-available;
   height: 35%;
   background-color: rgba(170, 143, 83, 0.9) !important;
 }
