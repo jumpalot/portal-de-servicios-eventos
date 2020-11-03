@@ -103,6 +103,11 @@ img.regresar {
 .lonk:hover {
   color: #737070;
 }
+.link{
+    text-decoration: none;
+      color: #C0BFBF;
+    font-weight: 600;
+}
 .link:hover{
   color: cadetblue;
 }
@@ -559,16 +564,14 @@ nav ul li a:hover {
 .infos {
   z-index: 1;
   width: 100%;
-  height: 40%;
-  max-width: 1500px;
-  text-align: center;
+  height: 35%;
   background-color: rgba(170, 143, 83, 0.9) !important;
 }
 .infos h2 {
   padding-top: 5px;
   font-size: 35px;
   color: #fff;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   letter-spacing: 2px;
 }
 .bannercate {
