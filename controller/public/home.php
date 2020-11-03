@@ -5,7 +5,7 @@
     #variables carousel
     # $img1=...
     #mostrar carousel
-    #include('view/public/carousel.php');
+    include('view/public/carouselHome.html');
 
     #mostrar banner
     include('view/public/banners/home.html');

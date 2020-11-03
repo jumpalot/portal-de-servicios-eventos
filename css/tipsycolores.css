@@ -73,13 +73,13 @@ h2.regresar {
   z-index: 4;
 }
 img.regresar {
-    position: absolute;
-    bottom: 70%;
-    left: -15px;
-    padding: 0.4em 0.4em 0.4em 1.2em;
-    letter-spacing: 1px;
-    width: 23em;
-    z-index: 3;
+  position: absolute;
+  bottom: 70%;
+  left: -15px;
+  padding: 0.4em 0.4em 0.4em 1.2em;
+  letter-spacing: 1px;
+  width: 23em;
+  z-index: 3;
 }
 .productos {
   display: flex;
@@ -116,7 +116,7 @@ img.regresar {
 
 .flecha {
   font-size: 30px;
-  color:  rgba(170, 143, 83, 1);
+  color: rgba(170, 143, 83, 1);
 }
 /******************* COLORES *******************/
 
@@ -367,7 +367,7 @@ h6 {
 p {
   padding-top: 20px;
 }
-.notop{
+.notop {
   margin-top: 0px;
 }
 .mb10 {
@@ -376,7 +376,7 @@ p {
 .mt10 {
   margin-top: 10px;
 }
-.mb-min{
+.mb-min {
   margin-bottom: 0.1em;
 }
 .cvl {
@@ -446,6 +446,130 @@ nav ul li a:hover {
   background: white;
   font-family: Quicksand;
   padding-top: -10px;
+}
+
+/*  ------------HOME----------------      */
+
+.banner {
+  width: 100%;
+  height: 550px;
+  animation: banner 20s infinite alternate;
+  background-size: 100% 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+@keyframes banner {
+  0%,
+  20% {
+    background-image: url(../img/gal039.jpg);
+  }
+  25%,
+  50% {
+    background-image: url(../img/gal010.jpg);
+  }
+  55%,
+  75% {
+    background-image: url(../img/gal016.jpg);
+  }
+  80%,
+  100% {
+    background-image: url(../img/gal035.jpg);
+  }
+}
+.capa {
+  width: 100%;
+  height: 200%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.info {
+  z-index: 1;
+  width: 100%;
+  height: 25%;
+  max-width: 1500px;
+  text-align: center;
+  background-color: rgba(170, 143, 83, 0.9) !important;
+}
+
+.info h2 {
+  padding-top: 5px;
+  font-size: 35px;
+  color: #fff;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+.selects {
+  padding-top: -10px;
+  color: #737070;
+  font-size: 20px;
+  border-radius: 2px;
+  border-color: #797070;
+  letter-spacing: 2px;
+  position: flex;
+}
+.colorcombo {
+  color: #737070;
+  font-size: 17px;
+}
+.botonbusqueda {
+  font-size: 15pt;
+  width: 20%;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1px;
+  background-color: grey;
+  border-radius: 20px;
+  border: none;
+  padding: 5px 5px;
+}
+.bannercat {
+  width: 100%;
+  height: 200px;
+  background-image: url(../img/promo.jpg);
+  background-size: 100% 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.infos {
+  z-index: 1;
+  width: 100%;
+  height: 40%;
+  max-width: 1500px;
+  text-align: center;
+  background-color: rgba(170, 143, 83, 0.9) !important;
+}
+.infos h2 {
+  padding-top: 5px;
+  font-size: 35px;
+  color: #fff;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+.bannercate {
+  width: 100%;
+  height: 200px;
+  background-image: url(../img/20170508174130-fiesta-oficina.jpEg);
+  background-size: 100% 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.escrit {
+  color: #c1a152;
+  font-family: Quicksand;
+}
+.escrits {
+  font-family: Quicksand;
+  color: #c1a152;
+  font-size: 55px;
+}
+.parrafos {
+  font-family: Quicksand;
+  color: gray;
+  font-size: 20px;
 }
 
 /* ----------PAGINA 7---------------------*/
