@@ -1,5 +1,5 @@
 <?php
-    if(@$_SESSION['loggedIn']){
+    if($loggedIn){
         switch(@$_GET['subSection']){
             case 'new':  
                 include('view/users/newPost.html');
@@ -12,5 +12,5 @@
                 include('view/users/userHome.html');
         }
         
-    } else include('view/users/logIn.html');
+    } else header('Location: ./login/');
 ?>
