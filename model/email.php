@@ -35,7 +35,7 @@
         global $db;
         $sql = "SELECT code FROM verificaciones WHERE email='$email'";
         if($db->query($sql)->fetch_object()->code == $codigo){
-            $db->query("DELETE * FROM verificaciones WHERE email='$email'");
+            $db->query("DELETE FROM verificaciones WHERE email='$email'");
             return 'true';
         } return 'false';
     }
