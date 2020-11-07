@@ -1,6 +1,13 @@
 <?php
     function sendMail($destinatario,$asunto,$cuerpo){
-        mail($destinatario,$asunto,$cuerpo,"From:portaldeeventos@us-imm-node5c.000webhost.io");
+        mail(
+            $destinatario,
+            $asunto,
+            $cuerpo,
+            'MIME-Version: 1.0' . "\r\n".
+            'Content-type: text/html; charset=iso-8859-1' . "\r\n".
+            "From:portaldeeventos@us-imm-node5c.000webhost.io"
+        );
     }
     function generarCodigo() {
         $pattern = '1234567890ABCDEFGHIJKLOPQRSTUVWXYZ';
