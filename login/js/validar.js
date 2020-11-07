@@ -15,11 +15,11 @@ function mostrarLogin() {
 function registro() {
   $('#verifmail')[0].style.display = "block";
   $('#regi')[0].style.display = "none";
-  $.post("../model/accounts/emailverify.php");
+  $.post("../model/accounts/emailverify.php", { email: $('#email').val() });
 }
 function verificar(){
   $.post(
-    "../model/accounts/emailverify.php",  { code: $("#code").val() },
+    "../model/accounts/emailverify.php",  { code: $("#code").val(), email: $('#email').val() },
     (msg) => {              
         if(msg=='true') window.locationf="../";
         else $("#failcode")[0].style.display="block";
