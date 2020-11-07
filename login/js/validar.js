@@ -19,7 +19,7 @@ function registro() {
 }
 function verificar(){
   $.post(
-    "../model/accounts/emailverify.php",  { code: $("#code").val() },
+    "../model/accounts/emailverify.php",  { code: $("#code").val(), email: $('#email').val() },
     (msg) => {              
         if(msg=='true') window.locationf="../";
         else $("#failcode")[0].style.display="block";
