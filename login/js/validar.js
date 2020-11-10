@@ -22,10 +22,10 @@ function registro() {
     $.post(
       "../model/accounts/register.php", $('form#regi').serialize(),
       (msg) => {    
-        if(msg=='noverif') $("#failcode")[1].style.display="block";
+        if(msg=='noverif') $("#failverif")[0].style.display="block";
         else if(msg=='noreg') {
           $('#regi1')[0].style.display = "block";
-          $("#failcode")[0].style.display="block";
+          $("#failreg")[0].style.display="block";
         }
         else window.location="../?auth="+msg;
       }
