@@ -33,3 +33,12 @@ function registro() {
     return false;
   }
 }
+function login(){
+  $.post(
+      "../model/accounts/login.php", $('form#login').serialize(),
+      (msg) => {    
+        if(msg=='noverif') $("#loginfail")[0].style.display="block";
+        else window.location="../?auth="+msg;
+      }
+    );
+}

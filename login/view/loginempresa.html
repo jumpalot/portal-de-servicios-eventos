@@ -1,17 +1,18 @@
 <div id="login">
-    <form name="login" class="formulario" method="POST">
+    <form id="login" class="formulario" onsubmit="login(); return false">
     
         <h4 class="h1">Inicia sesion</h4>
+        <h4 class="hidden" id="loginfail" style="color: brown;">Error al iniciar sesion. Verifique sus datos.</h4>
         <div class="contenedors">
         
             <div class="input-contenedor">
                 <i class="fas fa-envelope icon"></i>
-                <input type="text" placeholder="Correo Electronico" required="">
+                <input type="email" placeholder="Correo Electronico" name="email" required>
             </div>
             
             <div class="input-contenedor">
                 <i class="fas fa-key icon"></i>
-                <input type="password" placeholder="Contraseña" required="">         
+                <input type="password" placeholder="Contraseña" name="pass" required>         
             </div>
             <input type="submit" value="Ingresa" class="button">
             <!-- <div class="g-signin2 button" data-onsuccess="onSignIn"></div> -->

@@ -18,4 +18,14 @@
         }
         return 'noreg';
     }
+    function login($email, $pass){
+        global $db;
+        if(validemail($email)){
+            $pass = md5($pass);
+            $sql = "SELECT id_usuarios As id FROM usuarios WHERE correo='$email' AND pass='$pass'";
+            $res = $db->query($sql);
+            if($db->error=="") return $res->fetch_object()->id;
+        }
+        return 'noverif';
+    }
 ?>
