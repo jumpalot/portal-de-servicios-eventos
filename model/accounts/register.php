@@ -10,5 +10,5 @@
                @$_POST['fb'],   @$_POST['tw'],  @$_POST['ig'],  @$_POST['web']
             );
         } else echo 'noverif';                                                    //si no verifica lo aviso
-    } else enviarCodigo($_POST['email']);                                       //si no me enviaron un codigo lo envio
+    } else echo enviarCodigo($_POST['email']);                                    //si no me enviaron un codigo lo envio
 ?>

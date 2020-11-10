@@ -1,6 +1,6 @@
 <?php
     function sendMail($destinatario,$asunto,$cuerpo){
-        mail(
+        return mail(
             $destinatario,
             $asunto,
             $cuerpo,
@@ -24,14 +24,15 @@
                     ON DUPLICATE KEY UPDATE code='$codigo'";
             $db->query($sql);
             if($db->error=="")
-                sendMail(
+                echo sendMail(
                     $email,
                     "Codigo de verificación",
                     "<h5>Su código de verificación es:</h5>
                     <h2 style=\"color:#007bff\">$codigo</h2>
                     <h6>Si no solicito esto, descarte este mensaje</h6>"
                 );
-        }
+            else return $db->error;
+        } else return 'email invalido';
     }
     function verificarCodigo($codigo, $email){
         global $db;
