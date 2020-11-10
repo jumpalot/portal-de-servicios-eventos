@@ -1,12 +1,9 @@
 <?php
     session_start();
-    if(@$_GET['auth']==true){
+    if(@$_GET['auth']){
         $_SESSION['loggedIn'] = true;
         $loggedIn = true;
-        $profileimg = @$_POST['profpic'];
-        $profilenom = @$_POST['nom'];
-    } else if(@$_GET['auth']=='reg'){
-        
+        $_SESSION['usrId'] = $_GET['auth'];
     } else {
         $loggedIn = @$_SESSION['loggedIn'];
     }

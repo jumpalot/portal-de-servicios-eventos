@@ -30,8 +30,8 @@
         </li>
         <li class="nav-item">
           <?php if ($loggedIn): ?>
-            <img src="<?=$profileimg?>" class="rounded-circle">
-            <a href="./?section=userHome" class="nav-links"><?=$profilenom?></a>
+            <!-- <img src="" class="rounded-circle"> -->
+            <a href="./?section=userHome" class="nav-links"><?=$usuario->nombre?></a>
           <?php else: ?>
             <a class="nav-links" href="./login">
               <svg
