@@ -17,6 +17,6 @@
                (!$ig|preg_match("/@([A-Za-z0-9_]{3,16})/", $ig)) ;
     }
     function validweb($web){
-        return preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i", $web);
+        return (!$web|preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i", $web));
     }
 ?>
