@@ -10,7 +10,7 @@
             ($ig?"'$ig'":'null') .','.
             ($web?"'$web'":'null'); 
 
-        if (validemail($email)&validname($name)&validtel($tel)&validmedia($fb, $tw, $ig)&validweb($web)){ //validacion de datos
+        if (validemail($email)&&validname($name)&&validtel($tel)&&validmedia($fb, $tw, $ig)&&validweb($web)){ //validacion de datos
             $sql = "INSERT INTO `usuarios`(`nombre`, `pass`, `telefono`, `correo`, `fb`, `tw`, `ig`, `web`)
                     VALUES ('$name','$pass','$tel','$email', $opcionales)";
             $db->query($sql);
@@ -24,7 +24,7 @@
             $pass = md5($pass);
             $sql = "SELECT id_usuarios As id FROM usuarios WHERE correo='$email' AND pass='$pass'";
             $res = $db->query($sql);
-            if($db->error=="") return $res->fetch_object()->id;
+            if($db->error=="" && $res->num_rows>0) return $res->fetch_object()->id;
         }
         return 'noverif';
     }
