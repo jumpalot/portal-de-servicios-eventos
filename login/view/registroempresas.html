@@ -1,63 +1,55 @@
-    <div id="regi" class="hidden">
-    
-    <h4 class="h1">Registrate</h4>
-    <div class="contenedors">
-     
-        <div class="input-contenedor">
-            <i class="fas fa-user icon"></i>
-            <input type="text" placeholder="Nombre de la Empresa" name="name" required>
+<div id="regi" class="hidden">
+    <form id="regi" class="formulario" method="POST" action="./register.php" onsubmit="return registro()">
+        <h4 class="h1">Registrate</h4>
+        <div id="regi1" class="contenedors">
+            <h4 class="hidden" id="failcode" style="color: brown;">Ocurrio un error en el registro. Verifique sus datos.</h4>
+            <div class="input-contenedor">
+                <i class="fas fa-user icon"></i>
+                <input type="text" placeholder="Nombre de la Empresa" name="name" required>
+            </div>           
+            <div class="input-contenedor">
+                <i class="fas fa-envelope icon"></i>
+                <input type="email" placeholder="Correo Electronico" id="email" name="email" required>
+            </div>
+            <div class="input-contenedor">
+                <i class="fas fa-mobile icon"></i>
+                <input type="tel" placeholder="Numero telefonico" name="tel" required>   
+            </div>
+            <div class="input-contenedor">
+                <i class="fab fa-facebook icon"></i>
+                <input type="text" placeholder="Usuario de facebook (opcional)" name="fb">  
+            </div>
+            <div class="input-contenedor">
+                <i class="fab fa-instagram icon"></i>
+                <input type="text" placeholder="Usuario de instagram (opcional)" name="ig"> 
+            </div>
+            <div class="input-contenedor">
+                    <i class="fab fa-twitter-square icon"></i>
+                <input type="text" placeholder="Usuario de twitter (opcional)" name="tw">  
+            </div>
+            <div class="input-contenedor">
+                <i class="fas fa-sitemap icon"></i>
+                <input type="text" placeholder="pagina web (opcional)" name="web" pattern="(?:[(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))?"> 
+            </div>  
+            <div class="input-contenedor">
+                <i class="fas fa-key icon"></i>
+                <input type="password" placeholder="Contraseña" name="pass" required>  
+            </div>
+            <input type="submit" value="Registrate" class="button">
+            <p class="p">Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</p>
+            <p class="p">¿Ya tienes una cuenta? <a class="link" onclick="mostrarLogin()">Iniciar Sesion</a></p>
         </div>
-        
-        <div class="input-contenedor">
-            <i class="fas fa-envelope icon"></i>
-            <input type="text" placeholder="Correo Electronico" id="email" name="email" required>
+        <div id="verifmail" class="container hidden">
+            <h3 class="p">Verificación</h3>
+            <h4>Enviamos un codigo de verificación a tu correo</h4>
+            <h4>Introducelo para completar el registro</h4>
+            <div class="input-contenedor">
+                <i class="fas fa-key icon"></i>
+                <input type="text" placeholder="Codigo" id="code" pattern="(?:[A-Z0-9]{6})?">
+            </div>
+            <input type="submit" value="Verificar" class="button">
+            <h4 class="hidden" id="failcode" style="color: brown;">Codigo Incorrecto</h4>
         </div>
-        <div class="input-contenedor">
-            <i class="fas fa-mobile icon"></i>
-            <input type="text" placeholder="Numero telefonico" name="tel" required>
-        
-        </div>
-        <div class="input-contenedor">
-            <i class="fab fa-facebook icon"></i>
-            <input type="text" placeholder="Usuario de facebook (opcional)" name="fb">
-        
-        </div>
-        <div class="input-contenedor">
-            <i class="fab fa-instagram icon"></i>
-            <input type="text" placeholder="Usuario de instagram (opcional)" name="ig">
-        
-        </div>
-        <div class="input-contenedor">
-                <i class="fab fa-twitter-square icon"></i>
-            <input type="text" placeholder="Usuario de twitter (opcional)" name="tw">
-        
-        </div>
-        <div class="input-contenedor">
-            <i class="fas fa-sitemap icon"></i>
-            <input type="text" placeholder="pagina web (opcional)" name="web">
-        
-        </div>
-        
-        <div class="input-contenedor">
-            <i class="fas fa-key icon"></i>
-            <input type="password" placeholder="Contraseña" name="pass" required>
-        
-        </div>
-        <input type="button" value="Registrate" class="button" onclick="registro()">
-        <p class="p">Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</p>
-        <p class="p">¿Ya tienes una cuenta? <a class="link" onclick="mostrarLogin()">Iniciar Sesion</a></p>
-    </div>
-</div>
-    <div id="verifmail" class="container hidden">
-        <h4 class="h1">Verificación</h4>
-         <h4>Enviamos un codigo de verificación a tu correo</h4>
-         <h4>Introducelo para completar el registro</h4>
-         <div class="input-contenedor">
-             <i class="fas fa-key icon"></i>
-             <input type="text" placeholder="Codigo" id="code" pattern="[A-Z0-9]{6}">
-         </div>
-         <input type="button" value="Verificar" class="button" onclick="verificar()">
-         <h4 class="hidden" id="failcode" style="color: brown;">Codigo Incorrecto</h4>
-     </div>
     </form>
+</div>
     <br><br><br><br>
