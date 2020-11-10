@@ -38,10 +38,14 @@
         global $db;
         if(validcode($codigo) & validemail($email)){
             $sql = "SELECT code FROM verificaciones WHERE email='$email'";
-            if($db->query($sql)->fetch_object()->code == $codigo){
-                $db->query("DELETE FROM verificaciones WHERE email='$email'");
-                return 'true';
-            }    
+            $res = $db->query($sql);
+            if($db->error==""){
+                $res = $res->fetch_object();
+                if($res->code == $codigo){
+                    $db->query("DELETE FROM verificaciones WHERE email='$email'");
+                    return 'true';
+                }    
+            }
         }
         return 'false';
     }
