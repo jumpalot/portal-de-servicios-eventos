@@ -13,16 +13,23 @@ function mostrarLogin() {
   $("#regi")[0].style.display = "none";
 }
 function registro() {
-  $('#verifmail')[0].style.display = "block";
-  $('#regi')[0].style.display = "none";
-  $.post("../model/accounts/emailverify.php", { email: $('#email').val() });
-}
-function verificar(){
-  $.post(
-    "../model/accounts/emailverify.php",  { code: $("#code").val(), email: $('#email').val() },
-    (msg) => {              
-        if(msg=='true') window.location="../";
-        else $("#failcode")[0].style.display="block";
-    }
-  );
+  if($('#regi1')[0].style.display != "none"){
+    $('#verifmail')[0].style.display = "block";
+    $('#regi1')[0].style.display = "none";
+    $.post("../model/accounts/register.php", { email: $('#email').val() });
+    return false;
+  } else {
+    $.post(
+      "../model/accounts/register.php", $('form#regi').serialize(),
+      (msg) => {    
+        if(msg=='noverif') $("#failcode")[1].style.display="block";
+        else if(msg=='noreg') {
+          $('#regi1')[0].style.display = "block";
+          $("#failcode")[0].style.display="block";
+        }
+        else window.location="../?auth="+msg;
+      }
+    );
+    return false;
+  }
 }
