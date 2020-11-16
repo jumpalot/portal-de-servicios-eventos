@@ -12,6 +12,10 @@
   padding: 15px;
 }
 
+.block {
+  display: block;
+}
+
 .contenedor {
   height: 400px !important;
   width: 100% !important;
@@ -689,6 +693,79 @@ input[type="tel"] {
     border-radius: 2%;
   }
 }
+
+/* ----------- FOOTER -------------------*/
+footer{
+	
+	width: 100%;
+	max-width: 1980px;
+	background-color:white;
+	color:#c8bfa4;
+	
+}
+footer *{
+	margin: 0px;
+	padding:0px;
+	box-sizing: border-box;
+	font-family: sans-serif; 
+}
+footer .container-body{
+	display: flex;
+}
+footer .control{
+	display: flex;
+	width:100%;
+}
+footer .columna3{
+  display: flex;
+  float: right;
+	margin: 120px 0px 0px auto;
+}
+footer h1#fcorreos {
+	font-size:18px; 
+}
+footer h2#fredes {
+	font-size:12px; 
+  letter-spacing: 2px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+footer .columna1{
+	font-size: 10px;
+	margin:auto;
+}
+footer .columna2{
+	font-size: 10px;
+	margin:auto;
+}
+footer .redesicono{
+	display: flex;
+}
+footer .columnaportal{
+  margin:100px 0 20px 50px;
+  float: left;
+}
+footer .inCorreos input[type="text"]{
+	font-size: 20px;
+}
+footer a:link{
+	color:#c8bfa4;
+}
+footer a:visited {
+	color:#c8bfa4;
+}
+footer a:active {
+	color:#c8bfa4;
+}
+footer a:hover{
+	color:#c8bfa4;
+}
+input[type="submit"]#fsnews{
+	font-size: 20PX;
+	color:gray;
+	border-radius:8px;
+}
+footer A {text-decoration: none;}
 
 /* ----------PAGINA 7---------------------*/
 
