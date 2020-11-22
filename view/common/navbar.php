@@ -42,7 +42,7 @@
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="#">Nueva publicacion</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Cerrar Sesion</a>
+                  <a class="dropdown-item" href="./?logout=1">Cerrar Sesion</a>
           </div>
             </div>
           <?php else: ?>
