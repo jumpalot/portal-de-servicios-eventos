@@ -27,7 +27,7 @@ function registro() {
           $('#regi1')[0].style.display = "block";
           $("#failreg")[0].style.display="block";
         }
-        else window.location="../?auth="+msg;
+        else window.location="https://elportaldeeventos.000webhostapp.com/";
       }
     );
     return false;

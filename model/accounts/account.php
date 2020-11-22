@@ -24,7 +24,12 @@
             $pass = md5($pass);
             $sql = "SELECT id_usuarios As id FROM usuarios WHERE correo='$email' AND pass='$pass'";
             $res = $db->query($sql);
-            if($db->error=="" && $res->num_rows>0) return $res->fetch_object()->id;
+            if($db->error=="" && $res->num_rows>0) {
+                session_start();
+                $_SESSION['loggedIn'] = true;
+                $_SESSION['usrId'] = $res->fetch_object()->id;
+                return 'verificado';
+            }
         }
         return 'noverif';
     }
