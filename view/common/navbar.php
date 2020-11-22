@@ -35,15 +35,16 @@
                 <button type="button" class="btn btn-light dropdown-toggle"
                   data-toggle="dropdown">
                 </button>
-                  <ul class="dropdown-menu" role="menu">
-                  <li><a href="#">Perfil</a></li>
-                  <li><a href="#">Mis Publicaciones</a></li>
-                  <li><a href="#">Nueva publicacion</a></li>
-                  <li class="divider"></li>
-                  <li><a href="#">Cerrar Sesion</a></li>
-                  </ul>
+                  <div class="dropdown-menu" role="menu">
+                  <a class="dropdown-item" href="#">Perfil</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Mis Publicaciones</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Nueva publicacion</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Cerrar Sesion</a>
+          </div>
             </div>
-            <!-- <img src="" class="rounded-circle"> -->
           <?php else: ?>
             <a class="nav-links" href="./login">
               <svg

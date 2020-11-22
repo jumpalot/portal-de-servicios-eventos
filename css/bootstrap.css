@@ -3442,6 +3442,7 @@ input[type="button"].btn-block {
 
 .dropdown-menu.show {
   display: block;
+  padding: 1em;
 }
 
 .dropdown-header {
@@ -3508,6 +3509,8 @@ input[type="button"].btn-block {
 .btn-group > .btn-group:not(:last-child) > .btn {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
+  padding-left: 1em;
+  margin-left: 1em;
 }
 
 .btn-group > .btn:not(:first-child),
