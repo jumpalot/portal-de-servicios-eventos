@@ -38,7 +38,7 @@ function login(){
       "../model/accounts/login.php", $('form#login').serialize(),
       (msg) => {    
         if(msg=='noverif') $("#loginfail")[0].style.display="block";
-        else window.location="../?auth="+msg;
+        else window.location="https://elportaldeeventos.000webhostapp.com/";
       }
     );
 }
