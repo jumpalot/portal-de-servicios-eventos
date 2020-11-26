@@ -705,6 +705,7 @@ input[type="tel"] {
 }
 .modal-footer button[type="submit"]{
   background-color:rgba(170, 143, 83, 0.6);
+  border-color: white;
 }
 
 /* ----------- FOOTER -------------------*/
