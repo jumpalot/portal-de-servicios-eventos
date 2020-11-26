@@ -9,7 +9,7 @@ const listaTPublis = new Array(
 );
 function mostrarNewPost2() {
     var tipo = document.getElementById("tipo");
-    var opcion = tipo.options[tipo.selectedIndex];
+    var opcion = tipo.$("#zonasSalon")[0][tipo.selectedIndex];
     for (publi of listaTPublis) {
         var pub = document.getElementById(publi);
         if (pub!=null)
@@ -33,7 +33,7 @@ function inicializarSelects(id){
                         options.add(option);
                     }
                 });
-                options.selectpicker('refresh');
+                $("#zonasServicio")[0].selectpicker('refresh');
             })
             $.post("/model/publis/getTiposServicio.php", zonas => {
                 var options = $("#tiposServicio")[0].options
@@ -44,7 +44,7 @@ function inicializarSelects(id){
                         options.add(option);
                     }
                 });
-                options.selectpicker('refresh');
+                $("#tiposServicio")[0].selectpicker('refresh');
             })
             break;
         case "newSalon":
@@ -57,7 +57,7 @@ function inicializarSelects(id){
                         options.add(option);
                     }
                 });
-                options.selectpicker('refresh');
+                $("#zonasSalon")[0].selectpicker('refresh');
             })
             $.post("/model/publis/getTiposSalon.php", zonas => {
                 var options = $("#tiposSalon")[0].options
@@ -68,7 +68,7 @@ function inicializarSelects(id){
                         options.add(option);
                     }
                 });
-                options.selectpicker('refresh');
+                $("#tiposSalon")[0].selectpicker('refresh');
             })
             $.post("/model/publis/getEspacios.php", zonas => {
                 var options = $("#espacios")[0].options
@@ -79,7 +79,7 @@ function inicializarSelects(id){
                         options.add(option);
                     }
                 });
-                options.selectpicker('refresh');
+                $("#espacios")[0].selectpicker('refresh');
             })
             $.post("/model/publis/getlServicios.php", zonas => {
                 var options = $("#servicios")[0].options
@@ -90,7 +90,7 @@ function inicializarSelects(id){
                         options.add(option);
                     }
                 });
-                options.selectpicker('refresh');
+                $("#servicios")[0].selectpicker('refresh');
             })
             break;
         case "newEvento":
