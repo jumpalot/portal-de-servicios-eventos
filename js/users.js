@@ -12,3 +12,6 @@ function mostrarNewPost2() {
     for (listaTPublis of publi) document.getElementById(publi).style.display = "none";
     document.getElementById(opcion.value).style.display = "block";
 }
+function newPost(){
+    return false;
+}

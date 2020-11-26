@@ -1,45 +1,46 @@
-<div class="modal fade" id="newPostModal" tabindex="-1" aria-labelledby="newPostModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="newPostModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <select name="tipo" id="tipo" onchange="mostrar()">
-          <option value="newServicio">Servicio</option>
-          <option value="newSalon">Salón</option>
-          <option value="newEvento">Evento</option>
-          <option value="newImagenP">Imagen Personal</option>
-          <option value="newTrabajo">Trabaja con Nosotros</option>
-          <option value="newIdea">Ideas & Notas</option>
-        </select>
+<form action="." method="post" onsubmit="return newPost()">
 
-        <div class="hidden" id="newServicio">
-          Servicio. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+  <div class="modal fade" id="newPostModal" tabindex="-1" aria-labelledby="newPostModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="newPostModalLabel">Modal title</h5>
         </div>
-        <div class="hidden" id="newSalon">
-          Salon. Lorem, ipsum dolor sit amet consectetur adipisicing.
+        <div class="modal-body">
+          <select name="tipo" id="tipo" onchange="mostrar()">
+            <option value="newServicio">Servicio</option>
+            <option value="newSalon">Salón</option>
+            <option value="newEvento">Evento</option>
+            <option value="newImagenP">Imagen Personal</option>
+            <option value="newTrabajo">Trabaja con Nosotros</option>
+            <option value="newIdea">Ideas & Notas</option>
+          </select>
+          
+          <div class="hidden" id="newServicio">
+            Servicio. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </div>
+          <div class="hidden" id="newSalon">
+            Salon. Lorem, ipsum dolor sit amet consectetur adipisicing.
+          </div>
+          <div class="hidden" id="newEvento">
+            Evento. Lorem ipsum dolor sit amet consectetur.
+          </div>
+          <div class="hidden" id="newImagenP">
+            Imagen Personal. Lorem ipsum dolor sit amet.
+          </div>
+          <div class="hidden" id="newTrabajo">
+            Trabaja con nosotros. Lorem ipsum dolor sit amet.
+          </div>
+          <div class="hidden" id="newIdea">
+            Ideas & Notas. Lorem ipsum dolor sit amet.
+          </div>
         </div>
-        <div class="hidden" id="newEvento">
-          Evento. Lorem ipsum dolor sit amet consectetur.
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          <button type="submit" class="btn btn-primary">Subir publicación</button>
         </div>
-        <div class="hidden" id="newImagenP">
-          Imagen Personal. Lorem ipsum dolor sit amet.
-        </div>
-        <div class="hidden" id="newTrabajo">
-          Trabaja con nosotros. Lorem ipsum dolor sit amet.
-        </div>
-        <div class="hidden" id="newIdea">
-          Ideas & Notas. Lorem ipsum dolor sit amet.
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>
-</div>
+  
+</form>
