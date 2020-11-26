@@ -7,6 +7,12 @@
           <h3 class="modal-title" id="newPostModalLabel">Nueva publicación</h3>
         </div>
         <div class="modal-body">
+          <div class="input-contenedor">
+            <input type="text" placeholder="Nombre" name="nom" pattern="[a-zA-Z0-9]{5,20}" required> 
+          </div>
+          <div class="input-contenedor">
+            <textarea name="desc" cols="60" rows="10" class="form-control" required></textarea>
+          </div>
           <select class="custom-select" name="tipo" id="tipo" onchange="mostrarNewPost2()">
             <option value="" selected disabled hidden>Seleccione el tipo de publicación</option>
             <option value="newServicio">Servicio</option>
