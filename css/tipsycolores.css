@@ -700,6 +700,10 @@ input[type="tel"] {
 .modal-body input{
   width: 100%;
 }
+.modal-body select{
+  width: max-content;
+  margin: 1em;
+}
 
 /* ----------- FOOTER -------------------*/
 footer{
