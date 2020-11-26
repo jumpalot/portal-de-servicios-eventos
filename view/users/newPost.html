@@ -13,8 +13,7 @@
           <div class="input-contenedor">
             <textarea name="desc" cols="60" rows="10" class="form-control" placeholder="Descripción" required></textarea>
           </div>
-          <select class="selectpicker" name="tipo" id="tipo" onchange="mostrarNewPost2()">
-            <option value="" selected disabled hidden>Seleccione el tipo de publicación</option>
+          <select class="selectpicker" name="tipo" id="tipo" title="Seleccione el tipo de publicación" onchange="mostrarNewPost2()">
             <option value="newServicio">Servicio</option>
             <option value="newSalon">Salón</option>
             <option value="newEvento">Evento</option>
@@ -24,11 +23,9 @@
           </select>
           
           <div class="hidden" id="newServicio">
-            <select class="selectpicker" name="zonaServicio" id="zonasServicio" data-live-search="true" required>
-              <option value="" selected disabled hidden>Seleccione la zona donde se brinda su servicio</option>
+            <select class="selectpicker" title="Seleccione la zona donde se brinda su servicio" name="zonaServicio" id="zonasServicio" data-live-search="true" required>
             </select>
-            <select class="selectpicker" name="tipoServicio" id="tiposServicio" data-live-search="true" required>
-              <option value="" selected disabled hidden>Seleccione la opcion que mas se ajuste a su servicio</option>
+            <select class="selectpicker" name="tipoServicio" id="tiposServicio" data-live-search="true" title="Seleccione la opcion que mas se ajuste a su servicio" required>
             </select>
           </div>
           
@@ -36,17 +33,13 @@
             <div class="input-contenedor">
               <input type="text" placeholder="Capacidad de personas" name="cap" pattern="[0-9]{1,7}" required> 
             </div>
-            <select class="selectpicker" name="zonasSalon" id="zonasSalon" data-live-search="true" required>
-              <option value="" selected disabled hidden>Seleccione la zona donde se ubiuca su salon</option>
+            <select class="selectpicker" name="zonasSalon" id="zonasSalon" data-live-search="true" title="Seleccione la zona donde se ubiuca su salon" required>
             </select>
-            <select class="selectpicker" name="tipoSalon" id="tiposSalon" data-live-search="true" required>
-              <option value="" selected disabled hidden>Seleccione la opcion que mas se ajuste a su salon</option>
+            <select class="selectpicker" name="tipoSalon" id="tiposSalon" data-live-search="true" title="Seleccione la opcion que mas se ajuste a su salon" required>
             </select>
-            <select class="selectpicker" name="espacios" id="espacios" multiple data-live-search="true" required>
-              <option value="" selected disabled hidden>Busque espacios disponibles en su salon</option>
+            <select class="selectpicker" name="espacios" id="espacios" multiple data-live-search="true" title="Busque espacios disponibles en su salon" required>
             </select>
-            <select class="selectpicker" name="servicios" id="servicios" multiple data-live-search="true" required>
-              <option value="" selected disabled hidden>Busque servicios ofrecidos en su salon</option>
+            <select class="selectpicker" name="servicios" id="servicios" multiple data-live-search="true" title="Busque servicios ofrecidos en su salon" required>
             </select>
           </div>
           <div class="hidden" id="newEvento">
