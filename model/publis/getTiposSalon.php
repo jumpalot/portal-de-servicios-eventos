@@ -4,6 +4,6 @@
     $tsalons = $db->query($sql);
     if ($db->error=="")
         foreach ($tsalons as $tsalon):
-            echo $tsalon[0].','.$tsalon[1].';';
+            echo $tsalon["id_tiposalon"].','.$tsalon["nombre"].';';
         endforeach;
 ?>

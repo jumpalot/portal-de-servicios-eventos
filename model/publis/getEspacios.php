@@ -4,6 +4,6 @@
     $espacios = $db->query($sql);
     if ($db->error=="")
         foreach ($espacios as $espacio):
-            echo $espacio[0].','.$espacio[1].';';
+            echo $espacio['id_espacios'].','.$espacio['nombre'].';';
         endforeach;
 ?>

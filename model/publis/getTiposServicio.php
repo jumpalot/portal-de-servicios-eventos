@@ -4,6 +4,6 @@
     $servicios = $db->query($sql);
     if ($db->error=="")
         foreach ($servicios as $servicio):
-            echo $servicio[0].','.$servicio[1].';';
+            echo $servicio['id_tiposervicio'].','.$servicio['nombre'].';';
         endforeach;
 ?>

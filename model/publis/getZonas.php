@@ -4,6 +4,6 @@
     $zonas = $db->query($sql);
     if ($db->error=="")
         foreach ($zonas as $zona):
-            echo $zona[0].','.$zona[1].';';
+            echo $zona['id_zona'].','.$zona['zona'].';';
         endforeach;
         
