@@ -33,7 +33,7 @@ function inicializarSelects(id){
                         options.add(option);
                     }
                 });
-                options.selectpicker('render');
+                options.selectpicker('refresh');
             })
             $.post("/model/publis/getTiposServicio.php", zonas => {
                 var options = $("#tiposServicio")[0].options
@@ -44,7 +44,7 @@ function inicializarSelects(id){
                         options.add(option);
                     }
                 });
-                options.selectpicker('render');
+                options.selectpicker('refresh');
             })
             break;
         case "newSalon":
@@ -57,7 +57,7 @@ function inicializarSelects(id){
                         options.add(option);
                     }
                 });
-                options.selectpicker('render');
+                options.selectpicker('refresh');
             })
             $.post("/model/publis/getTiposSalon.php", zonas => {
                 var options = $("#tiposSalon")[0].options
@@ -68,7 +68,7 @@ function inicializarSelects(id){
                         options.add(option);
                     }
                 });
-                options.selectpicker('render');
+                options.selectpicker('refresh');
             })
             $.post("/model/publis/getEspacios.php", zonas => {
                 var options = $("#espacios")[0].options
@@ -79,7 +79,7 @@ function inicializarSelects(id){
                         options.add(option);
                     }
                 });
-                options.selectpicker('render');
+                options.selectpicker('refresh');
             })
             $.post("/model/publis/getlServicios.php", zonas => {
                 var options = $("#servicios")[0].options
@@ -90,7 +90,7 @@ function inicializarSelects(id){
                         options.add(option);
                     }
                 });
-                options.selectpicker('render');
+                options.selectpicker('refresh');
             })
             break;
         case "newEvento":
