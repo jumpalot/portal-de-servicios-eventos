@@ -19,6 +19,7 @@ const addOptions = (csvOptions, id) => {
     csvOptions.split(";").forEach(opt => addOption(options, opt));
     $(id).selectpicker('refresh');
 }
+const isEmpty = id => $(id)[0].options.length<2
 function mostrarNewPost2() {
     var tipo = document.getElementById("tipo");
     var opcion = tipo.options[tipo.selectedIndex];
@@ -36,14 +37,18 @@ function newPost(){
 function inicializarSelects(id){
     switch (id){
         case "newServicio":
-            $.post("/model/publis/getZonas.php",         zonas => addOptions(zonas, "#zonasServicio"))
-            $.post("/model/publis/getTiposServicio.php", tiposS => addOptions(tiposS, "#tiposServicio"))
+            if (isEmpty("#zonasServicio")){
+                $.post("/model/publis/getZonas.php",         zonas => addOptions(zonas, "#zonasServicio"))
+                $.post("/model/publis/getTiposServicio.php", tiposS => addOptions(tiposS, "#tiposServicio"))
+            }
             break;
         case "newSalon":
-            $.post("/model/publis/getZonas.php",         zonas => addOptions(zonas, "#zonasSalon"))
-            $.post("/model/publis/getTiposSalon.php",    tiposS => addOptions(tiposS, "#tiposSalon"))
-            $.post("/model/publis/getEspacios.php",      espacios => addOptions(espacios, "#espacios"))
-            $.post("/model/publis/getlServicios.php",    servicios => addOptions(servicios, "#servicios"))
+            if (isEmpty("#zonasSalon")){
+                $.post("/model/publis/getZonas.php",         zonas => addOptions(zonas, "#zonasSalon"))
+                $.post("/model/publis/getTiposSalon.php",    tiposS => addOptions(tiposS, "#tiposSalon"))
+                $.post("/model/publis/getEspacios.php",      espacios => addOptions(espacios, "#espacios"))
+                $.post("/model/publis/getlServicios.php",    servicios => addOptions(servicios, "#servicios"))
+            }
             break;
         case "newEvento":
 
