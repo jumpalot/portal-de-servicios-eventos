@@ -7,7 +7,7 @@ const listaTPublis = new Array(
     "newTrabajo",
     "newIdea"
 );
-const addOption = msg => {
+const addOption = (options, msg) => {
     if (msg!=""){
         var option = document.createElement("option");
         [option.value, option.text] = msg.split(",");
@@ -16,7 +16,7 @@ const addOption = msg => {
 }
 const addOptions = (csvOptions, id) => {
     var options = $(id)[0].options
-    csvOptions.split(";").forEach(addOption);
+    csvOptions.split(";").forEach(opt => addOption(options, opt));
     $(id)[0].selectpicker('refresh');
 }
 function mostrarNewPost2() {
