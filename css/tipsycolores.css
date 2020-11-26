@@ -696,6 +696,11 @@ input[type="tel"] {
   }
 }
 
+/* MODALS */
+.modal-body input{
+  width: 100%;
+}
+
 /* ----------- FOOTER -------------------*/
 footer{
 	
