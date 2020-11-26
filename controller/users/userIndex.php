@@ -1,16 +1,9 @@
-<?php
-    if($loggedIn){
-        switch(@$_GET['subSection']){
-            case 'new':  
-                include('view/users/newPost.html');
-                break;
-            case 'settings':
-                break;
-            case 'vip':
-                break;
-            default:
-                include('view/users/userHome.html');
-        }
-        
-    } else header('Location: ./login/');
+<?php 
+    if ($loggedIn):
+        echo '<script src="js/users.js"></script>';
+        include 'view/users/navuser.html';
+        include 'controller/users/modals.php';
+    else:
+        include 'view/users/navanonym.html';
+    endif;
 ?>
