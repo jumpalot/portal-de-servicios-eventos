@@ -26,17 +26,21 @@ function inicializarSelects(id){
             $.post("/model/publis/getZonas.php", zonas => {
                 var options = $("#zonasServicio")[0].options
                 zonas.split(";").forEach(zona => {
-                    var option = document.createElement("option");
-                    [option.value, option.text] = zona.split(",");
-                    options.add(option);
+                    if (zona!=""){
+                        var option = document.createElement("option");
+                        [option.value, option.text] = zona.split(",");
+                        options.add(option);
+                    }
                 });
             })
             $.post("/model/publis/getTiposServicio.php", zonas => {
                 var options = $("#tiposServicio")[0].options
                 zonas.split(";").forEach(zona => {
-                    var option = document.createElement("option");
-                    [option.value, option.text] = zona.split(",");
-                    options.add(option);
+                    if (zona!=""){
+                        var option = document.createElement("option");
+                        [option.value, option.text] = zona.split(",");
+                        options.add(option);
+                    }
                 });
             })
             break;
@@ -44,33 +48,41 @@ function inicializarSelects(id){
             $.post("/model/publis/getZonas.php", zonas => {
                 var options = $("#zonasSalon")[0].options
                 zonas.split(";").forEach(zona => {
-                    var option = document.createElement("option");
-                    [option.value, option.text] = zona.split(",");
-                    options.add(option);
+                    if (zona!=""){
+                        var option = document.createElement("option");
+                        [option.value, option.text] = zona.split(",");
+                        options.add(option);
+                    }
                 });
             })
             $.post("/model/publis/getTiposSalon.php", zonas => {
                 var options = $("#tiposSalon")[0].options
                 zonas.split(";").forEach(zona => {
-                    var option = document.createElement("option");
-                    [option.value, option.text] = zona.split(",");
-                    options.add(option);
+                    if (zona!=""){
+                        var option = document.createElement("option");
+                        [option.value, option.text] = zona.split(",");
+                        options.add(option);
+                    }
                 });
             })
             $.post("/model/publis/getEspacios.php", zonas => {
                 var options = $("#espacios")[0].options
                 zonas.split(";").forEach(zona => {
-                    var option = document.createElement("option");
-                    [option.value, option.text] = zona.split(",");
-                    options.add(option);
+                    if (zona!=""){
+                        var option = document.createElement("option");
+                        [option.value, option.text] = zona.split(",");
+                        options.add(option);
+                    }
                 });
             })
             $.post("/model/publis/getlServicios.php", zonas => {
                 var options = $("#servicios")[0].options
                 zonas.split(";").forEach(zona => {
-                    var option = document.createElement("option");
-                    [option.value, option.text] = zona.split(",");
-                    options.add(option);
+                    if (zona!=""){
+                        var option = document.createElement("option");
+                        [option.value, option.text] = zona.split(",");
+                        options.add(option);
+                    }
                 });
             })
             break;
