@@ -15,7 +15,9 @@
 .block {
   display: block;
 }
-
+a {
+  cursor: pointer;
+}
 .contenedor {
   height: 400px !important;
   width: 100% !important;
