@@ -7,7 +7,8 @@
           <h3 class="modal-title" id="newPostModalLabel">Nueva publicación</h3>
         </div>
         <div class="modal-body">
-          <select name="tipo" id="tipo" onchange="mostrar()">
+          <select class="custom-select" name="tipo" id="tipo" onchange="mostrar()">
+            <option value="" selected disabled hidden>Seleccione el tipo de publicación</option>
             <option value="newServicio">Servicio</option>
             <option value="newSalon">Salón</option>
             <option value="newEvento">Evento</option>
