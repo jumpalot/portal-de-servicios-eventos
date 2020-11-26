@@ -1,3 +1,4 @@
+$.fn.selectpicker.Constructor.BootstrapVersion = '4';
 const listaTPublis = new Array(
     "newServicio",
     "newSalon",
@@ -32,6 +33,7 @@ function inicializarSelects(id){
                         options.add(option);
                     }
                 });
+                options.selectpicker('render');
             })
             $.post("/model/publis/getTiposServicio.php", zonas => {
                 var options = $("#tiposServicio")[0].options
@@ -42,6 +44,7 @@ function inicializarSelects(id){
                         options.add(option);
                     }
                 });
+                options.selectpicker('render');
             })
             break;
         case "newSalon":
@@ -54,6 +57,7 @@ function inicializarSelects(id){
                         options.add(option);
                     }
                 });
+                options.selectpicker('render');
             })
             $.post("/model/publis/getTiposSalon.php", zonas => {
                 var options = $("#tiposSalon")[0].options
@@ -64,6 +68,7 @@ function inicializarSelects(id){
                         options.add(option);
                     }
                 });
+                options.selectpicker('render');
             })
             $.post("/model/publis/getEspacios.php", zonas => {
                 var options = $("#espacios")[0].options
@@ -74,6 +79,7 @@ function inicializarSelects(id){
                         options.add(option);
                     }
                 });
+                options.selectpicker('render');
             })
             $.post("/model/publis/getlServicios.php", zonas => {
                 var options = $("#servicios")[0].options
@@ -84,6 +90,7 @@ function inicializarSelects(id){
                         options.add(option);
                     }
                 });
+                options.selectpicker('render');
             })
             break;
         case "newEvento":
