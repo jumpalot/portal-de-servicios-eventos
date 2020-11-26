@@ -21,7 +21,7 @@ const addOptions = (csvOptions, id) => {
 }
 function mostrarNewPost2() {
     var tipo = document.getElementById("tipo");
-    var opcion = tipo.$("#zonasSalon")[0][tipo.selectedIndex];
+    var opcion = tipo.options[tipo.selectedIndex];
     for (publi of listaTPublis) {
         var pub = document.getElementById(publi);
         if (pub!=null)
