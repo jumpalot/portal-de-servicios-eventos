@@ -703,6 +703,9 @@ input[type="tel"] {
 .modal-body select{
   margin: 1em;
 }
+.modal-footer button[type="submit"]{
+  background-color:rgba(170, 143, 83, 0.6);
+}
 
 /* ----------- FOOTER -------------------*/
 footer{
