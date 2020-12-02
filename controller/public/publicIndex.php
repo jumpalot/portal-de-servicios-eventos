@@ -10,6 +10,10 @@
         case 'terminos':
             include('view/public/legales/terminos_condiciones.html');
         break;
+        case 'promos':
+            include('view/public/minisearch.html');
+            include('view/public/Promociones.html');
+        break;
         default:
             include('controller/public/home.php');
     }
