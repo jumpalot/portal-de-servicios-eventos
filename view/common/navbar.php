@@ -20,7 +20,7 @@
           <a class="nav-link" href="#">Categorias </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Salones</a>
+          <a class="nav-link" href="./?section=salones">Salones</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Imagen personal</a>
