@@ -1,4 +1,5 @@
 $.fn.selectpicker.Constructor.BootstrapVersion = '4';
+$("div#my-awesome-dropzone").dropzone({ url: "/file/post" });
 const listaTPublis = new Array(
     "newServicio",
     "newSalon",
