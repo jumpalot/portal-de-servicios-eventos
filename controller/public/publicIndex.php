@@ -14,6 +14,10 @@
             include('view/public/minisearch.html');
             include('view/public/Promociones.html');
         break;
+        case 'salones':
+            include('view/public/minisearch.html');
+            include('view/public/Salones.html');
+        break;
         default:
             include('controller/public/home.php');
     }
