@@ -1,5 +1,5 @@
 <?php
     include 'view/users/profile.html';
-    include 'view/users/newPost.html';
+    include 'controller/users/newPost.php';
     include 'view/users/mypubs.html';
 ?>
