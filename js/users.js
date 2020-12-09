@@ -70,7 +70,7 @@ function inicializarSelects(id){
     }
 }
 
-$('#newPostModal').on('show.bs.modal', function (event) {
+$('#newPostModal').on('show.bs.modal', (event) => {
     $("#formDropZone").append(
         "<form id='dZUpload' class='dropzone borde-dropzone'>"+
             "<div class='dz-default dz-message'>"+
@@ -80,7 +80,7 @@ $('#newPostModal').on('show.bs.modal', function (event) {
         "</form>"
     );
     let dzOptions = {
-        url: "model/fotos/setFotos.php",
+        url: "model/publis/fotos/setFotos.php",
         addRemoveLinks: true,
         paramName: "fotos",
         maxFilesize: 20, // MB
@@ -103,6 +103,6 @@ $('#newPostModal').on('show.bs.modal', function (event) {
         
     });
 });
-$('#newPostModal').on('hidden.bs.modal', function (event) {
+$('#newPostModal').on('hidden.bs.modal', (event) => {
   $("#formDropZone").empty();
 });
