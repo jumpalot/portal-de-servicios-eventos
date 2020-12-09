@@ -70,7 +70,7 @@ function inicializarSelects(id){
     }
 }
 
-$('#mdlArchivos').on('show.bs.modal', function (event) {
+$('#newPostModal').on('show.bs.modal', function (event) {
     $("#formDropZone").append(
         "<form id='dZUpload' class='dropzone borde-dropzone'>"+
             "<div class='dz-default dz-message'>"+
@@ -103,6 +103,6 @@ $('#mdlArchivos').on('show.bs.modal', function (event) {
         
     });
 });
-$('#mdlArchivos').on('hidden.bs.modal', function (event) {
+$('#newPostModal').on('hidden.bs.modal', function (event) {
   $("#formDropZone").empty();
 });
