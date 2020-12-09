@@ -1,5 +1,41 @@
 $(document).ready(()=>{
     $.fn.selectpicker.Constructor.BootstrapVersion = '4';
+    $('#newPostModal').on('show.bs.modal', (event) => {
+    $("#formDropZone").append(
+        "<form id='dZUpload' class='dropzone borde-dropzone'>"+
+            "<div class='dz-default dz-message'>"+
+                "<span><h2>Arrastra las fotos de tu publicación aquí</h2></span><br>"+
+                "<p>(o Clic para seleccionar)</p>"+
+            "</div>"+
+        "</form>"
+    );
+    let dzOptions = {
+        url: "model/publis/fotos/setFotos.php",
+        addRemoveLinks: true,
+        paramName: "fotos",
+        maxFilesize: 20, // MB
+        dictRemoveFile: "Remover",
+        params: {
+            idUsu:$("input#idUsu").val(),
+            tipoPub:$("select#tipo").val()
+        },
+        success: function (file, response) {
+            var imgName = response;
+            file.previewElement.classList.add("dz-success");
+            console.log("Successfully uploaded :" + imgName);
+        },
+        error: function (file, response) {
+            file.previewElement.classList.add("dz-error");
+        }
+    }
+    let myDropzone = new Dropzone("#dZUpload", dzOptions); 
+    myDropzone.on("complete", function(file,response) {
+        
+    });
+});
+$('#newPostModal').on('hidden.bs.modal', (event) => {
+  $("#formDropZone").empty();
+});
 });
 const listaTPublis = new Array(
     "newServicio",
@@ -69,40 +105,3 @@ function inicializarSelects(id){
             break;
     }
 }
-
-$('#newPostModal').on('show.bs.modal', (event) => {
-    $("#formDropZone").append(
-        "<form id='dZUpload' class='dropzone borde-dropzone'>"+
-            "<div class='dz-default dz-message'>"+
-                "<span><h2>Arrastra las fotos de tu publicación aquí</h2></span><br>"+
-                "<p>(o Clic para seleccionar)</p>"+
-            "</div>"+
-        "</form>"
-    );
-    let dzOptions = {
-        url: "model/publis/fotos/setFotos.php",
-        addRemoveLinks: true,
-        paramName: "fotos",
-        maxFilesize: 20, // MB
-        dictRemoveFile: "Remover",
-        params: {
-            idUsu:$("input#idUsu").val(),
-            tipoPub:$("select#tipo").val()
-        },
-        success: function (file, response) {
-            var imgName = response;
-            file.previewElement.classList.add("dz-success");
-            console.log("Successfully uploaded :" + imgName);
-        },
-        error: function (file, response) {
-            file.previewElement.classList.add("dz-error");
-        }
-    }
-    let myDropzone = new Dropzone("#dZUpload", dzOptions); 
-    myDropzone.on("complete", function(file,response) {
-        
-    });
-});
-$('#newPostModal').on('hidden.bs.modal', (event) => {
-  $("#formDropZone").empty();
-});
