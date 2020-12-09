@@ -781,6 +781,14 @@ input[type="submit"]#fsnews{
 }
 footer A {text-decoration: none;}
 
+/* ------------- NEW POST -----------------*/
+.borde-dropzone{
+  border: 2px dashed #47a447 !important;
+  border-radius: 5px !important;
+  background: white !important;
+  cursor: pointer;
+}
+
 /* ----------PAGINA 7---------------------*/
 
 /* ----------FIN PAGINA 7---------*/

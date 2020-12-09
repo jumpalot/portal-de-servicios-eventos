@@ -1,5 +1,6 @@
-$.fn.selectpicker.Constructor.BootstrapVersion = '4';
-$("div#my-awesome-dropzone").dropzone({ url: "/file/post" });
+$(document).ready(()=>{
+    $.fn.selectpicker.Constructor.BootstrapVersion = '4';
+});
 const listaTPublis = new Array(
     "newServicio",
     "newSalon",
@@ -33,7 +34,10 @@ function mostrarNewPost2() {
     inicializarSelects(opcion.value);
 }
 function newPost(){
-    return false;
+    $.post('./model/publis/addPost.php', $("form#np").serialize(), (res)=>{
+        $('div#result').html(res);
+        $('div#resultModal').modal('show');
+    });
 }
 function inicializarSelects(id){
     switch (id){
@@ -65,3 +69,40 @@ function inicializarSelects(id){
             break;
     }
 }
+
+$('#mdlArchivos').on('show.bs.modal', function (event) {
+    $("#formDropZone").append(
+        "<form id='dZUpload' class='dropzone borde-dropzone'>"+
+            "<div class='dz-default dz-message'>"+
+                "<span><h2>Arrastra las fotos de tu publicación aquí</h2></span><br>"+
+                "<p>(o Clic para seleccionar)</p>"+
+            "</div>"+
+        "</form>"
+    );
+    let dzOptions = {
+        url: "model/fotos/setFotos.php",
+        addRemoveLinks: true,
+        paramName: "fotos",
+        maxFilesize: 20, // MB
+        dictRemoveFile: "Remover",
+        params: {
+            idUsu:$("input#idUsu").val(),
+            tipoPub:$("select#tipo").val()
+        },
+        success: function (file, response) {
+            var imgName = response;
+            file.previewElement.classList.add("dz-success");
+            console.log("Successfully uploaded :" + imgName);
+        },
+        error: function (file, response) {
+            file.previewElement.classList.add("dz-error");
+        }
+    }
+    let myDropzone = new Dropzone("#dZUpload", dzOptions); 
+    myDropzone.on("complete", function(file,response) {
+        
+    });
+});
+$('#mdlArchivos').on('hidden.bs.modal', function (event) {
+  $("#formDropZone").empty();
+});

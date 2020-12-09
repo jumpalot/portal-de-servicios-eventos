@@ -14,7 +14,7 @@
     include('view/users/newPost/np-evento.html');
 
     //permito cargar fotos
-    include('view/users/newPost/np-dropzone.html');
+    include('view/users/newPost/np-dropzone.php');
 
     //finalizo el modal
     include('view/users/newPost/np-footer.html');
