@@ -5,6 +5,4 @@
 
     if ($loggedIn) $usuario = getUsuario($_SESSION['usrId']);
 
-    include('model/email.php');
-
 ?>
