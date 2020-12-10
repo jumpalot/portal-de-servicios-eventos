@@ -25,11 +25,11 @@
 
             // send mail
             $mailer->Send();
-            return true;
+            return "";
         } catch (Exception $e) {
-            
+            echo 'Mailer Error: ' . $mailer->ErrorInfo;
         }
-        return false;
+        return "fallo desconocido";
     }
     function generarCodigo() {
         $pattern = '1234567890ABCDEFGHIJKLOPQRSTUVWXYZ';
