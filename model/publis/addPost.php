@@ -17,6 +17,10 @@
                 if($idServicio!=null) {
                     addServicioImgs($idServicio, $archivos);
                     mvImgCache($archivos, $dir);
+                } else {
+                    echo '<h3 style="text-align:center"> No se pudo subir su publicacion</h3>';
+                    rmImgCache($archivos, $dir);
+                    exit;
                 }
             break;
             case "newSalon":
@@ -31,6 +35,10 @@
                     addEspaciosSalon($espacios, $idSalon);
                     addServiciosSalon($servicios, $idSalon);
                     mvImgCache($archivos, $dir);
+                } else {
+                    echo '<h3 style="text-align:center"> No se pudo subir su publicacion</h3>';
+                    rmImgCache($archivos, $dir);
+                    exit;
                 }
             break;
             default:
