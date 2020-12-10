@@ -19,13 +19,22 @@ $(document).ready(()=>{
             idUsu:$("input#idUsu").val(),
             tipoPub:$("select#tipo").val()
         },
-        success: function (file, response) {
+        success: (file, response) => {
             var imgName = response;
             file.previewElement.classList.add("dz-success");
             console.log("Successfully uploaded :" + imgName);
         },
-        error: function (file, response) {
+        error: (file, response) => {
             file.previewElement.classList.add("dz-error");
+        },
+        removedfile: (file) =>{
+            var foto = file.name; 
+            $.post("model/publis/fotos/rmFoto.php", {
+                foto: foto, 
+                idUsu:$("input#idUsu").val()
+            });
+            var _ref;
+            return (_ref = file.previewElement) != null ? _ref.parentNode.removeChild(file.previewElement) : void 0;
         }
     }
     let myDropzone = new Dropzone("#dZUpload", dzOptions); 
