@@ -1,6 +1,6 @@
 <?php
     function getImgCache($dir){
-        return scandir($dir);
+        return array_slice(scandir($dir),2);
     }
     function mvImgCache($archivos, $dir){
         foreach ($archivos as $archivo)
