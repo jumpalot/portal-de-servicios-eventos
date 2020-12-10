@@ -5,7 +5,7 @@
             $asunto,
             $cuerpo,
             'MIME-Version: 1.0' . "\r\n".
-            'Content-type: text/html; charset=iso-8859-1' . "\r\n".
+            'Content-Type: text/html; charset=UTF-8'. "\r\n".
             "From:portaldeeventos@us-imm-node5c.000webhost.io"
         );
     }
