@@ -1,13 +1,35 @@
 <?php
+    require_once('../../vendor/autoload.php');
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\Exception;
     function sendMail($destinatario,$asunto,$cuerpo){
-        return mail(
-            $destinatario,
-            $asunto,
-            $cuerpo,
-            'MIME-Version: 1.0' . "\r\n".
-            'Content-Type: text/html; charset=UTF-8'. "\r\n".
-            "From:portaldeeventos@us-imm-node5c.000webhost.io"
-        );
+        $mailer = new PHPMailer(true);
+        try {
+            // Configure PHPMailer
+            $mailer->isSMTP();
+            $mailer->SMTPAuth = true;
+            $mailer->SMTPSecure='STARTTLS';
+            $mailer->Port = 587;
+
+            // Configure SMTP Server
+            $mailer->Host = 'smtp.office365.com';
+            $mailer->Username = 'portalservicioseventos@outlook.com';
+            $mailer->Password = 'zcU.L^H]2e5=&Y52';
+
+            // Configure Email
+            $mailer->setFrom('portalservicioseventos@outlook.com', 'El Portal de Eventos');
+            $mailer->addAddress($destinatario);
+            $mailer->Subject = $asunto;
+            $mailer->Body = $cuerpo;
+            $mailer->isHTML(true);
+
+            // send mail
+            $mailer->Send();
+            return true;
+        } catch (Exception $e) {
+            
+        }
+        return false;
     }
     function generarCodigo() {
         $pattern = '1234567890ABCDEFGHIJKLOPQRSTUVWXYZ';
