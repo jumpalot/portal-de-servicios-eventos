@@ -12,7 +12,7 @@
         switch($tipo){
             case "newServicio":
                 $zonaServicio = $_POST['zonaServicio'];
-                $tiposServicio = $_POST['tiposServicio'];
+                $tiposServicio = $_POST['tipoServicio'];
                 $idServicio = addServicio($nom, $desc, $zonaServicio, $tiposServicio, $idUsu);
                 if($idServicio!=null) {
                     addServicioImgs($idServicio, $archivos);
