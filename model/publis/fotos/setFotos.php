@@ -3,6 +3,7 @@
     $idUsu = $_REQUEST['idUsu'];
     $tipoPub = $_REQUEST['tipoPub'];
     $dir_subida = "../../../img/$idUsu/cache/";
+    mkdir($dir_subida, 0777, true);
     $nomArchivo = basename($_FILES['fotos']['name']);
     $fichero_subido = $dir_subida . $nomArchivo;
     echo '<pre>';
