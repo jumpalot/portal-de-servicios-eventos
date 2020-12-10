@@ -32,9 +32,9 @@
     }
     function addServiciosSalon($servicios, $idSalon){
         global $db;
-        $sql = "INSERT INTO salon_espacio(id_espacios, id_salon) VALUES";
+        $sql = "INSERT INTO salon_lservicio(id_salon, id_lservicio) VALUES";
         foreach ($servicios as $servicio) 
-            $sql .= " ('$servicio', '$idSalon'),";
+            $sql .= " ('$idSalon', '$servicio'),";
         $sql = substr($sql, 0, -1);
         $db->query($sql);
     }
