@@ -1,6 +1,6 @@
 <?php
     function validemail($email){
-        return preg_match("/^[a-zA-Z0-9\-_]{3,20}@[a-zA-Z]{2,10}\.[a-zA-Z\.]{2,8}$/", $email);
+        return preg_match("/^[a-zA-Z0-9\-_.]{3,20}@[a-zA-Z]{2,10}\.[a-zA-Z\.]{2,8}$/", $email);
     }
     function validcode($code){
         return preg_match("/^[A-Z0-9]{6}$/", $code);
