@@ -22,6 +22,7 @@
             $mailer->Subject = $asunto;
             $mailer->Body = $cuerpo;
             $mailer->isHTML(true);
+            $mailer->CharSet = 'UTF-8';
 
             // send mail
             $mailer->Send();
