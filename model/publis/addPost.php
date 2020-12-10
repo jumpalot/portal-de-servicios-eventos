@@ -31,7 +31,7 @@
                 $servicios = $_POST['servicios'];
                 $idSalon = addSalon($nom, $desc, $cap, $zonasSalon, $tipoSalon, $idUsu);
                 if($idSalon!=null){
-                    addServicioImgs($idSalon, $archivos);
+                    addSalonImgs($idSalon, $archivos);
                     addEspaciosSalon($espacios, $idSalon);
                     addServiciosSalon($servicios, $idSalon);
                     mvImgCache($archivos, $dir);
