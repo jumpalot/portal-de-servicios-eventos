@@ -14,7 +14,10 @@
                 $zonaServicio = $_POST['zonaServicio'];
                 $tiposServicio = $_POST['tiposServicio'];
                 $idServicio = addServicio($nom, $desc, $zonaServicio, $tiposServicio, $idUsu);
-                if($idServicio!=null) addServicioImgs($idServicio, $archivos);
+                if($idServicio!=null) {
+                    addServicioImgs($idServicio, $archivos);
+                    mvImgCache($archivos, $dir);
+                }
             break;
             case "newSalon":
                 $cap = $_POST['cap'];
@@ -27,13 +30,14 @@
                     addServicioImgs($idSalon, $archivos);
                     addEspaciosSalon($espacios, $idSalon);
                     addServiciosSalon($servicios, $idSalon);
+                    mvImgCache($archivos, $dir);
                 }
             break;
             default:
-                echo '<h1> No se pudo subir su publicacion</h1>';
+                echo '<h3 style="text-align:center"> No se pudo subir su publicacion</h3>';
                 rmImgCache($archivos, $dir);
                 exit;
         }
-        echo '<h1> La Publicación se subio correctamente. Puede comprar mejoras para su publicación desde "Mis Publicaciones" </h1>';
+        echo '<h3 style="text-align:center"> La Publicación se subio correctamente. <br> Puede comprar mejoras para su publicación desde "Mis Publicaciones" </h3>';
     }
 ?>
