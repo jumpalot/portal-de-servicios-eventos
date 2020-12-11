@@ -14,7 +14,7 @@
             } else include('view/users/listPost/free.php');
         endwhile; 
     }
-    include('../../models/db.php');
+    include('../../model/db.php');
     session_start();
     $usrId = $_SESSION['usrId'];
     [$servicios, $salones] = getPublis($usrId);
