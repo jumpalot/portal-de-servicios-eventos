@@ -4,7 +4,7 @@
             //bind
             $zona = $pub->zona;
             $titulo = $pub->nombre;
-            $desc = substr($pub->descripcion, 0, 250).'...';
+            $desc = strip_tags($pub->descripcion);
             $pubId = $pub->id;
             //imagen y mostrar segun nivel
             if($pub->nivel>0){
