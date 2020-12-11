@@ -10,4 +10,9 @@
         foreach ($archivos as $archivo)
             unlink($dir.$archivo);
     }
+    function getFotoP($dir){
+        $archivos = getImgCache($dir);
+        if(count($archivos)>0) return $archivos[0];
+        return 'null';
+    }
 ?>
