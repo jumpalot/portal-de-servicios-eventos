@@ -1,50 +1,53 @@
 $(document).ready(()=>{
     $.fn.selectpicker.Constructor.BootstrapVersion = '4';
-    $('#newPostModal').on('show.bs.modal', (event) => {
-    $("#formDropZone").append(
-        "<form id='dZUpload' class='dropzone borde-dropzone'>"+
-            "<div class='dz-default dz-message'>"+
-                "<span><h2>Arrastra las fotos de tu publicación aquí</h2></span><br>"+
-                "<p>(o Clic para seleccionar)</p>"+
-            "</div>"+
-        "</form>"
-    );
-    let dzOptions = {
-        url: "model/publis/fotos/setFotos.php",
-        addRemoveLinks: true,
-        paramName: "fotos",
-        maxFilesize: 20, // MB
-        dictRemoveFile: "Remover",
-        params: {
-            idUsu:$("input#idUsu").val(),
-            tipoPub:$("select#tipo").val()
-        },
-        success: (file, response) => {
-            var imgName = response;
-            file.previewElement.classList.add("dz-success");
-            console.log("Successfully uploaded :" + imgName);
-        },
-        error: (file, response) => {
-            file.previewElement.classList.add("dz-error");
-        },
-        removedfile: (file) =>{
-            var foto = file.name; 
-            $.post("model/publis/fotos/rmFoto.php", {
-                foto: foto, 
-                idUsu:$("input#idUsu").val()
-            });
-            var _ref;
-            return (_ref = file.previewElement) != null ? _ref.parentNode.removeChild(file.previewElement) : void 0;
+    $('#newPostModal').on('show.bs.modal', event => {
+        $("#formDropZone").append(
+            "<form id='dZUpload' class='dropzone borde-dropzone'>"+
+                "<div class='dz-default dz-message'>"+
+                    "<span><h2>Arrastra las fotos de tu publicación aquí</h2></span><br>"+
+                    "<p>(o Clic para seleccionar)</p>"+
+                "</div>"+
+            "</form>"
+        );
+        let dzOptions = {
+            url: "model/publis/fotos/setFotos.php",
+            addRemoveLinks: true,
+            paramName: "fotos",
+            maxFilesize: 20, // MB
+            dictRemoveFile: "Remover",
+            params: {
+                idUsu:$("input#idUsu").val(),
+                tipoPub:$("select#tipo").val()
+            },
+            success: (file, response) => {
+                var imgName = response;
+                file.previewElement.classList.add("dz-success");
+                console.log("Successfully uploaded :" + imgName);
+            },
+            error: (file, response) => {
+                file.previewElement.classList.add("dz-error");
+            },
+            removedfile: file => {
+                var foto = file.name; 
+                $.post("model/publis/fotos/rmFoto.php", {
+                    foto: foto, 
+                    idUsu:$("input#idUsu").val()
+                });
+                var _ref;
+                return (_ref = file.previewElement) != null ? _ref.parentNode.removeChild(file.previewElement) : void 0;
+            }
         }
-    }
-    let myDropzone = new Dropzone("#dZUpload", dzOptions); 
-    myDropzone.on("complete", function(file,response) {
-        
+        let myDropzone = new Dropzone("#dZUpload", dzOptions); 
+        myDropzone.on("complete", function(file,response) {
+
+        });
     });
-});
-$('#newPostModal').on('hidden.bs.modal', (event) => {
-  $("#formDropZone").empty();
-});
+    $('#newPostModal').on('hidden.bs.modal', event => {
+        $("#formDropZone").empty();
+    });
+    $("#myPubsModal").on('show.bs.modal', event => {
+        $.post('model/publis/getPosts.php', msg => $("#mispublis").html(msg));
+    });
 });
 const listaTPublis = new Array(
     "newServicio",

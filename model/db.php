@@ -54,6 +54,50 @@
         $sql = substr($sql, 0, -1);
         $db->query($sql);
     }
+    function getSalones($id=null){
+        global $db;
+        $sql = "SELECT 
+                    salon.id_salon AS id,
+                    salon.nombre AS nombre,
+                    salon.descripcion AS descripcion,
+                    salon.capacidad as capacidad,
+                    salon.nivel as nivel,
+                    zonas.zona as zona,
+                    tiposalon.nombre as tipo,
+                    fotosSalon.foto as foto
+                FROM salon
+                NATURAL LEFT JOIN zonas
+                LEFT JOIN tiposalon 
+                    ON salon.id_tiposalon=tiposalon.id_tiposalon
+                LEFT JOIN fotosSalon 
+                    ON salon.id_fotoPrincipal=fotosSalon.id_fotos 
+                    AND salon.id_salon=fotosSalon.id_salon";
+        if(@$id) $sql .= " WHERE salon.id_usuario='$id'";
+        return $db->query($sql);
+    }
+    function getServicios($id=null){
+        global $db;
+        $sql = "SELECT 
+                    servicios.id_servicios AS id,
+                    servicios.nombre AS nombre,
+                    servicios.descripcion AS descripcion,
+                    servicios.nivel as nivel,
+                    zonas.zona as zona,
+                    tiposervicio.nombre as tipo,
+                    fotosServicios.foto as foto
+                FROM servicios
+                NATURAL LEFT JOIN zonas
+                LEFT JOIN tiposervicio
+                    ON servicios.id_tiposervicio = tiposervicio.id_tiposervicio
+                LEFT JOIN fotosServicios 
+                    ON servicios.id_fotoPrincipal=fotosServicios.id_fotos 
+                    AND servicios.id_servicios=fotosServicios.id_servicios";
+        if (@$id) $sql .= " WHERE servicios.id_usuario='$id'";
+        return $db->query($sql);
+    }
+    function getPublis($id){
+        return [getServicios($id), getSalones($id)];
+    }
     //$db = new mysqli('localhost','root','usbw','id14864471_portal');
     $db = new mysqli('localhost','id14864471_elportaldeservicioseventos','zcU.L^H]2e5=&Y52','id14864471_portal');
 ?>

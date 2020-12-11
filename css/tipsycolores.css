@@ -641,7 +641,18 @@ input[type="tel"] {
 }
 .input-contenedor {
   margin-bottom: 15px;
-  border: 1px solid #aaa;
+  border-top-left-radius: 40px;
+
+  border:2px solid rgba(170,143,83,1);
+  width: 100%;
+  background:rgba(170,147,80,1.1); 
+  z-index: 1;
+  color: white;
+}
+.input-contenedorp{
+    margin-bottom: 15px;
+    border:2px solid rgba(170,143,83,1);
+    width: 100%;
 }
 .input-contenedors {
   margin-bottom: 15px;
