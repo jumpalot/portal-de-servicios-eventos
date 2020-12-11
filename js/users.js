@@ -46,7 +46,7 @@ $(document).ready(()=>{
         $("#formDropZone").empty();
     });
     $("#myPubsModal").on('show.bs.modal', event => {
-        $.post('model/publis/getPosts.php', msg => $("#mispublis").html(msg));
+        $.post('controller/users/getPosts.php', msg => $("#mispublis").html(msg));
     });
 });
 const listaTPublis = new Array(
