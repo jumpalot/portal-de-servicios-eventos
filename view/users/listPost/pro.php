@@ -1,4 +1,4 @@
-<div class="productos br  input-contenedor">
+<div class="productos br  input-contenedor-pro">
         <div class="cont2 pd10">
             <p class="cuerpo2">
                 <i class="fas fa-map-marker-alt"></i><?=$zona?>

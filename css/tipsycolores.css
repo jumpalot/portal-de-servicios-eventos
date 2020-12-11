@@ -641,15 +641,18 @@ input[type="tel"] {
 }
 .input-contenedor {
   margin-bottom: 15px;
+  border: 1px solid #aaa;
+}
+.input-contenedor-pro {
+  margin-bottom: 15px;
   border-top-left-radius: 40px;
-
   border:2px solid rgba(170,143,83,1);
   width: 100%;
   background:rgba(170,147,80,1.1); 
   z-index: 1;
   color: white;
 }
-.input-contenedorp{
+.input-contenedor-basic{
     margin-bottom: 15px;
     border:2px solid rgba(170,143,83,1);
     width: 100%;
