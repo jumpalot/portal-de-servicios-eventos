@@ -129,7 +129,7 @@ function editarPub(id){
         )
     $('#editPubModal').modal('show');
 }
-function editToMyPubs {
+function editToMyPubs() {
     $('#editPubModal').modal('hide');
     $('#myPubsModal').modal('show');
 }
