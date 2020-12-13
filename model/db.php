@@ -98,10 +98,17 @@
     function getPublis($id){
         return [getServicios($id), getSalones($id)];
     }
+    function getFotosPubli($tipo, $idPub) {
+        global $db;
+        $uctipo = ucfirst($tipo);
+        $sql = "SELECT foto FROM fotos$uctipo WHERE id_$tipo=$idPub";
+        $db->query($sql);
+    }
     function rmPubli($tipo, $idPub, $idUsu){
         global $db;
         $sql = "DELETE FROM $tipo WHERE id_$tipo=$idPub AND id_usuario=$idUsu";
         $db->query($sql);
+        return $db->affected_rows>0;
     }
     //$db = new mysqli('localhost','root','usbw','id14864471_portal');
     $db = new mysqli('localhost','id14864471_elportaldeservicioseventos','zcU.L^H]2e5=&Y52','id14864471_portal');

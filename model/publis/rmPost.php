@@ -4,5 +4,8 @@
     $idUsu = $_SESSION['usrId'];
     $idPub = $_POST['idPub'];
     $tipo = $_POST['tipo'];
-    rmPubli($tipo, $idPub, $idUsu);
+    if (rmPubli($tipo, $idPub, $idUsu)){
+        $fotos = getFotosPubli($tipo, $idPub);
+        rmImgFromDb($fotos, "../../img/$idUsu/");
+    }
 ?>
