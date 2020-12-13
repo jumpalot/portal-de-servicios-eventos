@@ -726,6 +726,15 @@ input[type="tel"] {
   background-color:rgba(170, 143, 83, 0.6);
   border-color: white;
 }
+div.modal#editPubModal {
+  z-index: 101;
+}
+div.modal#myPubsModal {
+  z-index: 100;
+}
+div.modal#confirmDeleteModal {
+  z-index: 102;
+}
 
 /* ----------- FOOTER -------------------*/
 footer{
