@@ -139,6 +139,6 @@ function rmPub(){
         {
             idPub:$("#idPub").val(),
             tipo:$('#tipoPub').val()
-        }
+        }, msg => editToMyPubs()
     );
 }

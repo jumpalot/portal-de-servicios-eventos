@@ -734,6 +734,7 @@ div.modal#myPubsModal {
 }
 div.modal#confirmDeleteModal {
   z-index: 102;
+  max-width: 300px;
 }
 
 /* ----------- FOOTER -------------------*/
