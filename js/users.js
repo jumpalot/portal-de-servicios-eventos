@@ -121,12 +121,17 @@ function inicializarSelects(id){
     }
 }
 function editarPub(id){
-    $('#editPubModal').modal('show');
+    $('#myPubsModal').modal('hide');
     [tipo, idPub] = id.split('-');
     $("#edPubBody").html(
         '<input type="hidden" id="idPub" value="'+idPub+'">' +
         '<input type="hidden" id="tipoPub" value="'+tipo+'">'
-    )
+        )
+    $('#editPubModal').modal('show');
+}
+function editToMyPubs {
+    $('#editPubModal').modal('hide');
+    $('#myPubsModal').modal('show');
 }
 function rmPub(){
     $.post(
