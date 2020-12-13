@@ -48,6 +48,9 @@ $(document).ready(()=>{
     $("#myPubsModal").on('show.bs.modal', event => {
         $.post('controller/users/getPosts.php', msg => $("#mispublis").html(msg));
     });
+    $('#editPubModal').on('hidden.bs.modal', event => {
+        $("#edPubBody").empty();
+    });
 });
 const listaTPublis = new Array(
     "newServicio",
@@ -116,4 +119,21 @@ function inicializarSelects(id){
 
             break;
     }
+}
+function editarPub(id){
+    $('#editPubModal').modal('show')
+    [tipo, idPub] = id.split('-');
+    $("#edPubBody").html(
+        '<input type="hidden" id="idPub" value="'+idPub+'">' +
+        '<input type="hidden" id="tipoPub" value="'+tipo+'">'
+    )
+}
+function rmPub(){
+    $.post(
+        "model/publis/rmPost.php",
+        {
+            idPub:$("#idPub").val(),
+            tipo:$('#tipoPub').val()
+        }
+    );
 }

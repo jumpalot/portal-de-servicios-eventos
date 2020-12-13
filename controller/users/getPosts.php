@@ -18,6 +18,6 @@
     session_start();
     $usrId = $_SESSION['usrId'];
     [$servicios, $salones] = getPublis($usrId);
-    listarPublis($servicios, $usrId, 'ser');
-    listarPublis($salones, $usrId, 'sal');
+    listarPublis($servicios, $usrId, 'servicios');
+    listarPublis($salones, $usrId, 'salon');
 ?> 

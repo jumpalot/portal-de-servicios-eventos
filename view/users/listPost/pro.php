@@ -1,4 +1,4 @@
-<div class="productos br  input-contenedor-pro">
+<div class="productos br  input-contenedor-pro" id="<?=$tipo?>-<?=$pubId?>" onclick="editarPub(this.id)">
         <div class="cont2 pd10">
             <p class="cuerpo2">
                 <i class="fas fa-map-marker-alt"></i>&nbsp;<?=$zona?>
