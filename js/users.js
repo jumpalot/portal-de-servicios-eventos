@@ -121,7 +121,7 @@ function inicializarSelects(id){
     }
 }
 function editarPub(id){
-    $('#editPubModal').modal('show')
+    $('#editPubModal').modal('show');
     [tipo, idPub] = id.split('-');
     $("#edPubBody").html(
         '<input type="hidden" id="idPub" value="'+idPub+'">' +
