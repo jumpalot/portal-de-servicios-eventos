@@ -116,6 +116,13 @@
         $db->query($sql);
         return $db->affected_rows>0;
     }
+    function setFotoP($tipo, $idPub, $idUsu, $idFoto){
+        global $db;
+        $uctipo = ucfirst($tipo);
+        $sql = "UPDATE $tipo SET id_fotoPrincipal=$idFoto WHERE id_$tipo=$idPub AND id_usuario=$idUsu";
+        $db->query($sql);
+        return $db->error=="";
+    }
     //$db = new mysqli('localhost','root','usbw','id14864471_portal');
     $db = new mysqli('localhost','id14864471_elportaldeservicioseventos','zcU.L^H]2e5=&Y52','id14864471_portal');
 ?>

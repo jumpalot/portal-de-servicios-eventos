@@ -13,8 +13,7 @@
             case "newServicio":
                 $zonaServicio = $_POST['zonaServicio'];
                 $tiposServicio = $_POST['tipoServicio'];
-                $fotoP = getFotoP($dir);
-                $idServicio = addServicio($nom, $desc, $zonaServicio, $tiposServicio, $idUsu, $fotoP);
+                $idServicio = addServicio($nom, $desc, $zonaServicio, $tiposServicio, $idUsu);
                 if($idServicio!=null) {
                     addServicioImgs($idServicio, $archivos);
                     mvImgCache($archivos, $dir);
