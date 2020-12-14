@@ -11,7 +11,10 @@
         $sql = "INSERT INTO salon(nombre, descripcion, capacidad, id_zona, id_tiposalon, id_usuario, id_fotoPrincipal) 
                 VALUES ('$nom', '$desc', '$capacidad', '$zonaSalon','$tipoSalon','$idUsuario', '$idFotoPrincipal')";
         $db->query($sql);
-        if ($db->error) return null;
+        if ($db->error) {
+            echo '<script>console.log("'.$db->error.'");</script>';
+            return null;
+        }
         return $db->insert_id;
     }
     function addSalonImgs($idSalon, $basenames){
@@ -43,7 +46,10 @@
         $sql = "INSERT INTO servicios(nombre, descripcion, id_zona, id_tiposervicio, id_usuario, id_fotoPrincipal) 
                 VALUES ('$nom','$desc','$zonaServicio','$tiposServicio','$idUsuario', '$idFotoPrincipal')";
         $db->query($sql);
-        if ($db->error) return null;
+        if ($db->error) {
+            echo '<script>console.log("'.$db->error.'");</script>';
+            return null;
+        }
         return $db->insert_id;
     }
     function addServicioImgs($idServicio, $basenames){
