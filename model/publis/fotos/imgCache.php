@@ -3,9 +3,11 @@
         return array_slice(scandir($dir),2);
     }
     function mvImgCache($archivos, $dir, $tipo){
-        mkdir("$dir../$tipo/", 0777, true);
+        $newdir="$dir../$tipo/";
+        if(!file_exists ("$dir../$tipo/"))
+            mkdir($newdir, 0777, true);
         foreach ($archivos as $archivo)
-            rename("$dir$archivo", "$dir../$tipo/$archivo");
+            rename("$dir$archivo", "$newdir$archivo");
     }
     function rmImgCache($archivos, $dir){
         foreach ($archivos as $archivo)
