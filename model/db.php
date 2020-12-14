@@ -106,11 +106,22 @@
     function getPublis($id){
         return [getServicios($id), getSalones($id)];
     }
-    function getFotosPubli($tipo, $idPub) {
+    function getFotosPubli($tipo, $idPub, $idUsu) {
         global $db;
         $uctipo = ucfirst($tipo);
-        $sql = "SELECT foto FROM fotos$uctipo WHERE id_$tipo=$idPub";
-        $db->query($sql);
+        $sql = "SELECT
+                    fp.foto AS foto,
+                    fp.id_$tipo AS idPub
+                FROM
+                    fotos$uctipo AS fp
+                NATURAL JOIN $tipo 
+                WHERE 
+                    $tipo.id_usuario = $idUsu
+                GROUP BY
+                    foto
+                HAVING
+                    COUNT(*) < 2 AND idPub = $idPub";
+        return $db->query($sql);
     }
     function rmPubli($tipo, $idPub, $idUsu){
         global $db;
