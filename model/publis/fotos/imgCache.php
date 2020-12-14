@@ -2,9 +2,9 @@
     function getImgCache($dir){
         return array_slice(scandir($dir),2);
     }
-    function mvImgCache($archivos, $dir){
+    function mvImgCache($archivos, $dir, $tipo){
         foreach ($archivos as $archivo)
-            rename($dir.$archivo, $dir.'../'.$archivo);
+            rename("$dir$archivo", "$dir../$tipo/$archivo");
     }
     function rmImgCache($archivos, $dir){
         foreach ($archivos as $archivo)

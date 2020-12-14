@@ -5,7 +5,7 @@
     $idPub = $_POST['idPub'];
     $tipo = $_POST['tipo'];
     if (rmPubli($tipo, $idPub, $idUsu)){
-        $fotos = getFotosPubli($tipo, $idPub);
-        rmImgFromDb($fotos, "../../img/$idUsu/");
+        $fotos = getFotosPubli($tipo, $idPub, $idUsu);
+        rmImgFromDb($fotos, "../../img/$idUsu/$tipo/");
     }
 ?>

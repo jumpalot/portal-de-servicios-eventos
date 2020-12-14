@@ -16,7 +16,7 @@
                 $idServicio = addServicio($nom, $desc, $zonaServicio, $tiposServicio, $idUsu);
                 if($idServicio!=null) {
                     if(addServicioImgs($idServicio, $archivos)){
-                        mvImgCache($archivos, $dir);
+                        mvImgCache($archivos, $dir, 'servicios');
                     } else {
                         echo '<h3 style="text-align:center"> La publicación se subió</h3><h3>Pero ocurrió un error al registrar sus fotos</h3><h3>Puede solucionarlo desdde Mis Publicaciones</h3>';
                         rmImgCache($archivos, $dir);
@@ -40,7 +40,7 @@
                     if (addSalonImgs($idSalon, $archivos)){
                         addEspaciosSalon($espacios, $idSalon);
                         addServiciosSalon($servicios, $idSalon);
-                        mvImgCache($archivos, $dir);
+                        mvImgCache($archivos, $dir, 'salon');
                     } else {
                         echo '<h3 style="text-align:center"> La publicación se subió</h3><h3>Pero ocurrió un error al registrar sus fotos</h3><h3>Puede solucionarlo desdde Mis Publicaciones</h3>';
                         rmImgCache($archivos, $dir);
