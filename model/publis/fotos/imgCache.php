@@ -14,7 +14,7 @@
             unlink($dir.$archivo);
     }
     function rmImgFromDb($archivos, $dir){
-        foreach ($archivos as $archivo)
+        while ($archivo = $archivos->fetch_array(MYSQLI_NUM))
             unlink($dir.$archivo[0]);
     }
     function getFotoP($dir){
