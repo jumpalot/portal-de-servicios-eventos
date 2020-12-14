@@ -19,7 +19,7 @@
                     addServicioImgs($idServicio, $archivos);
                     mvImgCache($archivos, $dir);
                 } else {
-                    echo '<h3 style="text-align:center"> No se pudo subir su publicacion</h3>';
+                    echo '<h3 style="text-align:center"> No se pudo subir su publicacion</h3><h3>Error al cargar en la base de datos</h3>';
                     rmImgCache($archivos, $dir);
                     exit;
                 }
@@ -38,13 +38,13 @@
                     addServiciosSalon($servicios, $idSalon);
                     mvImgCache($archivos, $dir);
                 } else {
-                    echo '<h3 style="text-align:center"> No se pudo subir su publicacion</h3>';
+                    echo '<h3 style="text-align:center"> No se pudo subir su publicacion.</h3><h3>Error al cargar en la base de datos</h3>';
                     rmImgCache($archivos, $dir);
                     exit;
                 }
             break;
             default:
-                echo '<h3 style="text-align:center"> No se pudo subir su publicacion</h3>';
+                echo '<h3 style="text-align:center"> No se pudo subir su publicacion</h3><h3>tipo de publicación desconocida</h3>';
                 rmImgCache($archivos, $dir);
                 exit;
         }
