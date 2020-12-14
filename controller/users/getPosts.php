@@ -8,7 +8,7 @@
             $pubId = $pub->id;
             //imagen y mostrar segun nivel
             if($pub->nivel>0){
-                $img = "./img/$usrId/".$pub->foto;
+                $img = "./img/$usrId/$tipo/".$pub->foto;
                 if($pub->nivel>1) include('../../view/users/listPost/pro.php');
                 else include('../../view/users/listPost/basic.php');
             } else include('../../view/users/listPost/free.php');
