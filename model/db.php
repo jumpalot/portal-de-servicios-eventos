@@ -6,10 +6,10 @@
                 WHERE id_usuarios=$id";
         return $db->query($sql)->fetch_object();
     }
-    function addSalon($nom, $desc, $capacidad, $zonaSalon, $tipoSalon, $idUsuario, $idFotoPrincipal){
+    function addSalon($nom, $desc, $capacidad, $zonaSalon, $tipoSalon, $idUsuario){
         global $db;
-        $sql = "INSERT INTO salon(nombre, descripcion, capacidad, id_zona, id_tiposalon, id_usuario, id_fotoPrincipal) 
-                VALUES ('$nom', '$desc', '$capacidad', '$zonaSalon','$tipoSalon','$idUsuario', '$idFotoPrincipal')";
+        $sql = "INSERT INTO salon(nombre, descripcion, capacidad, id_zona, id_tiposalon, id_usuario) 
+                VALUES ('$nom', '$desc', '$capacidad', '$zonaSalon','$tipoSalon','$idUsuario')";
         $db->query($sql);
         if ($db->error) {
             echo '<script>console.log("'.$db->error.'");</script>';
@@ -41,10 +41,10 @@
         $sql = substr($sql, 0, -1);
         $db->query($sql);
     }
-    function addServicio($nom, $desc, $zonaServicio, $tiposServicio, $idUsuario, $idFotoPrincipal){
+    function addServicio($nom, $desc, $zonaServicio, $tiposServicio, $idUsuario){
         global $db;
-        $sql = "INSERT INTO servicios(nombre, descripcion, id_zona, id_tiposervicio, id_usuario, id_fotoPrincipal) 
-                VALUES ('$nom','$desc','$zonaServicio','$tiposServicio','$idUsuario', '$idFotoPrincipal')";
+        $sql = "INSERT INTO servicios(nombre, descripcion, id_zona, id_tiposervicio, id_usuario) 
+                VALUES ('$nom','$desc','$zonaServicio','$tiposServicio','$idUsuario')";
         $db->query($sql);
         if ($db->error) {
             echo '<script>console.log("'.$db->error.'");</script>';
