@@ -8,8 +8,8 @@
             <p class="cuerpo1 lnh">
                 <?=$desc?>
             </p>
-            <?php if ($desc>0):?>
-                <label class="btlr pd10 "><?=$desc?>% OFF</label>
+            <?php if ($descu>0):?>
+                <label class="btlr pd10 "><?=$descu?>% OFF</label>
             <?php endif; ?>
         </div>
         <div class="cont1 pd10">

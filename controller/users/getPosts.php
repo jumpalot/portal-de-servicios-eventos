@@ -12,7 +12,7 @@
             if($pub->nivel>0){
                 $img = "./img/$usrId/$tipo/".$pub->foto;
                 if($pub->nivel>1) {
-                    $desc = $pub->descuento;
+                    $descu = $pub->descuento;
                     include('../../view/users/listPost/pro.php');
                 }
                 else include('../../view/users/listPost/basic.php');
