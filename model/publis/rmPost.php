@@ -1,5 +1,6 @@
 <?php
     include("../db.php");
+    include("./fotos/imgCache.php");
     session_start();
     $idUsu = $_SESSION['usrId'];
     $idPub = $_POST['idPub'];
