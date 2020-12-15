@@ -14,6 +14,7 @@
             unlink($dir.$archivo);
     }
     function rmImgFromDb($archivos, $dir){
+        var_dump($archivos);
         while ($archivo = $archivos->fetch_array(MYSQLI_NUM))
             unlink($dir.$archivo[0]);
     }
