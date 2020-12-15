@@ -5,7 +5,7 @@
             <?=$zona?>
         </p>
         <br>
-        <h5><?=$titulo?></h5>
+        <h5 id="titulo"><?=$titulo?></h5>
         <p class="cuerpo1 lnh">
             <?=$desc?>
         </p>
