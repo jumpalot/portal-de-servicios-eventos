@@ -70,6 +70,7 @@
                     salon.descripcion AS descripcion,
                     salon.capacidad as capacidad,
                     salon.nivel as nivel,
+                    salon.descuento as descuento,
                     zonas.zona as zona,
                     tiposalon.nombre as tipo,
                     fotosSalon.foto as foto
@@ -90,6 +91,7 @@
                     servicios.nombre AS nombre,
                     servicios.descripcion AS descripcion,
                     servicios.nivel as nivel,
+                    servicios.descuento as descuento,
                     zonas.zona as zona,
                     tiposervicio.nombre as tipo,
                     fotosServicios.foto as foto

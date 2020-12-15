@@ -4,11 +4,13 @@
                 <i class="fas fa-map-marker-alt"></i>&nbsp;<?=$zona?>
                 <br>
             </p>
-            <h6>☆Rancho La Milagrosa</h6>
+            <h6 id="titulo">☆ <?=$titulo?></h6>
             <p class="cuerpo1 lnh">
                 <?=$desc?>
             </p>
-           <label class="btlr pd10 ">10% OFF</label>
+            <?php if ($desc>0):?>
+                <label class="btlr pd10 "><?=$desc?>% OFF</label>
+            <?php endif; ?>
         </div>
         <div class="cont1 pd10">
             <img src="<?=$img?>" width="100" height="100">

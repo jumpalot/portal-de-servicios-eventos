@@ -8,6 +8,7 @@
             $titulo = $pub->nombre;
             $desc = strip_tags($pub->descripcion);
             $pubId = $pub->id;
+            $desc = $pub->descuento;
             //imagen y mostrar segun nivel
             if($pub->nivel>0){
                 $img = "./img/$usrId/$tipo/".$pub->foto;
