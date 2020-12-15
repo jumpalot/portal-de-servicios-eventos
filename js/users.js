@@ -136,6 +136,18 @@ function editToMyPubs() {
     $('#editPubModal').modal('hide');
     $('#myPubsModal').modal('show');
 }
+function modifyToEdit() {
+    $('#modifyDataModal').modal('hide');
+    $('#editPubModal').modal('show');
+}
+function fotosToEdit() {
+    $('#editFotosModal').modal('hide');
+    $('#editPubModal').modal('show');
+}
+function upgradeToEdit() {
+    $('#upgradePubModal').modal('hide');
+    $('#editPubModal').modal('show');
+}
 function rmPub(){
     $.post(
         "model/publis/rmPost.php",
