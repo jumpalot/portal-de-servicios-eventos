@@ -766,6 +766,9 @@ div.modal#confirmDeleteModal {
   margin-top: 0;
   margin-bottom: 0;
 }
+.wrapper .box:hover h3, .wrapper .box:hover h5 {
+  color:rgba(170, 143, 83, 0.9);
+}
 
 /* ----------- FOOTER -------------------*/
 footer{
