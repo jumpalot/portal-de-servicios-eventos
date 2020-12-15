@@ -8,11 +8,13 @@
             $titulo = $pub->nombre;
             $desc = strip_tags($pub->descripcion);
             $pubId = $pub->id;
-            $desc = $pub->descuento;
             //imagen y mostrar segun nivel
             if($pub->nivel>0){
                 $img = "./img/$usrId/$tipo/".$pub->foto;
-                if($pub->nivel>1) include('../../view/users/listPost/pro.php');
+                if($pub->nivel>1) {
+                    $desc = $pub->descuento;
+                    include('../../view/users/listPost/pro.php');
+                }
                 else include('../../view/users/listPost/basic.php');
             } else include('../../view/users/listPost/free.php');
         endwhile; 
