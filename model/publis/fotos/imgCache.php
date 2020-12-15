@@ -14,9 +14,10 @@
             unlink($dir.$archivo);
     }
     function rmImgFromDb($archivos, $dir){
-        var_dump($archivos);
-        while ($archivo = $archivos->fetch_array(MYSQLI_NUM))
-            unlink($dir.$archivo[0]);
+        while ($archivo = $archivos->fetch_array(MYSQLI_ASSOC)){
+            unlink($dir.$archivo['foto']);
+            echo 'Imagen Borrada: '.$dir.$archivo['foto'];
+        }
     }
     function getFotoP($dir){
         $archivos = getImgCache($dir);
