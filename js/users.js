@@ -145,3 +145,30 @@ function rmPub(){
         }, msg => editToMyPubs()
     );
 }
+function modificarDatos(){
+    $('#editPubModal').modal('hide');
+    $.post(
+        "controller/users/modifyPost.php",
+        {},
+        msg => $('#modifyDataModal #body-content').html(msg)
+    );
+    $('#modifyDataModal').modal('show');
+}
+function editarFotos(){
+    $('#editPubModal').modal('hide');
+    $.post(
+        "controller/users/editFotos.php",
+        {},
+        msg => $('#editFotosModal #body-content').html(msg)
+    );
+    $('#editFotosModal').modal('show');
+}
+function mejorarPublicacion(){
+    $('#editPubModal').modal('hide');
+    $.post(
+        "controller/users/upgradePub.php",
+        {},
+        msg => $('#upgradePubModal #body-content').html(msg)
+    );
+    $('#upgradePubModal').modal('show');
+}
