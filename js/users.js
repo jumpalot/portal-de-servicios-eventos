@@ -49,7 +49,7 @@ $(document).ready(()=>{
         $.post('controller/users/getPosts.php', msg => $("#mispublis").html(msg));
     });
     $('#editPubModal').on('hidden.bs.modal', event => {
-        $("#edPubBody").empty();
+        $("#edPubInfo").empty();
     });
 });
 const listaTPublis = new Array(
@@ -123,7 +123,7 @@ function inicializarSelects(id){
 function editarPub(id){
     $('#myPubsModal').modal('hide');
     [tipo, idPub] = id.split('-');
-    $("#edPubBody").html(
+    $("#edPubInfo").html(
         '<input type="hidden" id="idPub" value="'+idPub+'">' +
         '<input type="hidden" id="tipoPub" value="'+tipo+'">'
         )

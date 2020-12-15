@@ -737,6 +737,32 @@ div.modal#confirmDeleteModal {
   max-width: 300px;
 }
 
+/* Editar Publicacion (modal) */
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+.wrapper .box {
+  border-radius: 1em;
+  border-color:rgba(170, 143, 83, 0.9);
+  border-width: 3px;
+  text-align: center;
+}
+.wrapper .box#b12{
+  grid-row: 1;
+  grid-column: 1 / 2;
+}
+.wrapper .box#b34{
+  grid-row: 1;
+  grid-column: 3 / 4;
+}
+.wrapper .box#b14{
+  grid-row: 2;
+  grid-column: 1 / 4;
+}
+
 /* ----------- FOOTER -------------------*/
 footer{
 	

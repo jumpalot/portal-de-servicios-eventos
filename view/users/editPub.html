@@ -5,7 +5,18 @@
         <h5 class="modal-title" id="editPubModalLabel">Editar Publicación</h5>
       </div>
       <div class="modal-body">
-        <div id="edPubBody"></div>
+        <div class="wrapper" id="edPubBody">
+          <div class="box" id="b12" onclick="modificarDatos()">
+            <h5>Modificar datos</h5>
+          </div>
+          <div class="box" id="b34" onclick="editarFotos()">
+            <h5>Editar Fotos</h5>
+          </div>
+          <div class="box" id="b14" onclick="mejorarPublicacion()">
+            <h3>Mejorar Publicación</h3>
+          </div> 
+        </div>
+        <div id="edPubInfo"></div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#confirmDeleteModal">Eliminar</button>
