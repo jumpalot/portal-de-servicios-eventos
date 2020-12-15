@@ -105,6 +105,13 @@
         if (@$id) $sql .= " WHERE servicios.id_usuario='$id'";
         return $db->query($sql);
     }
+    function getNivel($tipo, $idPub, $idUsu){
+        global $db;
+        $sql = "SELECT nivel FROM $tipo WHERE id_$tipo=$idPub AND id_usuario=$idUsu";
+        $datos = $db->query($sql);
+        if ($db->error=="") return $datos->fetch_object()->nivel;
+        return 4;
+    }
     function getPublis($id){
         return [getServicios($id), getSalones($id)];
     }

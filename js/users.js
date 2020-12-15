@@ -48,9 +48,9 @@ $(document).ready(()=>{
     $("#myPubsModal").on('show.bs.modal', event => {
         $.post('controller/users/getPosts.php', msg => $("#mispublis").html(msg));
     });
-    $('#editPubModal').on('hidden.bs.modal', event => {
-        $("#edPubInfo").empty();
-    });
+    // $('#editPubModal').on('hidden.bs.modal', event => {
+    //     $("#edPubInfo").empty();
+    // });
 });
 const listaTPublis = new Array(
     "newServicio",
@@ -179,7 +179,10 @@ function mejorarPublicacion(){
     $('#editPubModal').modal('hide');
     $.post(
         "controller/users/upgradePub.php",
-        {},
+        {
+            idPub:$("#idPub").val(),
+            tipo:$('#tipoPub').val()
+        },
         msg => $('#upgradePubModal #body-content').html(msg)
     );
     $('#upgradePubModal').modal('show');
