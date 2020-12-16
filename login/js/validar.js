@@ -27,7 +27,7 @@ function registro() {
           $('#regi1')[0].style.display = "block";
           $("#failreg")[0].style.display="block";
         }
-        else window.location="https://elportaldeeventos.000webhostapp.com/";
+        else window.location="http://portalgardey.escuelarobertoarlt.com.ar/";
       }
     );
     return false;
@@ -38,7 +38,7 @@ function login(){
       "../model/accounts/login.php", $('form#login').serialize(),
       (msg) => {    
         if(msg=='noverif') $("#loginfail")[0].style.display="block";
-        else window.location="https://elportaldeeventos.000webhostapp.com/";
+        else window.location="http://portalgardey.escuelarobertoarlt.com.ar/";
       }
     );
 }
