@@ -1,3 +1,4 @@
+var nivelActualPub = 0;
 $(document).ready(()=>{
     $.fn.selectpicker.Constructor.BootstrapVersion = '4';
     $('#newPostModal').on('show.bs.modal', event => {
@@ -48,9 +49,15 @@ $(document).ready(()=>{
     $("#myPubsModal").on('show.bs.modal', event => {
         $.post('./controller/users/getPosts.php', msg => $("#mispublis").html(msg));
     });
-    // $('#editPubModal').on('hidden.bs.modal', event => {
-    //     $("#edPubInfo").empty();
-    // });
+    $('#upgradePubModal input[type=radio]').change(() => {
+        let nuevoNivelPub = $('#upgradePubModal input[type=radio]:checked').val()
+        if(nivelActualPub==nuevoNivelPub)
+            $('#upgradePubModal .btn-success').addClass("hidden");
+        else {
+            $('#upgradePubModal .btn-success').text(nuevoNivelPub=="0"?"Cambiar":"Comprar");
+            $('#upgradePubModal .btn-success').removeClass("hidden");
+        }
+    });
 });
 const listaTPublis = new Array(
     "newServicio",
@@ -183,7 +190,10 @@ function mejorarPublicacion(){
             idPub:$("#idPub").val(),
             tipo:$('#tipoPub').val()
         },
-        msg => $('#upgradePubModal #body-content').html(msg)
+        msg => {
+            $('#upgradePubModal #body-content').html(msg);
+            nivelActualPub = $('#upgradePubModal input[type=radio]:checked').val();
+            $('#upgradePubModal').modal('show');
+        }
     );
-    $('#upgradePubModal').modal('show');
 }
