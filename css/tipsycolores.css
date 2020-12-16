@@ -770,6 +770,17 @@ div.modal#confirmDeleteModal {
   color:rgba(170, 143, 83, 0.9);
 }
 
+/* MEJORAR PUBLICACION */
+#upgradePubModal .input-group {
+  margin-bottom: 0.5em;
+}
+#upgradePubModal .input-group-text {
+  height: 44px;;
+}
+#upgradePubModal input[type=radio] {
+  width: 20px;
+}
+
 /* ----------- FOOTER -------------------*/
 footer{
 	
