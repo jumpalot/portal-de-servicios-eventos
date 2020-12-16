@@ -6,7 +6,7 @@
         return preg_match("/^[A-Z0-9]{6}$/", $code);
     }
     function validname($name){
-        return preg_match("/^[A-Za-z]{3,20}$/", $name);
+        return preg_match("/^[A-Za-z0-9 ]{3,20}$/", $name);
     }
     function validtel($tel){
         return preg_match("/[0-9]{10,20}/", $tel);

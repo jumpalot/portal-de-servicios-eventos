@@ -28,7 +28,7 @@
             $mailer->Send();
             return "";
         } catch (Exception $e) {
-            echo 'Mailer Error: ' . $mailer->ErrorInfo;
+            return 'Mailer Error: ' . $mailer->ErrorInfo;
         }
         return "fallo desconocido";
     }

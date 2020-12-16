@@ -14,7 +14,7 @@
             )
         );
     }
-    include('view/common/header.html');
+    include('./view/common/header.html');
     echo '<section class="col-9">';
     //incluir minisearch//
     
@@ -25,29 +25,29 @@
     $banner = $datos['banner'];
     //banner
     echo "<h5>HOME / IDEAS & NOTAS / $titulo</h5>";
-    include('view/public/banners/detalle.php');
+    include('./view/public/banners/detalle.php');
     unset($banner);
     //body
     $volanta = $datos['volanta'];
     $body = $datos['body'];
-    include('view/public/ideas/cuerpo.php');
+    include('./view/public/ideas/cuerpo.php');
     //anuncios
     echo '<div class="md-4">';
     foreach ($datos['anuncios'] as $anuncio) {
         $volanta = $anuncio['volanta'];
         $titulo = $anuncio['titulo'];
         $desc = $anuncio['desc'];
-        include('view/public/ideas/anuncio.php');
+        include('./view/public/ideas/anuncio.php');
     }
     echo '</div>';
     //carousel
-    include('view/public/carousel/carouselTop.html');
+    include('./view/public/carousel/carouselTop.html');
     $img = array();
     $cont=0;
     $active="active";
     foreach($datos['miniaturas'] as $miniatura){
         if (++$cont==4){
-            include('view/public/carousel/ideaItem.php');
+            include('./view/public/carousel/ideaItem.php');
             if($active!="") $active="";
             $cont=0;
             $img = array();
@@ -55,8 +55,8 @@
         $img[$cont] = $miniatura;
     }
     if(isset($img[1])) 
-    include('view/public/carousel/ideaItem.php');
-    include('view/public/carousel/carouselEnd.html');
+    include('./view/public/carousel/ideaItem.php');
+    include('./view/public/carousel/carouselEnd.html');
     unset($datos);
     echo '</section>';
 ?>    

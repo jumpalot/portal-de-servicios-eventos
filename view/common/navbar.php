@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container">
     <a class="navbar-brand" href="#"
-      ><img src="img/logo.png" width="350" height="60"
+      ><img src="./img/logo.png" width="350" height="60"
     /></a>
     <button
       class="navbar-toggler"
@@ -29,7 +29,7 @@
           <a class="nav-link" href="#">Contacto</a>
         </li>
         <li class="nav-item">
-          <?php include 'controller/users/userIndex.php' ?>
+          <?php include './controller/users/userIndex.php' ?>
         </li>
       </ul>
     </div>
