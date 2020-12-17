@@ -17,7 +17,7 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" href="#">Categorias </a>
+          <?php include './view/public/categorias.php' ?>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="./?section=salones">Salones</a>
