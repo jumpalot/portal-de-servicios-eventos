@@ -206,6 +206,7 @@ function buyUpgrade(){
             idPub:$("#idPub").val()
         }, res => {
             $('div#result').html(res);
+            $('#upgradePubModal').modal('hide');
             $('div#resultModal').modal('show');
         }
     );
