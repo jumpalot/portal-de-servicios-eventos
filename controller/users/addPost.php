@@ -1,5 +1,5 @@
 <?php
-    include('../../model/fotos/imgCache.php');
+    include('../../model/publis/fotos/imgCache.php');
     include('../../model/db.php');
     session_start();
     $idUsu = $_SESSION['usrId'];
