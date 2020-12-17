@@ -197,3 +197,16 @@ function mejorarPublicacion(){
         }
     );
 }
+function buyUpgrade(){
+    $.post(
+        "./controller/users/buyUpgrade.php",
+        {
+            nivel:$('#upgradePubModal input[type=radio]:checked').val(),
+            tipo:$('#tipoPub').val(),
+            idPub:$("#idPub").val()
+        }, res => {
+            $('div#result').html(res);
+            $('div#resultModal').modal('show');
+        }
+    );
+}

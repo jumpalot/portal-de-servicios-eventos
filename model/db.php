@@ -145,6 +145,13 @@
         $db->query($sql);
         return $db->error=="";
     }
+    function upPub($nivel, $tipo, $idPub, $idUsu){
+        global $db;
+        $sql = "UPDATE $tipo SET nivel=$nivel WHERE id_$tipo=$idPub AND id_usuario=$idUsu";
+        $db->query($sql);
+        if ($db->error) echo '<script>console.log("'.$db->error.'");</script>';
+        return $db->error=="";
+    }
     //$db = new mysqli('localhost','root','usbw','id14864471_portal');
     $db = new mysqli('localhost','u812890733_Jpgardey','G12345678y','u812890733_Portalgardey');
 ?>
