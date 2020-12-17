@@ -18,6 +18,9 @@
             include('./view/public/minisearch.html');
             include('./view/public/Salones.html');
         break;
+        case 'search':
+            include('./view/public/Busqueda.html');
+        break;
         default:
             include('./controller/public/home.php');
     }
