@@ -142,9 +142,9 @@
     }
     function setFotoP($tipo, $idPub, $idUsu, $idFoto){
         global $db;
-        $uctipo = ucfirst($tipo);
         $sql = "UPDATE $tipo SET id_fotoPrincipal=$idFoto WHERE id_$tipo=$idPub AND id_usuario=$idUsu";
         $db->query($sql);
+        if ($db->error) echo '<script>console.log("Foto principal: '.$db->error.'");</script>';
         return $db->error=="";
     }
     function upPub($nivel, $tipo, $idPub, $idUsu){
