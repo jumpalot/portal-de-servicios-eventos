@@ -780,6 +780,9 @@ div.modal#confirmDeleteModal {
 #upgradePubModal input[type=radio] {
   width: 20px;
 }
+#resultModal h3, #resultModal h5 {
+  text-align: center;
+}
 
 /* ----------- FOOTER -------------------*/
 footer{
