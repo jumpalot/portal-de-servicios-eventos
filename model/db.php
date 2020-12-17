@@ -117,7 +117,7 @@
     function getPublis($id){
         return [getServicios($id), getSalones($id)];
     }
-    function getFotosPubli($tipo, $idPub, $idUsu) {
+    function getFotosPubli($tipo, $idPub, $idUsu, $soloUnicas = false) {
         global $db;
         $uctipo = ucfirst($tipo);
         $sql = "SELECT
@@ -127,11 +127,13 @@
                     fotos$uctipo AS fp
                 NATURAL JOIN $tipo 
                 WHERE 
-                    $tipo.id_usuario = $idUsu
+                    $tipo.id_usuario = $idUsu";
+        if ($soloUnicas) $sql .= "
                 GROUP BY
                     foto
                 HAVING
-                    COUNT(*) < 2 AND idPub = $idPub";
+                    COUNT(*) < 2";
+        $sql .= " AND fp.id_$tipo=$idPub";
         return $db->query($sql);
     }
     function rmPubli($tipo, $idPub, $idUsu){
