@@ -51,8 +51,8 @@ $(document).ready(()=>{
     });
 });
 const listaTPublis = new Array(
-    "newServicio",
-    "newSalon",
+    "servicios",
+    "salon",
     "newEvento",
     "newImagenP",
     "newTrabajo",
@@ -90,13 +90,13 @@ function newPost(){
 }
 function inicializarSelects(id){
     switch (id){
-        case "newServicio":
+        case "servicios":
             if (isEmpty("#zonasServicio")){
                 $.post("./model/publis/getZonas.php",         zonas => addOptions(zonas, "#zonasServicio"))
                 $.post("./model/publis/getTiposServicio.php", tiposS => addOptions(tiposS, "#tiposServicio"))
             }
             break;
-        case "newSalon":
+        case "salon":
             if (isEmpty("#zonasSalon")){
                 $.post("./model/publis/getZonas.php",         zonas => addOptions(zonas, "#zonasSalon"))
                 $.post("./model/publis/getTiposSalon.php",    tiposS => addOptions(tiposS, "#tiposSalon"))

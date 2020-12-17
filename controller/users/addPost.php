@@ -10,7 +10,7 @@
         $tipo = $_POST['tipo'];
         $archivos = getImgCache($dir);
         switch($tipo){
-            case "newServicio":
+            case "servicios":
                 $zonaServicio = $_POST['zonaServicio'];
                 $tiposServicio = $_POST['tipoServicio'];
                 $idServicio = addServicio($nom, $desc, $zonaServicio, $tiposServicio, $idUsu);
@@ -31,7 +31,7 @@
                     exit;
                 }
             break;
-            case "newSalon":
+            case "salon":
                 $cap = $_POST['cap'];
                 $zonasSalon = $_POST['zonasSalon'];
                 $tipoSalon = $_POST['tipoSalon'];
