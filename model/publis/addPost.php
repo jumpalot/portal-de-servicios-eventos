@@ -15,7 +15,8 @@
                 $tiposServicio = $_POST['tipoServicio'];
                 $idServicio = addServicio($nom, $desc, $zonaServicio, $tiposServicio, $idUsu);
                 if($idServicio!=null) {
-                    if(addServicioImgs($idServicio, $archivos)){
+                    if($idFotoP = addServicioImgs($idServicio, $archivos)){
+                        setFotoP($tipo, $idPub, $idUsu, $idFotoP);
                         mvImgCache($archivos, $dir, 'servicios');
                     } else {
                         echo '<h3 style="text-align:center"> La publicación se subió</h3><h3>Pero ocurrió un error al registrar sus fotos</h3><h3>Puede solucionarlo desdde Mis Publicaciones</h3>';
@@ -34,12 +35,12 @@
                 $tipoSalon = $_POST['tipoSalon'];
                 $espacios = $_POST['espacios'];
                 $servicios = $_POST['servicios'];
-                $fotoP = getFotoP($dir);
-                $idSalon = addSalon($nom, $desc, $cap, $zonasSalon, $tipoSalon, $idUsu, $fotoP);
+                $idSalon = addSalon($nom, $desc, $cap, $zonasSalon, $tipoSalon, $idUsu);
                 if($idSalon!=null){
-                    if (addSalonImgs($idSalon, $archivos)){
+                    if ($idFotoP = addSalonImgs($idSalon, $archivos)){
                         addEspaciosSalon($espacios, $idSalon);
                         addServiciosSalon($servicios, $idSalon);
+                        setFotoP($tipo, $idPub, $idUsu, $idFotoP);
                         mvImgCache($archivos, $dir, 'salon');
                     } else {
                         echo '<h3 style="text-align:center"> La publicación se subió</h3><h3>Pero ocurrió un error al registrar sus fotos</h3><h3>Puede solucionarlo desdde Mis Publicaciones</h3>';

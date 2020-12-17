@@ -24,7 +24,8 @@
             $sql .= " ('$basename', $idSalon),";
         $sql = substr($sql, 0, -1);
         $db->query($sql);
-        return $db->error=="";
+        if($db->error!="") return null;
+        return $db->insert_id;
     }
     function addEspaciosSalon($espacios, $idSalon){
         global $db;
@@ -60,7 +61,8 @@
             $sql .= " ('$basename', $idServicio),";
         $sql = substr($sql, 0, -1);
         $db->query($sql);
-        return $db->error=="";
+        if($db->error!="") return null;
+        return $db->insert_id;
     }
     function getSalones($id=null){
         global $db;
