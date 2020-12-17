@@ -17,7 +17,7 @@
                 if($idServicio!=null) {
                     if (count($archivos)>0){
                         if($idFotoP = addServicioImgs($idServicio, $archivos)){
-                            setFotoP($tipo, $idPub, $idUsu, $idFotoP);
+                            setFotoP($tipo, $idServicio, $idUsu, $idFotoP);
                             mvImgCache($archivos, $dir, 'servicios');
                         } else {
                             echo '<h3 style="text-align:center"> La publicación se subió</h3><h3>Pero ocurrió un error al registrar sus fotos</h3><h3>Puede solucionarlo desdde Mis Publicaciones</h3>';
@@ -43,7 +43,7 @@
                         if ($idFotoP = addSalonImgs($idSalon, $archivos)){
                             addEspaciosSalon($espacios, $idSalon);
                             addServiciosSalon($servicios, $idSalon);
-                            setFotoP($tipo, $idPub, $idUsu, $idFotoP);
+                            setFotoP($tipo, $idSalon, $idUsu, $idFotoP);
                             mvImgCache($archivos, $dir, 'salon');
                         } else {
                             echo '<h3 style="text-align:center"> La publicación se subió</h3><h3>Pero ocurrió un error al registrar sus fotos</h3><h3>Puede solucionarlo desdde Mis Publicaciones</h3>';
