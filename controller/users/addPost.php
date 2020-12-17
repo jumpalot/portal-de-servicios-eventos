@@ -1,6 +1,6 @@
 <?php
-    include('./fotos/imgCache.php');
-    include('../db.php');
+    include('../../model/fotos/imgCache.php');
+    include('../../model/db.php');
     session_start();
     $idUsu = $_SESSION['usrId'];
     $dir = "../../img/$idUsu/cache/";

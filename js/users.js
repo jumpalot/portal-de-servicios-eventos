@@ -83,7 +83,7 @@ function mostrarNewPost2() {
     inicializarSelects(opcion.value);
 }
 function newPost(){
-    $.post('./model/publis/addPost.php', $("form#np").serialize(), (res)=>{
+    $.post('./controller/users/addPost.php', $("form#np").serialize(), (res)=>{
         $('div#result').html(res);
         $('div#resultModal').modal('show');
     });
