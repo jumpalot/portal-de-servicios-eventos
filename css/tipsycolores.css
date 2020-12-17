@@ -790,6 +790,11 @@ div.modal#confirmDeleteModal {
   text-align: center;
 }
 
+/* MIS PUBLICACIONES */
+.inline {
+  display: inline-flex;
+}
+
 /* ----------- FOOTER -------------------*/
 footer{
 	
