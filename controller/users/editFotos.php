@@ -13,7 +13,7 @@
         $nombre = $fotof->foto;
         $idFoto = $fotof->idFoto;
         $foto = "./img/$idUsu/$tipo/$nombre";
-        $checked = ($idFoto==$fotoP)?'checked':'';
+        $checked = ($idFoto==$fotoP)?'id="originalFotoP" checked':'';
         include '../../view/users/itemEditFoto.php';
     }
 ?>
