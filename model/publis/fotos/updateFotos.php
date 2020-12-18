@@ -7,7 +7,7 @@
 
     $idPub = $_POST['idPub'];
     $tipo = $_POST['tipo'];
-    $nFotoP = $_POST['fotoP'];
+    $nFotoP = $_POST['nFotoP'];
     $fotoP = $_POST['fotoP'];
     $trash = $_POST['trash'];
 

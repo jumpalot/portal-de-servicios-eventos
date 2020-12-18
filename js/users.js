@@ -1,5 +1,5 @@
 var nivelActualPub = 0;
-var fotoP = 0;
+var fotoP = "0";
 var trash = "";
 $(document).ready(()=>{
     $.fn.selectpicker.Constructor.BootstrapVersion = '4';
@@ -78,6 +78,7 @@ $(document).ready(()=>{
             }
         }
         let myDropzone = new Dropzone("#ed-dZUpload", dzOptions);
+        fotoP = $('#editPubModal input[type=radio]:checked').val();
     });
 });
 const listaTPublis = new Array(
@@ -208,7 +209,6 @@ function editarFotos(){
         },
         msg => {
             $('#editFotosModal #body-content').html(msg);
-            fotoP = $('#editPubModal input[type=radio]:checked').val();
             $('#editFotosModal').modal('show');
         }
     );
