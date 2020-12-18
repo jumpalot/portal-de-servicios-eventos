@@ -44,7 +44,7 @@ $(document).ready(()=>{
     $("#myPubsModal").on('show.bs.modal', event => {
         $.post('./controller/users/getPosts.php', msg => $("#mispublis").html(msg));
     });
-    $('#editPubModal').on('show.bs.modal', event => {
+    $('#editFotosModal').on('show.bs.modal', event => {
         $("#form-dz-edit").append(
             "<form id='ed-dZUpload' class='dropzone borde-dropzone'>"+
                 "<div class='dz-default dz-message'>"+
