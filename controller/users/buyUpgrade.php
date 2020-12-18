@@ -2,9 +2,9 @@
     include '../../model/db.php';
     session_start();
     $idUsu = $_SESSION['usrId'];
+    $tipo = $_SESSION['tipo'];
+    $idPub = $_SESSION['idPub'];
     $nivel = $_POST['nivel'];
-    $tipo = $_POST['tipo'];
-    $idPub = $_POST['idPub'];
     if (upPub($nivel, $tipo, $idPub, $idUsu)){
         if ($nivel!='0') {
             echo '

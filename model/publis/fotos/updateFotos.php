@@ -4,9 +4,9 @@
 
     session_start();
     $idUsu = $_SESSION['usrId'];
+    $tipo = $_SESSION['tipo'];
+    $idPub = $_SESSION['idPub'];
 
-    $idPub = $_POST['idPub'];
-    $tipo = $_POST['tipo'];
     $nFotoP = $_POST['nFotoP'];
     $fotoP = $_POST['fotoP'];
     $trash = $_POST['trash'];

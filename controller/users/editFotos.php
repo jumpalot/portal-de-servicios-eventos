@@ -2,8 +2,8 @@
     include '../../model/db.php';
     session_start();
     $idUsu = $_SESSION['usrId'];
-    $tipo = $_POST['tipo'];
-    $idPub = $_POST['idPub'];
+    $tipo = $_SESSION['tipo'];
+    $idPub = $_SESSION['idPub'];
     $fotos = getFotosPubli($tipo, $idPub, $idUsu);
     $fotoP = getFotoP($tipo, $idPub, $idUsu);
 

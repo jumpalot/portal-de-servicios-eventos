@@ -28,8 +28,7 @@ $(document).ready(()=>{
             removedfile: file => {
                 var foto = file.name; 
                 $.post("./model/publis/fotos/rmCacheFoto.php", {
-                    foto: foto, 
-                    idUsu:$("input#idUsu").val()
+                    foto: foto
                 });
                 var _ref;
                 return (_ref = file.previewElement) != null ? _ref.parentNode.removeChild(file.previewElement) : void 0;
@@ -157,11 +156,11 @@ function editarPub(id){
     $('#editPubModal #tituPub').html(
         $('#'+id+' #titulo').html()
     )
-    $("#editPubModal #edPubInfo").html(
-        '<input type="hidden" id="idPub" value="'+idPub+'">' +
-        '<input type="hidden" id="tipoPub" value="'+tipo+'">'
-    )
-    $('#editPubModal').modal('show');
+    $.post(
+        './model/publis/selectPub.php',
+        { tipo:tipo, idPub:idPub },
+        () => $('#editPubModal').modal('show')
+    );
 }
 function resultToMyPubs(){
     $('#resultModal').modal('hide');
@@ -184,19 +183,12 @@ function upgradeToEdit() {
     $('#editPubModal').modal('show');
 }
 function rmPub(){
-    $.post(
-        "./model/publis/rmPost.php",
-        {
-            idPub:$("#idPub").val(),
-            tipo:$('#tipoPub').val()
-        }, msg => editToMyPubs()
-    );
+    $.post('./model/publis/rmPost.php', msg => editToMyPubs());
 }
 function modificarDatos(){
     $('#editPubModal').modal('hide');
     $.post(
         "./controller/users/modifyPost.php",
-        {},
         msg => $('#modifyDataModal #body-content').html(msg)
     );
     $('#modifyDataModal').modal('show');
@@ -205,10 +197,6 @@ function editarFotos(){
     $('#editPubModal').modal('hide');
     $.post(
         "./controller/users/editFotos.php",
-        {
-            idPub:$("#idPub").val(),
-            tipo:$('#tipoPub').val()
-        },
         msg => {
             $('#editFotosModal #body-content').html(msg);
             $('#editFotosModal').modal('show');
@@ -219,8 +207,6 @@ function updateFotos(){
     $.post(
         "./model/publis/fotos/updateFotos.php",
         {
-            idPub:$("#idPub").val(),
-            tipo:$('#tipoPub').val(),
             fotoP:$('#editFotosModal #originalFotoP').val(),
             nFotoP:$('#editFotosModal input[type=radio]:checked').val(),
             trash:trash.substr(0, trash.length-1)
@@ -240,10 +226,6 @@ function mejorarPublicacion(){
     $('#editPubModal').modal('hide');
     $.post(
         "./controller/users/upgradePub.php",
-        {
-            idPub:$("#idPub").val(),
-            tipo:$('#tipoPub').val()
-        },
         msg => {
             $('#upgradePubModal #body-content').html(msg);
             nivelActualPub = $('#upgradePubModal input[type=radio]:checked').val();
@@ -263,11 +245,8 @@ function mejorarPublicacion(){
 function buyUpgrade(){
     $.post(
         "./controller/users/buyUpgrade.php",
-        {
-            nivel:$('#upgradePubModal input[type=radio]:checked').val(),
-            tipo:$('#tipoPub').val(),
-            idPub:$("#idPub").val()
-        }, res => {
+        {nivel:$('#upgradePubModal input[type=radio]:checked').val()},
+        res => {
             $('div#result').html(res);
             $('#upgradePubModal').modal('hide');
             $('div#resultModal').modal('show');
