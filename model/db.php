@@ -145,7 +145,12 @@
     function getFotoP($tipo, $idPub, $idUsu){
         global $db;
         $sql = "SELECT id_fotoPrincipal AS fotoP FROM $tipo WHERE id_$tipo=$idPub AND id_usuario=$idUsu";
-        return $db->query($sql)->fetch_object()->fotoP;
+        $res = $db->query($sql);
+        if ($db->error) {
+            echo '<script>console.log("'.$db->error.'")</script>';
+            return "0";
+        }
+        return $res->fetch_object()->fotoP;
     }
     function rmPubli($tipo, $idPub, $idUsu){
         global $db;
