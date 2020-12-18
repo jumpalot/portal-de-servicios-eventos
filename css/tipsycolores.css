@@ -404,6 +404,13 @@ h6 {
   background-color: rgba(128, 128, 128, 1);
   color: white;
 }
+.bblr {
+  border-bottom-right-radius: 15px;
+  background-color: rgba(128, 128, 128, 1);
+  color: white;
+  height: 2.3rem;
+  width: 7rem;
+}
 
 p {
   padding-top: 20px;
@@ -532,22 +539,25 @@ nav + .banner {
   text-align: center;
   background-color: rgba(170, 143, 83, 0.9) !important;
 }
-
+.info select {
+    font-size: 1em;
+    letter-spacing: 1px;
+    height: 2.3rem;
+}
 .info h2 {
   padding-top: 5px;
   font-size: 35px;
   color: #fff;
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
   letter-spacing: 2px;
 }
 .selects {
-  padding-top: -10px;
   color: #737070;
   font-size: 20px;
   border-radius: 2px;
   border-color: #797070;
   letter-spacing: 2px;
-  position: flex;
+  margin-right: .4em;
 }
 .colorcombo {
   color: #737070;
