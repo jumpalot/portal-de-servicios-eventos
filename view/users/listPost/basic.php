@@ -10,6 +10,6 @@
         </p>
     </div>
     <div class="cont1 pd10">
-        <img src="<?=$img?>" width="100" height="100">
+        <img src="<?=$img?>" width="200" height="200">
     </div>
 </div> 
