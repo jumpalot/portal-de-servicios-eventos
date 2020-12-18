@@ -803,6 +803,10 @@ div.modal#confirmDeleteModal {
 .inline {
   display: inline-flex;
 }
+#mispublis img {
+  object-fit: cover;
+  object-position: center center;
+}
 
 /* ----------- FOOTER -------------------*/
 footer{
