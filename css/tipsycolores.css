@@ -775,6 +775,7 @@ div.modal#confirmDeleteModal {
 .wrapper .box#b15{
   grid-row: 3;
   grid-column: 1 / 5;
+  font-weight: 500;
 }
 .wrapper .box h3, .wrapper .box h5 {
   margin-top: 0;
