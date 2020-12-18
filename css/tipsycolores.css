@@ -808,6 +808,18 @@ div.modal#confirmDeleteModal {
   object-position: center center;
 }
 
+/* EDITAR FOTOS */
+#editFotosModal img {
+  object-fit: cover;
+  object-position: center center;
+}
+#editFotosModal .h-50 {
+  height: 50px;
+}
+#editFotosModal .w-50 {
+  width: 50px;
+}
+
 /* ----------- FOOTER -------------------*/
 footer{
 	
