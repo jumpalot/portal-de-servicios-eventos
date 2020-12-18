@@ -7,6 +7,6 @@
   <img src="<?=$foto?>" class="border-0 h-50">
   <input type="text" class="form-control border-0 h-50" value="<?=$nombre?>" readonly>
   <div class="input-group-append h-50">
-    <span class="input-group-text border-0 h-50"><i class="fas fa-trash"></i></span>
+    <button class="input-group-text border-0 h-50" id="<?=$idFoto?>" onclick="addToTrash(this.id)"><i class="fas fa-trash"></i></button>
   </div>
 </div>

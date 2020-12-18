@@ -1,6 +1,7 @@
 <?php
     $foto = $_POST['foto'];
-    $idUsu = $_POST['idUsu'];
+    session_start();
+    $idUsu = $_SESSION['usrId'];
     $dir = "../../../img/$idUsu/cache/";
     unlink($dir.$foto);
 ?>

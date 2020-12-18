@@ -1,7 +1,7 @@
 <?php
     include('../../db.php');
-    $idUsu = $_REQUEST['idUsu'];
-    $tipoPub = $_REQUEST['tipoPub'];
+    session_start();
+    $idUsu = $_SESSION['usrId'];
     $dir_subida = "../../../img/$idUsu/cache/";
     mkdir($dir_subida, 0777, true);
     $nomArchivo = basename($_FILES['fotos']['name']);

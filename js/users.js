@@ -1,4 +1,6 @@
 var nivelActualPub = 0;
+var fotoP = 0;
+var trash = "";
 $(document).ready(()=>{
     $.fn.selectpicker.Constructor.BootstrapVersion = '4';
     $('#newPostModal').on('show.bs.modal', event => {
@@ -16,10 +18,6 @@ $(document).ready(()=>{
             paramName: "fotos",
             maxFilesize: 20, // MB
             dictRemoveFile: "Remover",
-            params: {
-                idUsu:$("input#idUsu").val(),
-                tipoPub:$("select#tipo").val()
-            },
             success: (file, response) => {
                 var imgName = response;
                 file.previewElement.classList.add("dz-success");
@@ -30,7 +28,7 @@ $(document).ready(()=>{
             },
             removedfile: file => {
                 var foto = file.name; 
-                $.post("./model/publis/fotos/rmFoto.php", {
+                $.post("./model/publis/fotos/rmCacheFoto.php", {
                     foto: foto, 
                     idUsu:$("input#idUsu").val()
                 });
@@ -38,16 +36,48 @@ $(document).ready(()=>{
                 return (_ref = file.previewElement) != null ? _ref.parentNode.removeChild(file.previewElement) : void 0;
             }
         }
-        let myDropzone = new Dropzone("#dZUpload", dzOptions); 
-        myDropzone.on("complete", function(file,response) {
-
-        });
+        let myDropzone = new Dropzone("#dZUpload", dzOptions);
     });
     $('#newPostModal').on('hidden.bs.modal', event => {
         $("#formDropZone").empty();
     });
     $("#myPubsModal").on('show.bs.modal', event => {
         $.post('./controller/users/getPosts.php', msg => $("#mispublis").html(msg));
+    });
+    $('#editPubModal').on('show.bs.modal', event => {
+        $("#form-dz-edit").append(
+            "<form id='ed-dZUpload' class='dropzone borde-dropzone'>"+
+                "<div class='dz-default dz-message'>"+
+                    "<span><h5>Arrastra las fotos de tu publicación aquí</h5></span><br>"+
+                    "<p>(o Clic para seleccionar)</p>"+
+                "</div>"+
+            "</form>"
+        );
+        let dzOptions = {
+            url: "./model/publis/fotos/setFotos.php",
+            addRemoveLinks: true,
+            paramName: "fotos",
+            maxFilesize: 20, // MB
+            dictRemoveFile: "Remover",
+            success: (file, response) => {
+                var imgName = response;
+                file.previewElement.classList.add("dz-success");
+                console.log("Successfully uploaded :" + imgName);
+            },
+            error: (file, res) => {
+                file.previewElement.classList.add("dz-error");
+                console.log(res)
+            },
+            removedfile: file => {
+                var foto = file.name; 
+                $.post("./model/publis/fotos/rmCacheFoto.php", {
+                    foto: foto
+                });
+                var _ref;
+                return (_ref = file.previewElement) != null ? _ref.parentNode.removeChild(file.previewElement) : void 0;
+            }
+        }
+        let myDropzone = new Dropzone("#ed-dZUpload", dzOptions);
     });
 });
 const listaTPublis = new Array(
@@ -176,9 +206,33 @@ function editarFotos(){
             idPub:$("#idPub").val(),
             tipo:$('#tipoPub').val()
         },
-        msg => $('#editFotosModal #body-content').html(msg)
+        msg => {
+            $('#editFotosModal #body-content').html(msg);
+            fotoP = $('#editPubModal input[type=radio]:checked').val();
+            $('#editFotosModal').modal('show');
+        }
     );
-    $('#editFotosModal').modal('show');
+}
+function updateFotos(){
+    $.post(
+        "./model/publis/fotos/updateFotos.php",
+        {
+            idPub:$("#idPub").val(),
+            tipo:$('#tipoPub').val(),
+            fotoP:fotoP,
+            nFotoP:$('#editFotosModal input[type=radio]:checked').val(),
+            trash:trash.substr(0, trash.length-1)
+        },
+        () => {
+            $('div#result').html(res);
+            $('#editFotosModal').modal('hide');
+            $('div#resultModal').modal('show');
+        }
+    );
+}
+function addToTrash(id){
+    trash += id+'-';
+    $('#editFotosModal #'+id).parent().parent().hide();
 }
 function mejorarPublicacion(){
     $('#editPubModal').modal('hide');

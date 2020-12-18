@@ -16,7 +16,7 @@
                 $idServicio = addServicio($nom, $desc, $zonaServicio, $tiposServicio, $idUsu);
                 if($idServicio!=null) {
                     if (count($archivos)>0){
-                        if($idFotoP = addServicioImgs($idServicio, $archivos)){
+                        if($idFotoP = addImgs($tipo, $idServicio, $archivos)){
                             setFotoP($tipo, $idServicio, $idUsu, $idFotoP);
                             mvImgCache($archivos, $dir, 'servicios');
                         } else {
@@ -40,7 +40,7 @@
                 $idSalon = addSalon($nom, $desc, $cap, $zonasSalon, $tipoSalon, $idUsu);
                 if($idSalon!=null){
                     if (count($archivos)>0){
-                        if ($idFotoP = addSalonImgs($idSalon, $archivos)){
+                        if ($idFotoP = addImgs($tipo, $idSalon, $archivos)){
                             addEspaciosSalon($espacios, $idSalon);
                             addServiciosSalon($servicios, $idSalon);
                             setFotoP($tipo, $idSalon, $idUsu, $idFotoP);

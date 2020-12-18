@@ -17,11 +17,12 @@
         }
         return $db->insert_id;
     }
-    function addSalonImgs($idSalon, $basenames){
+    function addImgs($tipo, $idPub, $basenames){
         global $db;
-        $sql = "INSERT INTO fotosSalon(foto, id_salon) VALUES";
+        $uctipo = ucfirst($tipo);
+        $sql = "INSERT INTO fotos$uctipo(foto, id_$tipo) VALUES";
         foreach ($basenames as $basename) 
-            $sql .= " ('$basename', $idSalon),";
+            $sql .= " ('$basename', '$idPub'),";
         $sql = substr($sql, 0, -1);
         $db->query($sql);
         if($db->error!="") return null;
@@ -52,16 +53,6 @@
             echo '<script>console.log("'.$db->error.'");</script>';
             return null;
         }
-        return $db->insert_id;
-    }
-    function addServicioImgs($idServicio, $basenames){
-        global $db;
-        $sql = "INSERT INTO fotosServicios(foto, id_servicios) VALUES";
-        foreach ($basenames as $basename) 
-            $sql .= " ('$basename', $idServicio),";
-        $sql = substr($sql, 0, -1);
-        $db->query($sql);
-        if($db->error!="") return null;
         return $db->insert_id;
     }
     function getSalones($id=null){
@@ -157,6 +148,22 @@
         $sql = "DELETE FROM $tipo WHERE id_$tipo=$idPub AND id_usuario=$idUsu";
         $db->query($sql);
         return $db->affected_rows>0;
+    }
+    function rmFotosPubli($tipo, $idPub, $idUsu, $fotos){
+        global $db;
+        $uctipo = ucfirst($tipo);
+        $sql = "DELETE FROM fotos$tipo AS fp
+                NATURAL JOIN $tipo AS tp
+                WHERE fp.id_$tipo=$idPub AND tp.id_usuario=$idUsu AND (";
+        foreach ($fotos as $foto)
+            $sql .= "id_fotos=$foto OR ";
+        $sql = substr($sql, 0, -4);
+        $db->query($sql);
+        if ($db->error) {
+            echo '<script>console.log("'.$db->error.'")</script>';
+            return false;
+        }
+        return true;
     }
     function setFotoP($tipo, $idPub, $idUsu, $idFoto){
         global $db;
