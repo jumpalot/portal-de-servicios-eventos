@@ -3509,7 +3509,7 @@ input[type="button"].btn-block {
 .btn-group > .btn-group:not(:last-child) > .btn {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
-  padding-left: 1em;
+  padding-left: 1.5em;
   margin-left: 1em;
 }
 
