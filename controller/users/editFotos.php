@@ -4,8 +4,16 @@
     $idUsu = $_SESSION['usrId'];
     $tipo = $_POST['tipo'];
     $idPub = $_POST['idPub'];
+    $fotos = getFotosPubli($tipo, $idPub, $idUsu);
+    $fotoP = getFotoP($tipo, $idPub, $idUsu);
 
-    $nombres = getFotosPubli($tipo, $idPub, $idUsu);
-    while ($nombre = $nombres->fetch_object()) echo $nombre;
-    echo '<div class="col-md-12 p" id="dz-edit"></div>'
+    echo '<div class="col-md-12 p" id="dz-edit"></div>';
+    
+    while ($fotof = $fotos->fetch_object()){
+        $nombre = $fotof->foto;
+        $idFoto = $fotof->idFoto;
+        $foto = "./img/$idUsu/$tipo/$nombre";
+        $checked = ($foto==$fotoP)?'checked':'';
+        include '../../view/users/itemEditFoto.php';
+    }
 ?>

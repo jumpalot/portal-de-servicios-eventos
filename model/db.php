@@ -127,6 +127,7 @@
         $uctipo = ucfirst($tipo);
         $sql = "SELECT
                     fp.foto AS foto,
+                    fp.id_fotos AS idFoto
                     fp.id_$tipo AS idPub
                 FROM
                     fotos$uctipo AS fp
@@ -140,6 +141,11 @@
                     COUNT(*) < 2";
         $sql .= " AND fp.id_$tipo=$idPub";
         return $db->query($sql);
+    }
+    function getFotoP($tipo, $idPub, $idUsu){
+        global $db;
+        $sql = "SELECT id_fotoPrincipal AS fotoP FROM $tipo WHERE id_$tipo=$idPub AND id_usuario=$idUsu";
+        return $db->query($sql)->fetch_object()->fotoP;
     }
     function rmPubli($tipo, $idPub, $idUsu){
         global $db;
