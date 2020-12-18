@@ -138,7 +138,7 @@
         $sql = "SELECT id_fotoPrincipal AS fotoP FROM $tipo WHERE id_$tipo=$idPub AND id_usuario=$idUsu";
         $res = $db->query($sql);
         if ($db->error) {
-            echo '<script>console.log("'.$db->error.'")</script>';
+            echo '<script>console.log("'.$db->error.'");</script>';
             return "0";
         }
         return $res->fetch_object()->fotoP;
@@ -160,7 +160,7 @@
         $sql = substr($sql, 0, -4);
         $db->query($sql);
         if ($db->error) {
-            echo '<script>console.log("'.$db->error.'")</script>';
+            echo '<script>console.log("'.$db->error.'");</script>';
             return false;
         }
         return true;
