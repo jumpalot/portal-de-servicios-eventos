@@ -172,7 +172,10 @@ function editarFotos(){
     $('#editPubModal').modal('hide');
     $.post(
         "./controller/users/editFotos.php",
-        {},
+        {
+            idPub:$("#idPub").val(),
+            tipo:$('#tipoPub').val()
+        },
         msg => $('#editFotosModal #body-content').html(msg)
     );
     $('#editFotosModal').modal('show');
