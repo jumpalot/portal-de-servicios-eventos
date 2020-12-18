@@ -78,6 +78,10 @@ $(document).ready(()=>{
         }
         let myDropzone = new Dropzone("#ed-dZUpload", dzOptions);
     });
+    $('#editFotosModal').on('hidden.bs.modal', event => {
+        $('#editFotosModal #body-content').empty();
+        trash="";
+    });
 });
 const listaTPublis = new Array(
     "servicios",
