@@ -127,7 +127,7 @@
         $uctipo = ucfirst($tipo);
         $sql = "SELECT
                     fp.foto AS foto,
-                    fp.id_fotos AS idFoto
+                    fp.id_fotos AS idFoto,
                     fp.id_$tipo AS idPub
                 FROM
                     fotos$uctipo AS fp
