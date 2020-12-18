@@ -759,10 +759,12 @@ div.modal#confirmDeleteModal {
 .wrapper .box#b13{
   grid-row: 1;
   grid-column: 1 / 3;
+  width: 100%;
 }
 .wrapper .box#b35{
   grid-row: 1;
   grid-column: 3 / 5;
+  width: 100%
 }
 .wrapper .box#b15{
   grid-row: 2;
