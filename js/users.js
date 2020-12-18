@@ -223,7 +223,7 @@ function updateFotos(){
             nFotoP:$('#editFotosModal input[type=radio]:checked').val(),
             trash:trash.substr(0, trash.length-1)
         },
-        () => {
+        res => {
             $('div#result').html(res);
             $('#editFotosModal').modal('hide');
             $('div#resultModal').modal('show');
