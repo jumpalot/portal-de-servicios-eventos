@@ -823,6 +823,11 @@ div.modal#confirmDeleteModal {
 #editFotosModal #ed-dZUpload {
   margin-bottom: 1em;
 }
+
+/* RESULT MODAL */
+#resultModal h5 {
+  text-align: center;
+}
 /* ----------- FOOTER -------------------*/
 footer{
 	
