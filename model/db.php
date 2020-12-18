@@ -158,7 +158,7 @@
                 WHERE fp.id_$tipo=$idPub AND tp.id_usuario=$idUsu AND (";
         foreach ($fotos as $foto)
             $sql .= "id_fotos=$foto OR ";
-        $sql = substr($sql, 0, -4)+')';
+        $sql = substr($sql, 0, -4).')';
         $db->query($sql);
         if ($db->error) {
             echo '<script>console.log("'.$db->error.'");</script>';
