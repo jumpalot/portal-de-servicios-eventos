@@ -820,6 +820,9 @@ div.modal#confirmDeleteModal {
   width: 50px !important;
 }
 
+#editFotosModal #ed-dZUpload {
+  margin-bottom: 1em;
+}
 /* ----------- FOOTER -------------------*/
 footer{
 	
