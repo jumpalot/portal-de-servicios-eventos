@@ -196,6 +196,13 @@ function modificarDatos(){
     );
     $('#modifyDataModal').modal('show');
 }
+function updatePub(){
+    $.post('./model/publis/updatePub.php', $('modifyDataForm').serialize(), res => {
+        $('#modifyDataModal').modal('hide');
+        $('#resultModal div#result').html(res);
+        $('#resultModal').modal('show');
+    });
+}
 function editarFotos(){
     $('#editPubModal').modal('hide');
     $.post(

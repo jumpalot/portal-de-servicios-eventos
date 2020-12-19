@@ -34,7 +34,14 @@
         foreach ($espacios as $espacio) 
             $sql .= " ('$espacio', '$idSalon'),";
         $sql = substr($sql, 0, -1);
+        $sql .= " ON DUPLICATE KEY UPDATE id_espacios=id_espacios";
         $db->query($sql);
+    }
+    function rmEspaciosSalon($idSalon){
+        global $db;
+        $sql = "DELETE FROM salon_espacio WHERE id_salon=$idSalon";
+        $db->query($sql);
+        return $db->error=="";
     }
     function addServiciosSalon($servicios, $idSalon){
         global $db;
@@ -42,7 +49,14 @@
         foreach ($servicios as $servicio) 
             $sql .= " ('$idSalon', '$servicio'),";
         $sql = substr($sql, 0, -1);
+        $sql .= " ON DUPLICATE KEY UPDATE id_lservicio=id_lservicio";
         $db->query($sql);
+    }
+    function rmServiciosSalon($idSalon){
+        global $db;
+        $sql = "DELETE FROM salon_lservicio WHERE id_salon=$idSalon";
+        $db->query($sql);
+        return $db->error=="";
     }
     function addServicio($nom, $desc, $zonaServicio, $tiposServicio, $idUsuario){
         global $db;
@@ -218,6 +232,37 @@
     function upPub($nivel, $tipo, $idPub, $idUsu){
         global $db;
         $sql = "UPDATE $tipo SET nivel=$nivel WHERE id_$tipo=$idPub AND id_usuario=$idUsu";
+        $db->query($sql);
+        if ($db->error) echo '<script>console.log("'.$db->error.'");</script>';
+        return $db->error=="";
+    }
+    function updateServicio($idPub, $idUsu, $titulo, $zona, $subtipo){
+        global $db;
+        $sql = "UPDATE servicio
+                SET 
+                    nombre='$titulo',
+                    id_zona='$zona',
+                    id_tiposervicios='$subtipo'
+                WHERE 
+                    id_servicio='$idPub '
+                AND 
+                    id_usuario='$idUsu'";
+        $db->query($sql);
+        if ($db->error) echo '<script>console.log("'.$db->error.'");</script>';
+        return $db->error=="";
+    }
+    function updateSalon($idPub, $idUsu, $titulo, $zona, $subtipo, $cap){
+        global $db;
+        $sql = "UPDATE salon
+                SET 
+                    nombre='$titulo',
+                    id_zona='$zona',
+                    id_tiposalon='$subtipo',
+                    capacidad='$cap'
+                WHERE 
+                    id_salon='$idPub '
+                AND 
+                    id_usuario='$idUsu'";
         $db->query($sql);
         if ($db->error) echo '<script>console.log("'.$db->error.'");</script>';
         return $db->error=="";
