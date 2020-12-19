@@ -2,8 +2,8 @@
         function getList($result){
             if($result!=null){
                 $list = '[';
-                while($espacio = $result->fetch_object()->id)
-                    $list .= $espacio.',';
+                while($espacio = $result->fetch_object())
+                    $list .= $espacio->id.',';
                 $list .= ']';
                 return $list;
             }
