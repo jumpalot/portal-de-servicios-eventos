@@ -7,6 +7,7 @@
     $idPub = $_SESSION['idPub'];
 
     $titulo = $_POST['nom'];
+    $desc = $_POST['desc'];
     $zona = $_POST['zonas'];
     $subtipo = $_POST['subtipo'];
 
