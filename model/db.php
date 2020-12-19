@@ -238,7 +238,7 @@
     }
     function updateServicio($idPub, $idUsu, $titulo, $desc, $zona, $subtipo){
         global $db;
-        $sql = "UPDATE servicio
+        $sql = "UPDATE servicios
                 SET 
                     nombre='$titulo',
                     descripcion='$desc',
