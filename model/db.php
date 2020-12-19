@@ -41,6 +41,7 @@
         global $db;
         $sql = "DELETE FROM salon_espacio WHERE id_salon=$idSalon";
         $db->query($sql);
+        if ($db->error) echo '<script>console.log(`'.$db->error.'`);</script>';
         return $db->error=="";
     }
     function addServiciosSalon($servicios, $idSalon){
@@ -56,6 +57,7 @@
         global $db;
         $sql = "DELETE FROM salon_lservicio WHERE id_salon=$idSalon";
         $db->query($sql);
+        if ($db->error) echo '<script>console.log(`'.$db->error.'`);</script>';
         return $db->error=="";
     }
     function addServicio($nom, $desc, $zonaServicio, $tiposServicio, $idUsuario){
