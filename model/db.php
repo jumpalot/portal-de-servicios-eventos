@@ -12,7 +12,7 @@
                 VALUES ('$nom', '$desc', '$capacidad', '$zonaSalon','$tipoSalon','$idUsuario')";
         $db->query($sql);
         if ($db->error) {
-            echo '<script>console.log("'.$db->error.'");</script>';
+            echo '<script>console.log(`'.$db->error.'`);</script>';
             return null;
         }
         return $db->insert_id;
@@ -64,7 +64,7 @@
                 VALUES ('$nom','$desc','$zonaServicio','$tiposServicio','$idUsuario')";
         $db->query($sql);
         if ($db->error) {
-            echo '<script>console.log("'.$db->error.'");</script>';
+            echo '<script>console.log(`'.$db->error.'`);</script>';
             return null;
         }
         return $db->insert_id;
@@ -194,7 +194,7 @@
         $sql = "SELECT id_fotoPrincipal AS fotoP FROM $tipo WHERE id_$tipo=$idPub AND id_usuario=$idUsu";
         $res = $db->query($sql);
         if ($db->error) {
-            echo '<script>console.log("'.$db->error.'");</script>';
+            echo '<script>console.log(`'.$db->error.'`);</script>';
             return "0";
         }
         return $res->fetch_object()->fotoP;
@@ -217,7 +217,7 @@
         $sql = substr($sql, 0, -4).')';
         $db->query($sql);
         if ($db->error) {
-            echo '<script>console.log("'.$db->error.'");</script>';
+            echo '<script>console.log(`'.$db->error.'`);</script>';
             return false;
         }
         return true;
@@ -233,7 +233,7 @@
         global $db;
         $sql = "UPDATE $tipo SET nivel=$nivel WHERE id_$tipo=$idPub AND id_usuario=$idUsu";
         $db->query($sql);
-        if ($db->error) echo '<script>console.log("'.$db->error.'");</script>';
+        if ($db->error) echo '<script>console.log(`'.$db->error.'`);</script>';
         return $db->error=="";
     }
     function updateServicio($idPub, $idUsu, $titulo, $desc, $zona, $subtipo){
@@ -249,7 +249,7 @@
                 AND 
                     id_usuario='$idUsu'";
         $db->query($sql);
-        if ($db->error) echo '<script>console.log("'.$db->error.'");</script>';
+        if ($db->error) echo '<script>console.log(`'.$db->error.'`);</script>';
         return $db->error=="";
     }
     function updateSalon($idPub, $idUsu, $titulo, $desc, $zona, $subtipo, $cap){
@@ -266,8 +266,8 @@
                 AND 
                     id_usuario='$idUsu'";
         $db->query($sql);
-        echo '<script>console.log("'.$sql.'");</script>';
-        if ($db->error) echo '<script>console.log("'.$db->error.'");</script>';
+        echo '<script>console.log(`'.$sql.'`);</script>';
+        if ($db->error) echo '<script>console.log(`'.$db->error.'`);</script>';
         return $db->error=="";
     }
     //$db = new mysqli('localhost','root','usbw','id14864471_portal');
