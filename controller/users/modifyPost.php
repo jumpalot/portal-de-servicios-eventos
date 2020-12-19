@@ -1,4 +1,15 @@
     <?php
+        function getList($result){
+            if($result!=null){
+                $list = '[';
+                while($espacio = $result->fetch_object()->id)
+                    $list .= $espacio.',';
+                $list .= ']';
+                return $list;
+            }
+            return '[]';
+        }
+
         include '../../model/db.php';
         session_start();
         $idUsu = $_SESSION['usrId'];
@@ -6,14 +17,32 @@
         $tipo = $_SESSION['tipo'];
         $idPub = $_SESSION['idPub'];
 
-        $titulo ="";
-        $desc="";
-        include '../../view/users/modifyPost/mp-common.html';
+        $publi = getEditData($tipo, $idPub);
+
+        $titulo = $publi->titulo;
+        $desc = $publi->descripcion;
+        include '../../view/users/modifyPost/mp-common.php';
+
+        include "../../view/users/modifyPost/mp-$tipo.html";
         
-        switch ($tipo){
-
+        $zona = $publi->zona;
+        $subtipo = $publi->subtipo;
+        if ($tipo=='salon'){
+            $capacidad = getCapacidad($idPub);
+            $lespacios = getList( getEspaciosPub($idPub) );
+            $lservicios = getList( getSalonlServicio($idPub) );
         }
-        include '../../view/users/modifyPost/mp-common.html';
-
     ?>
 </form>
+<script>
+    inicializarSelects('<?=$tipo?>', '#modifyDataModal');
+    setTimeout(()=>{
+        selectOption('zonas', '#modifyDataModal', <?=$zona?>)
+        selectOption('subtipo', '#modifyDataModal', <?=$subtipo?>)
+        <?php if($tipo=="salon"): ?>
+            $('#modifyDataModal #cap').val('<?=$capacidad?>');
+            selectOption('espacios', '#modifyDataModal', <?=$lespacios?>)
+            selectOption('servicios', '#modifyDataModal', <?=$lservicios?>)
+        <?php endif; ?>
+    },500);
+</script>

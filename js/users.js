@@ -97,10 +97,10 @@ const addOption = (options, msg) => {
         options.add(option);
     }
 }
-const addOptions = (csvOptions, id) => {
+const addOptions = (csvOptions, id, modal) => {
     var options = $(id)[0].options
     csvOptions.split(";").forEach(opt => addOption(options, opt));
-    $(id).selectpicker('refresh');
+    $(modal+' '+id).selectpicker('refresh');
 }
 const isEmpty = id => $(id)[0].options.length<2
 function mostrarNewPost2() {
@@ -112,7 +112,7 @@ function mostrarNewPost2() {
             pub.style.display = "none";
     }
     document.getElementById(opcion.value).style.display = "block";
-    inicializarSelects(opcion.value);
+    inicializarSelects(opcion.value, '#newPostModal');
 }
 function newPost(){
     $.post('./controller/users/addPost.php', $("form#np").serialize(), (res)=>{
@@ -120,20 +120,20 @@ function newPost(){
         $('div#resultModal').modal('show');
     });
 }
-function inicializarSelects(id){
+function inicializarSelects(id, modal){
     switch (id){
         case "servicios":
             if (isEmpty("#zonasServicio")){
-                $.post("./model/publis/getZonas.php",         zonas => addOptions(zonas, "#zonasServicio"))
-                $.post("./model/publis/getTiposServicio.php", tiposS => addOptions(tiposS, "#tiposServicio"))
+                $.post("./model/publis/getZonas.php",         zonas => addOptions(zonas, "#zonasServicio", modal))
+                $.post("./model/publis/getTiposServicio.php", tiposS => addOptions(tiposS, "#tiposServicio", modal))
             }
             break;
         case "salon":
             if (isEmpty("#zonasSalon")){
-                $.post("./model/publis/getZonas.php",         zonas => addOptions(zonas, "#zonasSalon"))
-                $.post("./model/publis/getTiposSalon.php",    tiposS => addOptions(tiposS, "#tiposSalon"))
-                $.post("./model/publis/getEspacios.php",      espacios => addOptions(espacios, "#espacios"))
-                $.post("./model/publis/getlServicios.php",    servicios => addOptions(servicios, "#servicios"))
+                $.post("./model/publis/getZonas.php",         zonas => addOptions(zonas, "#zonasSalon", modal))
+                $.post("./model/publis/getTiposSalon.php",    tiposS => addOptions(tiposS, "#tiposSalon", modal))
+                $.post("./model/publis/getEspacios.php",      espacios => addOptions(espacios, "#espacios", modal))
+                $.post("./model/publis/getlServicios.php",    servicios => addOptions(servicios, "#servicios", modal))
             }
             break;
         case "newEvento":
@@ -149,6 +149,9 @@ function inicializarSelects(id){
 
             break;
     }
+}
+function selectOption(idSelect, modal, toSelect){
+    $(modal+' '+idSelect).selectpicker('val', toSelect);
 }
 function editarPub(id){
     $('#myPubsModal').modal('hide');

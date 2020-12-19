@@ -1,9 +1,9 @@
 <?php
     include('../db.php');
-    $sql = "SELECT * FROM tiposervicio";
+    $sql = "SELECT * FROM tiposervicios";
     $servicios = $db->query($sql);
     if ($db->error=="")
         foreach ($servicios as $servicio):
-            echo $servicio['id_tiposervicio'].','.$servicio['nombre'].';';
+            echo $servicio['id_tiposervicios'].','.$servicio['nombre'].';';
         endforeach;
 ?>

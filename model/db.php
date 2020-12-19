@@ -46,7 +46,7 @@
     }
     function addServicio($nom, $desc, $zonaServicio, $tiposServicio, $idUsuario){
         global $db;
-        $sql = "INSERT INTO servicios(nombre, descripcion, id_zona, id_tiposervicio, id_usuario) 
+        $sql = "INSERT INTO servicios(nombre, descripcion, id_zona, id_tiposervicios, id_usuario) 
                 VALUES ('$nom','$desc','$zonaServicio','$tiposServicio','$idUsuario')";
         $db->query($sql);
         if ($db->error) {
@@ -86,22 +86,64 @@
                     servicios.nivel as nivel,
                     servicios.descuento as descuento,
                     zonas.zona as zona,
-                    tiposervicio.nombre as tipo,
+                    tiposervicios.nombre as tipo,
                     fotosServicios.foto as foto
                 FROM servicios
                 NATURAL LEFT JOIN zonas
-                LEFT JOIN tiposervicio
-                    ON servicios.id_tiposervicio = tiposervicio.id_tiposervicio
+                LEFT JOIN tiposervicios
+                    ON servicios.id_tiposervicios = tiposervicios.id_tiposervicios
                 LEFT JOIN fotosServicios 
                     ON servicios.id_fotoPrincipal=fotosServicios.id_fotos 
                     AND servicios.id_servicios=fotosServicios.id_servicios";
         if (@$id) $sql .= " WHERE servicios.id_usuario='$id'";
         return $db->query($sql);
     }
+    function getEditData($tipo, $idPub){
+        global $db;
+        $sql = "SELECT 
+                    nombre AS titulo,
+                    descripcion,
+                    id_zona AS zona,
+                    id_tipo$tipo AS subtipo,
+                    nivel
+                FROM $tipo
+                WHERE id_$tipo=$idPub";
+        $datos = $db->query($sql);
+        if($db->error) {
+            echo '<script>console.log(`'.$db->error.'`);</script>';
+            return null;
+        }
+        return $datos->fetch_object();
+    }
     function getTiposervicios(){
         global $db;
         $sql = "SELECT lservicios.nombre AS nombre FROM lservicios";
         return $db->query($sql);
+    }
+    function getEspaciosPub($idPub){
+        global $db;
+        $sql = "SELECT id_espacios AS id FROM salon_espacio WHERE id_salon=$idPub";
+        $datos = $db->query($sql);
+        if($db->error) {
+            echo '<script>console.log(`'.$db->error.'`);</script>';
+            return null;
+        }
+        return $datos;
+    }
+    function getSalonlServicio($idPub) {
+        global $db;
+        $sql = "SELECT id_lservicio AS id FROM salon_lservicio WHERE id_salon=$idPub";
+        $datos = $db->query($sql);
+        if($db->error) {
+            echo '<script>console.log(`'.$db->error.'`);</script>';
+            return null;
+        }
+        return $datos;
+    }
+    function getCapacidad($idPub){
+        global $db;
+        $sql = "SELECT capacidad AS cap FROM salon WHERE id_salon=$idPub";
+        return $db->query($sql)->fetch_object()->cap;
     }
     function getNivel($tipo, $idPub, $idUsu){
         global $db;
