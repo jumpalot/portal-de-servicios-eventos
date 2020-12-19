@@ -236,11 +236,12 @@
         if ($db->error) echo '<script>console.log("'.$db->error.'");</script>';
         return $db->error=="";
     }
-    function updateServicio($idPub, $idUsu, $titulo, $zona, $subtipo){
+    function updateServicio($idPub, $idUsu, $titulo, $desc, $zona, $subtipo){
         global $db;
         $sql = "UPDATE servicio
                 SET 
                     nombre='$titulo',
+                    descripcion='$desc',
                     id_zona='$zona',
                     id_tiposervicios='$subtipo'
                 WHERE 
@@ -251,11 +252,12 @@
         if ($db->error) echo '<script>console.log("'.$db->error.'");</script>';
         return $db->error=="";
     }
-    function updateSalon($idPub, $idUsu, $titulo, $zona, $subtipo, $cap){
+    function updateSalon($idPub, $idUsu, $titulo, $desc, $zona, $subtipo, $cap){
         global $db;
         $sql = "UPDATE salon
                 SET 
                     nombre='$titulo',
+                    descripcion='$desc',
                     id_zona='$zona',
                     id_tiposalon='$subtipo',
                     capacidad='$cap'
