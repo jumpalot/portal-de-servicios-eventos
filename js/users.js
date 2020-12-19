@@ -123,13 +123,13 @@ function newPost(){
 function inicializarSelects(id, modal){
     switch (id){
         case "servicios":
-            if (isEmpty("#servicios .zonas", modal)){
+            if (isEmpty("#servicios select.zonas", modal)){
                 $.post("./model/publis/getZonas.php",         zonas => addOptions(zonas, "#servicios select.zonas", modal))
                 $.post("./model/publis/getTiposServicio.php", tiposS => addOptions(tiposS, "#servicios select.subtipo", modal))
             }
             break;
         case "salon":
-            if (isEmpty("#salon .zonas", modal)){
+            if (isEmpty("#salon select.zonas", modal)){
                 $.post("./model/publis/getZonas.php",         zonas => addOptions(zonas, "#salon select.zonas", modal))
                 $.post("./model/publis/getTiposSalon.php",    tiposS => addOptions(tiposS, "#salon select.subtipo", modal))
                 $.post("./model/publis/getEspacios.php",      espacios => addOptions(espacios, "select#espacios", modal))
