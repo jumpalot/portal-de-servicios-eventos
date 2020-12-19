@@ -36,6 +36,8 @@
         $sql = substr($sql, 0, -1);
         $sql .= " ON DUPLICATE KEY UPDATE id_espacios=id_espacios";
         $db->query($sql);
+        if ($db->error) echo '<script>console.log(`'.$db->error.'`);</script>';
+        return $db->error=="";
     }
     function rmEspaciosSalon($idSalon){
         global $db;
@@ -52,6 +54,8 @@
         $sql = substr($sql, 0, -1);
         $sql .= " ON DUPLICATE KEY UPDATE id_lservicio=id_lservicio";
         $db->query($sql);
+        if ($db->error) echo '<script>console.log(`'.$db->error.'`);</script>';
+        return $db->error=="";
     }
     function rmServiciosSalon($idSalon){
         global $db;
