@@ -11,8 +11,8 @@
         $archivos = getImgCache($dir);
         switch($tipo){
             case "servicios":
-                $zonaServicio = $_POST['zonaServicio'];
-                $tiposServicio = $_POST['tipoServicio'];
+                $zonaServicio = $_POST['zonas'];
+                $tiposServicio = $_POST['subtipo'];
                 $idServicio = addServicio($nom, $desc, $zonaServicio, $tiposServicio, $idUsu);
                 if($idServicio!=null) {
                     if (count($archivos)>0){
@@ -33,8 +33,8 @@
             break;
             case "salon":
                 $cap = $_POST['cap'];
-                $zonasSalon = $_POST['zonasSalon'];
-                $tipoSalon = $_POST['tipoSalon'];
+                $zonasSalon = $_POST['zonas'];
+                $tipoSalon = $_POST['subtipo'];
                 $espacios = $_POST['espacios'];
                 $servicios = $_POST['servicios'];
                 $idSalon = addSalon($nom, $desc, $cap, $zonasSalon, $tipoSalon, $idUsu);
