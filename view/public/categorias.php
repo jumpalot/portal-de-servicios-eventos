@@ -1,7 +1,7 @@
 <?php
     $tps = getTiposervicios();
 ?>
-<a class="nav-link" href="#" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">Categorias </a>
+<a class="nav-link" href="#" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">Servicios </a>
 <div class="dropdown">
   <!-- <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
     Categorias
