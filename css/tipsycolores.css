@@ -18,6 +18,9 @@
 a {
   cursor: pointer;
 }
+select:focus {
+  outline: none;
+}
 .contenedor {
   height: 400px !important;
   width: 100% !important;
