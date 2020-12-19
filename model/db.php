@@ -249,6 +249,7 @@
                 AND 
                     id_usuario='$idUsu'";
         $db->query($sql);
+        echo '<script>console.log(`'.$sql.'`);</script>';
         if ($db->error) echo '<script>console.log(`'.$db->error.'`);</script>';
         return $db->error=="";
     }
