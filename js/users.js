@@ -124,14 +124,14 @@ function inicializarSelects(id, modal){
     switch (id){
         case "servicios":
             if (isEmpty("#zonas", modal)){
-                $.post("./model/publis/getZonas.php",         zonas => addOptions(zonas, "#servicios #zonas", modal))
-                $.post("./model/publis/getTiposServicio.php", tiposS => addOptions(tiposS, "#servicios #subtipo", modal))
+                $.post("./model/publis/getZonas.php",         zonas => addOptions(zonas, "#servicios .zonas", modal))
+                $.post("./model/publis/getTiposServicio.php", tiposS => addOptions(tiposS, "#servicios .subtipo", modal))
             }
             break;
         case "salon":
             if (isEmpty("#zonas", modal)){
-                $.post("./model/publis/getZonas.php",         zonas => addOptions(zonas, "#salon #zonas", modal))
-                $.post("./model/publis/getTiposSalon.php",    tiposS => addOptions(tiposS, "#salon #subtipo", modal))
+                $.post("./model/publis/getZonas.php",         zonas => addOptions(zonas, "#salon .zonas", modal))
+                $.post("./model/publis/getTiposSalon.php",    tiposS => addOptions(tiposS, "#salon .subtipo", modal))
                 $.post("./model/publis/getEspacios.php",      espacios => addOptions(espacios, "#espacios", modal))
                 $.post("./model/publis/getlServicios.php",    servicios => addOptions(servicios, "#servicios", modal))
             }
