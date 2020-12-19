@@ -98,11 +98,11 @@ const addOption = (options, msg) => {
     }
 }
 const addOptions = (csvOptions, id, modal) => {
-    var options = $(id)[0].options
+    var options = $(modal+' select#'+id)[0].options
     csvOptions.split(";").forEach(opt => addOption(options, opt));
     $(modal+' '+id).selectpicker('refresh');
 }
-const isEmpty = id => $(id)[0].options.length<2
+const isEmpty = id => $('select#'+id)[0].options.length<2
 function mostrarNewPost2() {
     var tipo = document.getElementById("tipo");
     var opcion = tipo.options[tipo.selectedIndex];
