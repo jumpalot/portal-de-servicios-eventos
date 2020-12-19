@@ -245,7 +245,7 @@
                     id_zona='$zona',
                     id_tiposervicios='$subtipo'
                 WHERE 
-                    id_servicio='$idPub '
+                    id_servicios='$idPub '
                 AND 
                     id_usuario='$idUsu'";
         $db->query($sql);
