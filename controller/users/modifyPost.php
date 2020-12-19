@@ -37,12 +37,12 @@
 <script>
     inicializarSelects('<?=$tipo?>', '#modifyDataModal');
     setTimeout(()=>{
-        selectOption('zonas', '#modifyDataModal', <?=$zona?>)
-        selectOption('subtipo', '#modifyDataModal', <?=$subtipo?>)
+        selectOption('select.zonas', '#modifyDataModal', <?=$zona?>)
+        selectOption('select.subtipo', '#modifyDataModal', <?=$subtipo?>)
         <?php if($tipo=="salon"): ?>
             $('#modifyDataModal #cap').val('<?=$capacidad?>');
-            selectOption('espacios', '#modifyDataModal', <?=$lespacios?>)
-            selectOption('servicios', '#modifyDataModal', <?=$lservicios?>)
+            selectOption('select#espacios', '#modifyDataModal', <?=$lespacios?>)
+            selectOption('select#servicios', '#modifyDataModal', <?=$lservicios?>)
         <?php endif; ?>
     },500);
 </script>
