@@ -57,7 +57,7 @@ input[type="email"] {
   grid-template: "setZonas    setTipoServicios  setTipoSalon" 10.6em
                  "rmZonas     rmTipoServicios   rmTipoSalon"  10.6em
                  "rmUsuarios  rmServicios       rmSalon"      13.6em;
-  gap: 1rem;
+  gap: 2rem;
   align-items: center;
   margin: 1rem;
 }
