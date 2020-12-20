@@ -1,20 +1,14 @@
 <?php
     $tps = getTiposervicios();
 ?>
-<a class="nav-link" href="#" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">Servicios </a>
-<div class="dropdown">
-<button class="dropbtn">categorias
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-        <div class="row"> 
-          <div class="column">
-           <?php while($tp = $tps->fetch_object()): ?>
-            <a href="?section=search&tipo=<?=$tp->nombre?>"><?=$tp->nombre?></a>
+<li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Caracteristicas
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Action</a>
+          <?php while($tp = $tps->fetch_object()): ?>
+            <a class="dropdown-item" href="?section=search&tipo=<?=$tp->nombre?>"><?=$tp->nombre?></a>
            <?php endwhile; ?>
-           <div class="dropdown-divider"></div>
-          </div>
         </div>
-    </div>
-
-</div>
+      </li>
