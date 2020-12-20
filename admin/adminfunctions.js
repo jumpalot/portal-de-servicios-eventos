@@ -21,6 +21,9 @@ function updateSelects(){
     rmTipoSalonLoad();
     rmTipoServiciosLoad();
 }
+function dimissAlert(){
+    $('.alert').removeClass('show');
+}
 function logIn(){
     $.post(
         './model/login.php',
