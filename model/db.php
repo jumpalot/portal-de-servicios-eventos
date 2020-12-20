@@ -140,6 +140,11 @@
         $sql = "SELECT lservicios.nombre AS nombre FROM lservicios";
         return $db->query($sql);
     }
+    function getTiposalones(){
+        global $db;
+        $sql = "SELECT tiposalon.nombre AS nombre FROM tiposalon";
+        return $db->query($sql);
+    }
     function getEspaciosPub($idPub){
         global $db;
         $sql = "SELECT id_espacios AS id FROM salon_espacio WHERE id_salon=$idPub";

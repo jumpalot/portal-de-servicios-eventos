@@ -10,6 +10,8 @@
         include './view/body/rmUsuarios.html';
         include './view/body/rmServicios.html';
         include './view/body/rmSalon.html';
+
+        include './view/alert.html';
     ?>
 
 </div>

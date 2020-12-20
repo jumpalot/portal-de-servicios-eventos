@@ -5,7 +5,7 @@
         <div class="contenedors">
         
             <div class="input-contenedor">
-                <input type="email"" placeholder="Email del Usuario" name="ts" onchange="rmServiciosLoad()" required>
+                <input type="email" placeholder="Email del Usuario" name="email" onchange="rmServiciosLoad()" pattern="[a-zA-Z0-9\-_.]{3,20}@[a-zA-Z]{2,10}\.[a-zA-Z\.]{2,8}" required>
             </div>
             <select class="selectpicker form-control" data-style="input-contenedor" data-width="100%" title="Seleccione el servicio a eliminar" name="servicios" data-live-search="true">
             </select>
