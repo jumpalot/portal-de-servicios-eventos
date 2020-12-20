@@ -5,10 +5,10 @@
     include('./account.php');
     if (@$_POST['code']){                                                       //si la pagina envio un codigo
         if(verificarCodigo($_POST['code'], $_POST['email'])){                   //lo verifico
-            echo register(                                                      //devuelvo el id del nuevo usuario
+            if (register(                                                      //devuelvo el id del nuevo usuario
                 $_POST['email'], $_POST['name'], $_POST['pass'], $_POST['tel'],
                @$_POST['fb'],   @$_POST['tw'],  @$_POST['ig'],  @$_POST['web']
-            );
+            )) echo login($_POST['email'], $_POST['pass']);
         } else echo 'noverif';                                                    //si no verifica lo aviso
     } else echo enviarCodigo($_POST['email']);                                    //si no me enviaron un codigo lo envio
 ?>
