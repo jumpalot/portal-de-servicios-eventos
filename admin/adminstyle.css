@@ -1,0 +1,43 @@
+* {
+    font-family: "Quicksand", sans-serif;
+}
+.formulario {
+  background: #fff;
+  margin-top: 150px;
+  padding: 3px;
+}
+.h1 {
+  text-align: center;
+  background-color: rgba(170, 143, 83, 0.6);
+  color: white !important;
+  font-size: 40px;
+}
+.hidden {
+  display: none;
+}
+.contenedors {
+  width: 100%;
+  padding: 15px;
+}
+.input-contenedor:hover {
+  border: 1px solid #faaf3c;
+}
+#wrapper {
+  display: grid;
+  grid-template: "setZona     setTipoServicios  setTipoSalon" 4em
+                 "rmZona      rmTipoServicios   rmTipoSalon"  4em
+                 "rmUsuarios  rmServicios       rmSalon"      4em
+                 "rmUsuarios  rmServicios       rmSalon"      4em;
+  gap: 4rem;
+  align-items: center;
+  margin: 4rem;
+}
+#wrapper .box {
+  width: 100%;
+  height: 100%;
+  border-radius: 1em;
+  border-color: tan;
+  background-color: bisque;
+  padding: 4em;
+  text-align: center;
+}
