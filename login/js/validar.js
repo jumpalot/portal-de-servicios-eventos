@@ -12,14 +12,19 @@ function mostrarLogin() {
   $("#login")[0].style.display = "block";
   $("#regi")[0].style.display = "none";
 }
+function validar() {
+  $.post("../model/accounts/register.php", { email: $('#email').val() }, msg => {
+      if(msg=='invalidEmail'){
+        $('#regi #email')[0].setCustomValidity("email ya registrado");
+      } else {
+        $('#regi #email')[0].setCustomValidity("");
+      }
+    });
+}
 function registro() {
   if($('#verifmail')[0].style.display != "block" && $('#code').val()==""){
-    $.post("../model/accounts/register.php", { email: $('#email').val() }, msg => {
-      if(msg!='invalidEmail'){
-        $('#verifmail')[0].style.display = "block";
-        $('#regi1')[0].style.display = "none";
-      } else $('#regi #email')[0].setCustomValidity("email ya registrado");
-    });
+    $('#verifmail')[0].style.display = "block";
+    $('#regi1')[0].style.display = "none";
   } else {
     $.post(
       "../model/accounts/register.php", $('form#regi').serialize(),
