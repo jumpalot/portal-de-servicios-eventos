@@ -1,0 +1,98 @@
+* {
+    font-family: "Quicksand", sans-serif;
+}
+.formulario {
+  background: #fff;
+  padding: 3px;
+  height: inherit;
+  border-radius: 1em;
+}
+#login.formulario {
+  margin-top: 15%;
+  margin-inline: 30%;
+}
+.input-contenedor {
+  margin-bottom: 15px;
+  border: 1px solid #aaa;
+}
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  font-size: 20px;
+  width: 100%;
+  padding: 10px;
+  border: none;
+}
+.button {
+  border: none;
+  width: 100%;
+  color: white;
+  font-size: 20px;
+  background-color: rgba(170, 143, 83, 0.6);
+  padding: 15px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.h1 {
+  text-align: center;
+  background-color: rgba(170, 143, 83, 0.6);
+  color: white !important;
+  font-size: 40px;
+  border-top-left-radius: .3em;
+  border-top-right-radius: .3em;
+}
+.hidden {
+  display: none;
+}
+.contenedors {
+  width: 100%;
+  padding: 15px;
+}
+.input-contenedor:hover {
+  border: 1px solid #faaf3c;
+}
+#wrapper {
+  display: grid;
+  grid-template: "setZonas    setTipoServicios  setTipoSalon" 18em
+                 "rmZonas     rmTipoServicios   rmTipoSalon"  18em
+                 "rmUsuarios  rmServicios       rmSalon"      18em;
+  gap: 2rem;
+  align-items: center;
+  margin: 2rem;
+}
+#wrapper .bodybox {
+  width: 100%;
+  height: 100%;
+  border-radius: 1em;
+  border-color: tan;
+  background-color: bisque;
+  padding: .6em;
+  text-align: center;
+}
+#wrapper .bodybox .setZonas{
+  grid-area: setZonas;
+}
+#wrapper .bodybox .rmZonas{
+  grid-area: rmZonas;
+}
+#wrapper .bodybox .setTipoServicios{
+  grid-area: setTipoServicios;
+}
+#wrapper .bodybox .rmTipoServicios{
+  grid-area: rmTipoServicios;
+}
+#wrapper .bodybox .setTipoSalon{
+  grid-area: setTipoSalon;
+}
+#wrapper .bodybox .rmTipoSalon{
+  grid-area: rmTipoSalon;
+}
+#wrapper .bodybox .rmUsuarios{
+  grid-area: rmUsuarios;
+}
+#wrapper .bodybox .rmServicios{
+  grid-area: rmServicios;
+}
+#wrapper .bodybox .rmSalon{
+  grid-area: rmSalon;
+}

@@ -1,0 +1,20 @@
+<div id="login">
+    <form id="login" class="formulario" onsubmit="return logIn()">
+    
+        <h4 class="h1">Panel de Administración</h4>
+        <h4 class="hidden" id="loginfail" style="color: brown;">Error al iniciar sesion. Verifique sus datos.</h4>
+        <div class="contenedors">
+        
+            <div class="input-contenedor">
+                <i class="fas fa-envelope icon"></i>
+                <input type="email" placeholder="Correo Electronico" name="email" required>
+            </div>
+            
+            <div class="input-contenedor">
+                <i class="fas fa-key icon"></i>
+                <input type="password" placeholder="Contraseña" name="pass" required>         
+            </div>
+            <input type="submit" value="Ingresa" class="button">
+        </div>
+    </form>
+</div>

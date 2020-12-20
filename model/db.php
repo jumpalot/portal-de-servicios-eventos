@@ -275,5 +275,10 @@
         if ($db->error) echo '<script>console.log(`'.$db->error.'`);</script>';
         return $db->error=="";
     }
+    function existsEmail($email){
+        global $db;
+        $sql = "SELECT count(*) AS cant FROM usuarios WHERE correo='$email'";
+        return $db->query($sql)->fetch_object()->cant=="1";
+    }
     $db = new mysqli('localhost','u812890733_Jpgardey','G12345678y','u812890733_Portalgardey');
 ?>

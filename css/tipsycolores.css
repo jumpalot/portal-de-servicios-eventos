@@ -18,6 +18,9 @@
 a {
   cursor: pointer;
 }
+.loading {
+  cursor: progress !important;
+}
 select:focus {
   outline: none;
 }

@@ -1,0 +1,17 @@
+<div class="bodybox rmSalon">
+    <form id="rmSalon" class="formulario" onsubmit="return rmSalon()">
+    
+        <h4 class="h1">Eliminar un salón</h4>
+        <div class="contenedors">
+        
+            <div class="input-contenedor">
+                <input type="mail" placeholder="Email del Usuario" name="ts" onchange="rmSalonLoad()" required>
+            </div>
+            <div class="input-contenedor hidden">
+                <select class="selectpicker form-control" data-style="input-contenedor" data-width="100%" title="Seleccione el salon a eliminar" name="salon" data-live-search="true">
+                </select>
+            </div>
+            <input type="submit" value="Borrar" class="button">
+        </div>
+    </form>
+</div>

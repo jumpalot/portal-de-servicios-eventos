@@ -13,25 +13,31 @@ function mostrarLogin() {
   $("#regi")[0].style.display = "none";
 }
 function registro() {
-  if($('#regi1')[0].style.display != "none"){
-    $('#verifmail')[0].style.display = "block";
-    $('#regi1')[0].style.display = "none";
-    $.post("../model/accounts/register.php", { email: $('#email').val() });
-    return false;
+  $('.body-login').addClass("loading");
+  if($('#verifmail')[0].style.display != "block" && $('#code').val()==""){
+    $.post("../model/accounts/register.php", { email: $('#regi #email').val() }, msg => {
+      if(msg!='invalidEmail'){
+        $('#duplicatemail')[0].style.display = "none"
+        $('#verifmail')[0].style.display = "block";
+        $('#regi1')[0].style.display = "none";
+      } else $('#duplicatemail')[0].style.display = "block";
+      $('.body-login').removeClass("loading");
+    });
   } else {
     $.post(
       "../model/accounts/register.php", $('form#regi').serialize(),
-      (msg) => {    
-        if(msg=='noverif') $("#failverif")[0].style.display="block";
+      msg => {    
+        if(msg=='noverifcode') $("#failverif")[0].style.display="block";
         else if(msg=='noreg') {
           $('#regi1')[0].style.display = "block";
           $("#failreg")[0].style.display="block";
+          $('#verifmail')[0].style.display = "none";
         }
         else window.location="http://portalgardey.escuelarobertoarlt.com.ar/";
-      }
-    );
-    return false;
+        $('.body-login').removeClass("loading");
+    });
   }
+  return false;
 }
 function login(){
   $.post(
