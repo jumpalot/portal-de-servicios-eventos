@@ -75,6 +75,11 @@ select:focus {
 /* .container {
   display: flex;
   flex-direction: row;
+      width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
 } */
 .productos {
   display: flex;
