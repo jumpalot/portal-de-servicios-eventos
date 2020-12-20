@@ -25,7 +25,7 @@
         <li class="nav-item">
           <a class="nav-link" href="#">Imagen personal</a>
         </li>
-        <li class="nav-item" class="ml-3">
+        <li class="nav-item">
           <a class="nav-link" href="./?section=contacto">Contacto</a>
         </li>
         <li class="nav-item">
