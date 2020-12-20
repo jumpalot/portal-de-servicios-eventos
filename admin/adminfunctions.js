@@ -1,4 +1,4 @@
-function login(){
+function logIn(){
     $.post(
         './model/login.php',
         $('form#login').serialize(),
@@ -6,4 +6,5 @@ function login(){
             if(msg=='invalid') $('#loginfail')[0].style.display = 'block';
         }
     ); 
+    return false;
 }
