@@ -3,9 +3,13 @@
 }
 .formulario {
   background: #fff;
+  padding: 3px;
+  height: inherit;
+  border-radius: 1em;
+}
+#login.formulario {
   margin-top: 15%;
   margin-inline: 30%;
-  padding: 3px;
 }
 .input-contenedor {
   margin-bottom: 15px;
@@ -34,6 +38,8 @@ input[type="email"] {
   background-color: rgba(170, 143, 83, 0.6);
   color: white !important;
   font-size: 40px;
+  border-top-left-radius: .3em;
+  border-top-right-radius: .3em;
 }
 .hidden {
   display: none;
@@ -61,7 +67,7 @@ input[type="email"] {
   border-radius: 1em;
   border-color: tan;
   background-color: bisque;
-  padding: 4em;
+  padding: .6em;
   text-align: center;
 }
 #wrapper .bodybox .setZonas{
