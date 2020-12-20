@@ -1,8 +1,4 @@
-$(document).ready(()=>{
-    rmZonasLoad();
-    rmTipoSalonLoad();
-    rmTipoServiciosLoad();
-});
+$(document).ready( () => updateSelects() );
 const addOption = (options, msg) => {
     if (msg!=""){
         var option = document.createElement("option");
@@ -15,6 +11,16 @@ const addOptions = (csvOptions, id) => {
     csvOptions.split(";").forEach(opt => addOption(options, opt));
     $(id).selectpicker('refresh');
 }
+const showRes = res => {
+    $('#respuesta').text(res);
+    $('.alert').alert();
+    $('.alert').addClass('show');
+}
+function updateSelects(){
+    rmZonasLoad();
+    rmTipoSalonLoad();
+    rmTipoServiciosLoad();
+}
 function logIn(){
     $.post(
         './model/login.php',
@@ -26,31 +32,46 @@ function logIn(){
     return false;
 }
 function setZonas(){
-
+    $.post(
+        './model/setZonas.php',
+        $('form#setZonas').serialize(),
+        res => showRes(res)
+    );
 }
 function setTipoServicios(){
-
+    $.post(
+        './model/setTipoServicios.php',
+        $('form#setTipoServicios').serialize(),
+        res => showRes(res)
+    );
 }
 function setTipoSalon(){
-
+    $.post(
+        './model/setTipoSalon.php',
+        $('form#setTipoSalon').serialize(),
+        res => showRes(res)
+    );
 }
 function rmZonas(){
 
 }
 function rmZonasLoad(){
-    $.post("../model/publis/getZonas.php",            zonas => addOptions(zonas, "#rmZonas select"))
+    $('#rmZonas select').empty();
+    $.post("../model/publis/getZonas.php",          zonas => addOptions(zonas, "#rmZonas select"));
 }
 function rmTipoServicios(){
     
 }
 function rmTipoServiciosLoad(){
-    $.post("../model/publis/getTiposServicio.php",    tiposS => addOptions(tiposS, "#rmTipoServicios select"))
+    $('#rmTipoServicios select').empty();
+    $.post("../model/publis/getTiposServicio.php",  tiposS => addOptions(tiposS, "#rmTipoServicios select"));
 }
 function rmTipoSalon(){
 
 }
 function rmTipoSalonLoad(){
-    $.post("../model/publis/getTiposSalon.php",    tiposS => addOptions(tiposS, "#rmTipoSalon select"))
+    $('#rmTipoSalon select').empty();
+    $.post("../model/publis/getTiposSalon.php",     tiposS => addOptions(tiposS, "#rmTipoSalon select"));
 }
 function rmUsuarios(){
 
