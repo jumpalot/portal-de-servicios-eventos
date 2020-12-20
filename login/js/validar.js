@@ -13,7 +13,7 @@ function mostrarLogin() {
   $("#regi")[0].style.display = "none";
 }
 function validar() {
-  $.post("../model/accounts/register.php", { email: $('#email').val() }, msg => {
+  $.post("../model/accounts/register.php", { email: $('#regi #email').val() }, msg => {
       if(msg=='invalidEmail'){
         $('#regi #email')[0].setCustomValidity("email ya registrado");
       } else {
