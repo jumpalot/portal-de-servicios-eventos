@@ -528,7 +528,6 @@ nav ul li a:hover {
 .column a:hover {
   background-color: #ddd;
 }
-
 /* Clear floats after the columns */
 .row:after {
   content: "";

@@ -7,7 +7,7 @@
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-        <div class="row">
+        <div class="row"> 
           <div class="column">
            <?php while($tp = $tps->fetch_object()): ?>
             <a href="?section=search&tipo=<?=$tp->nombre?>"><?=$tp->nombre?></a>
@@ -15,4 +15,5 @@
           </div>
         </div>
     </div>
+    
 </div>
