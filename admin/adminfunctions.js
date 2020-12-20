@@ -40,6 +40,7 @@ function setZonas(){
         $('form#setZonas').serialize(),
         res => {
             showRes(res)
+            $('#setZonas input').text("");
             rmZonasLoad();
         }
     );
@@ -51,6 +52,7 @@ function setTipoServicios(){
         $('form#setTipoServicios').serialize(),
         res => {
             showRes(res)
+            $('#setTipoServicios input').text("");
             rmTipoServiciosLoad();
         }
     );
@@ -62,6 +64,7 @@ function setTipoSalon(){
         $('form#setTipoSalon').serialize(),
         res => {
             showRes(res)
+            $('#setTipoSalon input').text("");
             rmTipoSalonLoad();
         }
     );
