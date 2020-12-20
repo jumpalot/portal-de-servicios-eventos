@@ -3,7 +3,7 @@
 ?>
 <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Caracteristicas
+          Servicios
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <?php while($tp = $tps->fetch_object()): ?>
