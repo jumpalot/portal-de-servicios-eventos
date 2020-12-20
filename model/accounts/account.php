@@ -14,8 +14,7 @@
             $sql = "INSERT INTO `usuarios`(`nombre`, `pass`, `telefono`, `correo`, `fb`, `tw`, `ig`, `web`)
                     VALUES ('$name','$pass','$tel','$email', $opcionales)";
             $db->query($sql);
-            echo $sql;
-            if($db->error=="") return $db->insert_id; //si la insercion no falló devuelve el nuevo id
+            if($db->error=="") return ""; //si la insercion no falló devuelve el nuevo id
         }
         return 'noreg';
     }
