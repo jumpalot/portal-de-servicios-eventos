@@ -6,7 +6,9 @@
                     servicios.nombre AS nombre
                 FROM servicios
                 WHERE correo='$email'";
-        return $db->query($sql);
+        $data = $db->query($sql);
+        if ($db->error) echo $sql;
+        return $data;
     }
     function getSalonesByEmail($email){
         global $db;
@@ -15,7 +17,9 @@
                     salon.nombre AS nombre
                 FROM salon
                 WHERE correo='$email'";
-        return $db->query($sql);
+        $data = $db->query($sql);
+        if ($db->error) echo $sql;
+        return $data;
     }
     $db = new mysqli('localhost','u812890733_Jpgardey','G12345678y','u812890733_Portalgardey');
 ?>
