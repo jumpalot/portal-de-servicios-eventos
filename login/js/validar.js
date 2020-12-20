@@ -13,6 +13,7 @@ function mostrarLogin() {
   $("#regi")[0].style.display = "none";
 }
 function registro() {
+  $('[type=submit]').addClass("progress");
   if($('#verifmail')[0].style.display != "block" && $('#code').val()==""){
     $.post("../model/accounts/register.php", { email: $('#regi #email').val() }, msg => {
       if(msg!='invalidEmail'){
@@ -20,6 +21,7 @@ function registro() {
         $('#verifmail')[0].style.display = "block";
         $('#regi1')[0].style.display = "none";
       } else $('#duplicatemail')[0].style.display = "block";
+      $('[type=submit]').removeClass("progress");
     });
   } else {
     $.post(
@@ -32,6 +34,7 @@ function registro() {
           $('#verifmail')[0].style.display = "none";
         }
         else window.location="http://portalgardey.escuelarobertoarlt.com.ar/";
+        $('[type=submit]').removeClass("progress");
     });
   }
   return false;
