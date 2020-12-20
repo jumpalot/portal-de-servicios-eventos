@@ -52,6 +52,12 @@ input[type="email"] {
 .input-contenedor:hover {
   border: 1px solid #faaf3c;
 }
+.alert {
+  position: absolute;
+  bottom: 0px;
+  left: 20%;
+  right: 20%;
+}
 #wrapper {
   display: grid;
   grid-template: "setZonas    setTipoServicios  setTipoSalon" 10.6em
