@@ -13,7 +13,7 @@ function mostrarLogin() {
   $("#regi")[0].style.display = "none";
 }
 function registro() {
-  if($('#verifmail')[0].style.display == "none" && $('#code').val()==""){
+  if($('#verifmail')[0].style.display != "block" && $('#code').val()==""){
     $('#verifmail')[0].style.display = "block";
     $('#regi1')[0].style.display = "none";
     $.post("../model/accounts/register.php", { email: $('#email').val() });
