@@ -5,7 +5,8 @@
                     servicios.id_servicios AS id,
                     servicios.nombre AS nombre
                 FROM servicios
-                WHERE correo='$email'";
+                INNER JOIN usuarios ON servicios.id_usuario=usuarios.id_usuarios
+                WHERE usuarios.correo='$email'";
         $data = $db->query($sql);
         if ($db->error) echo $sql;
         return $data;
@@ -16,7 +17,8 @@
                     salon.id_salon AS id,
                     salon.nombre AS nombre
                 FROM salon
-                WHERE correo='$email'";
+                INNER JOIN usuarios ON salon.id_usuario=usuarios.id_usuarios
+                WHERE usuarios.correo='$email'";
         $data = $db->query($sql);
         if ($db->error) echo $sql;
         return $data;
