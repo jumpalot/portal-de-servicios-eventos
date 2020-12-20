@@ -7,11 +7,12 @@
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-        <div class="row">
+        <div class="row"> 
           <div class="column">
            <?php while($tp = $tps->fetch_object()): ?>
-            <li><a href="?section=search&tipo=<?=$tp->nombre?>"><?=$tp->nombre?></a></li>
+            <a href="?section=search&tipo=<?=$tp->nombre?>"><?=$tp->nombre?></a>
            <?php endwhile; ?>
+           <div class="dropdown-divider"></div>
           </div>
         </div>
     </div>
