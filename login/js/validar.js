@@ -14,7 +14,7 @@ function mostrarLogin() {
 }
 function registro() {
   if($('#verifmail')[0].style.display != "block" && $('#code').val()==""){
-    $.post("../model/accounts/register.php", { email: $('#email').val() }, msg => {
+    $.post("../model/accounts/register.php", { email: $('#regi #email').val() }, msg => {
       if(msg!='invalidEmail'){
         $('#verifmail')[0].style.display = "block";
         $('#regi1')[0].style.display = "none";
