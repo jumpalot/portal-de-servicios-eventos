@@ -3,7 +3,8 @@
 }
 .formulario {
   background: #fff;
-  margin: 35%;
+  margin-top: 15%;
+  margin-inline: 30%;
   padding: 3px;
 }
 .input-contenedor {
