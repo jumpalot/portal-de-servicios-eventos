@@ -40,6 +40,7 @@ function setZonas(){
             rmZonasLoad();
         }
     );
+    return false;
 }
 function setTipoServicios(){
     $.post(
@@ -50,6 +51,7 @@ function setTipoServicios(){
             rmTipoServiciosLoad();
         }
     );
+    return false;
 }
 function setTipoSalon(){
     $.post(
@@ -60,33 +62,34 @@ function setTipoSalon(){
             rmTipoSalonLoad();
         }
     );
+    return false;
 }
 function rmZonas(){
-
+    return false;
 }
 function rmZonasLoad(){
     $('#rmZonas select').empty();
     $.post("../model/publis/getZonas.php",          zonas => addOptions(zonas, "#rmZonas select"));
 }
 function rmTipoServicios(){
-    
+    return false;
 }
 function rmTipoServiciosLoad(){
     $('#rmTipoServicios select').empty();
     $.post("../model/publis/getTiposServicio.php",  tiposS => addOptions(tiposS, "#rmTipoServicios select"));
 }
 function rmTipoSalon(){
-
+    return false;
 }
 function rmTipoSalonLoad(){
     $('#rmTipoSalon select').empty();
     $.post("../model/publis/getTiposSalon.php",     tiposS => addOptions(tiposS, "#rmTipoSalon select"));
 }
 function rmUsuarios(){
-
+    return false;
 }
 function rmServicios(){
-
+    return false;
 }
 function rmServiciosLoad(){
     if($('#rmServicios [type=email]')[0].checkValidity()){
@@ -101,7 +104,7 @@ function rmServiciosLoad(){
     }
 }
 function rmSalon(){
-
+    return false;
 }
 function rmSalonLoad(){
     if($('#rmSalon [type=email]')[0].checkValidity()){
