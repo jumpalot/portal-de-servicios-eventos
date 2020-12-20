@@ -498,50 +498,6 @@ nav ul li a:hover {
   font-family: Quicksand;
   padding-top: -10px;
 }
-/*------CARACTERISTICAS --------- */
-/* Dropdown content (hidden by default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  width: 100%;
-  left: 0;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-.dropbtn {
-  font-size: 16px;
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font: inherit; /* Important for vertical align on mobile phones */
-  margin: 0; /* Important for vertical align on mobile phones */
-}
-/* Add a background color on hover */
-.column a:hover {
-  background-color: #ddd;
-}
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.column a {
-  float: none;
-  color: rgb(255, 254, 254);
-  padding: 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
 
 /*  ------------HOME----------------      */
 

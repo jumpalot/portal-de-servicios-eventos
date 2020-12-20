@@ -12,8 +12,8 @@
            <?php while($tp = $tps->fetch_object()): ?>
             <a href="?section=search&tipo=<?=$tp->nombre?>"><?=$tp->nombre?></a>
            <?php endwhile; ?>
+           <div class="dropdown-divider"></div>
           </div>
         </div>
     </div>
-    
 </div>
