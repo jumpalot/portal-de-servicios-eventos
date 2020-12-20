@@ -16,7 +16,7 @@
         break;
         case 'salones':
             include('./view/public/minisearch.html');
-            include('./view/public/Salones.html');
+         
         break;
         case 'contacto':
             include('./view/public/Contacto.html');
