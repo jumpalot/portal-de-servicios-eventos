@@ -19,7 +19,8 @@ function validar() {
       } else {
         $('#regi #email')[0].setCustomValidity("");
       }
-    });
+      $('form#regi').submit()
+  });
 }
 function registro() {
   if($('#verifmail')[0].style.display != "block" && $('#code').val()==""){
