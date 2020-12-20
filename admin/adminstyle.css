@@ -55,9 +55,9 @@ input[type="email"] {
 #wrapper {
   display: grid;
   grid-template: "setZonas    setTipoServicios  setTipoSalon" 10.6em
-                 "rmZonas     rmTipoServicios   rmTipoSalon"  11.6em
-                 "rmUsuarios  rmServicios       rmSalon"      14.6em;
-  gap: 1rem;
+                 "rmZonas     rmTipoServicios   rmTipoSalon"  10.6em
+                 "rmUsuarios  rmServicios       rmSalon"      13.6em;
+  gap: 2rem;
   align-items: center;
   margin: 1rem;
 }
@@ -70,30 +70,30 @@ input[type="email"] {
   padding: .6em;
   text-align: center;
 }
-#wrapper .bodybox .setZonas{
+#wrapper .bodybox.setZonas{
   grid-area: setZonas;
 }
-#wrapper .bodybox .rmZonas{
+#wrapper .bodybox.rmZonas{
   grid-area: rmZonas;
 }
-#wrapper .bodybox .setTipoServicios{
+#wrapper .bodybox.setTipoServicios{
   grid-area: setTipoServicios;
 }
-#wrapper .bodybox .rmTipoServicios{
+#wrapper .bodybox.rmTipoServicios{
   grid-area: rmTipoServicios;
 }
-#wrapper .bodybox .setTipoSalon{
+#wrapper .bodybox.setTipoSalon{
   grid-area: setTipoSalon;
 }
-#wrapper .bodybox .rmTipoSalon{
+#wrapper .bodybox.rmTipoSalon{
   grid-area: rmTipoSalon;
 }
-#wrapper .bodybox .rmUsuarios{
+#wrapper .bodybox.rmUsuarios{
   grid-area: rmUsuarios;
 }
-#wrapper .bodybox .rmServicios{
+#wrapper .bodybox.rmServicios{
   grid-area: rmServicios;
 }
-#wrapper .bodybox .rmSalon{
+#wrapper .bodybox.rmSalon{
   grid-area: rmSalon;
 }
