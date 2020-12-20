@@ -3,8 +3,29 @@
 }
 .formulario {
   background: #fff;
-  margin-top: 150px;
+  margin: 35%;
   padding: 3px;
+}
+.input-contenedor {
+  margin-bottom: 15px;
+  border: 1px solid #aaa;
+}
+input[type="password"],
+input[type="email"] {
+  font-size: 20px;
+  width: 82%;
+  padding: 10px;
+  border: none;
+}
+.button {
+  border: none;
+  width: 100%;
+  color: white;
+  font-size: 20px;
+  background-color: rgba(170, 143, 83, 0.6);
+  padding: 15px 20px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 .h1 {
   text-align: center;
