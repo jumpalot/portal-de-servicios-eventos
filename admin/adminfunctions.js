@@ -50,7 +50,7 @@ function rmTipoSalon(){
 
 }
 function rmTipoSalonLoad(){
-    $.post("../model/publis/getTiposServicio.php",    tiposS => addOptions(tiposS, "#rmTipoServicios select"))
+    $.post("../model/publis/getTiposSalon.php",    tiposS => addOptions(tiposS, "#rmTipoSalon select"))
 }
 function rmUsuarios(){
 
