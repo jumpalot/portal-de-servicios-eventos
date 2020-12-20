@@ -16,9 +16,10 @@ function registro() {
   if($('#verifmail')[0].style.display != "block" && $('#code').val()==""){
     $.post("../model/accounts/register.php", { email: $('#regi #email').val() }, msg => {
       if(msg!='invalidEmail'){
+        $('#duplicatemail')[0].style.display = "none"
         $('#verifmail')[0].style.display = "block";
         $('#regi1')[0].style.display = "none";
-      } else $('#regi #email')[0].setCustomValidity("email ya registrado");
+      } else $('#duplicatemail')[0].style.display = "block";
     });
   } else {
     $.post(
