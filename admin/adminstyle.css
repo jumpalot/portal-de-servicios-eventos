@@ -53,10 +53,9 @@ input[type="email"] {
 }
 #wrapper {
   display: grid;
-  grid-template: "setZonas    setTipoServicios  setTipoSalon" 8em
-                 "rmZonas     rmTipoServicios   rmTipoSalon"  8em
-                 "rmUsuarios  rmServicios       rmSalon"      8em
-                 "rmUsuarios  rmServicios       rmSalon"      7em;
+  grid-template: "setZonas    setTipoServicios  setTipoSalon" 18em
+                 "rmZonas     rmTipoServicios   rmTipoSalon"  18em
+                 "rmUsuarios  rmServicios       rmSalon"      18em;
   gap: 2rem;
   align-items: center;
   margin: 2rem;
