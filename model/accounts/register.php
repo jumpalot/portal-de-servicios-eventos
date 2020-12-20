@@ -15,6 +15,6 @@
             if (existsEmail($_POST['email'])){                                      //verifico que no exista en la db
                 echo 'invalidEmail';
             } else echo enviarCodigo($_POST['email']);                                    //si no me enviaron un codigo lo envio
-        }
+        } echo 'invalidEmail';
     }
 ?>
