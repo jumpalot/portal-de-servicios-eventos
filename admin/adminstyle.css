@@ -1,6 +1,10 @@
 * {
     font-family: "Quicksand", sans-serif;
 }
+body {
+  height: 100%;
+  overflow: hidden;
+}
 .formulario {
   background: #fff;
   padding: 5px;
@@ -72,7 +76,7 @@ input[type="email"] {
   height: 100%;
   border-radius: 1em;
   border-color: tan;
-  background-color: bisque;
+  background-color: tan;
   padding: .6em;
   text-align: center;
 }
