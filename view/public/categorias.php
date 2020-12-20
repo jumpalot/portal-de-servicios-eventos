@@ -1,6 +1,5 @@
 <?php
-    include ("././model/db.php");
-    $tps = getTiposerviios();
+    $tps = getTiposervicios();
 ?>
 <a class="nav-link" href="#" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">Servicios </a>
 <div class="dropdown">
@@ -11,7 +10,7 @@
         <div class="row">
           <div class="column">
            <?php while($tp = $tps->fetch_object()): ?>
-            <li><a href="?section=search&tipo=<?=$tp->nombre?>"><?=$tp->nombre?></a></li>
+            <a href="?section=search&tipo=<?=$tp->nombre?>"><?=$tp->nombre?></a>
            <?php endwhile; ?>
           </div>
         </div>
