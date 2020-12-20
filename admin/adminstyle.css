@@ -11,6 +11,7 @@
   margin-bottom: 15px;
   border: 1px solid #aaa;
 }
+input[type="text"],
 input[type="password"],
 input[type="email"] {
   font-size: 20px;
