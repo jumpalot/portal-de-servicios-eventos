@@ -9,6 +9,12 @@
                 $_POST['email'], $_POST['name'], $_POST['pass'], $_POST['tel'],
                @$_POST['fb'],   @$_POST['tw'],  @$_POST['ig'],  @$_POST['web']
             )) echo login($_POST['email'], $_POST['pass']);
-        } else echo 'noverif';                                                    //si no verifica lo aviso
-    } else echo enviarCodigo($_POST['email']);                                    //si no me enviaron un codigo lo envio
+        } else echo 'noverifcode';                                                    //si no verifica lo aviso
+    } else {    
+        if (validemail($_POST['email'])){                                           //verifico que el email sea valido
+            if (existsEmail($_POST['email'])){                                      //verifico que no exista en la db
+                echo 'invalidEmail';
+            } else echo enviarCodigo($_POST['email']);                                    //si no me enviaron un codigo lo envio
+        }
+    }
 ?>
