@@ -35,21 +35,30 @@ function setZonas(){
     $.post(
         './model/setZonas.php',
         $('form#setZonas').serialize(),
-        res => showRes(res)
+        res => {
+            showRes(res)
+            rmZonasLoad();
+        }
     );
 }
 function setTipoServicios(){
     $.post(
         './model/setTipoServicios.php',
         $('form#setTipoServicios').serialize(),
-        res => showRes(res)
+        res => {
+            showRes(res)
+            rmTipoServiciosLoad();
+        }
     );
 }
 function setTipoSalon(){
     $.post(
         './model/setTipoSalon.php',
         $('form#setTipoSalon').serialize(),
-        res => showRes(res)
+        res => {
+            showRes(res)
+            rmTipoSalonLoad();
+        }
     );
 }
 function rmZonas(){
