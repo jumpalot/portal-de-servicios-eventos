@@ -1,6 +1,10 @@
 * {
     font-family: "Quicksand", sans-serif;
 }
+body {
+  height: 100%;
+  overflow: hidden;
+}
 .formulario {
   background: #fff;
   padding: 5px;
