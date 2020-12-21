@@ -71,6 +71,14 @@ function setTipoSalon(){
     return false;
 }
 function rmZonas(){
+    $.post(
+        './model/rmZonas.php',
+        $('form#rmZonas').serialize(),
+        res => {
+            showRes(res)
+            rmZonasLoad();
+        }
+    );
     return false;
 }
 function rmZonasLoad(){
@@ -78,6 +86,14 @@ function rmZonasLoad(){
     $.post("../model/publis/getZonas.php",          zonas => addOptions(zonas, "#rmZonas select"));
 }
 function rmTipoServicios(){
+    $.post(
+        './model/rmTipoServicios.php',
+        $('form#rmTipoServicios').serialize(),
+        res => {
+            showRes(res)
+            rmServiciosLoad();
+        }
+    );
     return false;
 }
 function rmTipoServiciosLoad(){
@@ -85,6 +101,14 @@ function rmTipoServiciosLoad(){
     $.post("../model/publis/getTiposServicio.php",  tiposS => addOptions(tiposS, "#rmTipoServicios select"));
 }
 function rmTipoSalon(){
+    $.post(
+        './model/rmTipoSalon.php',
+        $('form#rmTipoSalon').serialize(),
+        res => {
+            showRes(res)
+            rmTipoSalonLoad();
+        }
+    );
     return false;
 }
 function rmTipoSalonLoad(){

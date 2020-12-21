@@ -41,5 +41,23 @@
         $db->query($sql);
         return $db->error=="";
     }
+    function rmZona($zona){
+        global $db;
+        $sql = "DELETE FROM zonas WHERE id_zona='$zona'";
+        $db->query($sql);
+        return $db->error=="";
+    }
+    function rmTipoServicio($ts){
+        global $db;
+        $sql = "DELETE FROM tiposervicios WHERE id_tiposervicios='$ts'";
+        $db->query($sql);
+        return $db->error=="";
+    }
+    function rmTipoSalon($ts){
+        global $db;
+        $sql = "DELETE FROM tiposalon WHERE id_tiposalon='$ts'";
+        $db->query($sql);
+        return $db->error=="";
+    }
     $db = new mysqli('localhost','u812890733_Jpgardey','G12345678y','u812890733_Portalgardey');
 ?>
