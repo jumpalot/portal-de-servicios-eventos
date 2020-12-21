@@ -294,5 +294,61 @@
         $sql = "SELECT count(*) AS cant FROM usuarios WHERE correo='$email'";
         return $db->query($sql)->fetch_object()->cant=="1";
     }
+    function getServicio($idPub){
+        global $db;
+        $sql = "SELECT 
+                    servicios.id_servicios AS id,
+                    servicios.nombre AS titulo,
+                    servicios.descripcion AS descripcion,
+                    servicios.nivel as nivel,
+                    servicios.descuento as descuento,
+                    zonas.zona as zona,
+                    tiposervicios.nombre as tipo,
+                    fotosServicios.foto as foto,
+                    usuarios.id_usuarios as idUsu,
+                    usuarios.correo as email,
+                    usuarios.nombre as nombreUsu,
+                    usuarios.telefono as telefono,
+                    usuarios.fb as fb,
+                    usuarios.tw as tw,
+                    usuarios.ig as ig,
+                    usuarios.web as web
+                FROM servicios
+                NATURAL LEFT JOIN zonas
+                LEFT JOIN tiposervicios
+                    ON servicios.id_tiposervicios = tiposervicios.id_tiposervicios
+                LEFT JOIN fotosServicios 
+                    ON servicios.id_fotoPrincipal=fotosServicios.id_fotos 
+                        AND servicios.id_servicios=fotosServicios.id_servicios
+                INNER JOIN usuarios
+                    ON servicios.id_usuario=usuarios.id_usuarios
+                WHERE id_servicios='$idPub'";
+        $data = $db->query($sql);
+        if ($db->error) echo $sql;
+        return $data->fetch_object();
+    }
+    function getSalon($idPub){
+        global $db;
+        $sql = "SELECT 
+                    salon.id_salon AS id,
+                    salon.nombre AS titulo,
+                    salon.descripcion AS descripcion,
+                    salon.capacidad as capacidad,
+                    salon.nivel as nivel,
+                    salon.descuento as descuento,
+                    zonas.zona as zona,
+                    tiposalon.nombre as tipo,
+                    fotosSalon.foto as foto
+                FROM salon
+                NATURAL LEFT JOIN zonas
+                LEFT JOIN tiposalon 
+                    ON salon.id_tiposalon=tiposalon.id_tiposalon
+                LEFT JOIN fotosSalon 
+                    ON salon.id_fotoPrincipal=fotosSalon.id_fotos 
+                        AND salon.id_salon=fotosSalon.id_salon
+                WHERE id_salon='$idPub'";
+        $data = $db->query($sql);
+        return $data->fetch_object();
+    }
     $db = new mysqli('localhost','u812890733_Jpgardey','G12345678y','u812890733_Portalgardey');
 ?>

@@ -497,13 +497,6 @@ nav ul li {
   text-decoration: none;
 
 }
-#minisearch .fuente:hover{
-  color: grey;
-  margin-bottom: 20px;
-  font-size: 17pt; font-weight: 400; letter-spacing: 2px;
-  font-family:'Quicksand', sans-serif;
-  text-decoration: none;
-}
 .icons{
   font-size: 20px;
   letter-spacing: 20px;
@@ -900,6 +893,17 @@ div.modal#confirmDeleteModal {
 #resultModal h5 {
   text-align: center;
 }
+
+/* DETALLE PUBILCACIONES */
+.infoContacto {
+  background-color: #d4b66a;
+}
+.infoServicios {
+  background-color: #ebe9e6;
+  border-color: #d4b66a;
+  border-width: .4em;
+}
+
 /* ----------- FOOTER -------------------*/
 footer{
 	

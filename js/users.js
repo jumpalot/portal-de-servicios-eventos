@@ -260,3 +260,6 @@ function buyUpgrade(){
         }
     );
 }
+function verPub(){
+    window.location="./?section=preview";
+}
