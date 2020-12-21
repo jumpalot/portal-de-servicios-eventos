@@ -16,7 +16,6 @@
     function rmImgFromDb($archivos, $dir){
         while ($archivo = $archivos->fetch_array(MYSQLI_ASSOC)){
             unlink($dir.$archivo['foto']);
-            echo 'Imagen Borrada: '.$dir.$archivo['foto'];
         }
     }
     function rmTree($dir) {
