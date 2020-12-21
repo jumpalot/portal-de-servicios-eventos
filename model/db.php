@@ -247,14 +247,15 @@
         if ($db->error) echo '<script>console.log(`'.$db->error.'`);</script>';
         return $db->error=="";
     }
-    function updateServicio($idPub, $idUsu, $titulo, $desc, $zona, $subtipo){
+    function updateServicio($idPub, $idUsu, $titulo, $desc, $zona, $subtipo, $descuento){
         global $db;
         $sql = "UPDATE servicios
                 SET 
                     nombre='$titulo',
                     descripcion='$desc',
                     id_zona='$zona',
-                    id_tiposervicios='$subtipo'
+                    id_tiposervicios='$subtipo',
+                    descuento='$descuento'
                 WHERE 
                     id_servicios='$idPub '
                 AND 
@@ -263,7 +264,7 @@
         if ($db->error) echo '<script>console.log(`'.$db->error.'`);</script>';
         return $db->error=="";
     }
-    function updateSalon($idPub, $idUsu, $titulo, $desc, $zona, $subtipo, $cap){
+    function updateSalon($idPub, $idUsu, $titulo, $desc, $zona, $subtipo, $cap, $descuento){
         global $db;
         $sql = "UPDATE salon
                 SET 
@@ -271,7 +272,8 @@
                     descripcion='$desc',
                     id_zona='$zona',
                     id_tiposalon='$subtipo',
-                    capacidad='$cap'
+                    capacidad='$cap',
+                    descuento='$descuento'
                 WHERE 
                     id_salon='$idPub '
                 AND 
