@@ -282,13 +282,6 @@ h6,
 .boton {
   font-family: "Quicksand", sans-serif;
 }
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin-bottom: 0.5em;
-}
 
 h1 {
   font-size: 50pt;
@@ -496,20 +489,13 @@ nav ul li {
   font-family: Quicksand;
   float: left;
 }
-.fuente{
+#minisearch .fuente{
   color: white;
   margin-bottom: 20px;
   font-size: 20px; font-weight: 400; letter-spacing: 2px;
   font-family:'Quicksand', sans-serif;
   text-decoration: none;
 
-}
-.fuente:hover{
-  color: grey;
-  margin-bottom: 20px;
-  font-size: 17pt; font-weight: 400; letter-spacing: 2px;
-  font-family:'Quicksand', sans-serif;
-  text-decoration: none;
 }
 .icons{
   font-size: 20px;
@@ -551,6 +537,7 @@ nav ul li a:hover {
 }
 #minisearch .bootstrap-select>.dropdown-toggle{
   margin-bottom: 0;
+  font-size: 19px;
 }
 #minisearch .bootstrap-select {
     margin-top: 0;
@@ -906,6 +893,17 @@ div.modal#confirmDeleteModal {
 #resultModal h5 {
   text-align: center;
 }
+
+/* DETALLE PUBILCACIONES */
+.infoContacto {
+  background-color: #d4b66a;
+}
+.infoServicios {
+  background-color: #ebe9e6;
+  border-color: #d4b66a;
+  border-width: .4em;
+}
+
 /* ----------- FOOTER -------------------*/
 footer{
 	
@@ -922,7 +920,7 @@ footer *{
 	font-family: sans-serif; 
 }
 footer .container-body{
-	display: flex;
+	display: block;
 }
 footer .control{
 	display: flex;
@@ -958,7 +956,9 @@ footer .columnaportal{
   float: left;
 }
 footer .inCorreos input[type="text"]{
-	font-size: 20px;
+  font-size: 20px;
+  margin: .4em;
+  width: 20em;
 }
 footer a:link{
 	color:#c8bfa4;
@@ -974,8 +974,12 @@ footer a:hover{
 }
 input[type="submit"]#fsnews{
 	font-size: 20PX;
-	color:gray;
+	color: #c8bfa4;
 	border-radius:8px;
+}
+input[type="submit"]#fsnews:hover{
+	font-size: 16PX;
+	color: burlywood;
 }
 footer A {text-decoration: none;}
 
