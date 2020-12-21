@@ -30,6 +30,7 @@ function logIn(){
         $('form#login').serialize(),
         msg => {
             if(msg=='invalid') $('#loginfail')[0].style.display = 'block';
+            else window.location="http://portalgardey.escuelarobertoarlt.com.ar/admin/";
         }
     ); 
     return false;
