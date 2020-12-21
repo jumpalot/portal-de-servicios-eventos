@@ -121,7 +121,7 @@ function rmUsuarios(){
         $('form#rmUsuarios').serialize(),
         res => {
             showRes(res)
-            $('#rmUsuarios input[type=text]').val("");
+            $('#rmUsuarios input[type=email]').val("");
         }
     );
     return false;
@@ -132,7 +132,7 @@ function rmServicios(){
         $('form#rmServicios').serialize(),
         res => {
             showRes(res)
-            $('#rmServicios input[type=text]').val("");
+            $('#rmServicios input[type=email]').val("");
             $('#rmServicios select').empty()
         }
     );
@@ -156,7 +156,7 @@ function rmSalon(){
         $('form#rmSalon').serialize(),
         res => {
             showRes(res)
-            $('#rmSalon input[type=text]').val("");
+            $('#rmSalon input[type=email]').val("");
             $('#rmSalon select').empty()
         }
     );
