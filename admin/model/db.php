@@ -77,5 +77,33 @@
         $db->query($sql);
         return $db->error=="" && $db->affected_rows;
     }
+    function getIdUsu($email){
+        global $db;
+        $sql = "SELECT id_usuarios AS id FROM usuarios WHERE correo='$email'";
+        $data = $db->query($sql);
+        if($db->error) return null;
+        $usuario = $data->fetch_object();
+        if ($usuario==null) return null;
+        return $usuario->id;
+    }
+    function getFotosPubli($tipo, $idPub, $idUsu) {
+        global $db;
+        $uctipo = ucfirst($tipo);
+        $sql = "SELECT
+                    fp.foto AS foto,
+                    fp.id_fotos AS idFoto,
+                    fp.id_$tipo AS idPub
+                FROM
+                    fotos$uctipo AS fp
+                NATURAL JOIN $tipo 
+                WHERE 
+                    $tipo.id_usuario = $idUsu
+                GROUP BY
+                    foto
+                HAVING
+                    COUNT(*) < 2";
+        $sql .= " AND fp.id_$tipo=$idPub";
+        return $db->query($sql);
+    }
     $db = new mysqli('localhost','u812890733_Jpgardey','G12345678y','u812890733_Portalgardey');
 ?>
