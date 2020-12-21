@@ -39,7 +39,7 @@ function setZonas(){
         './model/setZonas.php',
         $('form#setZonas').serialize(),
         res => {
-            showRes(res)
+            showRes(res);
             $('#setZonas input[type=text]').val("");
             rmZonasLoad();
         }
@@ -51,7 +51,7 @@ function setTipoServicios(){
         './model/setTipoServicios.php',
         $('form#setTipoServicios').serialize(),
         res => {
-            showRes(res)
+            showRes(res);
             $('#setTipoServicios input[type=text]').val("");
             rmTipoServiciosLoad();
         }
@@ -63,7 +63,7 @@ function setTipoSalon(){
         './model/setTipoSalon.php',
         $('form#setTipoSalon').serialize(),
         res => {
-            showRes(res)
+            showRes(res);
             $('#setTipoSalon input[type=text]').val("");
             rmTipoSalonLoad();
         }
@@ -75,7 +75,7 @@ function rmZonas(){
         './model/rmZonas.php',
         $('form#rmZonas').serialize(),
         res => {
-            showRes(res)
+            showRes(res);
             rmZonasLoad();
         }
     );
@@ -90,7 +90,7 @@ function rmTipoServicios(){
         './model/rmTipoServicios.php',
         $('form#rmTipoServicios').serialize(),
         res => {
-            showRes(res)
+            showRes(res);
             rmTipoServiciosLoad();
         }
     );
@@ -105,7 +105,7 @@ function rmTipoSalon(){
         './model/rmTipoSalon.php',
         $('form#rmTipoSalon').serialize(),
         res => {
-            showRes(res)
+            showRes(res);
             rmTipoSalonLoad();
         }
     );
@@ -120,7 +120,7 @@ function rmUsuarios(){
         './model/rmUsuarios.php',
         $('form#rmUsuarios').serialize(),
         res => {
-            showRes(res)
+            showRes(res);
             $('#rmUsuarios input[type=email]').val("");
         }
     );
@@ -133,7 +133,8 @@ function rmServicios(){
         res => {
             showRes(res)
             $('#rmServicios input[type=email]').val("");
-            $('#rmServicios select').empty()
+            $('#rmServicios select').empty();
+            $('#rmServicios select').selectpicker('refresh');
         }
     );
     return false;
@@ -144,8 +145,8 @@ function rmServiciosLoad(){
             "./model/getServicios.php",
             $('form#rmServicios').serialize(),
             servicios => {
-                $('#rmServicios select').empty()
-                addOptions(servicios, "#rmServicios select")
+                $('#rmServicios select').empty();
+                addOptions(servicios, "#rmServicios select");
             }
         );
     }
@@ -157,7 +158,8 @@ function rmSalon(){
         res => {
             showRes(res)
             $('#rmSalon input[type=email]').val("");
-            $('#rmSalon select').empty()
+            $('#rmSalon select').empty();
+            $('#rmSalon select').selectpicker('refresh');
         }
     );
     return false;
