@@ -33,8 +33,8 @@
             break;
             case "salon":
                 $cap = $_POST['cap'];
-                $zonasSalon = $_POST['zonas'];
-                $tipoSalon = $_POST['subtipo'];
+                $zonasSalon = $_POST["zonas$tipo"];
+                $tipoSalon = $_POST["subtipo$tipo"];
                 $espacios = $_POST['espacios'];
                 $servicios = $_POST['servicios'];
                 $idSalon = addSalon($nom, $desc, $cap, $zonasSalon, $tipoSalon, $idUsu);
