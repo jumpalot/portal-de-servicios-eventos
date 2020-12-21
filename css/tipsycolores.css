@@ -538,11 +538,11 @@ nav ul li a:hover {
     color: #d4b66a;
 }
 #minisearch select{
-  width: 60vh;
+  width: 14rem;
   height: 2em;
 }
 #minisearch input[type=text]{
-  width: 100vh;
+  width: 20rem;
   height: 2em;
 }
 #minisearch .bblr {
