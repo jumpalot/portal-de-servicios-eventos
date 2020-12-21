@@ -37,7 +37,7 @@
         case 'search':
             include('./view/public/minisearch.html');
             include('./view/public/busqueda/Busqueda.html');
-            include('./view/public/busqueda/basic.php');
+            include('./view/public/busqueda/items/basic.php');
         break;
         default:
             include('./controller/public/home.php');
