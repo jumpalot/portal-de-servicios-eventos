@@ -19,7 +19,7 @@ const isEmpty = id => $(id)[0].options.length<2;
 function cargarZonas(){
     if ($('#minisearch').length){
         if (isEmpty("#minisearch select.zonas")){
-            $.post("./model/publis/getZonas.php", zonas => addOptions(zonas, "#minisearch select.zonas", modal));
+            $.post("./model/publis/getZonas.php", zonas => addOptions(zonas, "#minisearch select.zonas"));
         }
     }
 }
