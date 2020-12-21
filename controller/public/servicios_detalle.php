@@ -1,5 +1,6 @@
 <?php
     $idPub=$_GET['idPub'];
+    $tipo = $_GET['tipo'];
     $datos = getServicio($idPub);
     $idUsu = $datos->idUsu;
 
