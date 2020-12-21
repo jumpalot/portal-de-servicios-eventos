@@ -127,6 +127,15 @@ function rmUsuarios(){
     return false;
 }
 function rmServicios(){
+    $.post(
+        './model/rmServicios.php',
+        $('form#rmServicios').serialize(),
+        res => {
+            showRes(res)
+            $('#rmServicios input[type=text]').val("");
+            $('#rmServicios select').empty()
+        }
+    );
     return false;
 }
 function rmServiciosLoad(){
@@ -142,6 +151,15 @@ function rmServiciosLoad(){
     }
 }
 function rmSalon(){
+    $.post(
+        './model/rmSalon.php',
+        $('form#rmSalon').serialize(),
+        res => {
+            showRes(res)
+            $('#rmSalon input[type=text]').val("");
+            $('#rmSalon select').empty()
+        }
+    );
     return false;
 }
 function rmSalonLoad(){
