@@ -526,8 +526,11 @@ nav ul li a:hover {
   font-family: Quicksand;
   padding-top: -10px;
 }
-.navbar-dark .navbar-nav .show > .nav-link, .navbar-dark .navbar-nav .active > .nav-link, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .nav-link.active {
+.navbar-dark#minisearch .navbar-nav .show > .nav-link, .navbar-dark#minisearch .navbar-nav .active > .nav-link, .navbar-dark#minisearch .navbar-nav .nav-link.show, .navbar-dark#minisearch .navbar-nav .nav-link.active {
     color: #ffff;
+}
+.navbar-dark#primaryNavbar .navbar-nav .show > .nav-link, .navbar-dark#primaryNavbar .navbar-nav .active > .nav-link, .navbar-dark#primaryNavbar .navbar-nav .nav-link.show, .navbar-dark#primaryNavbar .navbar-nav .nav-link.active {
+    color: #d4b66a;
 }
 
 
