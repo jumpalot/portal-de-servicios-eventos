@@ -116,6 +116,14 @@ function rmTipoSalonLoad(){
     $.post("../model/publis/getTiposSalon.php",     tiposS => addOptions(tiposS, "#rmTipoSalon select"));
 }
 function rmUsuarios(){
+    $.post(
+        './model/rmUsuarios.php',
+        $('form#rmUsuarios').serialize(),
+        res => {
+            showRes(res)
+            $('#rmUsuarios input[type=text]').val("");
+        }
+    );
     return false;
 }
 function rmServicios(){
