@@ -91,7 +91,7 @@ function rmTipoServicios(){
         $('form#rmTipoServicios').serialize(),
         res => {
             showRes(res)
-            rmServiciosLoad();
+            rmTipoServiciosLoad();
         }
     );
     return false;
