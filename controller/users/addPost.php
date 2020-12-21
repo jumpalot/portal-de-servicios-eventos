@@ -3,11 +3,11 @@
     include('../../model/db.php');
     session_start();
     $idUsu = $_SESSION['usrId'];
-    $tipo = $_SESSION['tipo'];
     $dir = "../../img/$idUsu/cache/";
     if (isset($_POST['nom'])){
         $nom = $_POST['nom'];
         $desc = $_POST['desc'];
+        $tipo = $_POST['tipo'];
         $archivos = getImgCache($dir);
         switch($tipo){
             case "servicios":
