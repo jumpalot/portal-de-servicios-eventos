@@ -23,7 +23,8 @@
             include('./view/public/Contacto.html');
         break;
         case 'search':
-            include('./view/public/Busqueda.html');
+            include('./view/public/minisearch.html');
+            include('./view/public/busqueda/Busqueda.html');
         break;
         default:
             include('./controller/public/home.php');
