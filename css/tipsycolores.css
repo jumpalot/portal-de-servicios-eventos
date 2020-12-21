@@ -920,7 +920,7 @@ footer *{
 	font-family: sans-serif; 
 }
 footer .container-body{
-	display: flex;
+	display: block;
 }
 footer .control{
 	display: flex;
