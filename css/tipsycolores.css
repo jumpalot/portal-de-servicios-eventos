@@ -491,6 +491,21 @@ nav ul li {
   font-family: Quicksand;
   float: left;
 }
+.fuente{
+  color: white;
+  margin-bottom: 20px;
+  font-size: 20px; font-weight: 400; letter-spacing: 2px;
+  font-family:'Quicksand', sans-serif;
+  text-decoration: none;
+
+}
+.fuente:hover{
+  color: grey;
+  margin-bottom: 20px;
+  font-size: 17pt; font-weight: 400; letter-spacing: 2px;
+  font-family:'Quicksand', sans-serif;
+  text-decoration: none;
+}
 nav ul li a:hover {
   color: #dcceb2;
 }
