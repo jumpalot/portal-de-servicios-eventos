@@ -1,7 +1,7 @@
 <?php
     $tps = getTiposalones();
 ?>
-<li class="nav-item dropdown">
+<li class="nav-item dropdown" id="ddsalon">
         <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
           Salones
         </a>

@@ -1,7 +1,7 @@
 <?php
     $tps = getTiposervicios();
 ?>
-<li class="nav-item dropdown">
+<li class="nav-item dropdown" id="ddservicios">
         <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
           Servicios
         </a>

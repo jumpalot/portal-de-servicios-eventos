@@ -1,5 +1,6 @@
 $(document).ready(() => {
     cargarZonas();
+    iniciarHovers();
 });
 
 const addOption = (options, msg) => {
@@ -22,4 +23,8 @@ function cargarZonas(){
             $.post("./model/publis/getZonas.php", zonas => addOptions(zonas, "#minisearch select.zonas"));
         }
     }
+}
+function iniciarHovers(){
+    $('#ddservicios').hover(()=>$('#ddservicios .dropdown-menu').dropdown('toggle'));
+    $('#ddsalon').hover(()=>$('#ddsalon .dropdown-menu').dropdown('toggle'));
 }
