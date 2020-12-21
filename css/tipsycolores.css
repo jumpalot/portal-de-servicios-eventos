@@ -551,6 +551,7 @@ nav ul li a:hover {
 }
 #minisearch .bootstrap-select>.dropdown-toggle{
   margin-bottom: 0;
+  font-size: 19px;
 }
 #minisearch .bootstrap-select {
     margin-top: 0;
