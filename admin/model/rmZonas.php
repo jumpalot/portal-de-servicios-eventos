@@ -3,9 +3,9 @@
     if (@$_SESSION['adminlogin']){
         include './db.php';
         $zona = $_POST['zona'];
-        if (addZonas($zona))
-            echo 'Se añadio correctamente la zona';
+        if (rmZona($zona))
+            echo 'Se elimino correctamente la zona';
         else
-            echo 'Ocurrio un error al añadir la zona';
+            echo 'Ocurrio un error al eliminar la zona';
     }
 ?>

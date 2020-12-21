@@ -71,6 +71,14 @@ function setTipoSalon(){
     return false;
 }
 function rmZonas(){
+    $.post(
+        './model/rmZonas.php',
+        $('form#rmZonas').serialize(),
+        res => {
+            showRes(res)
+            rmZonasLoad();
+        }
+    );
     return false;
 }
 function rmZonasLoad(){
@@ -78,6 +86,14 @@ function rmZonasLoad(){
     $.post("../model/publis/getZonas.php",          zonas => addOptions(zonas, "#rmZonas select"));
 }
 function rmTipoServicios(){
+    $.post(
+        './model/rmTipoServicios.php',
+        $('form#rmTipoServicios').serialize(),
+        res => {
+            showRes(res)
+            rmTipoServiciosLoad();
+        }
+    );
     return false;
 }
 function rmTipoServiciosLoad(){
@@ -85,6 +101,14 @@ function rmTipoServiciosLoad(){
     $.post("../model/publis/getTiposServicio.php",  tiposS => addOptions(tiposS, "#rmTipoServicios select"));
 }
 function rmTipoSalon(){
+    $.post(
+        './model/rmTipoSalon.php',
+        $('form#rmTipoSalon').serialize(),
+        res => {
+            showRes(res)
+            rmTipoSalonLoad();
+        }
+    );
     return false;
 }
 function rmTipoSalonLoad(){
@@ -92,9 +116,26 @@ function rmTipoSalonLoad(){
     $.post("../model/publis/getTiposSalon.php",     tiposS => addOptions(tiposS, "#rmTipoSalon select"));
 }
 function rmUsuarios(){
+    $.post(
+        './model/rmUsuarios.php',
+        $('form#rmUsuarios').serialize(),
+        res => {
+            showRes(res)
+            $('#rmUsuarios input[type=email]').val("");
+        }
+    );
     return false;
 }
 function rmServicios(){
+    $.post(
+        './model/rmServicios.php',
+        $('form#rmServicios').serialize(),
+        res => {
+            showRes(res)
+            $('#rmServicios input[type=email]').val("");
+            $('#rmServicios select').empty()
+        }
+    );
     return false;
 }
 function rmServiciosLoad(){
@@ -110,6 +151,15 @@ function rmServiciosLoad(){
     }
 }
 function rmSalon(){
+    $.post(
+        './model/rmSalon.php',
+        $('form#rmSalon').serialize(),
+        res => {
+            showRes(res)
+            $('#rmSalon input[type=email]').val("");
+            $('#rmSalon select').empty()
+        }
+    );
     return false;
 }
 function rmSalonLoad(){

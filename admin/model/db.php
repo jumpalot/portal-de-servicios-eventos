@@ -41,5 +41,41 @@
         $db->query($sql);
         return $db->error=="";
     }
+    function rmZona($zona){
+        global $db;
+        $sql = "DELETE FROM zonas WHERE id_zona='$zona'";
+        $db->query($sql);
+        return $db->error=="" && $db->affected_rows;
+    }
+    function rmTipoServicio($ts){
+        global $db;
+        $sql = "DELETE FROM tiposervicios WHERE id_tiposervicios='$ts'";
+        $db->query($sql);
+        return $db->error=="" && $db->affected_rows;
+    }
+    function rmTipoSalon($ts){
+        global $db;
+        $sql = "DELETE FROM tiposalon WHERE id_tiposalon='$ts'";
+        $db->query($sql);
+        return $db->error=="" && $db->affected_rows;
+    }
+    function rmUsuario($email){
+        global $db;
+        $sql = "DELETE FROM usuarios WHERE correo='$email'";
+        $db->query($sql);
+        return $db->error=="" && $db->affected_rows;
+    }
+    function rmServicios($servicios){
+        global $db;
+        $sql = "DELETE FROM servicios WHERE id_servicios='$servicios'";
+        $db->query($sql);
+        return $db->error=="" && $db->affected_rows;
+    }
+    function rmSalon($salon){
+        global $db;
+        $sql = "DELETE FROM salon WHERE id_salon='$salon'";
+        $db->query($sql);
+        return $db->error=="" && $db->affected_rows;
+    }
     $db = new mysqli('localhost','u812890733_Jpgardey','G12345678y','u812890733_Portalgardey');
 ?>
