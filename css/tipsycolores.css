@@ -986,3 +986,13 @@ footer A {text-decoration: none;}
     width: 100%;
   }
 }
+/* ----------diseño de salones---------------------*/
+.bannersalon{
+  width:  100%;
+  height: 500px; 
+ background-image: url(../img/estancia_la_linda-quintas_y_estancias-buenos_aires-1220372089_20181_grande.jpg);
+  background-size: 100% 100%;
+  position: flex;
+  display: flex;
+  align-items: center;
+}
