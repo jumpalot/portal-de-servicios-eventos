@@ -2,7 +2,7 @@
     $tps = getTiposalones();
 ?>
 <li class="nav-item dropdown" id="ddsalon">
-        <a class="nav-link dropdown-toggle" href="?section=salones" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" onclick="window.location='?section=salones'" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
           Salones
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">

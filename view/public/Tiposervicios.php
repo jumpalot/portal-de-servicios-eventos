@@ -2,7 +2,7 @@
     $tps = getTiposervicios();
 ?>
 <li class="nav-item dropdown" id="ddservicios">
-        <a class="nav-link dropdown-toggle" href="?section=servicios" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" onclick="window.location='?section=servicios'" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
           Servicios
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
