@@ -7,7 +7,7 @@
         $salon = $_POST['salon'];
         $idUsu = getIdUsu($email);
         if($idUsu!=null){
-            $fotos = getFotosPubli('salon', $idPub, $idUsu);
+            $fotos = getFotosPubli('salon', $salon, $idUsu);
             if (rmSalon($salon)){
                 rmImgFromDb($fotos, "../../img/$idUsu/salon/");
                 echo 'Se elimino correctamente el salon';
