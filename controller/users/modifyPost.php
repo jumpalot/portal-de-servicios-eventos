@@ -34,7 +34,8 @@
             $lservicios = getList( getSalonlServicio($idPub) );
         }
         if ($publi->nivel=="2"){
-            include '../../view/users/modifyPost/mp-descuento.html';
+            $descuento = $publi->descuento;
+            include '../../view/users/modifyPost/mp-descuento.php';
         }
     ?>
 </form>

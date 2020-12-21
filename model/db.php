@@ -125,7 +125,8 @@
                     descripcion,
                     id_zona AS zona,
                     id_tipo$tipo AS subtipo,
-                    nivel
+                    nivel,
+                    descuento
                 FROM $tipo
                 WHERE id_$tipo=$idPub";
         $datos = $db->query($sql);
