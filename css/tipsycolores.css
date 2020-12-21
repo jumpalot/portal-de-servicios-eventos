@@ -537,6 +537,18 @@ nav ul li a:hover {
 .navbar-dark#primaryNavbar .navbar-nav .show > .nav-link, .navbar-dark#primaryNavbar .navbar-nav .active > .nav-link, .navbar-dark#primaryNavbar .navbar-nav .nav-link.show, .navbar-dark#primaryNavbar .navbar-nav .nav-link.active {
     color: #d4b66a;
 }
+#minisearch select{
+  width: 60vh;
+  height: 2em;
+}
+#minisearch input[type=text]{
+  width: 100vh;
+  height: 2em;
+}
+#minisearch .bblr {
+  height: 2em;
+  font-size: 20px;
+}
 
 
 /*  ------------HOME----------------      */
