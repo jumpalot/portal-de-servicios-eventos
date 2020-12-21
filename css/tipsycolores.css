@@ -506,6 +506,11 @@ nav ul li {
   font-family:'Quicksand', sans-serif;
   text-decoration: none;
 }
+.icons{
+  font-size: 20px;
+  letter-spacing: 20px;
+  color :gray;
+}
 nav ul li a:hover {
   color: #dcceb2;
 }
