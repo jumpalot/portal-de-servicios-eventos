@@ -527,8 +527,9 @@ nav ul li a:hover {
   padding-top: -10px;
 }
 .navbar-dark .navbar-nav .show > .nav-link, .navbar-dark .navbar-nav .active > .nav-link, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .nav-link.active {
-    color: #d4b66a;
+    color: #ffff;
 }
+
 
 /*  ------------HOME----------------      */
 
