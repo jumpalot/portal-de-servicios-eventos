@@ -549,7 +549,9 @@ nav ul li a:hover {
   height: 2em;
   font-size: 20px;
 }
-
+#minisearch .bootstrap-select>.dropdown-toggle{
+  margin-bottom: 0;
+}
 
 /*  ------------HOME----------------      */
 
