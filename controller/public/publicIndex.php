@@ -5,7 +5,9 @@
             include('./controller/public/ideas_detalle.php');
         break;
         case 'preview':
-            header('Location: ./?section=detalle&tipo='.$_SESSION['tipo'].'&idPub='.$_SESSION['idPub']);
+            echo '<script>
+                    window.location="./?section=detalle&tipo='.$_SESSION['tipo'].'&idPub='.$_SESSION['idPub'].'";
+                  </script>';
         break;
         case 'privacidad':
             include('./view/public/legales/politica_privacidad.html');
