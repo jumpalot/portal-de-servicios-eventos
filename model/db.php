@@ -322,7 +322,7 @@
                         AND servicios.id_servicios=fotosServicios.id_servicios
                 INNER JOIN usuarios
                     ON servicios.id_usuario=usuarios.id_usuarios
-                WHERE id_servicios='$idPub'";
+                WHERE servicios.id_servicios='$idPub'";
         $data = $db->query($sql);
         if ($db->error) echo $sql;
         return $data->fetch_object();
@@ -338,7 +338,15 @@
                     salon.descuento as descuento,
                     zonas.zona as zona,
                     tiposalon.nombre as tipo,
-                    fotosSalon.foto as foto
+                    fotosSalon.foto as foto,
+                    usuarios.id_usuarios as idUsu,
+                    usuarios.correo as email,
+                    usuarios.nombre as nombreUsu,
+                    usuarios.telefono as telefono,
+                    usuarios.fb as fb,
+                    usuarios.tw as tw,
+                    usuarios.ig as ig,
+                    usuarios.web as web
                 FROM salon
                 NATURAL LEFT JOIN zonas
                 LEFT JOIN tiposalon 
@@ -346,7 +354,9 @@
                 LEFT JOIN fotosSalon 
                     ON salon.id_fotoPrincipal=fotosSalon.id_fotos 
                         AND salon.id_salon=fotosSalon.id_salon
-                WHERE id_salon='$idPub'";
+                INNER JOIN usuarios
+                    ON salon.id_usuario=usuarios.id_usuarios
+                WHERE salon.id_salon='$idPub'";
         $data = $db->query($sql);
         return $data->fetch_object();
     }
