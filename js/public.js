@@ -25,6 +25,24 @@ function cargarZonas(){
     }
 }
 function iniciarHovers(){
-    $('#ddservicios').hover(()=>$('#ddservicios .dropdown-menu').dropdown('toggle'));
-    $('#ddsalon').hover(()=>$('#ddsalon .dropdown-menu').dropdown('toggle'));
+    $('#ddservicios').hover(
+        ()=>{
+            $('#ddservicios').addClass('show')
+            $('#ddservicios .dropdown-menu').addClass('show')
+        },
+        ()=>{
+            $('#ddservicios').removeClass('show')
+            $('#ddservicios .dropdown-menu').removeClass('show')
+        }
+    );
+    $('#ddsalon').hover(
+        ()=>{
+            $('#ddsalon').addClass('show')
+            $('#ddsalon .dropdown-menu').addClass('show')
+        },
+        ()=>{
+            $('#ddsalon').removeClass('show')
+            $('#ddsalon .dropdown-menu').removeClass('show')
+        }
+    );
 }

@@ -2,7 +2,16 @@ var nivelActualPub = 0;
 var trash = "";
 $(document).ready(()=>{
     $.fn.selectpicker.Constructor.BootstrapVersion = '4';
-    $('#ddusuarios').hover(()=>$('#ddusuarios .dropdown-menu').dropdown('toggle'));
+    $('#ddusuarios').hover(
+        ()=>{
+            $('#ddusuarios').addClass('show')
+            $('#ddusuarios .dropdown-menu').addClass('show')
+        },
+        ()=>{
+            $('#ddusuarios').removeClass('show')
+            $('#ddusuarios .dropdown-menu').removeClass('show')
+        }
+    );
     $('#newPostModal').on('show.bs.modal', event => {
         $("#formDropZone").append(
             "<form id='dZUpload' class='dropzone borde-dropzone'>"+
