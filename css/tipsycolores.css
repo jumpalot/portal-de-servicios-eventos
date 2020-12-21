@@ -72,7 +72,7 @@ select:focus {
 .fl {
   float: left;
 }
-/* .container {
+ .container {
   display: flex;
   flex-direction: row;
       width: 100%;
@@ -80,7 +80,7 @@ select:focus {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-} */
+} 
 .productos {
   display: flex;
   flex-direction: row;
