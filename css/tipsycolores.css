@@ -222,7 +222,12 @@ body {
 .col-3 {
   width: 25%;
 }
-
+.ancho{
+  width: 100%;
+  height: 80%;
+  background: gray;
+  margin: auto; 
+}
 /******************* ALTURAS **************/
 
 .h690 {
