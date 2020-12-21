@@ -12,7 +12,7 @@ const addOption = (options, msg) => {
 const addOptions = (csvOptions, id) => {
     var options = $(id)[0].options;
     csvOptions.split(";").forEach(opt => addOption(options, opt));
-    $(modal+' '+id).selectpicker('refresh');
+    $(id).selectpicker('refresh');
 }
 const isEmpty = id => $(id)[0].options.length<2;
 
