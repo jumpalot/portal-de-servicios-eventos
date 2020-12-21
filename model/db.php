@@ -138,12 +138,18 @@
     }
     function getTiposervicios(){
         global $db;
-        $sql = "SELECT lservicios.nombre AS nombre FROM lservicios";
+        $sql = "SELECT 
+                    lservicios.nombre AS nombre,
+                    lservicios.id_lservicio AS id 
+                FROM lservicios";
         return $db->query($sql);
     }
     function getTiposalones(){
         global $db;
-        $sql = "SELECT tiposalon.nombre AS nombre FROM tiposalon";
+        $sql = "SELECT 
+                    tiposalon.nombre AS nombre,
+                    tiposalon.id_tiposalon AS id
+                FROM tiposalon";
         return $db->query($sql);
     }
     function getEspaciosPub($idPub){
