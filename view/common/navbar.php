@@ -20,7 +20,7 @@
           <?php include './view/public/Tiposervicios.php' ?>
         </li>
         <li class="nav-item">
-          <?php include'./view/public/Tiposalones.php' ?>
+          <?php include './view/public/Tiposalones.php' ?>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Imagen personal</a>

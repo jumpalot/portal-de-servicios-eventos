@@ -1,4 +1,4 @@
-<div class="btn-group">
+<div class="btn-group" id="ddusuarios">
     <button type="button" class="btn btn-light" ><?=$usuario->nombre?></button>
     <button type="button" class="btn btn-light dropdown-toggle"
         data-toggle="dropdown">
