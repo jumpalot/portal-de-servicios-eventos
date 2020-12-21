@@ -222,7 +222,12 @@ body {
 .col-3 {
   width: 25%;
 }
-
+.ancho{
+  width: 100%;
+  height: 80%;
+  background: gray;
+  margin: auto; 
+}
 /******************* ALTURAS **************/
 
 .h690 {
@@ -995,4 +1000,15 @@ footer A {text-decoration: none;}
   position: flex;
   display: flex;
   align-items: center;
+}
+.infosalon{
+  z-index: 1;
+  width: 100%;
+   height: 16%;
+  max-width: 1500px;
+  padding-top: -10px;
+  position: absolute;
+    text-align: center;
+    background-color:rgba(170,143,83,0.9)!important;
+       color: white;
 }
