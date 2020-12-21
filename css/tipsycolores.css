@@ -489,7 +489,7 @@ nav ul li {
   font-family: Quicksand;
   float: left;
 }
-.fuente{
+#minisearch .fuente{
   color: white;
   margin-bottom: 20px;
   font-size: 20px; font-weight: 400; letter-spacing: 2px;
@@ -497,7 +497,7 @@ nav ul li {
   text-decoration: none;
 
 }
-.fuente:hover{
+#minisearch .fuente:hover{
   color: grey;
   margin-bottom: 20px;
   font-size: 17pt; font-weight: 400; letter-spacing: 2px;
