@@ -4,6 +4,9 @@
         case 'idea':
             include('./controller/public/ideas_detalle.php');
         break;
+        case 'preview':
+            header('Location: ./?section=detalle&tipo='.$_SESSION['tipo'].'&idPub='.$_SESSION['idPub']);
+        break;
         case 'privacidad':
             include('./view/public/legales/politica_privacidad.html');
         break;
@@ -17,7 +20,13 @@
         case 'salones':
             include('./view/public/minisearch.html');
             include('./view/public/Salones.html');
-         
+        break;
+        case 'servicios':
+            include('./view/public/minisearch.html');
+            include('./view/public/Servicios.html');
+        break;
+        case 'detalle':
+            include("./controller/public/".$_GET['tipo']."_detalle.php");
         break;
         case 'contacto':
             include('./view/public/Contacto.html');

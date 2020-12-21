@@ -900,6 +900,17 @@ div.modal#confirmDeleteModal {
 #resultModal h5 {
   text-align: center;
 }
+
+/* DETALLE PUBILCACIONES */
+.infoContacto {
+  background-color: #d4b66a;
+}
+.infoServicios {
+  background-color: #ebe9e6;
+  border-color: #d4b66a;
+  border-width: .4em;
+}
+
 /* ----------- FOOTER -------------------*/
 footer{
 	
