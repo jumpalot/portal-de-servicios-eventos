@@ -26,6 +26,7 @@
             include('./view/public/Servicios.html');
         break;
         case 'detalle':
+            include('./view/public/minisearch.html');
             include("./controller/public/".$_GET['tipo']."_detalle.php");
         break;
         case 'contacto':
