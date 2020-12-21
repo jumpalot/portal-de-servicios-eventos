@@ -1,5 +1,4 @@
 <?php
-    include './model/db.php';
     include('./view/common/header.html');
     $idPub=$_GET['idPub'];
     $datos = getServicio($idPub);
