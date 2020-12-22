@@ -1116,3 +1116,9 @@ footer A {text-decoration: none;}
   font-family:'Quicksand', Source Sans Pro;
   text-decoration: none;
   }
+  .anchosalon{
+    width: 80%;
+    height: 80%;
+    background: white;
+    margin: auto;    
+  }
