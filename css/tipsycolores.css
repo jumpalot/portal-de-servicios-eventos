@@ -935,7 +935,7 @@ div.modal#confirmDeleteModal {
 #wrapper-ipub .wpr-5 { grid-row: 5; }
 #wrapper-ipub .wpr-6 { grid-row: 6; }
 #wrapper-iusu {
-  grid-area: ipub;
+  grid-area: iusu;
   display: grid;
   grid-template: "titu nada nomb" auto
                  "celu mail reds" auto;
