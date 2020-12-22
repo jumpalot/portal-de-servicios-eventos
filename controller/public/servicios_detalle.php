@@ -58,4 +58,4 @@
     include('./view/public/columContacto.html');
 
     echo '</section>';
-    ?>    
+?>    
