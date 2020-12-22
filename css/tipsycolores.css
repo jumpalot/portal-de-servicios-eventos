@@ -908,6 +908,7 @@ div.modal#confirmDeleteModal {
   width: 21vw;
   background-color: antiquewhite;
   padding: 1em;
+  margin-top: 0;
 }
 #wrapper-detalle #wp-con h3 { font-size: 15pt; }
 #wrapper-detalle #wp-con .input-group, #wp-con textarea { margin-bottom: 1em; background-color: white;}
