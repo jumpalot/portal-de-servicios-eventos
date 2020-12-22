@@ -926,8 +926,9 @@ div.modal#confirmDeleteModal {
   align-items: center;
   margin-bottom: 1em;
 }
-#wrapper-ipub .wp-tipo { grid-column: tipo; }
-#wrapper-ipub .wp-dato { grid-column: dato; }
+#wrapper-ipub h3 { padding-top: 1em; }
+#wrapper-ipub .wp-tipo { grid-column: tipo; margin-left: 6.7em;}
+#wrapper-ipub .wp-dato { grid-column: dato; margin-right: 6.7em;}
 #wrapper-ipub .wpr { border-bottom: #c1a152; border-width: .2em;}
 #wrapper-ipub .wpr-1 { grid-row: 1; }
 #wrapper-ipub .wpr-2 { grid-row: 2; }
