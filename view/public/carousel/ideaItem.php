@@ -3,7 +3,7 @@
     <div class="row">
         <?php foreach ($img as $item): ?>
             <div class="col-sm">
-                <img src="./img/<?=$idUsu?>/<?=$tipo?>/<?=$item?>" class="block" height="140" width="140" id="imcaru-<?=$contTotal?>">
+                <img src="./img/<?=$idUsu?>/<?=$tipo?>/<?=$item?>" class="block" height="140" width="140">
             </div>
         <?php endforeach; ?>
     </div>
