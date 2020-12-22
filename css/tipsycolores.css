@@ -1124,3 +1124,9 @@ footer A {text-decoration: none;}
     background: white;
     margin: auto;    
   }
+  .card-img-salon{
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 100%;
+    background-color: rgba(170,143,83,1);
+  }
