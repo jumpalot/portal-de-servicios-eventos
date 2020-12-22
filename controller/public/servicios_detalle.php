@@ -10,22 +10,18 @@
     $seccion = 'Servicios';
     $titulo = $datos->titulo;
     $banner = $datos->foto;
-    echo "<h5>HOME / $seccion / $titulo</h5>";
     include('./view/public/banners/detalle.php');
 
     //body
     $body = $datos->descripcion;
     $volanta =($datos->descuento!="0")?$$datos->descuento.'% OFF':"";
     include('./view/public/ideas/cuerpo.php');
-
-    //contacto
-    include('./view/public/columContacto.html');
-
+    
     //infoPub
     $zona = $datos->zona;
     $subtipo= $datos->tipo;
     include('./view/public/infoServicios.php');
-
+    
     //carousel
     include('./view/public/carousel/carouselTop.html');
     $fotos = getFotosPubli('servicios', $idPub, $idUsu);
@@ -44,7 +40,7 @@
     if(isset($img[1])) 
         include('./view/public/carousel/ideaItem.php');
     include('./view/public/carousel/carouselEnd.html');
-
+    
     //infocontacto
     $nombreUsu = $datos->nombreUsu;
     $telefono = $datos->telefono;
@@ -54,6 +50,9 @@
     $ig = ($datos->ig=="NULL")? null : substr($datos->ig, 1);
     $web = ($datos->web=="NULL")? null : $datos->web;
     include('./view/public/infoContacto.php');
+    
+    //contacto
+    include('./view/public/columContacto.html');
 
     echo '</section>';
-?>    
+    ?>    
