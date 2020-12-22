@@ -955,6 +955,12 @@ div.modal#confirmDeleteModal {
   border-color: #d4b66a;
   border-width: .4em;
 }
+#breadcrumb {
+  width: 80%;
+  margin-top: 0em;
+  padding-top: 11em;
+  text-transform: uppercase;
+}
 
 /* ----------- FOOTER -------------------*/
 footer{
