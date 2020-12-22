@@ -106,7 +106,7 @@ h2.regresar {
 img.regresar {
   position: absolute;
   bottom: 70%;
-  left: -15px;
+  left: -29.57px;
   padding: 0.4em 0.4em 0.4em 1.2em;
   letter-spacing: 1px;
   width: 23em;
@@ -251,7 +251,8 @@ body {
 .crop-333 {
   object-fit: cover;
   height: 333px;
-  width: 74vw;
+  width: 80vw;
+  padding: 0;
 }
 
 .img1 {
@@ -896,7 +897,7 @@ div.modal#confirmDeleteModal {
                  "bod bod con" auto;
   gap: 10px;
   align-items: center;
-  width: 100%;
+  width: 80%;
   margin-bottom: 1em;
 }
 #wrapper-detalle #wp-ban { grid-area: ban; }
@@ -912,8 +913,8 @@ div.modal#confirmDeleteModal {
   align-items: center;
   margin-bottom: 1em;
 }
-#wrapper-bod #wp-desc { grid-area: con; }
-#wrapper-bod #wp-caru { grid-area: con; }
+#wrapper-bod #wp-desc { grid-area: desc; }
+#wrapper-bod #wp-caru { grid-area: caru; }
 #wrapper-ipub {
   grid-area: ipub;
   display: grid;
