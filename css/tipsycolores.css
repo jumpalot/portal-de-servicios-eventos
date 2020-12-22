@@ -918,7 +918,7 @@ div.modal#confirmDeleteModal {
 #wrapper-ipub {
   grid-area: ipub;
   display: grid;
-  grid-template-columns: [tipo dato] auto;
+  grid-template-columns: [tipo] auto [dato] auto;
   grid-auto-rows: minmax(100px, auto);
   gap: 10px;
   align-items: center;
