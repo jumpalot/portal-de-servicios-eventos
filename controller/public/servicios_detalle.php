@@ -4,7 +4,7 @@
     $datos = getServicio($idPub);
     $idUsu = $datos->idUsu;
 
-    echo '<h5 id="breadcrumb">HOME / <?=$seccion?> / <?=$titulo?></h5>';
+    echo "<h5 id=\"breadcrumb\">HOME / $seccion / $titulo </h5>";
     echo '<section id="wrapper-detalle">';
     
     //banner
