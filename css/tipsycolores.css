@@ -1097,3 +1097,13 @@ footer A {text-decoration: none;}
 
 
 }
+.infocards{
+  z-index: 1;
+  width: 100%;
+      padding-top: 20px;
+   height:100%;
+  position: flex;
+    text-align: center;
+    background-color:rgba(170,143,83,0.4)!important;
+       color: white;
+}
