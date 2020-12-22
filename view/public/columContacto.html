@@ -1,4 +1,31 @@
-<div class="md-4" id="wp-con" style="background-color: antiquewhite; height: 800px;">
+<form id="wp-con" onsubmit="return false">
     <h3>SOLICITAR PRESUPUESTO</h3>
-    <input type='date' class="form-control" />  
-</div>
+    Datos del evento
+    <div class="input-group">
+        <div class="input-group-prepend"><i class="fas fa-calendar-alt"></i></div>
+        <input class="form-control" placeholder="Fecha del Evento" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" name="fecha" />
+    </div>
+    <div class="input-group">
+        <div class="input-group-prepend"><i class="fas fa-users"></i></div>
+        <input class="form-control" placeholder="Cantidad de invitados" type="text" name="cantidad" />
+    </div>
+    Datos del contacto
+    <div class="input-group">
+        <div class="input-group-prepend"><i class="fas fa-user"></i></div>
+        <input class="form-control" placeholder="Nombre" type="text" name="nombre" />
+    </div>
+    <div class="input-group">
+        <div class="input-group-prepend"><i class="fas fa-user"></i></div>
+        <input class="form-control" placeholder="Apellido" type="text" name="apellido" />
+    </div>
+    <div class="input-group">
+        <div class="input-group-prepend"><i class="fas fa-phone-alt"></i></i></div>
+        <input class="form-control" placeholder="Telefono" type="text" name="tel" />
+    </div>
+    <div class="input-group">
+        <div class="input-group-prepend"><i class="fas fa-envelope"></i></div>
+        <input class="form-control" placeholder="Direccion de correo" type="text" name="email" />
+    </div>
+    <textarea class="form-control" name="comentarios" cols="30" rows="7" placeholder="Comentarios o sugerencias"></textarea>
+    <input type="submit" class="bblr border-0">
+</form>

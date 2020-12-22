@@ -905,6 +905,8 @@ div.modal#confirmDeleteModal {
 #wrapper-detalle #wp-con {
   grid-area: con;
   width: 21vw;
+  height: 800px;
+  background-color: antiquewhite;
 }
 #wrapper-detalle #wp-con h3 { font-size: 15pt; }
 #wrapper-detalle #wp-bod { grid-area: bod; width: 100%; text-align: justify; margin-top: 0; }
