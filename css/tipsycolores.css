@@ -945,7 +945,7 @@ div.modal#confirmDeleteModal {
   gap: 10px;
   align-items: center;
   color: white;
-  margin-bottom: 1em;
+  padding: .5em;
 }
 #wrapper-iusu #wp-titu { grid-area: titu; font-size: 1.3em;}
 #wrapper-iusu #wp-celu { grid-area: celu; display: flex;}
