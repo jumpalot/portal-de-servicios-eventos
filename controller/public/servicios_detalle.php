@@ -15,7 +15,7 @@
 
     //body
     $body = $datos->descripcion;
-    $volanta =($datos->descuento!="0")?$$datos->descuento.'% OFF':"";
+    $volanta =($datos->descuento!="0")?($datos->descuento).'% OFF':"";
     include('./view/public/ideas/cuerpo.php');
     
     //infoPub
