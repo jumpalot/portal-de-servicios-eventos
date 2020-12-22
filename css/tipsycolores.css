@@ -894,7 +894,8 @@ div.modal#confirmDeleteModal {
 #wrapper-detalle {
   display: grid;
   grid-template: "ban ban ban" auto
-                 "bod bod con" auto;
+                 "bod bod con" auto
+                 "inf inf con" auto;
   gap: 10px;
   align-items: start;
   width: 80%;
@@ -902,11 +903,11 @@ div.modal#confirmDeleteModal {
 }
 #wrapper-detalle #wp-ban { grid-area: ban; }
 #wrapper-detalle #wp-con { grid-area: con; width: 21vw;}
-#wrapper-bod {
-  grid-area: bod;
+#wrapper-detalle #wp-bod { grid-area: bod; width: 100%;}
+#wrapper-inf {
+  grid-area: inf;
   display: grid;
-  grid-template:  "desc" auto
-                  "ipub" auto
+  grid-template:  "ipub" auto
                   "caru" auto
                   "iusu" auto;
   gap: 10px;
@@ -914,9 +915,8 @@ div.modal#confirmDeleteModal {
   margin-top: 0;
   margin-bottom: 1em;
 }
-#wrapper-bod #wp-desc { grid-area: desc; }
-#wrapper-bod #wp-caru { grid-area: caru; width: 100%;}
-#wrapper-ipub {
+#wrapper-inf #wp-caru { grid-area: caru; width: 100%;}
+#wrapper-inf #wrapper-ipub {
   grid-area: ipub;
   width: 100%;
   display: grid;
@@ -935,7 +935,7 @@ div.modal#confirmDeleteModal {
 #wrapper-ipub .wpr-4 { grid-row: 4; }
 #wrapper-ipub .wpr-5 { grid-row: 5; }
 #wrapper-ipub .wpr-6 { grid-row: 6; }
-#wrapper-iusu {
+#wrapper-inf #wrapper-iusu {
   grid-area: iusu;
   width: 100%;
   display: grid;
