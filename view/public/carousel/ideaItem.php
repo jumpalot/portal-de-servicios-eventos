@@ -1,4 +1,4 @@
-<div class="carousel-item <?=$active?> container">
+<div class="carousel-item <?=$active?>">
     <input type="hidden" class="posicion" value="<?=$contSecciones?>">
     <div class="row">
         <?php foreach ($img as $item): ?>
