@@ -910,7 +910,7 @@ div.modal#confirmDeleteModal {
   grid-template:  "ipub" auto
                   "caru" auto
                   "iusu" auto;
-  gap: 10px;
+  gap: 2em;
   align-items: center;
   margin-top: 0;
   margin-bottom: 1em;
