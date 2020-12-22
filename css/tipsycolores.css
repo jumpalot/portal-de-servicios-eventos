@@ -944,6 +944,7 @@ div.modal#confirmDeleteModal {
                  "celu mail reds" auto;
   gap: 10px;
   align-items: center;
+  color: white;
   margin-bottom: 1em;
 }
 #wrapper-iusu #wp-titu { grid-area: titu; font-size: 1.3em;}
