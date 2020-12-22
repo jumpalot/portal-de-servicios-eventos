@@ -485,6 +485,11 @@ nav ul li {
   font-family: Quicksand;
   float: left;
 }
+#minisearch {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
 #minisearch .fuente{
   color: white;
   margin-bottom: 20px;
