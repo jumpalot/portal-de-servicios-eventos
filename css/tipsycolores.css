@@ -896,7 +896,7 @@ div.modal#confirmDeleteModal {
   grid-template: "ban ban ban" auto
                  "bod bod con" auto
                  "inf inf con" auto;
-  gap: 10px;
+  gap: 1.3em;
   align-items: start;
   width: 80%;
   margin-bottom: 1em;
