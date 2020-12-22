@@ -1,6 +1,6 @@
 <div class="infoContacto" id="wrapper-iusu">
     <h5 id="wp-titu">Contacto Directo</h5>
-    <h6 id="wp-nom"><?=$nombreUsu?></h6>
+    <h6 id="wp-nomb"><?=$nombreUsu?></h6>
     <div id="wp-celu">
         <i class="fas fa-phone-alt"></i>
         <h6 id="wp-nom"><?=$telefono?></h6>
