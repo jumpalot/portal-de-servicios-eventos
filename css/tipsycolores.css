@@ -915,9 +915,10 @@ div.modal#confirmDeleteModal {
   margin-bottom: 1em;
 }
 #wrapper-bod #wp-desc { grid-area: desc; }
-#wrapper-bod #wp-caru { grid-area: caru; }
+#wrapper-bod #wp-caru { grid-area: caru; width: 100%;}
 #wrapper-ipub {
   grid-area: ipub;
+  width: 100%;
   display: grid;
   grid-template-columns: [tipo] auto [dato] auto;
   grid-auto-rows: minmax(3em, auto);
@@ -936,6 +937,7 @@ div.modal#confirmDeleteModal {
 #wrapper-ipub .wpr-6 { grid-row: 6; }
 #wrapper-iusu {
   grid-area: iusu;
+  width: 100%;
   display: grid;
   grid-template: "titu nada nomb" auto
                  "celu mail reds" auto;
