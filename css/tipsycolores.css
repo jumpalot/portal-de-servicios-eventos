@@ -926,6 +926,7 @@ div.modal#confirmDeleteModal {
   margin-bottom: 1em;
 }
 #wrapper-inf #wp-caru { grid-area: caru; width: 100%;}
+#wrapper-inf #wp-caru .carousel-inner { width: 80%;}
 #wrapper-inf #wrapper-ipub {
   grid-area: ipub;
   width: 100%;
