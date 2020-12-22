@@ -1,4 +1,4 @@
-<div class="infoServicios" id="wrapper-ipub">
+<div class="infoServicios">
     <div id="wrapper-ipub">
         <div class="wpr wpr-1">
             <h5 class="wp-tipo">Sobre el lugar</h5>
