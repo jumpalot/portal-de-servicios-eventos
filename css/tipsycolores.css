@@ -958,6 +958,7 @@ div.modal#confirmDeleteModal {
 }
 #wrapper-iusu a {
   color: white;
+  text-decoration: none;
 }
 .infoContacto {
   background-color: #d4b66a;
