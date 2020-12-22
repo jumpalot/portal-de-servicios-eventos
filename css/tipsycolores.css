@@ -949,7 +949,8 @@ div.modal#confirmDeleteModal {
 #wrapper-iusu #wp-celu { grid-area: celu; display: flex;}
 #wrapper-iusu #wp-mail { grid-area: mail; display: flex;}
 #wrapper-iusu #wp-nomb { grid-area: nomb; }
-#wrapper-iusu #wp-reds { grid-area: reds; }
+#wrapper-iusu #wp-reds { grid-area: reds; font-size: 2.5em;}
+#wrapper-iusu #wp-reds>a { color: white; }
 .infoContacto {
   background-color: #d4b66a;
 }
