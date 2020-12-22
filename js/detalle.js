@@ -1,6 +1,6 @@
 $(document).ready(() => {
-
     actualizarFlechas();
+    $('#wrapper-detalle .carousel').on('slid.bs.carousel', () => actualizarFlechas() );
 });
 function actualizarFlechas(){
     let sectActual  = $('.active .posicion').val();
