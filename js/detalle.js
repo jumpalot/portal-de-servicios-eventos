@@ -17,3 +17,8 @@ function actualizarFlechas(){
         else                            fder.hide()
     }
 }
+function startDatePicker(){
+    $('#fechaEvento').datetimepicker({
+        locale: 'es-mx'
+    });
+}
