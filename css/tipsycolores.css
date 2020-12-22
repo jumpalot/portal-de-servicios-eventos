@@ -902,6 +902,7 @@ div.modal#confirmDeleteModal {
   margin-bottom: 1em;
 }
 #wrapper-detalle #wp-ban { grid-area: ban; }
+#wrapper-detalle #wp-ban a { text-transform: capitalize; }
 #wrapper-detalle #wp-con {
   grid-area: con;
   width: 21vw;

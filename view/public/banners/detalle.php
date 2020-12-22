@@ -1,5 +1,5 @@
 <section class="cvl detalle" id="wp-ban">
-    <a href="?section=<?=$tipo?>">
+    <a href="?section=<?=$seccion?>">
         <img src="./svg/banderin-seccion.svg" class="regresar">
         <h2 class="regresar">&nbsp;&#5176;&nbsp; <?=$seccion?></h2>
     </a>
