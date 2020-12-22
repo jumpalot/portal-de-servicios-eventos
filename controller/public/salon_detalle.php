@@ -16,7 +16,7 @@
     $idUsu = $datos->idUsu;
 
     //titulo
-    $seccion = 'Salon';
+    $seccion = 'Salones';
     $titulo = $datos->titulo;
     echo "<h5 id=\"breadcrumb\">HOME / $seccion / $titulo </h5>";
     echo '<section id="wrapper-detalle">';
