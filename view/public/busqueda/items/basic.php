@@ -1,3 +1,6 @@
+<?php
+    $tps = getServiciosXtipo(@$_GET['subtipo']);
+?>
 <div class="productos br input-contenedor-basic">
     <div class="cont2 pd10">
         <p class="cuerpo2">
