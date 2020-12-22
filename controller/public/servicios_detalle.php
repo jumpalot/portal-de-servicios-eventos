@@ -4,7 +4,7 @@
     $datos = getServicio($idPub);
     $idUsu = $datos->idUsu;
 
-    echo '<section class="col-9">';
+    echo '<section id="wrapper-detalle">';
     
     //banner
     $seccion = 'Servicios';
@@ -49,10 +49,10 @@
     $nombreUsu = $datos->nombreUsu;
     $telefono = $datos->telefono;
     $email = $datos->email;
-    $fb = $datos->fb;
-    $tw = $datos->tw;
-    $ig = $datos->ig;
-    $web = $datos->web;
+    $fb = ($datos->fb=="NULL")? null : $datos->fb;
+    $tw = ($datos->tw=="NULL")? null : substr($datos->tw, 1);
+    $ig = ($datos->ig=="NULL")? null : substr($datos->ig, 1);
+    $web = ($datos->web=="NULL")? null : $datos->web;
     include('./view/public/infoContacto.php');
 
     echo '</section>';

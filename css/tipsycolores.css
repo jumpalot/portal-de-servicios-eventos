@@ -895,6 +895,61 @@ div.modal#confirmDeleteModal {
 }
 
 /* DETALLE PUBILCACIONES */
+#wrapper-detalle {
+  display: grid;
+  grid-template: "ban ban ban" auto
+                 "bod bod con" auto;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 1em;
+}
+#wrapper-detalle #wp-ban { grid-area: ban; }
+#wrapper-detalle #wp-con { grid-area: con; }
+#wrapper-bod {
+  grid-area: bod;
+  display: grid;
+  grid-template:  "desc" auto
+                  "ipub" auto
+                  "caru" auto
+                  "iusu" auto;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 1em;
+}
+#wrapper-bod #wp-desc { grid-area: con; }
+#wrapper-bod #wp-caru { grid-area: con; }
+#wrapper-ipub {
+  grid-area: ipub;
+  display: grid;
+  grid-template-columns: [tipo dato] auto;
+  grid-auto-rows: minmax(100px, auto);
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 1em;
+}
+#wrapper-ipub .wp-tipo { grid-column: tipo; }
+#wrapper-ipub .wp-dato { grid-column: dato; }
+#wrapper-ipub .wpr { border-bottom: #c1a152; border-width: .2em;}
+#wrapper-ipub .wpr-1 { grid-row: 1; }
+#wrapper-ipub .wpr-2 { grid-row: 2; }
+#wrapper-ipub .wpr-3 { grid-row: 3; }
+#wrapper-ipub .wpr-4 { grid-row: 4; }
+#wrapper-ipub .wpr-5 { grid-row: 5; }
+#wrapper-ipub .wpr-6 { grid-row: 6; }
+#wrapper-iusu {
+  grid-area: ipub;
+  display: grid;
+  grid-template: "titu nada nomb" auto
+                 "celu mail reds" auto;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 1em;
+}
+#wrapper-iusu #wp-titu { grid-area: titu; }
+#wrapper-iusu #wp-celu { grid-area: celu; }
+#wrapper-iusu #wp-mail { grid-area: mail; }
+#wrapper-iusu #wp-nomb { grid-area: nomb; }
+#wrapper-iusu #wp-reds { grid-area: reds; }
 .infoContacto {
   background-color: #d4b66a;
 }
