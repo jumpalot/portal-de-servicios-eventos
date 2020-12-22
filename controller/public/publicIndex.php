@@ -28,6 +28,7 @@
             include('./view/public/Servicios.html');
         break;
         case 'detalle':
+            echo '<script src="./js/detalle.js"></script>';
             include('./view/public/minisearch.html');
             include("./controller/public/".$_GET['tipo']."_detalle.php");
         break;

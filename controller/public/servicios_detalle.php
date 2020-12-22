@@ -28,13 +28,17 @@
     $fotos = getFotosPubli('servicios', $idPub, $idUsu);
     $img = array();
     $cont=0;
+    $contTotal=0;
+    $contSecciones=1;
     $active="active";
     foreach($fotos as $foto){
+        $contTotal++;
         if (++$cont==4){
             include('./view/public/carousel/ideaItem.php');
             if($active!="") $active="";
             $cont=0;
             $img = array();
+            $contSecciones++;
         }
         $img[$cont] = $foto['foto'];
     }

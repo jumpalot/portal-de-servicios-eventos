@@ -1,8 +1,9 @@
 <div class="carousel-item <?=$active?> container">
+    <input type="hidden" class="posicion" value="<?=$contSecciones?>">
     <div class="row">
         <?php foreach ($img as $item): ?>
             <div class="col-sm">
-                <img src="./img/<?=$idUsu?>/<?=$tipo?>/<?=$item?>" class="block" height="140" width="140">
+                <img src="./img/<?=$idUsu?>/<?=$tipo?>/<?=$item?>" class="block" height="140" width="140" id="imcaru-<?=$contTotal?>">
             </div>
         <?php endforeach; ?>
     </div>
