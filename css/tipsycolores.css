@@ -170,7 +170,7 @@ img.regresar {
 body {
   color: dimgray;
   padding: 0;
-  width: 95%;
+  width: 100%;
   max-width: 1650px;
   margin: auto;
 }
@@ -484,11 +484,6 @@ nav ul li {
   color: #c1a152;
   font-family: Quicksand;
   float: left;
-}
-#minisearch {
-  position: absolute;
-  left: 0;
-  right: 0;
 }
 #minisearch .fuente{
   color: white;
@@ -1118,14 +1113,13 @@ footer A {text-decoration: none;}
 }
 .infosalon{
   z-index: 1;
-  width: 95%;
-   height: 16%;
+  width: 100%;
+  height: 5em;
   max-width: 1500px;
-  padding-top: -10px;
   position: absolute;
-    text-align: center;
-    background-color:rgba(170,143,83,0.9)!important;
-       color: white;
+  text-align: center;
+  background-color:rgba(170,143,83,0.9)!important;
+  color: white;
 }
 .cards {
   position: relative;
