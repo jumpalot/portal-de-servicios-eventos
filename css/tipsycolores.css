@@ -909,8 +909,8 @@ div.modal#confirmDeleteModal {
   padding: 1em;
 }
 #wrapper-detalle #wp-con h3 { font-size: 15pt; }
-#wrapper-detalle #wp-con .input-group, #wp-con textarea { margin-bottom: 1em; }
-#wrapper-detalle #wp-con .input-group-prepend { width: 2em; background-color: white; }
+#wrapper-detalle #wp-con .input-group, #wp-con textarea { margin-bottom: 1em; background-color: white;}
+#wrapper-detalle #wp-con .input-group-prepend { width: 2em; }
 #wrapper-detalle #wp-con .form-control { font-size: .9em; }
 #wrapper-detalle #wp-con .bblr { float: right; }
 #wrapper-detalle #wp-bod { grid-area: bod; width: 100%; text-align: justify; margin-top: 0; }
