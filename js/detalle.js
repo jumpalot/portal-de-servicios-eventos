@@ -1,4 +1,5 @@
 $(document).ready(() => {
+
     actualizarFlechas();
 });
 function actualizarFlechas(){
@@ -6,7 +7,7 @@ function actualizarFlechas(){
     let cantImgs    = $('.carousel-item img').length;
     let fizq        = $('.carousel-control-prev');
     let fder        = $('.carousel-control-next');
-    if(cantImgs=0){
+    if(cantImgs==0){
         fizq.hide()
         fder.hide()
     } else {
