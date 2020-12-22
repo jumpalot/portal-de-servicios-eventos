@@ -118,6 +118,27 @@
         if (@$id) $sql .= " WHERE servicios.id_usuario='$id'";
         return $db->query($sql);
     }
+    function getServiciosXtipo($Tipo){
+        global $db;
+        $sql = "SELECT 
+                    servicios.id_servicios AS id,
+                    servicios.nombre AS nombre,
+                    servicios.descripcion AS descripcion,
+                    servicios.nivel as nivel,
+                    servicios.descuento as descuento,
+                    zonas.zona as zona,
+                    tiposervicios.nombre as tipo,
+                    fotosServicios.foto as foto
+                FROM servicios
+                NATURAL LEFT JOIN zonas
+                LEFT JOIN tiposervicios
+                    ON servicios.id_tiposervicios = tiposervicios.id_tiposervicios
+                LEFT JOIN fotosServicios 
+                    ON servicios.id_fotoPrincipal=fotosServicios.id_fotos 
+                    AND servicios.id_servicios=fotosServicios.id_serviciosºº
+                WHERE tiposervicios.nombre=$Tipo AND servicios.id_tiposervicios=tiposervicios.id_tiposervicios";
+        return $db->query($sql);
+    }
     function getEditData($tipo, $idPub){
         global $db;
         $sql = "SELECT 
@@ -139,9 +160,9 @@
     function getTiposervicios(){
         global $db;
         $sql = "SELECT 
-                    lservicios.nombre AS nombre,
-                    lservicios.id_lservicio AS id 
-                FROM lservicios";
+                    tiposervicios.nombre AS nombre,
+                    tiposervicios.id_tiposervicios AS id 
+                FROM tiposervicios";
         return $db->query($sql);
     }
     function getTiposalones(){

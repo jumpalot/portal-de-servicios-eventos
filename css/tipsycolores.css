@@ -226,7 +226,7 @@ body {
   width: 100%;
   height: 80%;
   background: white;
-  margin: auto;  
+  margin: auto;    
 }
 /******************* ALTURAS **************/
 
@@ -445,12 +445,6 @@ p {
 }
 
 /*****diseño del navbar******/
-.ancho {
-  width: 100%;
-  height: 80;
-  background: gray;
-  margin: auto;
-}
 header {
   width: 100%;
   height: 90px;
@@ -1078,7 +1072,7 @@ footer A {text-decoration: none;}
 }
 .infosalon{
   z-index: 1;
-  width: 100%;
+  width: 95%;
    height: 16%;
   max-width: 1500px;
   padding-top: -10px;
