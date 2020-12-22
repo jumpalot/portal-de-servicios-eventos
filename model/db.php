@@ -175,7 +175,12 @@
     }
     function getEspaciosPub($idPub){
         global $db;
-        $sql = "SELECT id_espacios AS id, nombre FROM salon_espacio WHERE id_salon=$idPub";
+        $sql = "SELECT 
+                    id_espacios AS id,
+                    nombre
+                FROM salon_espacio 
+                NATURAL JOIN espacios
+                WHERE id_salon='$idPub'";
         $datos = $db->query($sql);
         if($db->error) {
             echo '<script>console.log(`'.$db->error.'`);</script>';
@@ -185,7 +190,12 @@
     }
     function getSalonlServicio($idPub) {
         global $db;
-        $sql = "SELECT id_lservicio AS id, nombre FROM salon_lservicio WHERE id_salon=$idPub";
+        $sql = "SELECT 
+                    id_lservicio AS id,
+                    nombre 
+                FROM salon_lservicio 
+                NATURAL JOIN lservicios
+                WHERE id_salon='$idPub'";
         $datos = $db->query($sql);
         if($db->error) {
             echo '<script>console.log(`'.$db->error.'`);</script>';
