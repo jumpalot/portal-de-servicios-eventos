@@ -1046,6 +1046,9 @@ footer a:active {
 footer a:hover{
 	color:#c8bfa4;
 }
+footer img {
+  margin-bottom: 0.8em;
+}
 input[type="submit"]#fsnews{
 	font-size: 20PX;
 	color: #c8bfa4;
