@@ -903,7 +903,7 @@ div.modal#confirmDeleteModal {
 }
 #wrapper-detalle #wp-ban { grid-area: ban; }
 #wrapper-detalle #wp-con { grid-area: con; width: 21vw;}
-#wrapper-detalle #wp-bod { grid-area: bod; width: 100%;}
+#wrapper-detalle #wp-bod { grid-area: bod; width: 100%; text-align: justify; }
 #wrapper-inf {
   grid-area: inf;
   display: grid;
