@@ -946,8 +946,8 @@ div.modal#confirmDeleteModal {
   margin-bottom: 1em;
 }
 #wrapper-iusu #wp-titu { grid-area: titu; }
-#wrapper-iusu #wp-celu { grid-area: celu; }
-#wrapper-iusu #wp-mail { grid-area: mail; }
+#wrapper-iusu #wp-celu { grid-area: celu; display: flex;}
+#wrapper-iusu #wp-mail { grid-area: mail; display: flex;}
 #wrapper-iusu #wp-nomb { grid-area: nomb; }
 #wrapper-iusu #wp-reds { grid-area: reds; }
 .infoContacto {
