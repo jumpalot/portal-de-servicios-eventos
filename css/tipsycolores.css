@@ -954,7 +954,8 @@ div.modal#confirmDeleteModal {
 .infoServicios {
   background-color: #ebe9e6;
   border-color: #d4b66a !important;
-  border-width: .4em !important;
+  border-width: .2em !important;
+  width: 100%;
 }
 #breadcrumb {
   width: 80%;
