@@ -4,12 +4,12 @@
     $datos = getServicio($idPub);
     $idUsu = $datos->idUsu;
 
+    $seccion = 'Servicios';
+    $titulo = $datos->titulo;
     echo "<h5 id=\"breadcrumb\">HOME / $seccion / $titulo </h5>";
     echo '<section id="wrapper-detalle">';
     
     //banner
-    $seccion = 'Servicios';
-    $titulo = $datos->titulo;
     $banner = $datos->foto;
     include('./view/public/banners/detalle.php');
 
