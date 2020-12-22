@@ -1107,3 +1107,12 @@ footer A {text-decoration: none;}
     background-color:rgba(170,143,83,0.4)!important;
        color: white;
 }
+.cardfonts{
+  color: white;
+  margin-bottom: 20px;
+  font-size: 35px; 
+  font-weight: 400; 
+ letter-spacing: 1; 
+  font-family:'Quicksand', Source Sans Pro;
+  text-decoration: none;
+  }
