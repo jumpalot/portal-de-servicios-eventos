@@ -3,11 +3,11 @@
     <h6 id="wp-nomb"><?=$nombreUsu?></h6>
     <div id="wp-celu">
         <i class="fas fa-phone-alt"></i>
-        <h6 id="wp-nom"><?=$telefono?></h6>
+        <h6><?=$telefono?></h6>
     </div>
     <div id="wp-mail">
         <i class="fas fa-envelope"></i>
-        <h6 id="wp-nom"><?=$email?></h6>
+        <h6><?=$email?></h6>
     </div>
     <div id="wp-reds">
         <?php if($ig): ?> <a href="https://www.instagram.com/<?=$ig?>"><i class="fab fa-instagram"></i></a> <?php endif; ?>
