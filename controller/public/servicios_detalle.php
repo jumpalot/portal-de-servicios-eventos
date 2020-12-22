@@ -44,7 +44,7 @@
     
     //infocontacto
     $nombreUsu = $datos->nombreUsu;
-    $telefono = '+'.(strlen($datos->telefono)>10)? $datos->telefono : '54'.$datos->telefono;
+    $telefono = '+'.((strlen($datos->telefono)>10)? $datos->telefono : '54'.$datos->telefono);
     $email = $datos->email;
     $fb = ($datos->fb=="NULL")? null : $datos->fb;
     $tw = ($datos->tw=="NULL")? null : substr($datos->tw, 1);
