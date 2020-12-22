@@ -896,7 +896,7 @@ div.modal#confirmDeleteModal {
   grid-template: "ban ban ban" auto
                  "bod bod con" auto;
   gap: 10px;
-  align-items: center;
+  align-items: start;
   width: 80%;
   margin-bottom: 1em;
 }
@@ -911,6 +911,7 @@ div.modal#confirmDeleteModal {
                   "iusu" auto;
   gap: 10px;
   align-items: center;
+  margin-top: 0;
   margin-bottom: 1em;
 }
 #wrapper-bod #wp-desc { grid-area: desc; }
