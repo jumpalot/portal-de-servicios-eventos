@@ -251,6 +251,7 @@ body {
 .crop-333 {
   object-fit: cover;
   height: 333px;
+  width: 74vw;
 }
 
 .img1 {
