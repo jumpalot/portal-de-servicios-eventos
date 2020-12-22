@@ -1047,7 +1047,6 @@ input[type="submit"]#fsnews{
 	border-radius:8px;
 }
 input[type="submit"]#fsnews:hover{
-	font-size: 16PX;
 	color: burlywood;
 }
 footer A {text-decoration: none;}
