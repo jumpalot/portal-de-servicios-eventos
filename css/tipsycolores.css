@@ -953,8 +953,8 @@ div.modal#confirmDeleteModal {
 }
 .infoServicios {
   background-color: #ebe9e6;
-  border-color: #d4b66a;
-  border-width: .4em;
+  border-color: #d4b66a !important;
+  border-width: .4em !important;
 }
 #breadcrumb {
   width: 80%;
