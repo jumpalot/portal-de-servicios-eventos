@@ -949,11 +949,11 @@ div.modal#confirmDeleteModal {
 #wrapper-iusu #wp-celu { grid-area: celu; display: flex;}
 #wrapper-iusu #wp-mail { grid-area: mail; display: flex;}
 #wrapper-iusu #wp-nomb { grid-area: nomb; }
-#wrapper-iusu #wp-reds { grid-area: reds; font-size: 2.5em;}
+#wrapper-iusu #wp-reds { grid-area: reds; }
 #wrapper-iusu #wp-celu>h6, #wrapper-iusu #wp-mail>h6, #wrapper-iusu #wp-nomb {
   font-size: 1.2em;
 }
-#wrapper-iusu #wp-celu>i, #wrapper-iusu #wp-mail>i {
+#wrapper-iusu #wp-celu>i, #wrapper-iusu #wp-mail>i, #wrapper-iusu #wp-reds{
   font-size: 1.5em;
 }
 #wrapper-iusu a {
