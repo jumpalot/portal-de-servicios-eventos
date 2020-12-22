@@ -950,12 +950,14 @@ div.modal#confirmDeleteModal {
 #wrapper-iusu #wp-mail { grid-area: mail; display: flex;}
 #wrapper-iusu #wp-nomb { grid-area: nomb; }
 #wrapper-iusu #wp-reds { grid-area: reds; font-size: 2.5em;}
-#wrapper-iusu #wp-reds>a { color: white; }
 #wrapper-iusu #wp-celu>h6, #wrapper-iusu #wp-mail>h6, #wrapper-iusu #wp-nomb {
   font-size: 1.2em;
 }
 #wrapper-iusu #wp-celu>i, #wrapper-iusu #wp-mail>i {
   font-size: 1.5em;
+}
+#wrapper-iusu a {
+  color: white;
 }
 .infoContacto {
   background-color: #d4b66a;
