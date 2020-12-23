@@ -14,9 +14,10 @@
             $sql = "INSERT INTO `usuarios`(`nombre`, `pass`, `telefono`, `correo`, `fb`, `tw`, `ig`, `web`)
                     VALUES ('$name','$pass','$tel','$email', $opcionales)";
             $db->query($sql);
-            if($db->error=="") return "";
+            if($db->error=="") return true;
         }
-        return 'noreg';
+        echo 'noreg';
+        return false;
     }
     function login($email, $pass){
         global $db;
@@ -28,7 +29,7 @@
                 session_start();
                 $_SESSION['loggedIn'] = true;
                 $_SESSION['usrId'] = $res->fetch_object()->id;
-                return 'verificado';
+                return '';
             }
         }
         return 'noverif';

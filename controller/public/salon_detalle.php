@@ -1,10 +1,22 @@
 <?php
-    $idPub=$_GET['idPub'];
+    function listar($datos){
+        $ldatos = '';
+        while ($dato = $datos->fetch_object())
+        $ldatos .= $dato->nombre.' / ';
+        return substr($ldatos, 0, -2);
+    }
+
+    $idPub = $_GET['idPub'];
     $tipo = $_GET['tipo'];
-    $datos = getServicio($idPub);
+
+    $datos = getSalon($idPub);
+    $espaciosdb = getEspaciosPub($datos->id);
+    $lserviciosdb = getSalonlServicio($datos->id);
+
     $idUsu = $datos->idUsu;
 
-    $seccion = 'servicios';
+    //titulo
+    $seccion = 'salones';
     $titulo = $datos->titulo;
     echo "<h5 id=\"breadcrumb\">HOME / $seccion / $titulo </h5>";
     echo '<section id="wrapper-detalle">';
@@ -15,17 +27,20 @@
 
     //body
     $body = $datos->descripcion;
-    $volanta =($datos->descuento!="0")?($datos->descuento).'% OFF':"";
+    $volanta =($datos->descuento!="0")?$$datos->descuento.'% OFF':"";
     include('./view/public/ideas/cuerpo.php');
     
     //infoPub
     $zona = $datos->zona;
     $subtipo= $datos->tipo;
-    include('./view/public/detalle/infoServicios.php');
+    $capacidad = $datos->capacidad;
+    $espacios = listar($espaciosdb);
+    $servicios = listar($lserviciosdb);
+    include('./view/public/detalle/infoSalon.php');
     
     //carousel
     include('./view/public/carousel/carouselTop.html');
-    $fotos = getFotosPubli('servicios', $idPub, $idUsu);
+    $fotos = getFotosPubli('salon', $idPub, $idUsu);
     $img = array();
     $cont=0;
     $contSecciones=1;

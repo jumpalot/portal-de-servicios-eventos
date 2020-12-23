@@ -16,26 +16,23 @@
             include('./view/public/legales/terminos_condiciones.html');
         break;
         case 'promos':
-            include('./view/public/minisearch.html');
+            include('./view/public/nav/minisearch.html');
             include('./view/public/Promociones.html');
         break;
-        case 'salones':
-            include('./view/public/minisearch.html');
-            include('./view/public/Salones.html');
-        break;
-        case 'servicios':
-            include('./view/public/minisearch.html');
-            include('./view/public/Servicios.html');
+        case 'categorias':
+            include('./view/public/nav/minisearch.html');
+            include('./controller/public/categorias.php');
         break;
         case 'detalle':
-            include('./view/public/minisearch.html');
+            echo '<script src="./js/detalle.js"></script>';
+            include('./view/public/nav/minisearch.html');
             include("./controller/public/".$_GET['tipo']."_detalle.php");
         break;
         case 'contacto':
             include('./view/public/Contacto.html');
         break;
         case 'search':
-            include('./view/public/minisearch.html');
+            include('./view/public/nav/minisearch.html');
             include('./view/public/busqueda/Busqueda.html');
             include('./view/public/busqueda/items/basic.php');
         break;

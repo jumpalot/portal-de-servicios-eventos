@@ -6,5 +6,5 @@
     $idPub = $_SESSION['idPub'];
     $check = array("", "", "", "");
     $check[getNivel($tipo, $idPub, $idUsu)] = 'checked';
-    include('../../view/users/upgradePubBody.php');
+    include('../../view/users/upgradePub/upgradePubBody.php');
 ?>

@@ -91,6 +91,12 @@ $(document).ready(()=>{
         $('#editFotosModal #body-content').empty();
         trash="";
     });
+    $("#profileModal").on('show.bs.modal', event => {
+        $.post('./controller/users/profile.php', msg => $("#profileBody").html(msg));
+    });
+    $("#editProfileModal").on('show.bs.modal', event => {
+        $.post('./controller/users/editProfile.php', msg => $("#editProfileBody").html(msg));
+    });
 });
 const listaTPublis = new Array(
     "servicios",
@@ -181,6 +187,30 @@ function fotosToEdit() {
 function upgradeToEdit() {
     $('#upgradePubModal').modal('hide');
     $('#editPubModal').modal('show');
+}
+function rmProfileToEdProfile() {
+    $('#rmProfileModal').modal('hide');
+    $('#editProfileModal').modal('show');
+}
+function editToRmUser() {
+    $('#editProfileModal').modal('hide');
+    $('#rmProfileModal').modal('show');
+}
+function homeToDeletePub() {
+    $('#editPubModal').modal('hide');
+    $('#confirmDeleteModal').modal('show');
+}
+function rmPubToHome() {
+    $('#confirmDeleteModal').modal('hide');
+    $('#editPubModal').modal('show');
+}
+function profileToEdit() {
+    $('#profileModal').modal('hide');
+    $('#editProfileModal').modal('show');
+}
+function editToProfile() {
+    $('#editProfileModal').modal('hide');
+    $('#profileModal').modal('show');
 }
 function rmPub(){
     $.post('./model/publis/rmPost.php', msg => editToMyPubs());

@@ -4,7 +4,7 @@
   padding: 0;
   transition: all 0.6s ease;
 }
-
+ 
 @import url("https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700|Source+Sans+Pro:400,700");
 
 .headers,
@@ -23,6 +23,9 @@ a {
 }
 select:focus {
   outline: none;
+}
+.input-contenedor input:focus {
+  outline: 0;
 }
 .contenedor {
   height: 400px !important;
@@ -97,7 +100,7 @@ select:focus {
 }
 h2.regresar {
   position: absolute;
-  bottom: 71%;
+  bottom: 74.5%;
   left: 3%;
   letter-spacing: 1px;
   color: white;
@@ -106,7 +109,7 @@ h2.regresar {
 img.regresar {
   position: absolute;
   bottom: 70%;
-  left: -15px;
+  left: -29.57px;
   padding: 0.4em 0.4em 0.4em 1.2em;
   letter-spacing: 1px;
   width: 23em;
@@ -170,12 +173,13 @@ img.regresar {
 body {
   color: dimgray;
   padding: 0;
-  width: 95%;
+  width: 100%;
   max-width: 1650px;
   margin: auto;
 }
 .oro100 {
   background-color: rgba(170, 143, 83, 1);
+  border-color: rgb(153, 130, 80);
   color: white !important;
 }
 .oro80 {
@@ -201,6 +205,13 @@ body {
 .blanco {
   border: solid 2px rgba(170, 143, 83, 1);
   background-color: white;
+}
+
+.verde {
+  color: darkseagreen;
+}
+.rojo {
+  color: crimson;
 }
 
 /******************* ANCHOS **************/
@@ -251,6 +262,8 @@ body {
 .crop-333 {
   object-fit: cover;
   height: 333px;
+  width: 80vw;
+  padding: 0;
 }
 
 .img1 {
@@ -445,12 +458,6 @@ p {
 }
 
 /*****diseño del navbar******/
-.ancho {
-  width: 100%;
-  height: 80;
-  background: gray;
-  margin: auto;
-}
 header {
   width: 100%;
   height: 90px;
@@ -488,6 +495,9 @@ nav ul li {
   color: #c1a152;
   font-family: Quicksand;
   float: left;
+}
+#minisearch {
+  padding-top: 94px;
 }
 #minisearch .fuente{
   color: white;
@@ -583,10 +593,14 @@ nav + .banner {
   padding: 1rem;
   z-index: 1;
   width: 100%;
-  height: 25%;
+  height: 30%;
   max-width: 1500px;
   text-align: center;
   background-color: rgba(170, 143, 83, 0.9) !important;
+}
+.info form {
+  min-width: 910px;
+  width: 70vw;
 }
 .info select {
     font-size: 1em;
@@ -594,10 +608,9 @@ nav + .banner {
     height: 2.3rem;
 }
 .info h2 {
-  padding-top: 5px;
   font-size: 35px;
   color: #fff;
-  margin-bottom: 1rem;
+  margin-bottom: .5rem;
   letter-spacing: 2px;
 }
 .selects {
@@ -647,6 +660,9 @@ nav + .banner {
 }
 .carousel-item img {
   object-fit: cover;
+}
+#carouselExampleIndicators .carousel-item img {
+  width: 100%;
 }
 .bannercate {
   width: 100%;
@@ -698,6 +714,7 @@ a:hover {
   color: white !important;
   font-size: 40px;
 }
+#code, #rcode { text-transform: uppercase; }
 input[type="text"],
 input[type="password"],
 input[type="email"],
@@ -777,6 +794,9 @@ input[type="number"] {
     margin-top: 150px;
     border-radius: 2%;
   }
+  .body-login .formulario{
+    padding: .4em;
+  }
 }
 
 /* MODALS */
@@ -796,15 +816,22 @@ div.modal#editPubModal {
 div.modal#myPubsModal {
   z-index: 100;
 }
-div.modal#confirmDeleteModal {
-  z-index: 102;
-  max-width: 300px;
-}
 @media (min-width: 576px) {
   div.modal#myPubsModal .modal-dialog {
     max-width: 700px;
     margin: 1.75rem auto;
   }
+}
+#confirmDeleteModal .modal-dialog {
+  max-width: 390px;
+  width: 31vw;
+}
+#rmProfileModal .modal-dialog {
+  max-width: 850px;
+  width: 45vw;
+}
+#rmProfileModal textarea {
+  margin-top: 2em;
 }
 
 /* Editar Publicacion (modal) */
@@ -895,13 +922,106 @@ div.modal#confirmDeleteModal {
 }
 
 /* DETALLE PUBILCACIONES */
+#wrapper-detalle {
+  display: grid;
+  grid-template: "ban ban ban" auto
+                 "bod bod con" auto
+                 "inf inf con" auto;
+  gap: 1.3em;
+  align-items: start;
+  width: 80%;
+  margin-bottom: 1em;
+}
+#wrapper-detalle #wp-ban { grid-area: ban; }
+#wrapper-detalle #wp-ban a { text-transform: capitalize; }
+#wrapper-detalle #wp-con {
+  grid-area: con;
+  width: 21vw;
+  background-color: antiquewhite;
+  padding: 1em;
+  margin-top: 0;
+}
+#wrapper-detalle #wp-con h6 { margin-top: 1.5em; }
+#wrapper-detalle #wp-con h3 { font-size: 15pt; }
+#wrapper-detalle #wp-con .input-group, #wp-con textarea { margin-bottom: 1em; background-color: white;}
+#wrapper-detalle #wp-con .input-group-prepend { width: 2em; }
+#wrapper-detalle #wp-con .form-control { font-size: .9em; }
+#wrapper-detalle #wp-con .bblr { float: right; }
+#wrapper-detalle #wp-bod { grid-area: bod; width: 100%; text-align: justify; margin-top: 0; }
+#wrapper-inf {
+  grid-area: inf;
+  display: grid;
+  grid-template:  "ipub" auto
+                  "caru" auto
+                  "iusu" auto;
+  gap: 2em;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+#wrapper-inf #wp-caru { grid-area: caru; width: 100%;}
+#wrapper-inf #wp-caru .carousel-inner { width: 80%;}
+#wrapper-inf #wrapper-ipub {
+  grid-area: ipub;
+  width: 100%;
+  display: grid;
+  grid-template-columns: [tipo] auto [dato] auto;
+  grid-auto-rows: minmax(3em, auto);
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 1em;
+}
+#wrapper-ipub h3 { padding-top: 1em; }
+#wrapper-ipub .wp-tipo-dato { grid-column: 1/3; }
+#wrapper-ipub .wp-tipo { grid-column: tipo; margin-left: 5.5rem;}
+#wrapper-ipub .wp-dato { grid-column: dato; margin-right: 5.5rem;}
+#wrapper-ipub .wpr { border-bottom: solid #c1a152 .1em; }
+#wrapper-ipub .wpr-1 { grid-row: 1; }
+#wrapper-ipub .wpr-2 { grid-row: 2; }
+#wrapper-ipub .wpr-3 { grid-row: 3; }
+#wrapper-ipub .wpr-4 { grid-row: 4; }
+#wrapper-ipub .wpr-5 { grid-row: 5; }
+#wrapper-ipub .wpr-6 { grid-row: 6; }
+#wrapper-inf #wrapper-iusu {
+  grid-area: iusu;
+  width: 100%;
+  display: grid;
+  grid-template: "titu nada nomb" auto
+                 "celu mail reds" auto;
+  gap: 10px;
+  align-items: center;
+  color: white;
+  padding: .5em;
+}
+#wrapper-iusu #wp-titu { grid-area: titu; font-size: 1.3em;}
+#wrapper-iusu #wp-celu { grid-area: celu; display: flex;}
+#wrapper-iusu #wp-mail { grid-area: mail; display: flex;}
+#wrapper-iusu #wp-nomb { grid-area: nomb; }
+#wrapper-iusu #wp-reds { grid-area: reds; }
+#wrapper-iusu #wp-celu>h6, #wrapper-iusu #wp-mail>h6, #wrapper-iusu #wp-nomb {
+  font-size: 1.2em;
+}
+#wrapper-iusu #wp-celu>i, #wrapper-iusu #wp-mail>i, #wrapper-iusu #wp-reds{
+  font-size: 1.5em;
+}
+#wrapper-iusu a {
+  color: white;
+  text-decoration: none;
+}
 .infoContacto {
   background-color: #d4b66a;
 }
 .infoServicios {
-  background-color: #ebe9e6;
-  border-color: #d4b66a;
-  border-width: .4em;
+  background-color: beige;
+  border-color: #d4b66a !important;
+  border-width: .2em !important;
+  width: 100%;
+}
+#breadcrumb {
+  width: 80%;
+  margin-top: 0em;
+  padding-top: 11em;
+  text-transform: uppercase;
 }
 
 /* ----------- FOOTER -------------------*/
@@ -972,13 +1092,16 @@ footer a:active {
 footer a:hover{
 	color:#c8bfa4;
 }
+footer img {
+  margin-bottom: 0.8em;
+}
+input[type=submit]:disabled { cursor: progress; }
 input[type="submit"]#fsnews{
 	font-size: 20PX;
 	color: #c8bfa4;
 	border-radius:8px;
 }
 input[type="submit"]#fsnews:hover{
-	font-size: 16PX;
 	color: burlywood;
 }
 footer A {text-decoration: none;}
@@ -1024,11 +1147,141 @@ footer A {text-decoration: none;}
 .infosalon{
   z-index: 1;
   width: 100%;
-   height: 16%;
+  height: 5em;
+  max-width: 1500px;
+  position: absolute;
+  text-align: center;
+  background-color:rgba(170,143,83,0.9)!important;
+  color: white;
+}
+.cards {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  width:100%;
+}
+.cards img { 
+  object-fit: cover; 
+  width: 19vw;
+  height: 19vw;
+}
+.infocards{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  width: 19vw;
+  height:19vw;
+  position: flex;
+  text-align: center;
+  background-color:rgba(170,143,83,0.4)!important;
+  color: white;
+}
+.cardfonts{
+  color: white;
+  margin-bottom: 20px;
+  font-size: 35px; 
+  font-weight: 400; 
+ letter-spacing: 1; 
+  font-family:'Quicksand', Source Sans Pro;
+  text-decoration: none;
+  }
+  .anchosalon{
+    width: 80vw;
+    height: 80%;
+    background: white;
+    margin: auto;    
+  }
+  .card-img-salon{
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 100%;
+    background-color: rgba(170,143,83,1);
+  }
+  /* ----------diseño de promociones---------------------*/
+  .banner-promos{
+    width:  100%;
+    height: 500px; 
+   background-image: url(../img/gal021.jpg);
+    background-size: 100% 100%;
+    position: flex;
+    display: flex;
+    align-items: center;
+}
+.infoprom{
+  z-index: 1;
+  width: 100%;
+  height: 5em;
   max-width: 1500px;
   padding-top: -10px;
   position: absolute;
     text-align: center;
     background-color:rgba(170,143,83,0.9)!important;
        color: white;
+}
+.fuente-prom{
+  font-family: Quicksand;
+   font-weight: 200;
+   font-size: 20px;
+   padding-top:5px;
+   font-weight: bold;
+   text-align: center;
+  }
+  .otrafuente{
+    text-decoration: none;
+      color: white;
+        font-weight: 620;
+  }
+  .posicioncard{
+    padding-top: 25px;
+    padding-top: 1px;
+}
+.infocard{
+  z-index: 1;
+  width: 80%;
+   height:92%;
+   padding-top: -20px;
+  position: flex;
+    text-align: center;
+    background-color:rgba(170,143,83,0.7)!important;
+       color: white;
+}
+.posicionico{
+  padding-top: 10px;
+}
+.tiposer{
+  z-index: 1;
+  width: 35%;
+   height:20%;
+   position: flex;
+    background-color:grey!important;
+       color: white;
+       font-size:5px;
+}
+.cardfont{
+  color: white;
+  margin-bottom: 20px;
+  font-size: 43px; 
+  font-weight: 350; 
+ letter-spacing: 1; 
+  font-family:'Quicksand', Source Sans Pro;
+  text-decoration: none;
+}
+.input-contenedor-promos{
+  margin-bottom: 15px;
+  border: 1px  rgba(170,143,83,0.7);
+  width: 95%;
+}
+.anchosprom{
+  width: 70%;
+  height: 80%;
+  background: white;
+  margin: auto;    
 }

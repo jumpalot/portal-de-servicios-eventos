@@ -202,7 +202,12 @@
     }
     function getEspaciosPub($idPub){
         global $db;
-        $sql = "SELECT id_espacios AS id FROM salon_espacio WHERE id_salon=$idPub";
+        $sql = "SELECT 
+                    id_espacios AS id,
+                    nombre
+                FROM salon_espacio 
+                NATURAL JOIN espacios
+                WHERE id_salon='$idPub'";
         $datos = $db->query($sql);
         if($db->error) {
             echo '<script>console.log(`'.$db->error.'`);</script>';
@@ -212,7 +217,12 @@
     }
     function getSalonlServicio($idPub) {
         global $db;
-        $sql = "SELECT id_lservicio AS id FROM salon_lservicio WHERE id_salon=$idPub";
+        $sql = "SELECT 
+                    id_lservicio AS id,
+                    nombre 
+                FROM salon_lservicio 
+                NATURAL JOIN lservicios
+                WHERE id_salon='$idPub'";
         $datos = $db->query($sql);
         if($db->error) {
             echo '<script>console.log(`'.$db->error.'`);</script>';
@@ -407,6 +417,26 @@
                 WHERE salon.id_salon='$idPub'";
         $data = $db->query($sql);
         return $data->fetch_object();
+    }
+    function getFotocate($tipo, $idCat){
+        global $db;
+        $uctipo = ucfirst($tipo);
+        $sql = "SELECT 
+                    ft.foto AS foto,
+                    tp.id_usuario AS idUsu
+                FROM $tipo AS tp
+                NATURAL JOIN fotos$uctipo AS ft
+                WHERE tp.id_tipo$tipo = $idCat
+                AND tp.id_fotoPrincipal = ft.id_fotos
+                ORDER BY tp.nivel DESC
+                LIMIT 1";
+        return $db->query($sql)->fetch_object();
+    }
+    function updatePass($email, $pass){
+        global $db;
+        $sql = "UPDATE usuarios SET pass='$pass' WHERE correo='$email'";
+        $db->query($sql);
+        return $db->error=="";
     }
     $db = new mysqli('localhost','u812890733_Jpgardey','G12345678y','u812890733_Portalgardey');
 ?>

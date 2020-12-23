@@ -6,11 +6,11 @@
     $tipo = $_SESSION['tipo'];
     $idPub = $_SESSION['idPub'];
 
-    $titulo = $_POST['nom'];
-    $desc = $_POST['desc'];
-    $zona = $_POST['zonas'];
-    $subtipo = $_POST['subtipo'];
-    $descuento = $_POST['descuento'];
+    $titulo = @$_POST['nom'];
+    $desc = @$_POST['desc'];
+    $zona = @$_POST['zonas'];
+    $subtipo = @$_POST['subtipo'];
+    $descuento = @$_POST['descuento'];
     $descuento = ($descuento)?$descuento:"0";
 
     if ($tipo!='salon') {
@@ -19,9 +19,9 @@
         else echo '<h5>Ocurrió un problema al actualizar los datos</h5>
                    <h5>Por Favor, vuelva a intentarlo más tarde</h5>';
     } else {
-        $cap = $_POST['cap'];
-        $espacios = $_POST['espacios'];
-        $servicios = $_POST['servicios'];
+        $cap = @$_POST['cap'];
+        $espacios = @$_POST['espacios'];
+        $servicios = @$_POST['servicios'];
         if  ( updateSalon($idPub, $idUsu, $titulo, $desc, $zona, $subtipo, $cap, $descuento) &
             ( rmEspaciosSalon($idPub)  && addEspaciosSalon($espacios, $idPub)  ) &
             ( rmServiciosSalon($idPub) && addServiciosSalon($servicios, $idPub)) ) 
