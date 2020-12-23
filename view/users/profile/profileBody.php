@@ -12,7 +12,8 @@
                     <li class="list-group-item"><i class="fab fa-instagram icon"></i>Nombre de usuario:</li>
                     <li class="list-group-item"><i class="fab fa-twitter-square icon"></i>Nombre de usuario:</li>
                     <li class="list-group-item"> <i class="fas fa-sitemap icon"></i></i>Pagina web:</li>
-                    <li class="list-group-item"><i class="fab fa-facebook icon"></i></i>Nombre de usuario:emirorellana</li>
+                    <li class="list-group-item"><i class="fab fa-facebook icon"></i></i>Nombre de usuario:
+                    emirorellana</li>
 
                 </ul>
 
