@@ -9,7 +9,6 @@
         <p class="cuerpo1 lnh">
             <?=$tp->descripcion?>
         </p>
-        <input type="submit" value="COTIZAR" class="bbrr pd10 boton">
-        <input type="submit" value="&#10009;" class="bbrrr pd10 boton">
+        <input type="button" value="COTIZAR" id="<?=$tp->id?>-<?=$tipo?>" onclick="iraDetalle(this.id)" class="bbrr pd10 boton">
      </div>
 </div>

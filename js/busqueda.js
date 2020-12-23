@@ -22,3 +22,7 @@ function cargarBusqueda(tipo, subtipo){
         msg => $('#sectionSearch').html(msg)
     )
 }
+function iraDetalle(id){
+    [idPub, tipo] = id.split('-');
+    window.location="http://portalgardey.escuelarobertoarlt.com.ar/?section=detalle&tipo="+tipo+"&idPub="+idPub;
+}

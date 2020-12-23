@@ -12,7 +12,7 @@
         <?php if ($tp->descuento!="0"):?>
                 <label class="btlr pd10 "><?=$descu?>% OFF</label>
         <?php endif; ?>
-        <input type="submit" value="COTIZAR" class="bbrr pd10 boton">
+        <input type="button" id="<?=$tp->id?>-<?=$tipo?>" onclick="iraDetalle(this.id)" value="COTIZAR" class="bbrr pd10 boton">
      </div>
     <div class="cont1 pd10">
         <img src="./img/<?=$tp->idUsu?>/<?=$tipo?>/<?=$tp->foto?>" width="200" height="200">

@@ -9,7 +9,7 @@
         <p class="cuerpo1 lnh">
             <?=$tp->descripcion?>
         </p>
-        <input type="submit" value="COTIZAR" class="bbrr pd10 boton">
+        <input type="button" id="<?=$tp->id?>-<?=$tipo?>" onclick="iraDetalle(this.id)" value="COTIZAR" class="bbrr pd10 boton">
      </div>
     <div class="cont1 pd10">
         <img src="./img/<?=$tp->idUsu?>/<?=$tipo?>/<?=$tp->foto?>" width="200" height="200">
