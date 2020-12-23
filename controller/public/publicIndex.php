@@ -33,7 +33,7 @@
             include('./view/public/Contacto.html');
         break;
         case 'search':
-            echo '<script>var tipo="'.@$_GET['tipo'].'"; var subtipo="'.@$_GET['subtipo'].'";';
+            echo '<script>var tipo="'.@$_GET['tipo'].'"; var subtipo="'.@$_GET['subtipo'].'";</script>';
             echo '<script src="./js/busuqeda.js"></script>';
             include('./view/public/nav/minisearch.html');
             include('./view/public/busqueda/Busqueda.html');
