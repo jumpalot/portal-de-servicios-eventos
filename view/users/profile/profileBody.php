@@ -8,7 +8,7 @@
                 <h5 class="card-title text-center"><i class="fas fa-user-tie"></i>&nbsp;<?=$nombre?></h5>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item"><i class="fas fa-mobile icon"></i><?=$telefono?></li>
-                    <li class="list-group-item"><center><i class="fas fa-envelope icon"></center></i><?=$correo?></li>
+                    <li class="list-group-item"><i class="fas fa-envelope icon"></i><?=$correo?></li>
                     <?php if ($ig): ?><li class="list-group-item"><i class="fab fa-instagram icon"></i><?=$ig?></li><?php endif; ?>
                     <?php if ($tw): ?><li class="list-group-item"><i class="fab fa-twitter-square icon"></i><?=$tw?></li><?php endif; ?>
                     <?php if ($fb): ?><li class="list-group-item"><i class="fab fa-facebook icon"></i><?=$fb?></li><?php endif; ?>
