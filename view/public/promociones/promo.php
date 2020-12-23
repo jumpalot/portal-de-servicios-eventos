@@ -10,11 +10,11 @@
 						</div>
 						<img src="../img/gal045.jpg"height="50" width="50">
 					</div>
-					<p class="cardfont">15% de descuento por persona</p>
+					<p class="cardfont"><?=$titulo?></p>
 					<div class="input-contenedor-promo">
-						<h2 class="gris1 h2"><a href="" class="otrafuente fuente">COTIZAR YA!</a></h2>
+						<h2 class="gris1 h2"><a href="?section=detalle&tipo=<?=$tipo?>&idPub=<?=$idPub?>" class="otrafuente fuente">COTIZAR YA!</a></h2>
 					</div>
-					<p class="card-text">Promocion valida hasta 17/12/2020</p>
+					<p class="card-text">Promocion valida hasta <?=$limite?></p>
 				</div>
 			</div>
 		</div>

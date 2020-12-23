@@ -442,5 +442,22 @@
         $db->query($sql);
         return $db->error=="";
     }
+    function addPromo($titulo, $limite, $tipo, $idPub){
+        global $db;
+        $sql = "INSERT INTO promociones (id_$tipo, titulo, limite) 
+                VALUES ($idPub, '$titulo', '$limite')";
+        $db->query($sql);
+        if ($db->error) echo '<script>console.log(`'.$db->error.'`);</script>';
+        return $db->error=="";
+    }
+    function getPromos($pagina){
+        global $db;
+        $inicio = $pagina*6;
+        $fin = ($pagina+1)*6;
+        $sql = "SELECT * FROM `promociones` WHERE limite>NOW() limit $inicio, $fin";
+        $datos =$db->query($sql);
+        if ($db->error) echo '<script>console.log(`'.$db->error.'`);</script>';
+        return $datos;
+    }
     $db = new mysqli('localhost','u812890733_Jpgardey','G12345678y','u812890733_Portalgardey');
 ?>
