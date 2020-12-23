@@ -32,7 +32,7 @@
   Filtros:
   <div class="dropdown">
    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-   Zona
+   Ubicacion
    <?php 
      $tpszona=getZonas();
    ?>
