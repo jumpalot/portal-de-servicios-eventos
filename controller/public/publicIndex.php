@@ -34,7 +34,7 @@
         break;
         case 'search':
             echo '<script>var tipo="'.@$_GET['tipo'].'"; var subtipo="'.@$_GET['subtipo'].'";</script>';
-            echo '<script src="./js/busuqeda.js"></script>';
+            echo '<script src="./js/busqueda.js"></script>';
             include('./view/public/nav/minisearch.html');
             include('./view/public/busqueda/Busqueda.html');
         break;
