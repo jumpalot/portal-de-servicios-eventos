@@ -16,7 +16,8 @@
             $db->query($sql);
             if($db->error=="") return "";
         }
-        return 'noreg';
+        echo 'noreg';
+        return false;
     }
     function login($email, $pass){
         global $db;
