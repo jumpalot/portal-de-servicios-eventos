@@ -293,3 +293,17 @@ function buyUpgrade(){
 function verPub(){
     window.location="./?section=preview";
 }
+function agregarOferta(){
+    $('#editPubModal').modal('hide');
+    $('#newOfertaModal').modal('show');
+}
+function promoToHome(){
+    $('#newOfertaModal').modal('hide');
+    $('#editPubModal').modal('show');
+}
+function uploadPromo(){
+    $.post('./model/public/newPromo.php', $('form#promos').serialize(), res => {
+        $('div#result').html(res);
+        $('div#resultModal').modal('show');
+    });
+}

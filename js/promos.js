@@ -1,4 +1,4 @@
-var pagina = 1;
+var pagina = 0;
 $(document).ready( () => {
     cargarPromos();
     $('#cargarMas').on('click', e => {

@@ -839,7 +839,7 @@ div.modal#myPubsModal {
   display: grid;
   grid-template: "a a a" 4em
                  "b c d" 4em
-                 "e e e" 5em;
+                 "p e e" 5em;
   gap: 10px;
   align-items: center;
   margin-bottom: 1em;
@@ -868,6 +868,9 @@ div.modal#myPubsModal {
 .wrapper .box#gr-e{
   grid-area: e;
   font-weight: 500;
+}
+.wrapper .box#gr-p{
+  grid-area: p;
 }
 .wrapper .box h3, .wrapper .box h5 {
   margin-top: 0;
