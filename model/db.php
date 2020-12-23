@@ -135,7 +135,7 @@
                     ON servicios.id_tiposervicios = tiposervicios.id_tiposervicios
                 LEFT JOIN fotosServicios 
                     ON servicios.id_fotoPrincipal=fotosServicios.id_fotos 
-                    AND servicios.id_servicios=fotosServicios.id_serviciosºº
+                    --AND servicios.id_servicios=fotosServicios.id_serviciosºº
                 WHERE servicios.id_tiposervicios=$Tipo ";
                 if (@$zona) $sql .= " OR zonas.zona='$zona'";
                 if (@$descuento) $sql .= " OR servicios.descuento='$descuento'";
