@@ -136,7 +136,7 @@
                 LEFT JOIN fotosServicios 
                     ON servicios.id_fotoPrincipal=fotosServicios.id_fotos 
                     AND servicios.id_servicios=fotosServicios.id_serviciosºº
-                WHERE tiposervicios.nombre=$Tipo AND servicios.id_tiposervicios=tiposervicios.id_tiposervicios";
+                WHERE servicios.id_tiposervicios=$Tipo ";
                 if (@$zona) $sql .= " OR zonas.zona='$zona'";
                 if (@$descuento) $sql .= " OR servicios.descuento='$descuento'";
         return $db->query($sql);
@@ -160,7 +160,7 @@
                 LEFT JOIN fotosSalon 
                     ON salon.id_fotoPrincipal=fotosSalon.id_fotos 
                     AND salon.id_salon=fotosSalon.id_salon
-                  WHERE servicios.id_tiposervicios='$tipo'";
+                  WHERE salon.id_tiposalon='$tipo'";
                   if (@$capacidad) $sql .= " OR salon.capacidad='$capacidad'";
                   if (@$zona) $sql .= " OR zona.zona='$zona'";
                   if (@$descuento) $sql .= " OR salon.descuento='$descuento'";
