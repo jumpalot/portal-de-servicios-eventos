@@ -9,7 +9,7 @@ $(document).ready( () => {
 });
 function cargarPromos(){
     $.post(
-        './controller/promociones.php',
+        './controller/public/promociones.php',
         {pagina:pagina},
         msg => {
             $('#listpromos').append(msg)
