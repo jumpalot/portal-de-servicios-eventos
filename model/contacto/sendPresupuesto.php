@@ -12,17 +12,19 @@
     $comentarios = $_POST['comentarios'];
 
     $asunto = "Solicitud de presupuesto $titulo";
-    $cuerpo = "<h2 style=\"text-align: center;\">$asunto</h2>
-               <h3style=\"color: #c1a152;\">Datos del evento</h3>
-               <h4>Fecha</h4><h6>$fecha</h6>
-               <h4>Cantidad</h4><h6>$cantidad</h6>
-               <h3style=\"color: #c1a152;\">Datos de contacto</h3>
-               <h4>Nombre</h4><h6>$nombre $apellido</h6>
-               <h4>Email</h4><h6>$usrmail</h6>
-               <h4>Telefono</h4><h6>$telefono</h6>
-               <h3style=\"color: #c1a152;\">Comentarios</h3>
-               <p style=\"text-align: justify; width: 20em;\">$comentarios</p>
-               ";
+    $cuerpo =  "<div style=\"text-align: center;\">
+                <h1>$asunto</h1>
+                <h2 style=\"color: #c1a152;\">Datos del evento</h2>
+                <h3>Fecha</h3><h5>$fecha</h5>
+                <h3>Cantidad</h3><h5>$cantidad</h5>
+                <h2 style=\"color: #c1a152;\">Datos de contacto</h3>
+                <h3>Nombre</h3><h5>$nombre $apellido</h5>
+                <h3>Email</h3><h5>$usrmail</h5>
+                <h3>Telefono</h3><h5>$telefono</h5>
+                <h2 style=\"color: #c1a152;\">Comentarios</h3>
+                <div style=\"text-align: -webkit-center;\">
+                    <p style=\"text-align: justify; width: 25em;\">$comentarios</p>
+                </div>";
 
     echo sendMail($dest, $asunto, $cuerpo);
 ?>
