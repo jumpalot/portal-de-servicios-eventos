@@ -62,12 +62,12 @@ function registro() {
         "../model/accounts/register.php", $('form#regi').serialize(),
         msg => {    
           if(msg=='noverifcode') $("#failverif")[0].style.display="block";
-          else if(msg=='noreg') {
+          else if(msg=='') window.location="http://portalgardey.escuelarobertoarlt.com.ar/";
+          else{
             $('#regi1')[0].style.display = "block";
             $("#failreg")[0].style.display="block";
             $('#verifmail')[0].style.display = "none";
           }
-          else window.location="http://portalgardey.escuelarobertoarlt.com.ar/";
           endloading();
       });
     }
