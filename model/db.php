@@ -139,7 +139,9 @@
                 WHERE servicios.id_tiposervicios=$Tipo ";
                 if (@$zona) $sql .= " OR zonas.zona='$zona'";
                 if (@$descuento) $sql .= " OR servicios.descuento='$descuento'";
-        return $db->query($sql);
+        $datos = $db->query($sql);
+        if ($db->error) echo '<script>console.log(`'.$db->error.'`);</script>';
+        return $datos;
     }
     function MegagetSalones($tipo,$capacidad=null,$zona=null,$descuento=null){
         global $db;
@@ -164,7 +166,9 @@
                   if (@$capacidad) $sql .= " OR salon.capacidad='$capacidad'";
                   if (@$zona) $sql .= " OR zona.zona='$zona'";
                   if (@$descuento) $sql .= " OR salon.descuento='$descuento'";
-        return $db->query($sql);
+        $datos = $db->query($sql);
+        if ($db->error) echo '<script>console.log(`'.$db->error.'`);</script>';
+        return $datos;
     }
     function getEditData($tipo, $idPub){
         global $db;
