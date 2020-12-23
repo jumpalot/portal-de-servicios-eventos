@@ -28,6 +28,11 @@ function endloading(){
   $('.body-login').removeClass("loading");
   $('.body-login [type=submit]').attr("disabled", false);
 }
+function irA(id){
+  $('html, body').animate({
+    scrollTop: $("#"+id).offset().top
+  }, 1000);
+}
 function registro() {
   $('#nocoinem')[0].style.display = "none";
   $('#nocoinpas')[0].style.display = "none";
@@ -35,8 +40,10 @@ function registro() {
   $("#failverif")[0].style.display="none";
   if($('#email').val()!=$('#cemail').val()){
     $('#nocoinem')[0].style.display = "block";
+    irA('email');
   } else if ($('#pass').val()!=$('#cpass').val()) {
     $('#nocoinpas')[0].style.display = "block";
+    irA('pass');
   } else {
     loading();
     if($('#verifmail')[0].style.display != "block" && $('#code').val()==""){
@@ -44,7 +51,10 @@ function registro() {
         if(msg!='invalidEmail'){
           $('#verifmail')[0].style.display = "block";
           $('#regi1')[0].style.display = "none";
-        } else $('#duplicatemail')[0].style.display = "block";
+        } else {
+          $('#duplicatemail')[0].style.display = "block";
+          irA('email');
+        }
         endloading();
       });
     } else {
