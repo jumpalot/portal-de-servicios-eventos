@@ -14,6 +14,6 @@
         $idFoto = $fotof->idFoto;
         $foto = "./img/$idUsu/$tipo/$nombre";
         $checked = ($idFoto==$fotoP)?'id="originalFotoP" checked':'';
-        include '../../view/users/itemEditFoto.php';
+        include '../../view/users/editFotos/itemEditFoto.php';
     }
 ?>
