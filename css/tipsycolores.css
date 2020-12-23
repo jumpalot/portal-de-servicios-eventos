@@ -822,6 +822,9 @@ div.modal#myPubsModal {
     margin: 1.75rem auto;
   }
 }
+#resultModal h4 {
+  text-align: center;
+}
 #profileModal .modal-dialog {
   max-width: 80%;
   width: fit-content;
