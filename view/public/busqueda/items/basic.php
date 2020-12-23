@@ -27,7 +27,7 @@
     </div>
  </div> 
  <?php endwhile; ?>
- <div class="media-right">
+ <div class="media-left">
   Filtros:
   <div class="dropdown">
    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
