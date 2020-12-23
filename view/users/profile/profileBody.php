@@ -5,7 +5,7 @@
         </div>
         <div class="col-md-8">
             <div class="card-body">
-                <h5 class="card-title text-center"><i class="fas fa-user icon"></i><?=$nombre?></h5>
+                <h5 class="card-title text-center"><i class="fas fa-user-tie"></i></i><?=$nombre?></h5>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item"><i class="fas fa-mobile icon"></i>Telefono:</li>
                     <li class="list-group-item"><i class="fas fa-envelope icon"></i>Mail:</li>
