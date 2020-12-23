@@ -34,7 +34,6 @@
         break;
         case 'search':
             include('./view/public/nav/minisearch.html');
-            include('./view/public/busqueda/Busqueda.html');
             include('./view/public/busqueda/items/basic.php');
             
         break;
