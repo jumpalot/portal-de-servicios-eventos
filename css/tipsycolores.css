@@ -818,6 +818,13 @@ div.modal#confirmDeleteModal {
     margin: 1.75rem auto;
   }
 }
+#rmProfileModal .modal-dialog {
+  max-width: 850px;
+  width: 45vw;
+}
+#rmProfileModal textarea {
+  margin-top: 2em;
+}
 
 /* Editar Publicacion (modal) */
 .wrapper {
