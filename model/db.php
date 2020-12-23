@@ -207,7 +207,8 @@
     function getZonas(){
         global $db;
         $sql = "SELECT 
-                    zonas.zona AS zona
+                    zonas.zona AS zona,
+                    zonas.id_zona AS id
                 FROM zonas";
         return $db->query($sql);
         if($db->error) {
