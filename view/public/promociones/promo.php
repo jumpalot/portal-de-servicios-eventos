@@ -1,6 +1,5 @@
 <div class="col mb-4">
 	<div class="card">
-		<img src="../img/gal021.jpg" class="card-img" alt="..." height="600">
 		<div class="card-img-overlay">
 			<div class="posicioncard">
 				<div class=" infocard">
