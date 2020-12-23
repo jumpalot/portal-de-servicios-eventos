@@ -24,6 +24,9 @@ a {
 select:focus {
   outline: none;
 }
+.input-contenedor input:focus {
+  outline: 0;
+}
 .contenedor {
   height: 400px !important;
   width: 100% !important;

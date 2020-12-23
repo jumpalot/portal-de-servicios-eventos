@@ -70,7 +70,7 @@ function recuperar(){
         else if (msg=='invemail') $("#invemail")[0].style.display="block";
         else if (msg=='') {
           $("form#recu")[0].style.display="none";
-          $("#comprobar")[0].style.display="block";
+          $("form#verifrecu")[0].style.display="block";
         }
         else $("#unerror")[0].style.display="block";
         $('.body-login').removeClass("loading");
@@ -82,11 +82,15 @@ function verifrecu(){
   $('#failverifrecu')[0].style.display="none";
   $('#nocoin')[0].style.display="none";
   $('#unkfail')[0].style.display="none";
-  if ($('#p1').val()!=$('#p1').val())
+  if ($('#p1').val()!=$('#p2').val())
     $('#nocoin')[0].style.display="block";
   else  $.post (
     "../model/accounts/validrecuperar.php",
-    $('form#verifrecu').serialize(), 
+    {
+      email:$('form#recu #rmail').val(),
+      code:$('form#verifrecu #rcode').val(),
+      pass:$('form#verifrecu #p1').val()
+    }, 
     msg => {
       if (msg == 'noverif') $('#failverifrecu')[0].style.display="block";
       else if (msg == '') {

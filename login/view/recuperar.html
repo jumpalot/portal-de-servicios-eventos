@@ -8,24 +8,23 @@
             
             <div class="input-contenedor">
                 <i class="fas fa-envelope icon"></i>
-                <input type="email" placeholder="Correo Electronico" name="email" required>
+                <input type="email" placeholder="Correo Electronico" id="rmail" name="email" required>
             </div>
             
-            <input type="submit" value="Ingresa" class="button">
+            <input type="submit" value="Enviar" class="button">
             <h4 class="hidden" id="unerror" style="color: brown;">Fallo desconocido.</h4>
             <!-- <div class="g-signin2 button" data-onsuccess="onSignIn"></div> -->
             <p>¿Ya recordaste? <a class="link" onclick="recuToLog()">Iniciar Sesion </a></p>
             <p><a class="link" href="../">Volver al inicio</a></p>
         </div>
     </form>
-    <form id="verifrecu" class="formulario" onsubmit="verifrecu(); return false">
-    
-        <h3 class="p">Verificación</h3>
+    <form id="verifrecu" class="formulario hidden" onsubmit="verifrecu(); return false">
+        <h4 class="h1">Verificación</h4>
             <h4>Enviamos un codigo de verificación a tu correo</h4>
             <h4>Introducelo junto con tu nueva Contraseña</h4>
             <div class="input-contenedor">
                 <i class="fas fa-key icon"></i>
-                <input type="text" placeholder="Codigo" id="code" name="code" pattern="(?:[A-Z0-9]{6})?" required>
+                <input type="text" placeholder="Codigo" id="rcode" name="code" pattern="(?:[A-Z0-9]{6})?" required>
             </div>
             <h4 class="hidden" id="failverifrecu" style="color: brown;">Codigo Incorrecto</h4>
             <div class="input-contenedor">
