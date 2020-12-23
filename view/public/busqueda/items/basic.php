@@ -1,5 +1,4 @@
-<div class="media">
-<div class="media-body">   
+
 <?php
     $tps = MegagetServicios(@$_GET['subtipo']);
     if(@$_GET['tipo']=="servicios"){
@@ -9,8 +8,8 @@
     }
     while($tp = $tps->fetch_object()): 
 ?>  
- <div class="productos br input-contenedor-basic">
-    <div class="cont2 pd10">
+    <div class="productos br input-contenedor-basic">
+     <div class="cont2 pd10">
         <p class="cuerpo2">
             <i class="fas fa-map-marker-alt"></i>
             <?=$tp->zona?>
@@ -22,14 +21,14 @@
         </p>
         <input type="submit" value="COTIZAR" class="bbrr pd10 boton">
         <input type="submit" value="&#10009;" class="bbrrr pd10 boton">
-    </div>
-    <div class="cont1 pd10">
+     </div>
+     <div class="cont1 pd10">
         <img src="./img/<?=$tipo?>/<?=$foto?>" width="200" height="200">
+     </div>
     </div>
- </div> 
  <?php endwhile; ?>
-</div>
- <div class="media-left">
+
+ 
   Filtros:
   <div class="dropdown">
    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
@@ -47,4 +46,4 @@
    </ul>
   </div>
  </div>
-</div>
+
