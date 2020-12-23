@@ -1,6 +1,5 @@
 
 <?php
-    $tps = MegagetServicios(@$_GET['subtipo']);
     if(@$_GET['tipo']=="servicios"){
         $tps = MegagetServicios(@$_GET['subtipo']);
     }else if(@$_GET['tipo']=="salon"){
@@ -23,7 +22,7 @@
         <input type="submit" value="&#10009;" class="bbrrr pd10 boton">
      </div>
      <div class="cont1 pd10">
-        <img src="./img/<?=$tipo?>/<?=$foto?>" width="200" height="200">
+        <img src="./img/<?=@$_GET['tipo']?>/<?=$foto?>" width="200" height="200">
      </div>
     </div>
  <?php endwhile; ?>
