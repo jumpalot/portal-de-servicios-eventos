@@ -1,4 +1,6 @@
 <?php
+    include '../../model/db.php';
+
     $pagina = $_POST['pagina'];
 
     $promos = getPromos($pagina);
