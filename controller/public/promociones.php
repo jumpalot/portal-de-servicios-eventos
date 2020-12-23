@@ -1,6 +1,6 @@
 <?php
     $pagina = $_POST['pagina'];
-    
-    include 'view/public/promociones/promo.php';
+
+    include '../../view/public/promociones/promo.php';
     
 ?>
