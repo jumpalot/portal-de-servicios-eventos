@@ -36,7 +36,7 @@ Filtros:
   <span class="caret"></span></button>
   <ul class="dropdown-menu">
       <?php while($tpzona = $tpszona->fetch_object()):?>
-    <li><a class="checkbox" href="#" value=<?=$tpzona->id?>><?=$tpzona->zona?></a></li>
+    <li><a class="checkbox" value=<?=$tpzona->id?>><?=$tpzona->zona?></a></li>
       <?php endwhile; ?>
   </ul>
 </div>
