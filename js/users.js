@@ -208,6 +208,7 @@ function rmProfile() {
     $.post('./model/accounts/rmUser.php', res =>{
         if (res=='eliminado') window.location = "./?logout=1";
         else {
+            console.log(res);
             $('#rmProfileModal').modal('hide');
             $('#resultModal div#result').html("<h4>Ocurrio un error al intentar eliminar su usuario</h4><h4>Si el problema persiste, envie un correo a</h4><h4> <a href=\"mailto:portalservicioseventos@outlook.com\">portalservicioseventos@outlook.com</a></h4>");
             $('#resultModal').modal('show');

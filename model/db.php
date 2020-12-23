@@ -454,7 +454,9 @@
         global $db;
         $sql = "DELETE FROM usuarios WHERE id_usuarios='$idUsu'";
         $db->query($sql);
-        return $db->error=="" && $db->affected_rows;
+        if ($db->error=="" && $db->affected_rows) return true;
+        echo $db->error;
+        return false;
     }
     function updatePass($email, $pass){
         global $db;

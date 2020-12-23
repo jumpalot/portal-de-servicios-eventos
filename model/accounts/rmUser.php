@@ -7,5 +7,4 @@
         echo 'eliminado';
         rmTree("../../img/$idUsu");
     }
-    else echo 'error';
 ?>
