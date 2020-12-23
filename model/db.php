@@ -122,6 +122,7 @@
         global $db;
         $sql = "SELECT 
                     servicios.id_servicios AS id,
+                    servicios.id_usuario AS idUsu,
                     servicios.nombre AS nombre,
                     servicios.descripcion AS descripcion,
                     servicios.nivel as nivel,
@@ -147,6 +148,7 @@
         global $db;
         $sql = "SELECT 
                     salon.id_salon AS id,
+                    salon.id_usuario AS idUsu,
                     salon.nombre AS nombre,
                     salon.descripcion AS descripcion,
                     salon.capacidad as capacidad,
