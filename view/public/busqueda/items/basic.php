@@ -11,7 +11,7 @@
         </p>
         <input type="button" id="<?=$tp->id?>-<?=$tipo?>" onclick="iraDetalle(this.id)" value="COTIZAR" class="bbrr pd10 boton">
      </div>
-    <div class="cont1 pd10">
+    <div class="cont1 pd10 text-center">
         <img src="./img/<?=$tp->idUsu?>/<?=$tipo?>/<?=$tp->foto?>" width="200" height="200">
     </div>
 </div>
