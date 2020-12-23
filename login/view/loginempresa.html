@@ -2,6 +2,7 @@
     <form id="login" class="formulario" onsubmit="login(); return false">
     
         <h4 class="h1">Inicia sesion</h4>
+        <h4 class="hidden" id="recutrue" style="color: darkolivegreen;">Contraseña recuperada</h4>
         <h4 class="hidden" id="loginfail" style="color: brown;">Error al iniciar sesion. Verifique sus datos.</h4>
         <div class="contenedors">
         
@@ -17,6 +18,7 @@
             <input type="submit" value="Ingresa" class="button">
             <!-- <div class="g-signin2 button" data-onsuccess="onSignIn"></div> -->
             <p>¿No tienes una cuenta? <a class="link" onclick="mostrarReg()">Registrate </a></p>
+            <p>¿Olvidaste tu contraseña? <a class="link" onclick="mostrarRecu()">Recuperar </a></p>
             <p><a class="link" href="../">Volver al inicio</a></p>
         </div>
     </form>

@@ -1,0 +1,47 @@
+<div id="recuperar" class="hidden">
+    <form id="recu" class="formulario" onsubmit="recuperar(); return false">
+    
+        <h4 class="h1">Recuperar Contraseña</h4>
+        <h4 class="hidden" id="noemail" style="color: brown;">Email no registrado.</h4>
+        <h4 class="hidden" id="invemail" style="color: brown;">Email invalido.</h4>
+        <div class="contenedors">
+            
+            <div class="input-contenedor">
+                <i class="fas fa-envelope icon"></i>
+                <input type="email" placeholder="Correo Electronico" name="email" required>
+            </div>
+            
+            <input type="submit" value="Ingresa" class="button">
+            <h4 class="hidden" id="unerror" style="color: brown;">Fallo desconocido.</h4>
+            <!-- <div class="g-signin2 button" data-onsuccess="onSignIn"></div> -->
+            <p>¿Ya recordaste? <a class="link" onclick="recuToLog()">Iniciar Sesion </a></p>
+            <p><a class="link" href="../">Volver al inicio</a></p>
+        </div>
+    </form>
+    <form id="verifrecu" class="formulario" onsubmit="verifrecu(); return false">
+    
+        <h3 class="p">Verificación</h3>
+            <h4>Enviamos un codigo de verificación a tu correo</h4>
+            <h4>Introducelo junto con tu nueva Contraseña</h4>
+            <div class="input-contenedor">
+                <i class="fas fa-key icon"></i>
+                <input type="text" placeholder="Codigo" id="code" name="code" pattern="(?:[A-Z0-9]{6})?" required>
+            </div>
+            <h4 class="hidden" id="failverifrecu" style="color: brown;">Codigo Incorrecto</h4>
+            <div class="input-contenedor">
+                <i class="fas fa-key icon"></i>
+                <input type="password" placeholder="Contraseña" id="p1" name="pass" required>  
+            </div>
+            <div class="input-contenedor">
+                <i class="fas fa-key icon"></i>
+                <input type="password" placeholder="Repetir Contraseña" id="p2" required>  
+            </div>
+            <h4 class="hidden" id="nocoin" style="color: brown;">Las contraseñas no coinciden</h4>
+            <input type="submit" value="Enviar" class="button">
+            <h4 class="hidden" id="unkfail" style="color: brown;">Fallo desconocido</h4>
+            <!-- <div class="g-signin2 button" data-onsuccess="onSignIn"></div> -->
+            <p>¿Ya recordaste? <a class="link" onclick="recuToLog()">Iniciar Sesion </a></p>
+            <p><a class="link" href="../">Volver al inicio</a></p>
+        </div>
+    </form>
+</div>

@@ -56,6 +56,7 @@
                 );
             else return $db->error;
         } else return 'email invalido';
+        return '';
     }
     function verificarCodigo($codigo, $email){
         global $db;

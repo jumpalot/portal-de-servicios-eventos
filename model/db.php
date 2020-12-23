@@ -405,5 +405,11 @@
                 LIMIT 1";
         return $db->query($sql)->fetch_object();
     }
+    function updatePass($email, $pass){
+        global $db;
+        $sql = "UPDATE usuarios SET pass='$pass' WHERE correo='$email'";
+        $db->query($sql);
+        return $db->error=="";
+    }
     $db = new mysqli('localhost','u812890733_Jpgardey','G12345678y','u812890733_Portalgardey');
 ?>
