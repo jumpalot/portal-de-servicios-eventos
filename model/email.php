@@ -60,6 +60,7 @@
     }
     function verificarCodigo($codigo, $email){
         global $db;
+        $codigo=strtoupper($codigo);
         if(validcode($codigo) && validemail($email)){
             $sql = "SELECT code FROM verificaciones WHERE email='$email'";
             $res = $db->query($sql);

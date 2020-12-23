@@ -714,6 +714,7 @@ a:hover {
   color: white !important;
   font-size: 40px;
 }
+#code, #rcode { text-transform: uppercase; }
 input[type="text"],
 input[type="password"],
 input[type="email"],
