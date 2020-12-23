@@ -6,5 +6,6 @@
     $telefono = $usuario->telefono;
     $correo = $usuario->correo;
     $ig = $usuario->ig;
+    $tw = $usuario->tw;
     include '../../view/users/profile/profileBody.php';
 ?>
