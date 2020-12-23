@@ -9,5 +9,6 @@
     include './view/users/editFotos/editFotos.html';
     include './view/users/modifyPost/modifyData.html';
     include './view/users/upgradePub/upgradePub.html';
+    include './view/users/newOferta.html';
     include './controller/users/newPost.php';
 ?>
