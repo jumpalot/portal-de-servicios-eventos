@@ -399,7 +399,7 @@
                     tp.id_usuario AS idUsu
                 FROM $tipo AS tp
                 NATURAL JOIN fotos$uctipo AS ft
-                WHERE tp.id_tiposervicios = $idCat
+                WHERE tp.id_tipo$tipo = $idCat
                 AND tp.id_fotoPrincipal = ft.id_fotos
                 ORDER BY tp.nivel DESC
                 LIMIT 1";
