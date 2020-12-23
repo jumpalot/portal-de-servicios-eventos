@@ -1,5 +1,5 @@
   <div class="dropdown">
-   <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+   <button class="btn oro100 dropdown-toggle" type="button" data-toggle="dropdown">
    Salones
    <span class="caret"></span></button>
    <ul class="dropdown-menu">
@@ -12,7 +12,7 @@
   </div>
 
   <div class="dropdown">
-   <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+   <button class="btn oro100 dropdown-toggle" type="button" data-toggle="dropdown">
    Capacidad
    <span class="caret"></span></button>
    <ul class="dropdown-menu">

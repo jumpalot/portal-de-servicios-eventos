@@ -1,5 +1,5 @@
 <div class="dropdown">
-   <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+   <button class="btn oro100 dropdown-toggle" type="button" data-toggle="dropdown">
    Ubicacion
    <span class="caret"></span></button>
    <ul class="dropdown-menu">
