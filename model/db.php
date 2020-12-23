@@ -210,6 +210,10 @@
                     zonas.zona AS zona,
                 FROM zonas";
         return $db->query($sql);
+        if($db->error) {
+            echo '<script>console.log(`'.$db->error.'`);</script>';
+            return null;
+        }
     }
     function getEspaciosPub($idPub){
         global $db;
