@@ -16,8 +16,9 @@
             include('./view/public/legales/terminos_condiciones.html');
         break;
         case 'promos':
+            echo '<script src="./js/promos.js"></script>';
             include('./view/public/nav/minisearch.html');
-            include('./view/public/Promociones.html');
+            include('./view/public/promociones/promociones.html');
         break;
         case 'categorias':
             include('./view/public/nav/minisearch.html');
