@@ -11,8 +11,8 @@
                     <li class="list-group-item"><center><i class="fas fa-envelope icon"></center></i><?=$correo?></li>
                     <li class="list-group-item"><i class="fab fa-instagram icon"></i><?=$ig?></li>
                     <li class="list-group-item"><i class="fab fa-twitter-square icon"></i><?=$tw?></li>
-                    <li class="list-group-item"> <i class="fas fa-sitemap icon"></i></i>Pagina web:</li>
-                    <li class="list-group-item"><i class="fab fa-facebook icon"></i></i>Nombre de usuario</li>
+                    <li class="list-group-item"> <i class="fas fa-sitemap icon"></i><?=$web?></li>
+                    <li class="list-group-item"><i class="fab fa-facebook icon"></i><?=$fb?></li>
 
                 </ul>
 
