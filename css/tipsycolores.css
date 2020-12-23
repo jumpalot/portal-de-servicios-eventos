@@ -1226,6 +1226,9 @@ footer A {text-decoration: none;}
     background-color:rgba(170,143,83,0.9)!important;
        color: white;
 }
+#listpromos img {
+  object-fit: cover;
+}
 .fuente-prom{
   font-family: Quicksand;
    font-weight: 200;
