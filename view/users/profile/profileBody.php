@@ -8,11 +8,12 @@
                 <h5 class="card-title text-center"><i class="fas fa-user icon"></i><?=$nombre?></h5>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item"><i class="fas fa-mobile icon"></i>Telefono:</li>
-                    <li class="list-group-item"><i class="fas fa-envelope icon"></i>Mail</li>
-                    <li class="list-group-item"><i class="fab fa-instagram icon"></i>Nombre de usuario</li>
-                    <li class="list-group-item"><i class="fab fa-twitter-square icon"></i>Nombre de usuario</li>
-                    <li class="list-group-item"> <i class="fas fa-sitemap icon"></i></i>Pagina web</li>
-                    <li class="list-group-item"><i class="fab fa-facebook icon"></i></i>Nombre de usuario</li>
+                    <li class="list-group-item"><i class="fas fa-envelope icon"></i>Mail:</li>
+                    <li class="list-group-item"><i class="fab fa-instagram icon"></i>Nombre de usuario:</li>
+                    <li class="list-group-item"><i class="fab fa-twitter-square icon"></i>Nombre de usuario:</li>
+                    <li class="list-group-item"> <i class="fas fa-sitemap icon"></i></i>Pagina web:</li>
+                    <li class="list-group-item"><i class="fab fa-facebook icon"></i></i>Nombre de usuario:
+                    emirorellana</li>
 
                 </ul>
 
