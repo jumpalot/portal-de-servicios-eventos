@@ -450,6 +450,12 @@
                 LIMIT 1";
         return $db->query($sql)->fetch_object();
     }
+    function rmUsuario($idUsu){
+        global $db;
+        $sql = "DELETE FROM usuarios WHERE id_usuarios='$idUsu'";
+        $db->query($sql);
+        return $db->error=="" && $db->affected_rows;
+    }
     function updatePass($email, $pass){
         global $db;
         $sql = "UPDATE usuarios SET pass='$pass' WHERE correo='$email'";
