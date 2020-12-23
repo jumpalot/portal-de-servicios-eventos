@@ -1,6 +1,7 @@
 <?php
     include('../db.php');
     include('../validations.php');
+    include('../email.php');
 
     $email = @$_POST['email'];
     $codigo = @$_POST['code'];
