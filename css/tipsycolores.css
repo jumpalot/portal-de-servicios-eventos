@@ -1244,6 +1244,7 @@ footer A {text-decoration: none;}
    position: flex;
     background-color:grey!important;
        color: white;
+       font-size:5px;
 }
 .cardfont{
   color: white;
