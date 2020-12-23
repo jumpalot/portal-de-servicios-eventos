@@ -1179,3 +1179,76 @@ footer A {text-decoration: none;}
     width: 100%;
     background-color: rgba(170,143,83,1);
   }
+  /* ----------diseño de promociones---------------------*/
+  .banner-promos{
+    width:  100%;
+    height: 500px; 
+   background-image: url(../img/gal021.jpg);
+    background-size: 100% 100%;
+    position: flex;
+    display: flex;
+    align-items: center;
+}
+.infoprom{
+  z-index: 1;
+  width: 100%;
+   height: 16%;
+  max-width: 1500px;
+  padding-top: -10px;
+  position: absolute;
+    text-align: center;
+    background-color:rgba(170,143,83,0.9)!important;
+       color: white;
+}
+.fuente-prom{
+  font-family: Quicksand;
+   font-weight: 200;
+   font-size: 20px;
+   padding-top:5px;
+   font-weight: bold;
+   text-align: center;
+  }
+  .otrafuente{
+    text-decoration: none;
+      color: white;
+        font-weight: 620;
+  }
+  .posicioncard{
+    padding-top: 25px;
+    padding-top: 1px;
+}
+.infocard{
+  z-index: 1;
+  width: 80%;
+   height:92%;
+   padding-top: -20px;
+  position: flex;
+    text-align: center;
+    background-color:rgba(170,143,83,0.7)!important;
+       color: white;
+}
+.posicionico{
+  padding-top: 10px;
+}
+.tiposer{
+  z-index: 1;
+  width: 35%;
+   height:20%;
+   position: flex;
+    background-color:grey!important;
+       color: white;
+}
+.cardfont{
+  color: white;
+  margin-bottom: 20px;
+  font-size: 43px; 
+  font-weight: 350; 
+ letter-spacing: 1; 
+  font-family:'Quicksand', Source Sans Pro;
+  text-decoration: none;
+}
+.input-contenedors{
+  margin-bottom: 15px;
+  border: 1px  rgba(170,143,83,0.7);
+  width: 95%;
+}
