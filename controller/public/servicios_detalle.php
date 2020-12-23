@@ -55,7 +55,7 @@
     include('./view/public/infoContacto.php');
     
     //contacto
-    include('./view/public/columContacto.html');
+    include('./view/public/columContacto.php');
 
     echo '</section>';
 ?>    

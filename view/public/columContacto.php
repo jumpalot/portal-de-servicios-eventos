@@ -20,13 +20,15 @@
     </div>
     <div class="input-group">
         <div class="input-group-prepend"><i class="fas fa-phone-alt"></i></i></div>
-        <input class="form-control" placeholder="Telefono" type="tel" name="tel" />
+        <input class="form-control" placeholder="Telefono" type="tel" name="telefono" />
     </div>
     <div class="input-group">
         <div class="input-group-prepend"><i class="fas fa-envelope"></i></div>
         <input class="form-control" placeholder="Direccion de correo" type="email" name="email" />
     </div>
     <textarea class="form-control border-0" name="comentarios" cols="30" rows="7" placeholder="Comentarios o sugerencias"></textarea>
+    <input type="hidden" name="titulo" value="<?=$titulo?>">
+    <input type="hidden" name="destinatario" value="<?=$email?>">
     <input type="submit" class="bblr border-0">
     <h6 class="hidden verde">Enviado</h6>
     <h6 class="hidden rojo">Error al enviar</h6>

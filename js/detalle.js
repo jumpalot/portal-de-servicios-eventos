@@ -24,7 +24,7 @@ function sendPresupuesto() {
     $.post('./model/contacto/sendPresupuesto.php', $('#wp-con').serialize(), res => {
         $('#wp-con')[0].reset()
         $('#wp-con [type=submit]').attr("disabled", false);
-        if(res=='enviado') $('#wpcon h6.verde').show()
+        if(res=='') $('#wpcon h6.verde').show()
         else {
             $('#wpcon h6.rojo').show()
             console.log(res);
