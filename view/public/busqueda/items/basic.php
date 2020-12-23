@@ -22,7 +22,7 @@
         <input type="submit" value="&#10009;" class="bbrrr pd10 boton">
     </div>
     <div class="cont1 pd10">
-        <img src="./img/<?=$idUsu?>/<?=$tipo?>/<?=$foto?>" width="200" height="200">
+        <img src="./img/<?=$foto?>" width="200" height="200">
     </div>
 </div> 
 <?php endwhile; ?>
