@@ -4,4 +4,5 @@
     include('./view/loginempresa.html');
     include('./view/registroempresas.html');
     include('./view/recuperar.html');
+    include('./view/footer.html')
 ?>
