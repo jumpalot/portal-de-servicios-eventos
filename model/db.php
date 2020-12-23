@@ -118,7 +118,7 @@
         if (@$id) $sql .= " WHERE servicios.id_usuario='$id'";
         return $db->query($sql);
     }
-    function getServiciosXtipo($Tipo){
+    function MegagetServicios($Tipo,$zona=null,$descuento=null){
         global $db;
         $sql = "SELECT 
                     servicios.id_servicios AS id,
@@ -137,6 +137,33 @@
                     ON servicios.id_fotoPrincipal=fotosServicios.id_fotos 
                     AND servicios.id_servicios=fotosServicios.id_serviciosºº
                 WHERE tiposervicios.nombre=$Tipo AND servicios.id_tiposervicios=tiposervicios.id_tiposervicios";
+                if (@$zona) $sql .= " OR zonas.zona='$zona'";
+                if (@$descuento) $sql .= " OR servicios.descuento='$descuento'";
+        return $db->query($sql);
+    }
+    function MegagetSalones($tipo,$capacidad=null,$zona=null,$descuento=null){
+        global $db;
+        $sql = "SELECT 
+                    salon.id_salon AS id,
+                    salon.nombre AS nombre,
+                    salon.descripcion AS descripcion,
+                    salon.capacidad as capacidad,
+                    salon.nivel as nivel,
+                    salon.descuento as descuento,
+                    zonas.zona as zona,
+                    tiposalon.nombre as tipo,
+                    fotosSalon.foto as foto
+                FROM salon
+                NATURAL LEFT JOIN zonas
+                LEFT JOIN tiposalon 
+                    ON salon.id_tiposalon=tiposalon.id_tiposalon
+                LEFT JOIN fotosSalon 
+                    ON salon.id_fotoPrincipal=fotosSalon.id_fotos 
+                    AND salon.id_salon=fotosSalon.id_salon
+                  WHERE tiposalon.nombre='$tipo'";
+                  if (@$capacidad) $sql .= " OR salon.capacidad='$capacidad'";
+                  if (@$zona) $sql .= " OR zona.zona='$zona'";
+                  if (@$descuento) $sql .= " OR salon.descuento='$descuento'";
         return $db->query($sql);
     }
     function getEditData($tipo, $idPub){
