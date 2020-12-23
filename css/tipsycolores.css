@@ -589,10 +589,14 @@ nav + .banner {
   padding: 1rem;
   z-index: 1;
   width: 100%;
-  height: 25%;
+  height: 30%;
   max-width: 1500px;
   text-align: center;
   background-color: rgba(170, 143, 83, 0.9) !important;
+}
+.info form {
+  min-width: 910px;
+  width: 70vw;
 }
 .info select {
     font-size: 1em;
@@ -603,7 +607,7 @@ nav + .banner {
   padding-top: 5px;
   font-size: 35px;
   color: #fff;
-  margin-bottom: 1rem;
+  margin-bottom: .5rem;
   letter-spacing: 2px;
 }
 .selects {
