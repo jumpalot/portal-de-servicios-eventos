@@ -1299,3 +1299,25 @@ footer A {text-decoration: none;}
   background: white;
   margin: auto;    
 }
+/* ----------BUSQUEDA----------- */
+#searchWrapper {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template: "a b" auto;
+  gap: 3em;
+  align-items: center;
+  margin-bottom: 1em;
+}
+#searchWrapper #sectionCates{
+  grid-area: a;
+  width: 20vw;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+#searchWrapper #sectionSearch{
+  grid-area: b;
+  width: 80vw;
+  padding-left: 1em;
+  padding-right: 1em;
+}
