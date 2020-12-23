@@ -302,7 +302,7 @@ function promoToHome(){
     $('#editPubModal').modal('show');
 }
 function uploadPromo(){
-    $.post('./model/public/newPromo.php', $('form#promos').serialize(), res => {
+    $.post('./model/publis/newPromo.php', $('form#promos').serialize(), res => {
         $('div#result').html(res);
         $('div#resultModal').modal('show');
     });
