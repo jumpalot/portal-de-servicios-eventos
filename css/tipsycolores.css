@@ -1301,6 +1301,7 @@ footer A {text-decoration: none;}
 }
 /* ----------BUSQUEDA----------- */
 #searchWrapper {
+  padding: 2em;
   width: 100%;
   height: 100%;
   display: grid;
@@ -1308,6 +1309,7 @@ footer A {text-decoration: none;}
   gap: 3em;
   align-items: center;
   margin-bottom: 1em;
+  margin-top: ;
 }
 #searchWrapper #sectionCates{
   grid-area: a;
@@ -1317,7 +1319,7 @@ footer A {text-decoration: none;}
 }
 #searchWrapper #sectionSearch{
   grid-area: b;
-  width: 80vw;
+  width: 65vw;
   padding-left: 1em;
   padding-right: 1em;
 }
