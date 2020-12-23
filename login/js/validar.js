@@ -20,53 +20,64 @@ function recuToLog() {
   $("#recuperar")[0].style.display = "none";
   $("#login")[0].style.display = "block";
 }
-function registro() {
+function loading(){
   $('.body-login').addClass("loading");
   $('.body-login [type=submit]').attr("disabled", true);
-  if($('#verifmail')[0].style.display != "block" && $('#code').val()==""){
-    $.post("../model/accounts/register.php", { email: $('#regi #email').val() }, msg => {
-      if(msg!='invalidEmail'){
-        $('#duplicatemail')[0].style.display = "none"
-        $('#verifmail')[0].style.display = "block";
-        $('#regi1')[0].style.display = "none";
-      } else $('#duplicatemail')[0].style.display = "block";
-      $('.body-login').removeClass("loading");
-      $('.body-login [type=submit]').attr("disabled", false);
-    });
+}
+function endloading(){
+  $('.body-login').removeClass("loading");
+  $('.body-login [type=submit]').attr("disabled", false);
+}
+function registro() {
+  $('#nocoinem')[0].style.display = "none";
+  $('#nocoinpas')[0].style.display = "none";
+  $('#duplicatemail')[0].style.display = "none";
+  $("#failverif")[0].style.display="none";
+  if($('#email').val()!=$('#cemail').val()){
+    $('#nocoinem')[0].style.display = "block";
+  } else if ($('#pass').val()!=$('#cpass').val()) {
+    $('#nocoinpas')[0].style.display = "block";
   } else {
-    $.post(
-      "../model/accounts/register.php", $('form#regi').serialize(),
-      msg => {    
-        if(msg=='noverifcode') $("#failverif")[0].style.display="block";
-        else if(msg=='noreg') {
-          $('#regi1')[0].style.display = "block";
-          $("#failreg")[0].style.display="block";
-          $('#verifmail')[0].style.display = "none";
-        }
-        else window.location="http://portalgardey.escuelarobertoarlt.com.ar/";
-        $('.body-login').removeClass("loading");
-        $('.body-login [type=submit]').attr("disabled", false);
-    });
+    loading();
+    if($('#verifmail')[0].style.display != "block" && $('#code').val()==""){
+      $.post("../model/accounts/register.php", { email: $('#regi #email').val() }, msg => {
+        if(msg!='invalidEmail'){
+          $('#verifmail')[0].style.display = "block";
+          $('#regi1')[0].style.display = "none";
+        } else $('#duplicatemail')[0].style.display = "block";
+        endloading();
+      });
+    } else {
+      $.post(
+        "../model/accounts/register.php", $('form#regi').serialize(),
+        msg => {    
+          if(msg=='noverifcode') $("#failverif")[0].style.display="block";
+          else if(msg=='noreg') {
+            $('#regi1')[0].style.display = "block";
+            $("#failreg")[0].style.display="block";
+            $('#verifmail')[0].style.display = "none";
+          }
+          else window.location="http://portalgardey.escuelarobertoarlt.com.ar/";
+          endloading();
+      });
+    }
   }
   return false;
 }
 function login(){
-  $('.body-login').addClass("loading");
-  $('#wp-con [type=submit]').attr("disabled", true);
+  loading();
   $('#recutrue')[0].style.display="none";
   $.post(
       "../model/accounts/login.php", $('form#login').serialize(),
       msg => {    
         if(msg=='noverif') $("#loginfail")[0].style.display="block";
         else window.location="http://portalgardey.escuelarobertoarlt.com.ar/";
-        $('.body-login').removeClass("loading");
-        $('.body-login [type=submit]').attr("disabled", false);
+        endloading();
       }
   );
 }
 function recuperar(){
-  $('.body-login').addClass("loading");
-  $('.body-login [type=submit]').attr("disabled", true);
+  loading();
   $("#noemail")[0].style.display="none";
   $("#invemail")[0].style.display="none";
   $.post(
@@ -79,20 +90,18 @@ function recuperar(){
           $("form#verifrecu")[0].style.display="block";
         }
         else $("#unerror")[0].style.display="block";
-        $('.body-login').removeClass("loading");
-        $('.body-login [type=submit]').attr("disabled", false);
+        endloading();
       }
   );
 }
 function verifrecu(){
-  $('.body-login').addClass("loading");
-  $('.body-login [type=submit]').attr("disabled", true);
+  loading();
   $('#failverifrecu')[0].style.display="none";
   $('#nocoin')[0].style.display="none";
   $('#unkfail')[0].style.display="none";
   if ($('#p1').val()!=$('#p2').val()){
     $('#nocoin')[0].style.display="block";
-    $('.body-login [type=submit]').attr("disabled", false);
+    endloading();
   }
   else  $.post (
     "../model/accounts/validrecuperar.php",
@@ -108,8 +117,7 @@ function verifrecu(){
         $('#recutrue')[0].style.display="block";
       }
       else $('#unkfail')[0].style.display="block";
-      $('.body-login').removeClass("loading");
-      $('.body-login [type=submit]').attr("disabled", false);
+      endloading();
     }
   );
 }

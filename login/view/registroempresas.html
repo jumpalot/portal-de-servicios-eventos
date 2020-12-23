@@ -11,7 +11,12 @@
                 <i class="fas fa-envelope icon"></i>
                 <input type="email" placeholder="Correo Electronico" id="email" name="email" required>
             </div>
+            <div class="input-contenedor">
+                <i class="fas fa-envelope icon"></i>
+                <input type="email" placeholder="Confirmar Correo Electronico" id="cemail" required>
+            </div>
             <h6 class="hidden" id="duplicatemail" style="color: brown;">El correo ya está registrado</h6>
+            <h6 class="hidden" id="nocoinem" style="color: brown;">Los correos no coinciden</h6>
             <div class="input-contenedor">
                 <i class="fas fa-mobile icon"></i>
                 <input type="tel" placeholder="Numero telefonico" name="tel" required>   
@@ -34,8 +39,13 @@
             </div>  
             <div class="input-contenedor">
                 <i class="fas fa-key icon"></i>
-                <input type="password" placeholder="Contraseña" name="pass" required>  
+                <input type="password" placeholder="Contraseña" id="pass" name="pass" required>  
             </div>
+            <div class="input-contenedor">
+                <i class="fas fa-key icon"></i>
+                <input type="password" placeholder="Contraseña" id="cpass" required>  
+            </div>
+            <h6 class="hidden" id="nocoinpas" style="color: brown;">Las contraseñas no coinciden</h6>
             <input type="submit" value="Registrate" class="button">
             <p class="p">
                 Al registrarte, aceptas nuestras 
