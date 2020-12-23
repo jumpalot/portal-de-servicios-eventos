@@ -4,7 +4,7 @@
         data-toggle="dropdown">
     </button>
     <div class="dropdown-menu" role="menu">
-        <a class="dropdown-item" data-toggle="modal" data-target="#profileModal" role="button"><i class="fas fa-user-crown"></i>Perfil</a>
+        <a class="dropdown-item" data-toggle="modal" data-target="#profileModal" role="button"><i class="far fa-user-crown"></i>Perfil</a>
         <div class="dropdown-divider"></div>
         <a class="dropdown-item" data-toggle="modal" data-target="#myPubsModal" role="button"><i class="far fa-newspaper"></i>Mis Publicaciones</a>
         <div class="dropdown-divider"></div>
