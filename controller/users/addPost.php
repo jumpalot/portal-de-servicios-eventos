@@ -35,14 +35,14 @@
                 $cap = $_POST['cap'];
                 $zonasSalon = $_POST["zonas$tipo"];
                 $tipoSalon = $_POST["subtipo$tipo"];
-                $espacios = $_POST['espacios'];
-                $servicios = $_POST['servicios'];
+                $espacios = @$_POST['espacios'];
+                $servicios = @$_POST['servicios'];
                 $idSalon = addSalon($nom, $desc, $cap, $zonasSalon, $tipoSalon, $idUsu);
                 if($idSalon!=null){
                     if (count($archivos)>0){
                         if ($idFotoP = addImgs($tipo, $idSalon, $archivos)){
-                            addEspaciosSalon($espacios, $idSalon);
-                            addServiciosSalon($servicios, $idSalon);
+                            if($espacios) addEspaciosSalon ($espacios, $idSalon);
+                            if($servicios) addServiciosSalon ($servicios, $idSalon);
                             setFotoP($tipo, $idSalon, $idUsu, $idFotoP);
                             mvImgCache($archivos, $dir, 'salon');
                         } else {
