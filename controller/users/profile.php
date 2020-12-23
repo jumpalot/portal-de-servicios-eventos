@@ -7,5 +7,7 @@
     $correo = $usuario->correo;
     $ig = $usuario->ig;
     $tw = $usuario->tw;
+    $web = $usuario->web;
+    $fb = $usuario->fb;
     include '../../view/users/profile/profileBody.php';
 ?>
