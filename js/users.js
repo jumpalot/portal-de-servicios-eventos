@@ -188,6 +188,14 @@ function upgradeToEdit() {
     $('#upgradePubModal').modal('hide');
     $('#editPubModal').modal('show');
 }
+function rmProfileToEdProfile() {
+    $('#rmProfileModal').modal('hide');
+    $('#editProfileModal').modal('show');
+}
+function editToRmUser() {
+    $('#editProfileModal').modal('show');
+    $('#rmProfileModal').modal('show');
+}
 function profileToEdit() {
     $('#profileModal').modal('hide');
     $('#editProfileModal').modal('show');
