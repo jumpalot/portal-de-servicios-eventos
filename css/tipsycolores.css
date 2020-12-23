@@ -1309,7 +1309,6 @@ footer A {text-decoration: none;}
   gap: 3em;
   align-items: center;
   margin-bottom: 1em;
-  margin-top: ;
 }
 #searchWrapper #sectionCates{
   grid-area: a;
@@ -1322,4 +1321,7 @@ footer A {text-decoration: none;}
   width: 65vw;
   padding-left: 1em;
   padding-right: 1em;
+}
+#sectionSearch .productos {
+  width: 65vw;
 }
