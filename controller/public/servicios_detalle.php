@@ -21,7 +21,7 @@
     //infoPub
     $zona = $datos->zona;
     $subtipo= $datos->tipo;
-    include('./view/public/infoServicios.php');
+    include('./view/public/detalle/infoServicios.php');
     
     //carousel
     include('./view/public/carousel/carouselTop.html');
@@ -52,10 +52,10 @@
     $tw = ($datos->tw=="NULL")? null : substr($datos->tw, 1);
     $ig = ($datos->ig=="NULL")? null : substr($datos->ig, 1);
     $web = ($datos->web=="NULL")? null : $datos->web;
-    include('./view/public/infoContacto.php');
+    include('./view/public/detalle/infoContacto.php');
     
     //contacto
-    include('./view/public/columContacto.php');
+    include('./view/public/detalle/columContacto.php');
 
     echo '</section>';
 ?>    
