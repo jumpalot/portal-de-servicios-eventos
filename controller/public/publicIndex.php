@@ -19,13 +19,9 @@
             include('./view/public/nav/minisearch.html');
             include('./view/public/Promociones.html');
         break;
-        case 'salones':
+        case 'categorias':
             include('./view/public/nav/minisearch.html');
-            include('./view/public/Salones.html');
-        break;
-        case 'servicios':
-            include('./view/public/nav/minisearch.html');
-            include('./view/public/Servicios.html');
+            include('./controller/public/categorias.php');
         break;
         case 'detalle':
             echo '<script src="./js/detalle.js"></script>';

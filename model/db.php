@@ -391,5 +391,19 @@
         $data = $db->query($sql);
         return $data->fetch_object();
     }
+    function getFotocate($tipo, $idCat){
+        global $db;
+        $uctipo = ucfirst($tipo);
+        $sql = "SELECT 
+                    ft.foto AS foto,
+                    tp.id_usuario AS idUsu
+                FROM $tipo AS tp
+                NATURAL JOIN fotos$uctipo AS ft
+                WHERE tp.id_tiposervicios = $idCat
+                AND tp.id_fotoPrincipal = ft.id_fotos
+                ORDER BY tp.nivel DESC
+                LIMIT 1";
+        return $db->query($sql)->fetch_object();
+    }
     $db = new mysqli('localhost','u812890733_Jpgardey','G12345678y','u812890733_Portalgardey');
 ?>
