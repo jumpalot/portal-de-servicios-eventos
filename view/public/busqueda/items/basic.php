@@ -2,7 +2,7 @@
     $tps = MegagetServicios(@$_GET['subtipo']);
     if(@$_GET['tipo']=="servicios"){
         $tps = MegagetServicios(@$_GET['subtipo']);
-    }elseif(@$_GET['tipo']=="salones"){
+    }else if(@$_GET['tipo']=="salones"){
         $tps = MegagetSalones(@$_GET['subtipo']);
     }
     while($tp = $tps->fetch_object()): 
