@@ -1329,3 +1329,7 @@ footer A {text-decoration: none;}
 #sectionCates .dropdown{
   margin-top: 1em;
 }
+#sectionCates .btn:focus, .btn.focus {
+    outline: 0;
+    box-shadow: none;
+}
