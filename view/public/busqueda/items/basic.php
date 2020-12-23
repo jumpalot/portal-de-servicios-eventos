@@ -1,3 +1,5 @@
+<div class="media">
+<div class="media-body">   
 <?php
     $tps = MegagetServicios(@$_GET['subtipo']);
     if(@$_GET['tipo']=="servicios"){
@@ -6,8 +8,7 @@
         $tps = MegagetSalones(@$_GET['subtipo']);
     }
     while($tp = $tps->fetch_object()): 
-?>
-<div class="media">
+?>  
  <div class="productos br input-contenedor-basic">
     <div class="cont2 pd10">
         <p class="cuerpo2">
@@ -27,6 +28,7 @@
     </div>
  </div> 
  <?php endwhile; ?>
+</div>
  <div class="media-left">
   Filtros:
   <div class="dropdown">
