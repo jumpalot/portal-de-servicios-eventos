@@ -17,7 +17,7 @@
         break;
         case 'promos':
             include('./view/public/nav/minisearch.html');
-            include('./view/public/Promociones.html');
+            include('./controller/public/promociones.php');
         break;
         case 'categorias':
             include('./view/public/nav/minisearch.html');
