@@ -22,6 +22,7 @@ function recuToLog() {
 }
 function registro() {
   $('.body-login').addClass("loading");
+  $('.body-login [type=submit]').attr("disabled", true);
   if($('#verifmail')[0].style.display != "block" && $('#code').val()==""){
     $.post("../model/accounts/register.php", { email: $('#regi #email').val() }, msg => {
       if(msg!='invalidEmail'){
@@ -30,6 +31,7 @@ function registro() {
         $('#regi1')[0].style.display = "none";
       } else $('#duplicatemail')[0].style.display = "block";
       $('.body-login').removeClass("loading");
+      $('.body-login [type=submit]').attr("disabled", false);
     });
   } else {
     $.post(
@@ -43,12 +45,14 @@ function registro() {
         }
         else window.location="http://portalgardey.escuelarobertoarlt.com.ar/";
         $('.body-login').removeClass("loading");
+        $('.body-login [type=submit]').attr("disabled", false);
     });
   }
   return false;
 }
 function login(){
   $('.body-login').addClass("loading");
+  $('#wp-con [type=submit]').attr("disabled", true);
   $('#recutrue')[0].style.display="none";
   $.post(
       "../model/accounts/login.php", $('form#login').serialize(),
@@ -56,11 +60,13 @@ function login(){
         if(msg=='noverif') $("#loginfail")[0].style.display="block";
         else window.location="http://portalgardey.escuelarobertoarlt.com.ar/";
         $('.body-login').removeClass("loading");
+        $('.body-login [type=submit]').attr("disabled", false);
       }
   );
 }
 function recuperar(){
   $('.body-login').addClass("loading");
+  $('.body-login [type=submit]').attr("disabled", true);
   $("#noemail")[0].style.display="none";
   $("#invemail")[0].style.display="none";
   $.post(
@@ -74,16 +80,20 @@ function recuperar(){
         }
         else $("#unerror")[0].style.display="block";
         $('.body-login').removeClass("loading");
+        $('.body-login [type=submit]').attr("disabled", false);
       }
   );
 }
 function verifrecu(){
   $('.body-login').addClass("loading");
+  $('.body-login [type=submit]').attr("disabled", true);
   $('#failverifrecu')[0].style.display="none";
   $('#nocoin')[0].style.display="none";
   $('#unkfail')[0].style.display="none";
-  if ($('#p1').val()!=$('#p2').val())
+  if ($('#p1').val()!=$('#p2').val()){
     $('#nocoin')[0].style.display="block";
+    $('.body-login [type=submit]').attr("disabled", false);
+  }
   else  $.post (
     "../model/accounts/validrecuperar.php",
     {
@@ -99,6 +109,7 @@ function verifrecu(){
       }
       else $('#unkfail')[0].style.display="block";
       $('.body-login').removeClass("loading");
+      $('.body-login [type=submit]').attr("disabled", false);
     }
   );
 }
