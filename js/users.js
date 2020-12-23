@@ -193,7 +193,7 @@ function rmProfileToEdProfile() {
     $('#editProfileModal').modal('show');
 }
 function editToRmUser() {
-    $('#editProfileModal').modal('show');
+    $('#editProfileModal').modal('hide');
     $('#rmProfileModal').modal('show');
 }
 function profileToEdit() {
