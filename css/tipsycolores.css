@@ -822,6 +822,10 @@ div.modal#myPubsModal {
     margin: 1.75rem auto;
   }
 }
+#profileModal .modal-dialog {
+  max-width: 80%;
+  width: fit-content;
+}
 #confirmDeleteModal .modal-dialog {
   max-width: 390px;
   width: 31vw;
