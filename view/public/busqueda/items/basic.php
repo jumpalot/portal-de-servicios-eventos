@@ -22,7 +22,7 @@
         <input type="submit" value="&#10009;" class="bbrrr pd10 boton">
      </div>
      <div class="cont1 pd10">
-        <img src="./img/<?=$tp->idUsu?>/<?=@$_GET['tipo']?>/<?=$tp->foto?>" width="200" height="200">
+     <img src="./img/<?=$tp->idUsu?>/<?=@$_GET['tipo']?>/<?=$tp->foto?>" width="200" height="200">
      </div>
     </div>
  <?php endwhile; ?>
@@ -44,5 +44,20 @@
       <?php endwhile; ?>
    </ul>
   </div>
- </div>
+  <div class="dropdown">
+   <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+   Salones
+   <?php 
+     $tpsSalones=getTiposalones();
+   ?>
+   <span class="caret"></span></button>
+   <ul class="dropdown-menu">
+      <?php while($tpsalones = $tpsSalones->fetch_object()):?>
+       <div class="checkbox">
+        <li><label><input type="checkbox" value=<?=$tpsalones->id?>><?=$tpsalones->nombre?></label></li>
+       </div>
+      <?php endwhile; ?>
+   </ul>
+  </div>
+
 
