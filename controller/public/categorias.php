@@ -13,7 +13,8 @@
 
     foreach ($categorias as $categoria):
         $nombre = $categoria['nombre'];
-        $fotocate = getFotoCate($tipo, $categoria['id']);
+        $subtipo = $categoria['id'];
+        $fotocate = getFotoCate($tipo, $subtipo);
         $foto = ($fotocate) ? './img/'.$fotocate->idUsu.'/'.$tipo.'/'.$fotocate->foto : './img/proximamente.png';
         include './view/public/categorias/categoria.php';
     endforeach;
