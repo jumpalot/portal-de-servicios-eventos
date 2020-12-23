@@ -204,6 +204,13 @@
                 FROM tiposalon";
         return $db->query($sql);
     }
+    function getZonas(){
+        global $db;
+        $sql = "SELECT 
+                    zonas.zona AS zona,
+                FROM zonas";
+        return $db->query($sql);
+    }
     function getEspaciosPub($idPub){
         global $db;
         $sql = "SELECT 
