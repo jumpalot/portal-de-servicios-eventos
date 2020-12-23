@@ -4,7 +4,7 @@ $(document).ready( () => {
 } )
 function cargarCates(tipo, subtipo){
     $.post(
-        './controller/public/search/categorias.php',
+        './controller/public/search/filtros.php',
         {
             tipo:tipo,
             subtipo:subtipo
