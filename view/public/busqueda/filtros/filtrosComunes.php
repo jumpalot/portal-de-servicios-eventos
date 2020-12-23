@@ -1,7 +1,6 @@
-  Filtros:
 <div class="dropdown">
    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-   Ubicacion:
+   Ubicacion
    <span class="caret"></span></button>
    <ul class="dropdown-menu">
       <?php while($tpzona = $tpszona->fetch_object()):?>
@@ -10,4 +9,4 @@
        </div>
       <?php endwhile; ?>
    </ul>
-</div>
+  </div>
