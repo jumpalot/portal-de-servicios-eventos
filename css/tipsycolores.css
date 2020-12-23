@@ -203,6 +203,13 @@ body {
   background-color: white;
 }
 
+.verde {
+  color: darkseagreen;
+}
+.rojo {
+  color: crimson;
+}
+
 /******************* ANCHOS **************/
 .col-12 {
   width: 100%;
@@ -913,6 +920,7 @@ div.modal#confirmDeleteModal {
   padding: 1em;
   margin-top: 0;
 }
+#wrapper-detalle #wp-con h6 { margin-top: 1.5em; }
 #wrapper-detalle #wp-con h3 { font-size: 15pt; }
 #wrapper-detalle #wp-con .input-group, #wp-con textarea { margin-bottom: 1em; background-color: white;}
 #wrapper-detalle #wp-con .input-group-prepend { width: 2em; }
@@ -1066,6 +1074,7 @@ footer a:hover{
 footer img {
   margin-bottom: 0.8em;
 }
+input[type=submit]:disabled { cursor: progress; }
 input[type="submit"]#fsnews{
 	font-size: 20PX;
 	color: #c8bfa4;

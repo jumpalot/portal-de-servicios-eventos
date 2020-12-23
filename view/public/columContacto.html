@@ -1,4 +1,4 @@
-<form id="wp-con" onsubmit="return false">
+<form id="wp-con" onsubmit="return sendPresupuesto()">
     <h3>SOLICITAR PRESUPUESTO</h3>
     <h5>Datos del evento</h5>
     <div class="input-group">
@@ -20,12 +20,14 @@
     </div>
     <div class="input-group">
         <div class="input-group-prepend"><i class="fas fa-phone-alt"></i></i></div>
-        <input class="form-control" placeholder="Telefono" type="text" name="tel" />
+        <input class="form-control" placeholder="Telefono" type="tel" name="tel" />
     </div>
     <div class="input-group">
         <div class="input-group-prepend"><i class="fas fa-envelope"></i></div>
-        <input class="form-control" placeholder="Direccion de correo" type="text" name="email" />
+        <input class="form-control" placeholder="Direccion de correo" type="email" name="email" />
     </div>
     <textarea class="form-control border-0" name="comentarios" cols="30" rows="7" placeholder="Comentarios o sugerencias"></textarea>
     <input type="submit" class="bblr border-0">
+    <h6 class="hidden verde">Enviado</h6>
+    <h6 class="hidden rojo">Error al enviar</h6>
 </form>

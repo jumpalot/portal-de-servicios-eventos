@@ -17,3 +17,17 @@ function actualizarFlechas(){
         else                            fder.hide()
     }
 }
+function sendPresupuesto() {
+    $('#wpcon h6.verde').hide()
+    $('#wpcon h6.rojo').hide()
+    $('#wp-con [type=submit]').attr("disabled", true);
+    $.post('./model/contacto/sendPresupuesto.php', $('#wp-con').serialize(), res => {
+        $('#wp-con')[0].reset()
+        $('#wp-con [type=submit]').attr("disabled", false);
+        if(res=='enviado') $('#wpcon h6.verde').show()
+        else {
+            $('#wpcon h6.rojo').show()
+            console.log(res);
+        }
+    });
+}
