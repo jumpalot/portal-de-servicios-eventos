@@ -160,7 +160,7 @@
                 LEFT JOIN fotosSalon 
                     ON salon.id_fotoPrincipal=fotosSalon.id_fotos 
                     AND salon.id_salon=fotosSalon.id_salon
-                  WHERE tiposalon.nombre='$tipo'";
+                  WHERE servicios.id_tiposervicios='$tipo'";
                   if (@$capacidad) $sql .= " OR salon.capacidad='$capacidad'";
                   if (@$zona) $sql .= " OR zona.zona='$zona'";
                   if (@$descuento) $sql .= " OR salon.descuento='$descuento'";
