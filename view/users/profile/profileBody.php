@@ -5,24 +5,17 @@
         </div>
         <div class="col-md-8">
             <div class="card-body">
-                <h5 class="card-title text-center"><?=$nombre?></h5>
+                <h5 class="card-title text-center"><i class="fas fa-user icon"></i><?=$nombre?></h5>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Dni:44094767</li>
-                    <li class="list-group-item">Cras justo odio</li>
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Vestibulum at eros</li>
+                    <li class="list-group-item"><i class="fas fa-mobile icon"></i>Telefono:</li>
+                    <li class="list-group-item"><i class="fas fa-envelope icon"></i>Mail</li>
+                    <li class="list-group-item"><i class="fab fa-instagram icon"></i>Nombre de usuario</li>
+                    <li class="list-group-item"><i class="fab fa-twitter-square icon"></i>Nombre de usuario</li>
+                    <li class="list-group-item"> <i class="fas fa-sitemap icon"></i></i>Pagina web</li>
+                    <li class="list-group-item"><i class="fab fa-facebook icon"></i></i>Nombre de usuario</li>
+
                 </ul>
-                <p class="text-center">
-                    <a href="https://www.instagram.com/emirko.07/?hl=es-la">
-                        <img src="https://icons.iconarchive.com/icons/icons8/ios7/48/Logos-Instagram-icon.png"> 
-                    </a>
-                    <a href="">
-                        <img src="https://icons.iconarchive.com/icons/danleech/simple/48/facebook-icon.png">
-                    </a> 
-                    <a href="">
-                        <img src="https://icons.iconarchive.com/icons/limav/flat-gradient-social/48/Twitter-icon.png">
-                    </a>
-                </p>
+
             </div>
         </div>
     </div>
