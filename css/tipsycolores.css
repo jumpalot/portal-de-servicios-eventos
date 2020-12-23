@@ -1326,3 +1326,6 @@ footer A {text-decoration: none;}
 #sectionSearch .productos {
   width: 65vw;
 }
+#sectionCates .dropdown{
+  margin-top: 1em;
+}
