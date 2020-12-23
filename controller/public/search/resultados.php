@@ -1,8 +1,9 @@
 <?php
     include '../../../model/db.php';
-    if(@$_POST['tipo']=="servicios"){
+    $tipo = @$_POST['tipo'];
+    if($tipo=="servicios"){
         $tps = MegagetServicios(@$_POST['subtipo']);
-    }else if(@$_POST['tipo']=="salon"){
+    }else if($tipo=="salon"){
         $tps = MegagetSalones(@$_POST['subtipo']);
     }
     if($tps){
