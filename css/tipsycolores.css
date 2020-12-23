@@ -793,6 +793,9 @@ input[type="number"] {
     margin-top: 150px;
     border-radius: 2%;
   }
+  .body-login .formulario{
+    padding: .4em;
+  }
 }
 
 /* MODALS */
