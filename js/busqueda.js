@@ -19,6 +19,6 @@ function cargarBusqueda(tipo, subtipo){
             tipo:tipo,
             subtipo:subtipo
         },
-        msg => $('#listprosectionSearchmos').html(msg)
+        msg => $('#sectionSearch').html(msg)
     )
 }
