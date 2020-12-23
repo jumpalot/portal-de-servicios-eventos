@@ -196,6 +196,14 @@ function editToRmUser() {
     $('#editProfileModal').modal('hide');
     $('#rmProfileModal').modal('show');
 }
+function homeToDeletePub() {
+    $('#editPubModal').modal('hide');
+    $('#confirmDeleteModal').modal('show');
+}
+function rmPubToHome() {
+    $('#confirmDeleteModal').modal('hide');
+    $('#editPubModal').modal('show');
+}
 function profileToEdit() {
     $('#profileModal').modal('hide');
     $('#editProfileModal').modal('show');
