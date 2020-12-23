@@ -826,6 +826,14 @@ div.modal#myPubsModal {
   max-width: 390px;
   width: 31vw;
 }
+#newOfertaModal .modal-dialog {
+  max-width: 80%;
+  width: 45vw;
+}
+#newOfertaModal .modal-body {
+  max-width: 100%;
+  width: 40vw;
+}
 #rmProfileModal .modal-dialog {
   max-width: 850px;
   width: 45vw;
