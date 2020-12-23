@@ -36,7 +36,7 @@
             include('./view/public/nav/minisearch.html');
             include('./view/public/busqueda/Busqueda.html');
             include('./view/public/busqueda/items/basic.php');
-            include('./view/public/busqueda/items/filtros.php');
+            
         break;
         default:
             include('./controller/public/home.php');

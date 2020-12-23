@@ -26,3 +26,17 @@
     </div>
 </div> 
 <?php endwhile; ?>
+Filtros:
+<div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+  Zona
+  <?php 
+     $tpszona=getZonas();
+  ?>
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+      <?php while($tpzona = $tpszona->fetch_object()):?>
+    <li><a class="checkbox" href="#"><?=$tpzona->zona?></a></li>
+      <?php endwhile; ?>
+  </ul>
+</div>
