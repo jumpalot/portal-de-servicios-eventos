@@ -18,15 +18,15 @@ function actualizarFlechas(){
     }
 }
 function sendPresupuesto() {
-    $('#wpcon h6.verde').hide()
-    $('#wpcon h6.rojo').hide()
+    $('#wp-con h6.verde').hide()
+    $('#wp-con h6.rojo').hide()
     $('#wp-con [type=submit]').attr("disabled", true);
     $.post('./model/contacto/sendPresupuesto.php', $('#wp-con').serialize(), res => {
         $('#wp-con')[0].reset()
         $('#wp-con [type=submit]').attr("disabled", false);
-        if(res=='') $('#wpcon h6.verde').show()
+        if(res=='') $('#wp-con h6.verde').show()
         else {
-            $('#wpcon h6.rojo').show()
+            $('#wp-con h6.rojo').show()
             console.log(res);
         }
     });
