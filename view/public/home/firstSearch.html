@@ -7,7 +7,12 @@
 				<select class="selectpicker form-control zonas" data-style="input-contenedor" data-width="14rem" title="Zona" name="zonas" data-live-search="true">
 				</select>
 				<label class="toro">""</label>
-				<input type="text" name="buscando" id="buscando" placeholder="Busqueda">
+				<select class="selectpicker form-control" data-style="input-contenedor" data-width="10rem" title="Tipo" name="tipo" data-live-search="false" required>
+					<option value="servicios">Servicios</option>
+					<option value="salon">Salones</option>
+				</select>
+				<label class="toro">""</label>
+				<input type="text" name="buscando" id="buscando" placeholder="Busqueda" required>
 				<label class="toro">" "</label>
 				<button type="submit" name="section" value="search" class="bblr border-0"><i class="fas fa-search"></i></button>
 			</form>
