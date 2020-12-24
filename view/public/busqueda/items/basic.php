@@ -1,5 +1,5 @@
 <div class="productos br input-contenedor-basic">
-     <div class="cont2 pd10">
+     <div class="cont2">
         <p class="cuerpo2">
             <i class="fas fa-map-marker-alt"></i>
             <?=$tp->zona?>
