@@ -50,7 +50,7 @@ function enviarContacto(){
     $.post('./model/contacto/sendContacto.php', $('form#contactoForm').serialize(), res => {
         $('#contactoModal').modal('hide');
         $('div#result').html(res);
-        $('div#resultModal btn-success').val('contactoModal');
+        $('div#resultModal .btn-success').val('contactoModal');
         $('form#contactoForm')[0].reset();
         $('div#resultModal').modal('show');
     });
