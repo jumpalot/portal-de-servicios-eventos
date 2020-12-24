@@ -1343,6 +1343,8 @@ footer A {text-decoration: none;}
   width: 20vw;
   padding-left: 1em;
   padding-right: 1em;
+  border-right: solid;
+  height: 100%;
 }
 #searchWrapper #sectionSearch{
   grid-area: b;
