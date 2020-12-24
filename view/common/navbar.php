@@ -26,7 +26,7 @@
           <a class="nav-link" href="#">Imagen personal</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./?section=contacto">Contacto</a>
+          <a class="nav-link" data-toggle="modal" data-target="#contactoModal" role="button">Contacto</a>
         </li>
         <li class="nav-item">
           <?php include './controller/users/userIndex.php' ?>

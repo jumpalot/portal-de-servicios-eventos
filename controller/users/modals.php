@@ -1,5 +1,4 @@
 <?php
-    include './view/users/result.html';
     include './view/users/modifyPost/confirmDelete.html';
     include './view/users/editPub.html';
     include './view/users/profile/profile.html';

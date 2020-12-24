@@ -1,4 +1,8 @@
 <?php
+    #generales
+    include './view/public/modals/result.html';
+    include './view/public/modals/contacto.html';
+
     #desambiguacion
     switch(@$_GET['section']){
         case 'idea':
@@ -28,9 +32,6 @@
             echo '<script src="./js/detalle.js"></script>';
             include('./view/public/nav/minisearch.html');
             include("./controller/public/".$_GET['tipo']."_detalle.php");
-        break;
-        case 'contacto':
-            include('./view/public/Contacto.html');
         break;
         case 'search':
             echo '<script>var tipo="'.@$_GET['tipo'].'"; var subtipo="'.@$_GET['subtipo'].'";</script>';

@@ -46,3 +46,10 @@ function iniciarHovers(){
         }
     );
 }
+function enviarContacto(){
+    $.post('./model/contacto/sendContacto.php', $('form#contactoForm').serialize(), res => {
+        $('#contactoModal').modal('hide');
+        $('div#result').html(res);
+        $('div#resultModal').modal('show');
+    });
+}
