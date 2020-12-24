@@ -1254,6 +1254,11 @@ footer A {text-decoration: none;}
   object-fit: cover;
   height: 33vw;
 }
+#listpromos .card-img-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .fuente-prom{
   font-family: Quicksand;
    font-weight: 200;
