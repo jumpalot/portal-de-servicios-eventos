@@ -512,5 +512,26 @@
         if ($db->error) echo '<script>console.log(`'.$db->error.'`);</script>';
         return $datos;
     }
+    function updateUser($idUsu, $name, $tel, $fb, $ig, $tw, $web){
+        global $db;
+        $name= "'$name'";
+        $tel = "'$tel'";
+        $fb  = ($fb)  ?  "'$fb'"  :  'null';
+        $ig  = ($ig)  ?  "'$ig'"  :  'null';
+        $tw  = ($tw)  ?  "'$tw'"  :  'null';
+        $web = ($web) ?  "'$web'" :  'null';
+        $sql = "UPDATE usuarios 
+                SET 
+                    nombre=$name, 
+                    telefono=$tel,
+                    fb=$fb,
+                    ig=$ig,
+                    tw=$tw,
+                    web=$web
+                WHERE id_usuarios=$idUsu";
+        $db->query($sql);
+        if ($db->error) echo '<script>console.log(`'.$db->error.'`);</script>';
+        return $db->error=="";
+    }
     $db = new mysqli('localhost','u812890733_Jpgardey','G12345678y','u812890733_Portalgardey');
 ?>

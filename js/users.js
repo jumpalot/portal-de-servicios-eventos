@@ -319,3 +319,12 @@ function uploadPromo(){
         $('div#resultModal').modal('show');
     });
 }
+function saveEditProfile(){
+    $.post('./model/accounts/updateUser.php', $('form#editProfileForm').serialize(), res => {
+        $('#editProfileModal').modal('hide');
+        $('div#result').html(res);
+        $('div#resultModal .btn-success').val('profileModal');
+        $('form#editProfileForm')[0].reset();
+        $('div#resultModal').modal('show');
+    });
+}
