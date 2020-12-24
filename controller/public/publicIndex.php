@@ -1,7 +1,4 @@
 <?php
-    #generales
-    include './view/public/modals/result.html';
-    include './view/public/modals/contacto.html';
 
     #desambiguacion
     switch(@$_GET['section']){
@@ -42,4 +39,7 @@
         default:
             include('./controller/public/home.php');
     }
+    #generales
+    include './view/public/modals/result.html';
+    include './view/public/modals/contacto.html';
 ?>
