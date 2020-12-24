@@ -7,7 +7,7 @@
         <br>
         <h5 id="titulo">☆ <?=$tp->nombre?></h5>
         <p class="cuerpo1 lnh">
-            <?=$tp->descripcion?>
+            <?=strip_tags($tp->descripcion)?>
         </p>
         <?php if ($tp->descuento!="0"):?>
                 <label class="btlr pd10 "><?=$tp->descuento?>% OFF</label>

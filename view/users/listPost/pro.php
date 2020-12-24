@@ -6,7 +6,7 @@
             </p>
             <h6 id="titulo">☆ <?=$titulo?></h6>
             <p class="cuerpo1 lnh">
-                <?=$desc?>
+                <?=strip_tags($desc)?>
             </p>
             <?php if ($descu>0):?>
                 <label class="btlr pd10 "><?=$descu?>% OFF</label>
