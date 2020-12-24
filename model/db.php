@@ -137,9 +137,10 @@
                 LEFT JOIN fotosServicios 
                     ON servicios.id_fotoPrincipal=fotosServicios.id_fotos 
                     AND servicios.id_servicios=fotosServicios.id_servicios
-                WHERE servicios.id_tiposervicios=$Tipo ";
-                if (@$zona) $sql .= " OR zonas.zona='$zona'";
-                if (@$descuento) $sql .= " OR servicios.descuento='$descuento'";
+                WHERE 1";
+                if (@$Tipo) $sql .= " AND servicios.id_tiposervicios=$Tipo";
+                if (@$zona) $sql .= " AND zonas.zona='$zona'";
+                if (@$descuento) $sql .= " AND servicios.descuento='$descuento'";
         $datos = $db->query($sql);
         if ($db->error) echo '<script>console.log(`'.$db->error.'`);</script>';
         return $datos;
