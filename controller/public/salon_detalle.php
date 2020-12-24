@@ -46,6 +46,7 @@
     $contSecciones=1;
     $active="active";
     foreach($fotos as $foto){
+        $img[$cont] = $foto['foto'];
         if (++$cont==4){
             include('./view/public/carousel/ideaItem.php');
             if($active!="") $active="";
@@ -53,7 +54,6 @@
             $img = array();
             $contSecciones++;
         }
-        $img[$cont] = $foto['foto'];
     }
     if(isset($img[1])) 
         include('./view/public/carousel/ideaItem.php');
