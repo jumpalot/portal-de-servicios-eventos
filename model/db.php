@@ -504,7 +504,7 @@
                         ON tsal.id_tiposalon = sal.id_tiposalon
                 ) ON p.id_salon = sal.id_salon
                 WHERE
-                    p.limite > NOW()
+                    p.limite >= NOW()
                 ORDER BY p.limite ASC
                 LIMIT $inicio, $fin";
         $datos =$db->query($sql);
