@@ -192,6 +192,9 @@ body {
   border-color: rgb(153, 130, 80);
   color: white !important;
 }
+.btn.oro100:focus {
+  box-shadow: 0 0 0 0.1rem  rgba(170, 143, 83, 0.25);
+}
 .oro80 {
   background-color: rgba(170, 143, 83, 0.8);
   color: white !important;
