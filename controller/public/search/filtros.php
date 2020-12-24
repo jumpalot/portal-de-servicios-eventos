@@ -1,4 +1,4 @@
-Filtros
+<h3>Filtros</h3>
 <?php 
     include '../../../model/db.php';
     $tpszona=getZonas();

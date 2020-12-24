@@ -1340,17 +1340,16 @@ footer A {text-decoration: none;}
 #searchWrapper #sectionCates{
   margin-top: 0;
   grid-area: a;
-  width: 20vw;
   padding-left: 1em;
-  padding-right: 1em;
+  padding-right: 4em;
   border-right: solid;
   height: 100%;
 }
 #searchWrapper #sectionSearch{
   grid-area: b;
+  margin: 0;
   width: 65vw;
-  padding-left: 1em;
-  padding-right: 1em;
+  padding-left: 4em;
 }
 #sectionSearch .productos {
   width: 65vw;
@@ -1360,6 +1359,9 @@ footer A {text-decoration: none;}
 }
 #sectionCates .dropdown{
   margin-top: 1em;
+}
+#sectionCates .dropdown-toggle{
+  width: 100%;
 }
 #sectionCates .btn:focus, .btn.focus {
     outline: 0;
