@@ -1,5 +1,5 @@
 <div class="col mb-4">
-    <a href="?section=search&tipo=<?$tipo?>&subtipo=<?=$subtipo?>">
+    <a href="?section=search&tipo=<?=$tipo?>&subtipo=<?=$subtipo?>">
         <div class="cards">
             <img
                 src="<?=$foto?>"
