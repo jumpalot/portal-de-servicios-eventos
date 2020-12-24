@@ -1,12 +1,12 @@
 <div class="col mb-4">
 	<div class="card">
-		<img src="../img/gal021.jpg" class="card-img" alt="..." height="600">
+		<img src="<?=$foto?>" class="card-img" alt="..." height="600">
 		<div class="card-img-overlay">
 			<div class="posicioncard">
 				<div class=" infocard">
 					<div class="posicionico">
 						<div class="tiposer">
-							<h5 class="gris1">Catering</a></h5>
+							<h5 class="gris1"><?=$subtipo?></a></h5>
 						</div>
 					</div>
 					<p class="cardfont"><?=$titulo?></p>

@@ -476,7 +476,37 @@
         global $db;
         $inicio = $pagina*6;
         $fin = ($pagina+1)*6;
-        $sql = "SELECT * FROM `promociones` WHERE limite>NOW() limit $inicio, $fin";
+        $sql = "SELECT
+                    p.id_salon,
+                    p.id_servicios,
+                    p.titulo,
+                    p.limite,
+                    ser.id_usuario AS usuarioservicios,
+                    fser.foto AS fotoservicios,
+                    tser.nombre AS subtiposervicios,
+                    sal.id_usuario AS usuariosalon,
+                    fsal.foto AS fotosalon,
+                    tsal.nombre AS subtiposalon
+                FROM
+                    promociones AS p
+                LEFT JOIN (
+                    servicios AS ser
+                    INNER JOIN fotosServicios AS fser
+                        ON fser.id_fotos = ser.id_fotoPrincipal
+                    INNER JOIN tiposervicios AS tser
+                        ON tser.id_tiposervicios = ser.id_tiposervicios
+                ) ON p.id_servicios = ser.id_servicios
+                LEFT JOIN (
+                    salon AS sal
+                    INNER JOIN fotosSalon AS fsal
+                        ON fsal.id_fotos = sal.id_fotoPrincipal
+                    INNER JOIN tiposalon AS tsal
+                        ON tsal.id_tiposalon = sal.id_tiposalon
+                ) ON p.id_salon = sal.id_salon
+                WHERE
+                    p.limite > NOW()
+                ORDER BY p.limite ASC
+                LIMIT $inicio, $fin";
         $datos =$db->query($sql);
         if ($db->error) echo '<script>console.log(`'.$db->error.'`);</script>';
         return $datos;
