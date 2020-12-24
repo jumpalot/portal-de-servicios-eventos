@@ -1333,7 +1333,6 @@ footer A {text-decoration: none;}
   height: 100%;
   display: grid;
   grid-template: "a b" auto;
-  gap: 3em;
   align-items: center;
   margin-bottom: 1em;
 }
