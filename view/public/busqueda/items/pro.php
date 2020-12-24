@@ -10,7 +10,7 @@
             <?=$tp->descripcion?>
         </p>
         <?php if ($tp->descuento!="0"):?>
-                <label class="btlr pd10 "><?=$descu?>% OFF</label>
+                <label class="btlr pd10 "><?=$tp->descuento?>% OFF</label>
         <?php endif; ?>
         <input type="button" id="<?=$tp->id?>-<?=$tipo?>" onclick="iraDetalle(this.id)" value="COTIZAR" class="bbrr pd10 boton">
      </div>
