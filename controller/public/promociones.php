@@ -5,7 +5,6 @@
 
     $promos = getPromos($pagina);
 
-    $alternador = true;
     foreach ($promos as $promo):
 
         $tipo = ($promo["id_salon"])?'salon':'servicios';
@@ -20,9 +19,7 @@
         
         $foto = "./img/$idUsu/$tipo/$nomFoto";
 
-        if ($alternador) echo '<div class="row row-cols-1 row-cols-md-2">';
         include '../../view/public/promociones/promo.php';
-        if(!$alternador) echo '</div>';
 
     endforeach;
 ?>

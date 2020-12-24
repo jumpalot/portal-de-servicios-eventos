@@ -1244,8 +1244,14 @@ footer A {text-decoration: none;}
     background-color:rgba(170,143,83,0.9)!important;
        color: white;
 }
+#listpromos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2em;
+}
 #listpromos img {
   object-fit: cover;
+  height: 33vw;
 }
 .fuente-prom{
   font-family: Quicksand;
@@ -1279,7 +1285,7 @@ footer A {text-decoration: none;}
 }
 .tiposer{
   z-index: 1;
-  width: 35%;
+  width: fit-content;
    height:20%;
    position: flex;
     background-color:grey!important;
