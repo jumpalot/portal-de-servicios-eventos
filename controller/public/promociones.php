@@ -8,7 +8,7 @@
     $alternador = true;
     foreach ($promos as $promo):
 
-        $tipo = ($promo["id_salon"]=="NULL")?'servicios':'salon';
+        $tipo = ($promo["id_salon"])?'servicios':'salon';
 
         $idPub = $promo["id_$tipo"];
         $idUsu = $promo["usuario$tipo"];
