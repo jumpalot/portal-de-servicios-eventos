@@ -168,9 +168,9 @@ function editarPub(id){
         () => $('#editPubModal').modal('show')
     );
 }
-function resultToMyPubs(){
+function resultToVal(val){
     $('#resultModal').modal('hide');
-    $('#myPubsModal').modal('show');
+    $('#'+val).modal('show');
 }
 function editToMyPubs() {
     $('#editPubModal').modal('hide');
