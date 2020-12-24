@@ -1337,7 +1337,7 @@ footer A {text-decoration: none;}
   margin-bottom: 1em;
 }
 #searchWrapper #sectionCates{
-  margin-top: 0;
+  margin: 0;
   grid-area: a;
   padding-left: 1em;
   padding-right: 4em;
