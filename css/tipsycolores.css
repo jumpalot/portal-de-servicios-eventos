@@ -1279,12 +1279,12 @@ footer A {text-decoration: none;}
 .infocard{
   z-index: 1;
   width: 80%;
-   height:92%;
-   padding-top: -20px;
-  position: flex;
-    text-align: center;
-    background-color:rgba(170,143,83,0.7)!important;
-       color: white;
+  height:92%;
+  text-align: center;
+  background-color:rgba(170,143,83,0.7)!important;
+  color: white;
+  display: grid;
+  grid-template-rows: 5rem auto 4rem 3rem;
 }
 .posicionico{
   padding-top: 10px;
@@ -1305,17 +1305,26 @@ footer A {text-decoration: none;}
   font-weight: 350; 
   font-family:'Quicksand', Source Sans Pro;
   text-decoration: none;
+  align-self: center;
 }
 .input-contenedor-promos{
   margin-bottom: 15px;
   border: 1px  rgba(170,143,83,0.7);
   width: 95%;
 }
+.input-contenedor-promo {
+  margin: 0;
+  align-self: end;
+}
 .anchosprom{
   width: 70%;
   height: 80%;
   background: white;
   margin: auto;    
+}
+#listpromos p.card-text{
+  padding-top: 0;
+  align-self: center;
 }
 /* ----------BUSQUEDA----------- */
 #searchWrapper {
