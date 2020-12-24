@@ -862,6 +862,9 @@ div.modal#myPubsModal {
 #rmProfileModal textarea {
   margin-top: 2em;
 }
+#editProfileModal .input-contenedor{
+  width: 19em;
+}
 
 /* Editar Publicacion (modal) */
 .wrapper {
