@@ -14,5 +14,5 @@
     <input type="text" placeholder="Usuario de twitter (opcional)" name="tw" value="<?=$tw?>" pattern="@([A-Za-z0-9_]{0,16})">  
 </div>
 <div class="input-contenedor">
-    <input type="text" placeholder="pagina web (opcional)" name="web" value="<?=$web?>" pattern="\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i"> 
+    <input type="text" placeholder="pagina web (opcional)" name="web" value="<?=$web?>" pattern="\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]"> 
 </div>  
