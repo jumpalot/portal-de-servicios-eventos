@@ -314,6 +314,7 @@ function promoToHome(){
 }
 function uploadPromo(){
     $.post('./model/publis/newPromo.php', $('form#promos').serialize(), res => {
+        $('#newOfertaModal').modal('hide');
         $('div#result').html(res);
         $('div#resultModal').modal('show');
     });
