@@ -1364,8 +1364,14 @@ footer A {text-decoration: none;}
   width: 65vw;
   height: 25vw;
 }
+#sectionSearch .productos.free {
+  height: 19vw;
+}
 #sectionSearch .cont2 {
   padding: 1.5em;
+}
+#sectionSearch .productos.free .cont2{
+  padding: 0em 1.5em 0em 1.5em;
 }
 #sectionSearch .fondopro img {
   width: 65vw;

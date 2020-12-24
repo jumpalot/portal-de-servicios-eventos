@@ -1,10 +1,14 @@
-<div class="productos br input-contenedor-basic">
+<div class="productos br input-contenedor-basic free">
      <div class="cont2">
-        <p class="cuerpo2">
+        &nbsp;&nbsp;&nbsp;
+        <h5 class="inline" id="titulo"><?=$tp->nombre?></h5>
+        <p class="cuerpo2 inline">
+            &nbsp;&nbsp;
             <i class="fas fa-map-marker-alt"></i>
+            &nbsp;
             <?=$tp->zona?>
+            &nbsp;
         </p>
-        <h5 id="titulo"><?=$tp->nombre?></h5>
         <p class="cuerpo1 lnh">
             <?=$tp->descripcion?>
         </p>
