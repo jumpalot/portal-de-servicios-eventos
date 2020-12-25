@@ -146,7 +146,7 @@
         if ($db->error) echo '<script>console.log(`'.$db->error.'`);</script>';
         return $datos;
     }
-    function MegagetSalones($tipo,$capacidad=null,$zona=null,$buscando=null,$descuento=null){
+    function MegagetSalones($tipo,$zona=null,$buscando=null,$descuento=null,$capacidad=null){
         global $db;
         $sql = "SELECT 
                     salon.id_salon AS id,
