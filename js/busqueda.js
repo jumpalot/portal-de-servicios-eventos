@@ -1,8 +1,8 @@
 $(document).ready( () => {
-    cargarCates(tipo, subtipo);
-    cargarBusqueda(tipo, subtipo);
+    cargarCates();
+    cargarBusqueda();
 } )
-function cargarCates(tipo, subtipo){
+function cargarCates() {
     $.post(
         './controller/public/search/filtros.php',
         {
@@ -12,12 +12,14 @@ function cargarCates(tipo, subtipo){
         msg => $('#sectionCates').html(msg)
     )
 }
-function cargarBusqueda(tipo, subtipo){
+function cargarBusqueda() {
     $.post(
         './controller/public/search/resultados.php',
         {
             tipo:tipo,
-            subtipo:subtipo
+            subtipo:subtipo,
+            zona:zona,
+            buscando:buscando
         },
         msg => $('#sectionSearch').html(msg)
     )

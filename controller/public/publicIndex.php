@@ -6,9 +6,7 @@
             include('./controller/public/ideas_detalle.php');
         break;
         case 'preview':
-            echo '<script>
-                    window.location="./?section=detalle&tipo='.$_SESSION['tipo'].'&idPub='.$_SESSION['idPub'].'";
-                  </script>';
+            include('./js/includes/loadPreview.php');
         break;
         case 'privacidad':
             include('./view/public/legales/politica_privacidad.html');
@@ -31,8 +29,7 @@
             include("./controller/public/".$_GET['tipo']."_detalle.php");
         break;
         case 'search':
-            echo '<script>var tipo="'.@$_GET['tipo'].'"; var subtipo="'.@$_GET['subtipo'].'";</script>';
-            echo '<script src="./js/busqueda.js"></script>';
+            include('./js/includes/loadbusqueda.php');
             include('./view/public/nav/minisearch.html');
             include('./view/public/busqueda/Busqueda.html');
         break;

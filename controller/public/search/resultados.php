@@ -1,10 +1,13 @@
 <?php
     include '../../../model/db.php';
     $tipo = @$_POST['tipo'];
+    $subtipo = @$_POST['subtipo'];
+    $zona = @$_POST['zona'];
+    $buscando = @$_POST['buscando'];
     if($tipo=="servicios"){
-        $tps = MegagetServicios(@$_POST['subtipo']);
+        $tps = MegagetServicios($subtipo, $zona, $buscando);
     }else if($tipo=="salon"){
-        $tps = MegagetSalones(@$_POST['subtipo']);
+        $tps = MegagetSalones($subtipo, $zona, $buscando);
     }
     if($tps){
         while($tp = $tps->fetch_object()): 
