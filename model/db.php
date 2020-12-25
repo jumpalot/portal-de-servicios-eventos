@@ -138,10 +138,11 @@
                     ON servicios.id_fotoPrincipal=fotosServicios.id_fotos 
                     AND servicios.id_servicios=fotosServicios.id_servicios
                 WHERE 1";
-                if (@$tipo) $sql .= " AND servicios.id_tiposervicios=$tipo";
-                if (@$zona) $sql .= " AND zonas.id_zona='$zona'";
-                if (@$buscando) $sql .= " AND servicios.nombre LIKE '%$buscando%'";
-                if (@$descuento) $sql .= " AND servicios.descuento='$descuento'";
+        if (@$tipo) $sql .= " AND servicios.id_tiposervicios=$tipo";
+        if (@$zona) $sql .= " AND zonas.id_zona='$zona'";
+        if (@$buscando) $sql .= " AND servicios.nombre LIKE '%$buscando%'";
+        if (@$descuento) $sql .= " AND servicios.descuento='$descuento'";
+        $sql .= " ORDER BY servicios.nivel DESC";
         $datos = $db->query($sql);
         if ($db->error) echo '<script>console.log(`'.$db->error.'`);</script>';
         return $datos;
@@ -167,11 +168,12 @@
                     ON salon.id_fotoPrincipal=fotosSalon.id_fotos 
                     AND salon.id_salon=fotosSalon.id_salon
                   WHERE 1";
-                  if (@$tipo) $sql .= " AND salon.id_tiposalon=$tipo";
-                  if (@$capacidad) $sql .= " AND salon.capacidad='$capacidad'";
-                  if (@$zona) $sql .= " AND zonas.id_zona='$zona'";
-                  if (@$buscando) $sql .= " AND salon.nombre LIKE '%$buscando%'";
-                  if (@$descuento) $sql .= " AND salon.descuento='$descuento'";
+        if (@$tipo) $sql .= " AND salon.id_tiposalon=$tipo";
+        if (@$capacidad) $sql .= " AND salon.capacidad='$capacidad'";
+        if (@$zona) $sql .= " AND zonas.id_zona='$zona'";
+        if (@$buscando) $sql .= " AND salon.nombre LIKE '%$buscando%'";
+        if (@$descuento) $sql .= " AND salon.descuento='$descuento'";
+        $sql .= " ORDER BY salon.nivel DESC";
         $datos = $db->query($sql);
         if ($db->error) echo '<script>console.log(`'.$db->error.'`);</script>';
         return $datos;
