@@ -837,7 +837,7 @@ div.modal#myPubsModal {
   div.modal#myPubsModal .input-contenedor-pro {
     height: 280px;
   }
-  div.modal#myPubsModal .fondopro {
+  div.modal#myPubsModal .fondopro img{
     width: 620px;
     height: 280px;
     border-top-left-radius: 40px;
