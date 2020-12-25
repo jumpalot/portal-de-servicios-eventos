@@ -87,10 +87,6 @@ select:focus {
     margin-right: auto;
     margin-left: auto;
 } 
-.productos {
-  display: flex;
-  flex-direction: row;
-}
 .detalle {
   position: relative;
   /* display: inline-block; */
@@ -747,7 +743,6 @@ input[type="number"] {
   margin-bottom: 15px;
   border-top-left-radius: 40px;
   border:2px solid rgba(170,143,83,1);
-  width: 100%;
   background:rgba(170,147,80,1.1); 
   z-index: 1;
   color: white;
@@ -834,6 +829,18 @@ div.modal#myPubsModal {
   div.modal#myPubsModal .modal-dialog {
     max-width: 700px;
     margin: 1.75rem auto;
+  }
+  div.modal#myPubsModal .modal-dialog .productos {
+    width: 620px;
+    margin: 1.75rem auto;
+  }
+  div.modal#myPubsModal .input-contenedor-pro {
+    height: 280px;
+  }
+  div.modal#myPubsModal .fondopro {
+    width: 620px;
+    height: 280px;
+    border-top-left-radius: 40px;
   }
 }
 #resultModal h4 {
