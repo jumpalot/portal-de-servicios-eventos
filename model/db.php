@@ -139,7 +139,7 @@
                     AND servicios.id_servicios=fotosServicios.id_servicios
                 WHERE 1";
                 if (@$Tipo) $sql .= " AND servicios.id_tiposervicios=$Tipo";
-                if (@$zona) $sql .= " AND zonas.zona='$zona'";
+                if (@$zona) $sql .= " AND zonas.id_zona='$zona'";
                 if (@$buscando) $sql .= " AND servicios.nombre LIKE '%$buscando%'";
                 if (@$descuento) $sql .= " AND servicios.descuento='$descuento'";
         $datos = $db->query($sql);
@@ -168,7 +168,7 @@
                     AND salon.id_salon=fotosSalon.id_salon
                   WHERE salon.id_tiposalon='$tipo'";
                   if (@$capacidad) $sql .= " AND salon.capacidad='$capacidad'";
-                  if (@$zona) $sql .= " AND zona.zona='$zona'";
+                  if (@$zona) $sql .= " AND zonas.id_zona='$zona'";
                   if (@$buscando) $sql .= " AND salon.nombre LIKE '%$buscando%'";
                   if (@$descuento) $sql .= " AND salon.descuento='$descuento'";
         $datos = $db->query($sql);
