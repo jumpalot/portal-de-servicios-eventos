@@ -118,7 +118,7 @@
         if (@$id) $sql .= " WHERE servicios.id_usuario='$id'";
         return $db->query($sql);
     }
-    function MegagetServicios($Tipo,$zona=null,$buscando=null,$descuento=null){
+    function MegagetServicios($tipo,$zona=null,$buscando=null,$descuento=null){
         global $db;
         $sql = "SELECT 
                     servicios.id_servicios AS id,
@@ -138,7 +138,7 @@
                     ON servicios.id_fotoPrincipal=fotosServicios.id_fotos 
                     AND servicios.id_servicios=fotosServicios.id_servicios
                 WHERE 1";
-                if (@$Tipo) $sql .= " AND servicios.id_tiposervicios=$Tipo";
+                if (@$tipo) $sql .= " AND servicios.id_tiposervicios=$tipo";
                 if (@$zona) $sql .= " AND zonas.id_zona='$zona'";
                 if (@$buscando) $sql .= " AND servicios.nombre LIKE '%$buscando%'";
                 if (@$descuento) $sql .= " AND servicios.descuento='$descuento'";
@@ -166,7 +166,8 @@
                 LEFT JOIN fotosSalon 
                     ON salon.id_fotoPrincipal=fotosSalon.id_fotos 
                     AND salon.id_salon=fotosSalon.id_salon
-                  WHERE salon.id_tiposalon='$tipo'";
+                  WHERE 1";
+                  if (@$tipo) $sql .= " AND salon.id_tiposalon=$tipo";
                   if (@$capacidad) $sql .= " AND salon.capacidad='$capacidad'";
                   if (@$zona) $sql .= " AND zonas.id_zona='$zona'";
                   if (@$buscando) $sql .= " AND salon.nombre LIKE '%$buscando%'";
