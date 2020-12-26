@@ -873,6 +873,10 @@ div.modal#myPubsModal {
   width: 21em;
 }
 
+.dropdown-menu li {
+  width: 100%;
+}
+
 /* Editar Publicacion (modal) */
 .wrapper {
   display: grid;
