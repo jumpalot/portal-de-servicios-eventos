@@ -1,7 +1,6 @@
 $(document).ready( () => {
     cargarCates();
     cargarBusqueda();
-    $('.selectpicker').selectpicker();
 } )
 function cargarCates() {
     $.post(
@@ -10,7 +9,10 @@ function cargarCates() {
             tipo:tipo,
             subtipo:subtipo
         },
-        msg => $('#sectionCates').html(msg)
+        msg => {
+            $('#sectionCates').html(msg);
+            $('.selectpicker').selectpicker();
+        }
     )
 }
 function cargarBusqueda() {
