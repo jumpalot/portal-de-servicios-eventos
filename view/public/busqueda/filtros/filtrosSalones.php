@@ -1,26 +1,12 @@
-  <div class="dropdown">
-   <button class="btn oro100 dropdown-toggle" type="button" data-toggle="dropdown">
-   Salones
-   <span class="caret"></span></button>
-   <ul class="dropdown-menu">
-      <?php while($tpsalones = $tpsSalones->fetch_object()):?>
-       <div class="checkbox">
-        <li><label><input type="checkbox" value=<?=$tpsalones->id?>><?=$tpsalones->nombre?></label></li>
-       </div>
-      <?php endwhile; ?>
-   </ul>
-  </div>
+<select class="selectpicker form-control subtipo" data-style="input-contenedor" data-width="100%" name="subtipos[]" data-live-search="true" title="Tipos de salon" multiple>
+   <?php while($tpsalones = $tpsSalones->fetch_object()): ?>
+      <option value="<?=$tpsalones->id?>"><?=$tpsalones->nombre?></option>
+   <?php endwhile; ?>
+</select>
 
-  <div class="dropdown">
-   <button class="btn oro100 dropdown-toggle" type="button" data-toggle="dropdown">
-   Capacidad
-   <span class="caret"></span></button>
-   <ul class="dropdown-menu">
-       <div class="checkbox">
-         <label><input type="checkbox" value="DCapacidad">Hasta 50 invitados</label>
-         <label><input type="checkbox" value="DCapacidad">De 51 a 100</label>
-         <label><input type="checkbox" value="DCapacidad">De 100 a 200</label>
-         <label><input type="checkbox" value="DCapacidad">Mas de 200</label>
-       </div>
-   </ul>
-  </div>
+<select class="selectpicker form-control subtipo" data-style="input-contenedor" data-width="100%" name="cantidades[]" data-live-search="false" title="Capacidad de personas" multiple>
+  <option value="0;51">Hasta 50 invitados</option>
+  <option value="50;101">De 51 a 100</option>
+  <option value="100;201">De 101 a 200</option>
+  <option value="200;2000000000">Mas de 200</option>
+</select>

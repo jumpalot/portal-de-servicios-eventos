@@ -1,12 +1,5 @@
-<div class="dropdown">
-   <button class="btn oro100 dropdown-toggle" type="button" data-toggle="dropdown">
-   Ubicacion
-   <span class="caret"></span></button>
-   <ul class="dropdown-menu">
-      <?php while($tpzona = $tpszona->fetch_object()):?>
-       <div class="checkbox">
-        <li><label><input type="checkbox" value=<?=$tpzona->id?>><?=$tpzona->zona?></label></li>
-       </div>
-      <?php endwhile; ?>
-   </ul>
-  </div>
+<select class="selectpicker form-control zonas" data-style="input-contenedor" data-width="100%" name="zonas[]" data-live-search="true" title="Ubicación" multiple>
+   <?php while($tpzona = $tpszona->fetch_object()):?>
+      <option value="<?=$tpzona->id?>"><?=$tpzona->zona?></option>
+   <?php endwhile; ?>
+</select>
