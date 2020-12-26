@@ -1366,16 +1366,15 @@ footer A {text-decoration: none;}
 #searchWrapper #sectionCates{
   margin: 0;
   grid-area: a;
-  padding-left: 1em;
-  padding-right: 4em;
+  padding-right: 2em;
   border-right: solid;
   height: 100%;
+  width: 20vw;
 }
 #searchWrapper #sectionSearch{
   grid-area: b;
   margin: 0;
-  width: 65vw;
-  padding-left: 4em;
+  width: 76vw;
 }
 #sectionSearch .productos {
   width: 65vw;
