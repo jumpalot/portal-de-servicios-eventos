@@ -14,7 +14,7 @@
             // Configure SMTP Server
             $mailer->Host = 'smtp.office365.com';
             $mailer->Username = 'portalservicioseventos@outlook.com';
-            $mailer->Password = 'zcU.L^H]2e5=&Y52';
+            $mailer->Password = 'P5LL5?Bs3y~m3|<k';
 
             // Configure Email
             $mailer->setFrom('portalservicioseventos@outlook.com', 'El Portal de Eventos');
