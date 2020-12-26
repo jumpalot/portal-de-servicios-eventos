@@ -1,6 +1,7 @@
 $(document).ready( () => {
     cargarCates();
     cargarBusqueda();
+    $('.selectpicker').selectpicker();
 } )
 function cargarCates() {
     $.post(
