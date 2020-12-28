@@ -168,10 +168,6 @@ function editarPub(id){
         () => $('#editPubModal').modal('show')
     );
 }
-function resultToVal(val){
-    $('#resultModal').modal('hide');
-    $('#'+val).modal('show');
-}
 function editToMyPubs() {
     $('#editPubModal').modal('hide');
     $('#myPubsModal').modal('show');

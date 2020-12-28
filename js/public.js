@@ -46,6 +46,10 @@ function iniciarHovers(){
         }
     );
 }
+function resultToVal(val){
+    $('#resultModal').modal('hide');
+    $('#'+val).modal('show');
+}
 function enviarContacto(){
     $.post('./model/contacto/sendContacto.php', $('form#contactoForm').serialize(), res => {
         $('#contactoModal').modal('hide');
