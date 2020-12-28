@@ -1,7 +1,7 @@
 <div class="modal fade" id="contactoModal" tabindex="-1" aria-labelledby="contactoModalLabel" aria-hidden="true">
-  <form id="contactoForm" onsubmit="return sendContacto()">
   <div class="modal-dialog modal-dialog-scrollable">
     <div class="modal-content">
+      <form id="contactoForm" onsubmit="return enviarContacto()">
 
         <div class="modal-header">
           <h5 class="modal-title" id="contactoModalLabel">Contacto</h5>
@@ -34,7 +34,7 @@
               <div class="input-group-prepend"><i class="fas fa-user"></i></div>
               <input class="form-control" placeholder="motivo del mensaje" type="text" name="titulo" required />
           </div>
-            <textarea class="form-control border-0" name="comentarios" cols="30" rows="4" placeholder="Comentarios o sugerencias" required></textarea>
+            <textarea class="form-control border-0" name="comentarios" cols="30" rows="7" placeholder="Comentarios o sugerencias" required></textarea>
           
             <h6 class="hidden verde">Enviado</h6>
             <h6 class="hidden rojo">Error al enviar</h6>
@@ -49,7 +49,7 @@
           <button type="submit" class="btn oro100">Enviar</button>
         </div>
 
-      </div>
+      </form>
     </div>
-  </form>
-</div>
+  </div>
+</div> 
