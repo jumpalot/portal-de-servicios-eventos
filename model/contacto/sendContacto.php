@@ -22,7 +22,7 @@
                     <p style=\"text-align: justify; width: 25em;\">$comentarios</p>
                 </div>";
 
-        # $asunto = $_POST['asunto'];
+       
     #enviar email
         echo sendMail($dest, $asunto, $cuerpo);
             echo '<h4>Mensaje enviado</h4>';
