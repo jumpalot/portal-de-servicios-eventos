@@ -24,11 +24,8 @@
 
         # $asunto = $_POST['asunto'];
     #enviar email
-        if(echo sendMail($destinatario,$asunto,$cuerpo)){
+        echo sendMail($destinatario,$asunto,$cuerpo);
             echo '<h4>Mensaje enviado</h4>';
-        }else {
-            echo'<H4>Error en el envio</h4>';
-        }
     #hacer echo de lo que se vera en el modal resultado
 
 ?>
