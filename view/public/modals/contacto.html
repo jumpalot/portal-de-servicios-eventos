@@ -1,13 +1,44 @@
 <div class="modal fade" id="contactoModal" tabindex="-1" aria-labelledby="contactoModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-scrollable">
     <div class="modal-content">
-      <form id="contactoForm" onsubmit="enviarContacto(); return false">
+      <form id="contactoForm" onsubmit="sendContacto(); return false">
 
         <div class="modal-header">
           <h5 class="modal-title" id="contactoModalLabel">Contacto</h5>
         </div>
 
         <div class="modal-body">
+          
+          <h5>Nuestras vias de comunicacion</h5>
+
+            <h3>Comentarios, sugerencias y reportes </h3>
+
+            <h5>Contacto directo</h5>
+            <div class="input-group">
+                <div class="input-group-prepend"><i class="fas fa-user"></i></div>
+                <input class="form-control" placeholder="Nombre" type="text" name="nombre" required />
+            </div>
+            <div class="input-group">
+                <div class="input-group-prepend"><i class="fas fa-user"></i></div>
+                <input class="form-control" placeholder="Apellido" type="text" name="apellido" required />
+            </div>
+            <div class="input-group">
+                <div class="input-group-prepend"><i class="fas fa-phone-alt"></i></i></div>
+                <input class="form-control" placeholder="Telefono" type="tel" name="telefono" required />
+            </div>
+            <div class="input-group">
+                <div class="input-group-prepend"><i class="fas fa-envelope"></i></div>
+                <input class="form-control" placeholder="Direccion de correo" type="email" name="email" required />
+            </div>
+            <div class="input-group">
+              <div class="input-group-prepend"><i class="fas fa-user"></i></div>
+              <input class="form-control" placeholder="motivo del mensaje" type="text" name="titulo" required />
+          </div>
+            <textarea class="form-control border-0" name="comentarios" cols="30" rows="7" placeholder="Comentarios o sugerencias" required></textarea>
+          
+            <h6 class="hidden verde">Enviado</h6>
+            <h6 class="hidden rojo">Error al enviar</h6>
+        
           
 
 
