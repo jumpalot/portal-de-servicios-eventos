@@ -2,7 +2,7 @@
     #incluir librerias
         include '../email.php';
     #recibir datos
-    $dest = $_POST['destinatario'];
+    $dest = "portalservicioseventos@outlook.com";
     $usrmail = $_POST['email'];
     $titulo = $_POST['titulo'];
     $nombre = $_POST['nombre'];
@@ -24,7 +24,7 @@
 
         # $asunto = $_POST['asunto'];
     #enviar email
-        echo sendMail($dest,$asunto,$cuerpo);
+        echo sendMail($dest, $asunto, $cuerpo);
             echo '<h4>Mensaje enviado</h4>';
     #hacer echo de lo que se vera en el modal resultado
 
