@@ -24,7 +24,7 @@
 
         # $asunto = $_POST['asunto'];
     #enviar email
-        echo sendMail($destinatario,$asunto,$cuerpo);
+        echo sendMail($dest,$asunto,$cuerpo);
             echo '<h4>Mensaje enviado</h4>';
     #hacer echo de lo que se vera en el modal resultado
 
