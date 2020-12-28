@@ -54,4 +54,5 @@ function enviarContacto(){
         $('form#contactoForm')[0].reset();
         $('div#resultModal').modal('show');
     });
+    return false;
 }
