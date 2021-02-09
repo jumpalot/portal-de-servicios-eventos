@@ -1391,7 +1391,7 @@ footer A {text-decoration: none;}
 }
 #sectionSearch .productos {
   width: 65vw;
-  height: 25vw;
+  height: 23vw;
 }
 #sectionSearch .productos.free {
   height: 19vw;
@@ -1404,7 +1404,7 @@ footer A {text-decoration: none;}
 }
 #sectionSearch .fondopro img {
   width: 65vw;
-  height: 25vw;
+  height: 23vw;
   border-top-left-radius: 2em;
 }
 #sectionCates .dropdown{
