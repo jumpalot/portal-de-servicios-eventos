@@ -368,6 +368,8 @@ h6 {
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;  
+  -webkit-user-select: none;
+  user-select: none;
   text-overflow: ellipsis;
   overflow: hidden;
   font-size: 1.1vw;
@@ -439,6 +441,13 @@ h6 {
   border-top-left-radius: 15px;
   background-color: rgba(128, 128, 128, 1);
   color: white;
+}
+.productos .btlr {
+  border-top-left-radius: 40px;
+  border-bottom-right-radius: 10px;
+  background-color: white;
+  color: black;
+  position: absolute;
 }
 .bblr {
   border-bottom-right-radius: 15px;
