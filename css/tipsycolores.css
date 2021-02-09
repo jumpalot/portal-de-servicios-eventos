@@ -139,6 +139,10 @@ img.regresar {
   z-index: 2;
   flex: 1;
 }
+.cont1 > img {
+  width: 16vw;
+  height: 16vw;
+}
 .cont2 {
   flex: 2;
   z-index: 2;
@@ -366,7 +370,7 @@ h6 {
   -webkit-box-orient: vertical;  
   text-overflow: ellipsis;
   overflow: hidden;
-  font-size: 12pt;
+  font-size: 1.1vw;
   font-weight: 400;
   letter-spacing: 0px;
 }

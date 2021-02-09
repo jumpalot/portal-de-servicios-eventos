@@ -4,7 +4,6 @@
             <i class="fas fa-map-marker-alt"></i>
             &nbsp;<?=$tp->zona?>
         </p>
-        <br>
         <h5 id="titulo">☆ <?=$tp->nombre?></h5>
         <p class="cuerpo1 lnh">
             <?=strip_tags($tp->descripcion)?>
