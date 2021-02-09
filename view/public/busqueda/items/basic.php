@@ -10,6 +10,6 @@
         </p>
      </div>
     <div class="cont1 pd10 text-center">
-        <img src="./img/<?=$tp->idUsu?>/<?=$tipo?>/<?=$tp->foto?>" width="200" height="200">
+        <img src="./img/<?=$tp->idUsu?>/<?=$tipo?>/<?=$tp->foto?>">
     </div>
 </div>
