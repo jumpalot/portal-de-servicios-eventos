@@ -12,6 +12,5 @@
         <p class="cuerpo1 lnh">
             <?=$tp->descripcion?>
         </p>
-        <input type="button" value="COTIZAR"  class="bbrr pd10 boton">
      </div>
 </div>
