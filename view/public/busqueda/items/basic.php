@@ -1,4 +1,4 @@
-<div class="productos br input-contenedor-basic">
+<div class="productos br input-contenedor-basic" id="<?=$tp->id?>-<?=$tipo?>" onclick="iraDetalle(this.id)">
      <div class="cont2">
         <p class="cuerpo2">
             <i class="fas fa-map-marker-alt"></i>
@@ -8,7 +8,6 @@
         <p class="cuerpo1 lnh">
             <?=strip_tags($tp->descripcion)?>
         </p>
-        <input type="button" id="<?=$tp->id?>-<?=$tipo?>" onclick="iraDetalle(this.id)" value="COTIZAR" class="bbrr pd10 boton">
      </div>
     <div class="cont1 pd10 text-center">
         <img src="./img/<?=$tp->idUsu?>/<?=$tipo?>/<?=$tp->foto?>" width="200" height="200">

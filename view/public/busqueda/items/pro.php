@@ -1,4 +1,4 @@
-<div class="productos br  input-contenedor-pro">
+<div class="productos br  input-contenedor-pro" id="<?=$tp->id?>-<?=$tipo?>" onclick="iraDetalle(this.id)">
      <div class="cont2">
         <p class="cuerpo2">
             <i class="fas fa-map-marker-alt"></i>
@@ -11,7 +11,6 @@
         <?php if ($tp->descuento!="0"):?>
                 <label class="btlr pd10 "><?=$tp->descuento?>% OFF</label>
         <?php endif; ?>
-        <input type="button" id="<?=$tp->id?>-<?=$tipo?>" onclick="iraDetalle(this.id)" value="COTIZAR" class="bbrr pd10 boton">
      </div>
     <div class="cont1 pd10 text-center">
         <img src="./img/<?=$tp->idUsu?>/<?=$tipo?>/<?=$tp->foto?>" width="200" height="200">
