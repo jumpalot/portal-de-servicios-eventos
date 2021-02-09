@@ -1392,6 +1392,7 @@ footer A {text-decoration: none;}
 #sectionSearch .productos {
   width: 65vw;
   height: 23vw;
+  cursor: pointer;
 }
 #sectionSearch .productos.free {
   height: 16vw;
