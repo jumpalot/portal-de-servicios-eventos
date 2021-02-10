@@ -625,6 +625,16 @@ nav + .banner {
   min-width: 910px;
   width: 70vw;
 }
+.info form .zonas {
+  width: 10vw !important;
+}
+.info form .tipos {
+  width: 12vw !important;
+}
+.info form input {
+  width: 25vw !important;
+}
+
 .info select {
     font-size: 1em;
     letter-spacing: 1px;
