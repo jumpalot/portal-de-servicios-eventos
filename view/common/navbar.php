@@ -23,7 +23,7 @@
           <?php include './view/public/nav/Tiposalones.php' ?>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Imagen personal</a>
+          <a class="nav-link" href="./?section=promos">Promociones</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" data-toggle="modal" data-target="#contactoModal" role="button">Contacto</a>
