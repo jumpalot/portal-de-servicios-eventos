@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="primaryNavbar">
   <div class="container">
     <a class="navbar-brand" href="http://portalgardey.escuelarobertoarlt.com.ar/"
-      ><img src="./img/logo.png" width="350" height="60"
+      ><img src="./img/logo.png" height="60"
     /></a>
     <button
       class="navbar-toggler"
