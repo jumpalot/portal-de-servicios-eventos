@@ -1428,8 +1428,8 @@ footer A {text-decoration: none;}
   text-transform: capitalize;
 }
 #sectionCates .btn:focus, .btn.focus {
-    outline: 0;
-    box-shadow: none;
+  outline: none !important;
+  box-shadow: none;
 }
 #sectionCates .dropdown-item.active, .dropdown-item:active {
   background-color: rgba(170, 143, 83, 1);
