@@ -2,9 +2,8 @@ var pagina = 0;
 const cantXpag = 4;
 var total = 0;
 $(document).ready( () => {
-    cargarPromos();
-    verificarCargarMas();
     $.post( './model/publis/getTotalPromos.php', res => total = res );
+    cargarPromos();
     $('#cargarMas').on('click', async function(e) {
         e.preventDefault();
         pagina++;
