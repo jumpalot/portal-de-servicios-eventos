@@ -138,7 +138,7 @@
                     ON servicios.id_fotoPrincipal=fotosServicios.id_fotos 
                     AND servicios.id_servicios=fotosServicios.id_servicios
                 WHERE 1";
-        if (@$tipo) {
+        if (@$tipo && $tipo!="[]") {
             $tipolimpio = preg_replace("/[^0-9,]/", "", $tipo);
             $arraytipo = explode(',', $tipolimpio);
             $sql .= " AND (";
@@ -147,7 +147,7 @@
             }
             $sql .= "0)";
         }
-        if (@$zona) {
+        if (@$zona && $zona!="[]") {
             $zonalimpia = preg_replace("/[^0-9,]/", "", $zona);
             $arrayzona = explode(',', $zonalimpia);
             $sql .= " AND (";
@@ -185,7 +185,7 @@
                     AND salon.id_salon=fotosSalon.id_salon
                   WHERE 1";
         if (@$capacidad) $sql .= " AND salon.capacidad='$capacidad'";
-        if (@$tipo) {
+        if (@$tipo && $tipo!="[]") {
             $tipolimpio = preg_replace("/[^0-9,]/", "", $tipo);
             $arraytipo = explode(',', $tipolimpio);
             $sql .= " AND (";
@@ -194,7 +194,7 @@
             }
             $sql .= "0)";
         }
-        if (@$zona) {
+        if (@$zona && $zona!="[]") {
             $zonalimpia = preg_replace("/[^0-9,]/", "", $zona);
             $arrayzona = explode(',', $zonalimpia);
             $sql .= " AND (";
