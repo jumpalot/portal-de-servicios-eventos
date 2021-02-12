@@ -138,8 +138,20 @@
                     ON servicios.id_fotoPrincipal=fotosServicios.id_fotos 
                     AND servicios.id_servicios=fotosServicios.id_servicios
                 WHERE 1";
-        if (@$tipo) $sql .= " AND servicios.id_tiposervicios=$tipo";
-        if (@$zona) $sql .= " AND zonas.id_zona='$zona'";
+        if (@$tipo) {
+            $sql .= " AND (";
+            foreach (explode('-', $tipo) as $tp){
+                $sql .= "servicios.id_tiposervicios='$tp' OR ";
+            }
+            $sql .= "0)";
+        }
+        if (@$zona) {
+            $sql .= " AND (";
+            foreach (explode('-', $zona) as $zon){
+                $sql .= "zonas.id_zona='$zon' OR ";
+            }
+            $sql .= "0)";
+        } 
         if (@$buscando) $sql .= " AND servicios.nombre LIKE '%$buscando%'";
         if (@$descuento) $sql .= " AND servicios.descuento='$descuento'";
         $sql .= " ORDER BY servicios.nivel DESC";
@@ -480,8 +492,8 @@
     }
     function getPromos($pagina){
         global $db;
-        $inicio = $pagina*6;
-        $fin = ($pagina+1)*6;
+        $inicio = $pagina*4;
+        $fin = ($pagina+1)*4;
         $sql = "SELECT
                     p.id_salon,
                     p.id_servicios,
