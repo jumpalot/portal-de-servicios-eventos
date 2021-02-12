@@ -25,4 +25,6 @@ function verificarCargarMas(){
     let maxActual = ( pagina + 1 ) * 4;
     if(total>maxActual)
         $('div.fuente-prom').removeClass('hidden');
+    else
+        $('div.fuente-prom').addClass('hidden');
 }
