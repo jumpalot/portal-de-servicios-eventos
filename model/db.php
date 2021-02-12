@@ -138,20 +138,16 @@
                     ON servicios.id_fotoPrincipal=fotosServicios.id_fotos 
                     AND servicios.id_servicios=fotosServicios.id_servicios
                 WHERE 1";
-        if (@$tipo && $tipo!="[]") {
-            $tipolimpio = preg_replace("/[^0-9,]/", "", $tipo);
-            $arraytipo = explode(',', $tipolimpio);
+        if (@$tipo) {
             $sql .= " AND (";
-            foreach ($arraytipo as $tp){
+            foreach ($tipo as $tp){
                 $sql .= "servicios.id_tiposervicios='$tp' OR ";
             }
             $sql .= "0)";
         }
-        if (@$zona && $zona!="[]") {
-            $zonalimpia = preg_replace("/[^0-9,]/", "", $zona);
-            $arrayzona = explode(',', $zonalimpia);
+        if (@$zona) {
             $sql .= " AND (";
-            foreach ($arrayzona as $zon){
+            foreach ($zona as $zon){
                 $sql .= "zonas.id_zona='$zon' OR ";
             }
             $sql .= "0)";
@@ -185,20 +181,16 @@
                     AND salon.id_salon=fotosSalon.id_salon
                   WHERE 1";
         if (@$capacidad) $sql .= " AND salon.capacidad='$capacidad'";
-        if (@$tipo && $tipo!="[]") {
-            $tipolimpio = preg_replace("/[^0-9,]/", "", $tipo);
-            $arraytipo = explode(',', $tipolimpio);
+        if (@$tipo) {
             $sql .= " AND (";
-            foreach ($arraytipo as $tp){
+            foreach ($tipo as $tp){
                 $sql .= "salon.id_tiposalon='$tp' OR ";
             }
             $sql .= "0)";
         }
-        if (@$zona && $zona!="[]") {
-            $zonalimpia = preg_replace("/[^0-9,]/", "", $zona);
-            $arrayzona = explode(',', $zonalimpia);
+        if (@$zona) {
             $sql .= " AND (";
-            foreach ($arrayzona as $zon){
+            foreach ($zona as $zon){
                 $sql .= "zonas.id_zona='$zon' OR ";
             }
             $sql .= "0)";
