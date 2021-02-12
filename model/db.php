@@ -139,15 +139,19 @@
                     AND servicios.id_servicios=fotosServicios.id_servicios
                 WHERE 1";
         if (@$tipo) {
+            $tipolimpio = preg_replace("/[^0-9,]/", "", $tipo);
+            $arraytipo = explode(',', $tipolimpio);
             $sql .= " AND (";
-            foreach (explode('-', $tipo) as $tp){
+            foreach ($arraytipo as $tp){
                 $sql .= "servicios.id_tiposervicios='$tp' OR ";
             }
             $sql .= "0)";
         }
         if (@$zona) {
+            $zonalimpia = preg_replace("/[^0-9,]/", "", $zona);
+            $arrayzona = explode(',', $zonalimpia);
             $sql .= " AND (";
-            foreach (explode('-', $zona) as $zon){
+            foreach ($arrayzona as $zon){
                 $sql .= "zonas.id_zona='$zon' OR ";
             }
             $sql .= "0)";
@@ -180,9 +184,25 @@
                     ON salon.id_fotoPrincipal=fotosSalon.id_fotos 
                     AND salon.id_salon=fotosSalon.id_salon
                   WHERE 1";
-        if (@$tipo) $sql .= " AND salon.id_tiposalon=$tipo";
         if (@$capacidad) $sql .= " AND salon.capacidad='$capacidad'";
-        if (@$zona) $sql .= " AND zonas.id_zona='$zona'";
+        if (@$tipo) {
+            $tipolimpio = preg_replace("/[^0-9,]/", "", $tipo);
+            $arraytipo = explode(',', $tipolimpio);
+            $sql .= " AND (";
+            foreach ($arraytipo as $tp){
+                $sql .= "salon.id_tiposalon='$tp' OR ";
+            }
+            $sql .= "0)";
+        }
+        if (@$zona) {
+            $zonalimpia = preg_replace("/[^0-9,]/", "", $zona);
+            $arrayzona = explode(',', $zonalimpia);
+            $sql .= " AND (";
+            foreach ($arrayzona as $zon){
+                $sql .= "zonas.id_zona='$zon' OR ";
+            }
+            $sql .= "0)";
+        } 
         if (@$buscando) $sql .= " AND salon.nombre LIKE '%$buscando%'";
         if (@$descuento) $sql .= " AND salon.descuento='$descuento'";
         $sql .= " ORDER BY salon.nivel DESC";
