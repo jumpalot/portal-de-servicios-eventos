@@ -12,6 +12,15 @@ function cargarCates() {
         msg => {
             $('#sectionCates').html(msg);
             $('.selectpicker').selectpicker();
+            $('#filtroZona').change( () => {
+                zona = $('#filtroZona').val()
+                cargarBusqueda()
+            });
+            $('#filtroSubtipo').change( () => {
+                subtipo = $('#filtroSubtipo').val()
+                cargarBusqueda()
+            });
+
         }
     )
 }
