@@ -31,7 +31,7 @@ function cargarBusqueda() {
             tipo:tipo,
             subtipo:subtipo,
             zona:zona,
-            buscando:buscando
+            buscando:$('#buscando').val()
         },
         msg => $('#sectionSearch').html(msg)
     )
