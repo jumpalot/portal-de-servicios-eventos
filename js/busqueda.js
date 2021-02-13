@@ -1,6 +1,7 @@
 $(document).ready( () => {
     cargarCates();
     cargarBusqueda();
+    $('#buscando').keyup(()=>cargarBusqueda())
 } )
 function cargarCates() {
     $.post(
