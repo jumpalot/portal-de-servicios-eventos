@@ -530,7 +530,7 @@ nav ul li {
   text-decoration: none;
 
 }
-#minisearch button {
+nav#minisearch button {
   position: absolute;
   right: 30%;
 }
