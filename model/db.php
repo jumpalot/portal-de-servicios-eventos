@@ -501,7 +501,8 @@
     function addPromo($titulo, $limite, $tipo, $idPub){
         global $db;
         $sql = "INSERT INTO promociones (id_$tipo, titulo, limite) 
-                VALUES ($idPub, '$titulo', '$limite')";
+                VALUES ($idPub, '$titulo', '$limite')
+                ON DUPLICATE KEY UPDATE titulo='$titulo', limite = '$limite' ";
         $db->query($sql);
         if ($db->error) echo '<script>console.log(`'.$db->error.'`);</script>';
         return $db->error=="";
