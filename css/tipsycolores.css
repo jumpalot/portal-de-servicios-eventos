@@ -530,6 +530,10 @@ nav ul li {
   text-decoration: none;
 
 }
+#minisearch button {
+  position: absolute;
+  right: 30%;
+}
 .icons{
   font-size: 20px;
   letter-spacing: 20px;
