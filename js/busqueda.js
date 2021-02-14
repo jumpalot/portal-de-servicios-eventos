@@ -1,8 +1,7 @@
 $(document).ready( () => {
+    initSearchBar();
     cargarCates();
     cargarBusqueda();
-    $('#buscando').keyup(()=>cargarBusqueda())
-    $('#buscando').attr("placeholder", "Búsqueda de "+tipo);
 } )
 function cargarCates() {
     $.post(
@@ -41,4 +40,9 @@ function cargarBusqueda() {
 function iraDetalle(id){
     [idPub, tipo] = id.split('-');
     window.location="http://portalgardey.escuelarobertoarlt.com.ar/?section=detalle&tipo="+tipo+"&idPub="+idPub;
+}
+function initSearchBar(){
+    $('#buscando').val(buscando)
+    $('#buscando').keyup(()=>cargarBusqueda())
+    $('#buscando').attr("placeholder", "Búsqueda de "+tipo);
 }
