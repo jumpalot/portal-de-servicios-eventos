@@ -2,6 +2,7 @@ $(document).ready( () => {
     cargarCates();
     cargarBusqueda();
     $('#buscando').keyup(()=>cargarBusqueda())
+    $('#buscando').attr("placeholder", "Búsqueda de "+tipo);
 } )
 function cargarCates() {
     $.post(

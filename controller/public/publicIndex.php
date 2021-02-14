@@ -16,16 +16,17 @@
         break;
         case 'promos':
             echo '<script src="./js/promos.js"></script>';
-            include('./view/public/nav/minisearch.html');
             include('./view/public/promociones/promociones.html');
         break;
         case 'categorias':
             include('./view/public/nav/minisearch.html');
+            include('./js/includes/loadminisearch.php');
             include('./controller/public/categorias.php');
         break;
         case 'detalle':
             echo '<script src="./js/detalle.js"></script>';
             include('./view/public/nav/minisearch.html');
+            include('./js/includes/loadminisearch.php');
             include("./controller/public/".$_GET['tipo']."_detalle.php");
         break;
         case 'search':
