@@ -146,11 +146,13 @@
             $sql .= "0)";
         }
         if (@$zona) {
-            $sql .= " AND (";
-            foreach ($zona as $zon){
-                $sql .= "zonas.id_zona='$zon' OR ";
-            }
-            $sql .= "0)";
+            if (is_array($zona)){
+                $sql .= " AND (";
+                foreach ($zona as $zon){
+                    $sql .= "zonas.id_zona='$zon' OR ";
+                }
+                $sql .= "0)";
+            } else $sql .= " AND zonas.id_zona='$zona'";
         } 
         if (@$buscando) $sql .= " AND servicios.nombre LIKE '%$buscando%'";
         if (@$descuento) $sql .= " AND servicios.descuento='$descuento'";
@@ -189,11 +191,13 @@
             $sql .= "0)";
         }
         if (@$zona) {
-            $sql .= " AND (";
-            foreach ($zona as $zon){
-                $sql .= "zonas.id_zona='$zon' OR ";
-            }
-            $sql .= "0)";
+            if (is_array($zona)){
+                $sql .= " AND (";
+                foreach ($zona as $zon){
+                    $sql .= "zonas.id_zona='$zon' OR ";
+                }
+                $sql .= "0)";
+            } else $sql .= " AND zonas.id_zona='$zona'";
         } 
         if (@$buscando) $sql .= " AND salon.nombre LIKE '%$buscando%'";
         if (@$descuento) $sql .= " AND salon.descuento='$descuento'";
