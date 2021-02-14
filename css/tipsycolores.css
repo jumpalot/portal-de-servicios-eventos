@@ -1286,7 +1286,7 @@ footer A {text-decoration: none;}
   /* ----------diseño de promociones---------------------*/
   .banner-promos{
     width:  100%;
-    height: 500px; 
+    height: 90vh; 
    background-image: url(../img/gal021.jpg);
     background-size: 100% 100%;
     position: flex;
@@ -1296,13 +1296,16 @@ footer A {text-decoration: none;}
 .infoprom{
   z-index: 1;
   width: 100%;
-  height: 5em;
+  height: 18vh;
   max-width: 1650px;
   padding-top: -10px;
   position: absolute;
     text-align: center;
     background-color:rgba(170,143,83,0.9)!important;
        color: white;
+}
+.infoprom>h1{
+  font-size: 15vh;
 }
 #listpromos {
   display: grid;
