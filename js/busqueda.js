@@ -8,7 +8,8 @@ function cargarCates() {
         './controller/public/search/filtros.php',
         {
             tipo:tipo,
-            subtipo:subtipo
+            subtipo:subtipo,
+            zona:zona
         },
         msg => {
             $('#sectionCates').html(msg);
