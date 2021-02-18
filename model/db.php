@@ -185,8 +185,12 @@
                     AND salon.id_salon=fotosSalon.id_salon
                   WHERE 1";
         if (@$capacidad) {
-            [$mincap, $maxcap] = explode(';', $capacidad);
-            $sql .= " AND salon.capacidad>'$mincap' AND salon.capacidad<'$maxcap'";
+            $sql .= " AND (";
+            foreach ($capacidad as $cap):
+                [$mincap, $maxcap] = explode(';', $cap);
+                $sql .= "(salon.capacidad>'$mincap' AND salon.capacidad<'$maxcap') OR ";
+            endforeach;
+            $sql .= "0)";
         }
         if (@$tipo) {
             if (is_array($tipo)){
