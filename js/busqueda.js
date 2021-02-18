@@ -40,7 +40,7 @@ function cargarBusqueda() {
 }
 function iraDetalle(id){
     [idPub, tipo] = id.split('-');
-    window.location="http://portalgardey.escuelarobertoarlt.com.ar/?section=detalle&tipo="+tipo+"&idPub="+idPub;
+    window.open("http://portalgardey.escuelarobertoarlt.com.ar/?section=detalle&tipo="+tipo+"&idPub="+idPub, '_blank');
 }
 function initSearchBar(){
     $('#buscando').val(buscando)
