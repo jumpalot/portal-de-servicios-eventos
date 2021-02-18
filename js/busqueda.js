@@ -22,7 +22,11 @@ function cargarCates() {
                 subtipo = $('#filtroSubtipo').val()
                 cargarBusqueda()
             });
-
+            if(tipo="salon"){
+                $('#filtroCantidad').change( () => {
+                capacidad = $('#filtroCantidad').val()
+                cargarBusqueda()
+            });}
         }
     )
 }
@@ -33,6 +37,7 @@ function cargarBusqueda() {
             tipo:tipo,
             subtipo:subtipo,
             zona:zona,
+            capacidad:capacidad,
             buscando:$('#buscando').val()
         },
         msg => $('#sectionSearch').html(msg)

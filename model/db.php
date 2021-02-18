@@ -163,7 +163,7 @@
         if ($db->error) echo '<script>console.log(`'.$db->error.'`);</script>';
         return $datos;
     }
-    function MegagetSalones($tipo,$zona=null,$buscando=null,$descuento=null,$capacidad=null){
+    function MegagetSalones($tipo,$zona=null,$buscando=null,$capacidad=null,$descuento=null){
         global $db;
         $sql = "SELECT 
                     salon.id_salon AS id,
@@ -184,7 +184,10 @@
                     ON salon.id_fotoPrincipal=fotosSalon.id_fotos 
                     AND salon.id_salon=fotosSalon.id_salon
                   WHERE 1";
-        if (@$capacidad) $sql .= " AND salon.capacidad='$capacidad'";
+        if (@$capacidad) {
+            [$mincap, $maxcap] = explode(';', $capacidad);
+            $sql .= " AND salon.capacidad>'$mincap' AND salon.capacidad<'$maxcap";
+        }
         if (@$tipo) {
             if (is_array($tipo)){
                 $sql .= " AND (";

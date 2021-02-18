@@ -7,7 +7,8 @@
     if($tipo=="servicios"){
         $tps = MegagetServicios($subtipo, $zona, $buscando);
     }else if($tipo=="salon"){
-        $tps = MegagetSalones($subtipo, $zona, $buscando);
+        $capacidad = @$_POST['capacidad'];
+        $tps = MegagetSalones($subtipo, $zona, $buscando, $capacidad);
     }
     if($tps){
         while($tp = $tps->fetch_object()): 
