@@ -1262,6 +1262,9 @@ footer A {text-decoration: none;}
   background-color:rgba(170,143,83,0.4)!important;
   color: white;
 }
+.mayusculas{
+  text-transform:uppercase;
+}
 .cardfonts{
   color: white;
   margin-bottom: 20px;
