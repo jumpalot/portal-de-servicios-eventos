@@ -1,5 +1,5 @@
 $(document).ready(() => {
-    //cargarZonas();
+    cargarZonas();
     iniciarHovers();
 });
 
@@ -18,7 +18,7 @@ const addOptions = (csvOptions, id) => {
 const isEmpty = id => $(id)[0].options.length<2;
 
 function cargarZonas(){
-    if ($('#minisearch').length){
+    if ($('#minisearch select.zonas').length){
         if (isEmpty("#minisearch select.zonas")){
             $.post("./model/publis/getZonas.php", zonas => addOptions(zonas, "#minisearch select.zonas"));
         }
