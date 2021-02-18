@@ -186,7 +186,7 @@
                   WHERE 1";
         if (@$capacidad) {
             [$mincap, $maxcap] = explode(';', $capacidad);
-            $sql .= " AND salon.capacidad>'$mincap' AND salon.capacidad<'$maxcap";
+            $sql .= " AND salon.capacidad>'$mincap' AND salon.capacidad<'$maxcap'";
         }
         if (@$tipo) {
             if (is_array($tipo)){
