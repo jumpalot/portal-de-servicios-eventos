@@ -1,6 +1,6 @@
 <select id="filtroSubtipo" class="selectpicker form-control subtipo" data-style="input-contenedor" data-width="100%" name="subtipos[]" data-live-search="true" title="Tipos de salon" multiple>
    <?php while($tpsalones = $tpsSalones->fetch_object()): ?>
-      <option value="<?=$tpsalones->id?>"><?=$tpsalones->nombre?></option>
+      <option value="<?=$tpsalones->id?>" <?=($subTipo==$tpsalones->id)?"selected":""?>><?=$tpsalones->nombre?></option>
    <?php endwhile; ?>
 </select>
 
