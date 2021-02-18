@@ -139,11 +139,13 @@
                     AND servicios.id_servicios=fotosServicios.id_servicios
                 WHERE 1";
         if (@$tipo) {
-            $sql .= " AND (";
-            foreach ($tipo as $tp){
-                $sql .= "servicios.id_tiposervicios='$tp' OR ";
-            }
-            $sql .= "0)";
+            if (is_array($tipo)){
+                $sql .= " AND (";
+                foreach ($tipo as $tp){
+                    $sql .= "servicios.id_tiposervicios='$tp' OR ";
+                }
+                $sql .= "0)";
+            } else $sql .= " AND servicios.id_tiposervicios='$tipo'";
         }
         if (@$zona) {
             if (is_array($zona)){
@@ -184,11 +186,13 @@
                   WHERE 1";
         if (@$capacidad) $sql .= " AND salon.capacidad='$capacidad'";
         if (@$tipo) {
-            $sql .= " AND (";
-            foreach ($tipo as $tp){
-                $sql .= "salon.id_tiposalon='$tp' OR ";
-            }
-            $sql .= "0)";
+            if (is_array($tipo)){
+                $sql .= " AND (";
+                foreach ($tipo as $tp){
+                    $sql .= "salon.id_tiposalon='$tp' OR ";
+                }
+                $sql .= "0)";
+            } else $sql .= " AND salon.id_tiposalon='$tipo'";
         }
         if (@$zona) {
             if (is_array($zona)){
