@@ -5,7 +5,7 @@
 			<div class="infocard">
 				<div class="posicionico">
 					<div class="tiposer">
-						<h5 class="gris1"><?=$subtipo?></a></h5>
+						<h5 class="gris1 mayusculas"><?=$subtipo?></a></h5>
 					</div>
 				</div>
 				<p class="cardfont"><?=$titulo?></p>
