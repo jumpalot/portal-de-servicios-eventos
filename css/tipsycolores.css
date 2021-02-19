@@ -1274,8 +1274,8 @@ footer A {text-decoration: none;}
 a .dropdown-item {
   text-transform: capitalize !important;
 }
-a::first-letter{
-
+a :first-child ::first-letter{
+font-size: 9px;
 }
 a span {
   text-transform: capitalize !important;
