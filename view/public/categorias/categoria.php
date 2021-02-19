@@ -7,7 +7,7 @@
                 class="card-img-salon"
             />
             <div class="card-img-overlay infocards">
-            <p class="cardfonts"><?=$nombre?></p>
+            <p class="cardfonts primera-letra"><?=$nombre?></p>
             </div>
         </div>
     </a>
