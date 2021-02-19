@@ -3434,6 +3434,12 @@ input[type="button"].btn-block {
   font-weight: 400;
   color: #212529;
 }
+.primera-letras::first-letter{
+  text-transform:uppercase;
+  width: 100%;
+  font-weight: 400;
+  color: white;
+}
 .dropdown-item:hover, .dropdown-item:focus {
   color: #16181b;
   text-decoration: none;
