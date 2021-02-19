@@ -5,7 +5,7 @@
   </a>
   <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
     <?php while($tp = $tpser->fetch_object()): ?>
-      <a class="dropdown-item" href="?section=search&tipo=servicios&subtipo=<?=$tp->id?>">
+      <a class="dropdown-item primera-letra" href="?section=search&tipo=servicios&subtipo=<?=$tp->id?>">
         <?=$tp->nombre?>
       </a>
     <?php endwhile; ?>
