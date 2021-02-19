@@ -3431,7 +3431,7 @@ input[type="button"].btn-block {
 .primera-letra::first-letter{
   text-transform:uppercase;
  
-  display: block;
+
   width: 100%;
   padding: 0.25rem 1.5rem;
   font-weight: 400;
