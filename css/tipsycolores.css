@@ -1273,6 +1273,9 @@ footer A {text-decoration: none;}
 a .dropdown-item {
   text-transform: capitalize !important;
 }
+a span {
+  text-transform: capitalize !important;
+}
 .cardfonts{
   color: white;
   margin-bottom: 20px;
