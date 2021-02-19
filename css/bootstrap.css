@@ -3439,6 +3439,7 @@ input[type="button"].btn-block {
   white-space: nowrap;
   background-color: transparent;
   border: 0;
+  text-transform:uppercase;
 }
 .dropdown-item:hover, .dropdown-item:focus {
   color: #16181b;
