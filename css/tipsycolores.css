@@ -1271,8 +1271,10 @@ footer A {text-decoration: none;}
 .mayusini {
   text-transform: capitalize !important;
 }
-a .dropdown-item ::first-letter{
+a .dropdown-item {
   text-transform: capitalize !important;
+}
+a::first-letter{
 
 }
 a span {
