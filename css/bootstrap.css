@@ -3428,7 +3428,7 @@ input[type="button"].btn-block {
   background-color: transparent;
   border: 0;
 }
-.primera-letra::first-letter{
+.primera-letra:first-child{
  
   text-transform:uppercase;
 }
