@@ -12,11 +12,11 @@
         return preg_match("/[0-9]{10,20}/", $tel);
     }
     function validmedia($fb, $tw, $ig){
-        return (!$tw|preg_match("/@([A-Za-z0-9_]{3,16})/", $tw)) &
-               (!$fb|preg_match("/([A-Za-z0-9_]{3,20})/", $fb))  &
-               (!$ig|preg_match("/@([A-Za-z0-9_]{3,16})/", $ig)) ;
+        return (!$tw|preg_match("/@([A-Za-z0-9ñ_]{3,16})/", $tw)) &
+               (!$fb|preg_match("/([A-Za-z0-9ñ_]{3,20})/", $fb))  &
+               (!$ig|preg_match("/@([A-Za-z0-9ñ_]{3,16})/", $ig)) ;
     }
     function validweb($web){
-        return (!$web|preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i", $web));
+        return (!$web|preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&ñ@#\/%=~_|]/i", $web));
     }
 ?>

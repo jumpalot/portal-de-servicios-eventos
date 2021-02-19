@@ -1358,8 +1358,8 @@ class PHPMailer
                  * @see https://html.spec.whatwg.org/#e-mail-state-(type=email)
                  */
                 return (bool) preg_match(
-                    '/^[a-zA-Z0-9.!#$%&\'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}' .
-                    '[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/sD',
+                    '/^[a-zA-Z0-9ñ.!#$%&\'*+\/=?^_`{|}~-]+@[a-zA-Z0-9ñ](?:[a-zA-Z0-9ñ-]{0,61}' .
+                    '[a-zA-Z0-9ñ])?(?:\.[a-zA-Z0-9ñ](?:[a-zA-Z0-9ñ-]{0,61}[a-zA-Z0-9ñ])?)*$/sD',
                     $address
                 );
             case 'php':
@@ -3261,7 +3261,7 @@ class PHPMailer
                 if (!preg_match('/[\200-\377]/', $str)) {
                     // Can't use addslashes as we don't know the value of magic_quotes_sybase
                     $encoded = addcslashes($str, "\0..\37\177\\\"");
-                    if (($str === $encoded) && !preg_match('/[^A-Za-z0-9!#$%&\'*+\/=?^_`{|}~ -]/', $str)) {
+                    if (($str === $encoded) && !preg_match('/[^A-Za-z0-9ñ!#$%&\'*+\/=?^_`{|}~ -]/', $str)) {
                         return $encoded;
                     }
 
@@ -3440,7 +3440,7 @@ class PHPMailer
         switch (strtolower($position)) {
             case 'phrase':
                 // RFC 2047 section 5.3
-                $pattern = '^A-Za-z0-9!*+\/ -';
+                $pattern = '^A-Za-z0-9ñ!*+\/ -';
                 break;
             /*
              * RFC 2047 section 5.2.
