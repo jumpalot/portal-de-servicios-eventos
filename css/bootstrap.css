@@ -3428,8 +3428,7 @@ input[type="button"].btn-block {
   background-color: transparent;
   border: 0;
 }
-.primera-letra:first-child{
- 
+.primera-letra::first-letter{
   text-transform:uppercase;
 }
 .dropdown-item:hover, .dropdown-item:focus {
