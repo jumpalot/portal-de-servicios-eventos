@@ -3430,10 +3430,7 @@ input[type="button"].btn-block {
 }
 .primera-letra::first-letter{
   text-transform:uppercase;
- 
-
   width: 100%;
-  padding: 0.25rem 1.5rem;
   font-weight: 400;
   color: #212529;
 }
