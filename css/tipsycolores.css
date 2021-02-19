@@ -1265,6 +1265,9 @@ footer A {text-decoration: none;}
 .mayusculas{
   text-transform:uppercase;
 }
+.mayusini {
+  text-transform: capitalize;
+}
 .cardfonts{
   color: white;
   margin-bottom: 20px;
