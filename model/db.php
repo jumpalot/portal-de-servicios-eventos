@@ -578,5 +578,5 @@
         if ($db->error) echo '<script>console.log(`'.$db->error.'`);</script>';
         return $db->error=="";
     }
-    $db = new mysqli('localhost','u812890733_Jpgardey','G12345678y','u812890733_Portalgardey');
+    $db = new mysqli('localhost','id17537878_proyectopresentacion','6NCsC0[=P\mH*-7w','id17537878_u812890733_portalgardey');
 ?>
