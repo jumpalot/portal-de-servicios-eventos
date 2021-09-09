@@ -579,4 +579,4 @@
         return $db->error=="";
     }
     $db = new mysqli('localhost','id17537878_proyectopresentacion','6NCsC0[=P\mH*-7w','id17537878_u812890733_portalgardey');
-?>
+?> 
